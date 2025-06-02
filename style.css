@@ -1,0 +1,12 @@
+body {
+  font-family: 'Playfair Display', serif;
+  /* Creamy gradient background */
+  background: linear-gradient(135deg, #fef9f4, #f5efe7);
+  /* Optional subtle noise texture overlay using a base64 small noise image */
+  background-image:
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEUAAAD///+l2Z/dAAAACklEQVQI12NgYAAAAAMAASsJTYQAAAAASUVORK5CYII=');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  color: #111;
+  scroll-behavior: smooth; /* basic smooth scroll fallback */
+}
