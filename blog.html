@@ -3,23 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog - English Literary Society IIT Kanpur</title>
+  <title>Blog | English Literary Society IIT Kanpur</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #F0D8B6; /* fallback light warm color */
+      background-color: #fef9f4;
       background-image: url('paper-texture-wide.png');
-      background-repeat: repeat-x;   /* repeat horizontally like wide paper */
+      background-repeat: repeat-x;
       background-position: top center;
-      background-attachment: fixed;  /* keep background fixed when scrolling */
-      background-size: auto;         /* use actual image size, or adjust below */
+      background-attachment: fixed;
+      background-size: auto;
       color: #111;
       scroll-behavior: smooth;
     }
-    /* Custom styles for links and buttons */
     nav a:hover, h3:hover {
       text-decoration-thickness: 2px;
       transition: text-decoration-thickness 0.3s ease;
@@ -28,60 +27,91 @@
       transform: scale(1.05);
       transition: transform 0.3s ease;
     }
+    .blog-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="mb-16 flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-down">
-    <h1 class="text-4xl font-bold tracking-wide">English Literary Society</h1>
-    <nav class="mt-6 md:mt-0 space-x-8 text-lg font-light uppercase tracking-widest">
-      <a href="index.html" class="hover:text-gray-700">Home</a>
-      <a href="about.html" class="hover:text-gray-700">About</a>
-      <a href="events.html" class="hover:text-gray-700">Events</a>
-      <a href="blog.html" class="hover:text-gray-700">Blog</a>
-      <a href="contact.html" class="hover:text-gray-700">Contact</a>
-    </nav>
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto px-6 py-4">
+      <h2 class="text-2xl font-bold tracking-wide hidden md:block">English Literary Society IIT Kanpur</h2>
+      <nav class="mt-2 md:mt-0 space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="index.html" class="hover:text-gray-700">Home</a>
+        <a href="about.html" class="hover:text-gray-700">About</a>
+        <a href="events.html" class="hover:text-gray-700">Events</a>
+        <a href="blog.html" class="hover:text-gray-700 font-semibold underline">Blog</a>
+        <a href="contact.html" class="hover:text-gray-700">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Blog Posts -->
-  <main class="max-w-5xl mx-auto px-6 mb-24" data-aos="fade-up">
-    <h2 class="text-4xl font-semibold mb-8 border-b-2 border-gray-300 pb-2">Blog</h2>
+  <!-- Blog Hero Section -->
+  <section class="text-center py-20 bg-[#fef9f4]" data-aos="fade-down">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Reflections</h1>
+    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">A window into words that move, provoke, and inspire—curated by the writers of ELS.</p>
+  </section>
 
-    <article id="post1" class="mb-16" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-3xl font-semibold mb-4">Exploring Modern Poetry: Voices of Our Generation</h3>
-      <time datetime="2025-05-20" class="block italic text-gray-500 mb-4">May 20, 2025</time>
-      <p class="leading-relaxed text-gray-700">
-        Contemporary poetry continues to evolve with diverse voices challenging traditional forms...
-        <a href="#" class="text-gray-800 underline">Read more</a>
-      </p>
-    </article>
+  <!-- Blog Grid Section -->
+  <section class="max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Blog Card -->
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+        <a href="blogs/The_Substance.html">
+          <img src="images/blogs/The_Substance.png" alt="The Substance" class="blog-img group-hover:opacity-70 transition" />
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+            <h3 class="text-2xl font-bold">The Substance</h3>
+            <p class="text-base mt-1 font-medium">by ELS · May 2025</p>
+            <p class="text-sm mt-2">A review of Coralie Fargeat’s body-horror film dissecting beauty, identity, and society’s obsession with youth.</p>
+          </div>
+        </a>
+      </div>
 
-    <article id="post2" class="mb-16" data-aos="fade-up" data-aos-delay="400">
-      <h3 class="text-3xl font-semibold mb-4">Why Storytelling Matters in the Digital Age</h3>
-      <time datetime="2025-05-05" class="block italic text-gray-500 mb-4">May 5, 2025</time>
-      <p class="leading-relaxed text-gray-700">
-        Storytelling remains a fundamental human experience, even as our communication shifts online...
-        <a href="#" class="text-gray-800 underline">Read more</a>
-      </p>
-    </article>
+      <!-- Second Blog Card Example -->
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+        <a href="blogs/we_live_in_a_time.html">
+          <img src="images/blogs/we_live_in_time.png" alt="We Live In Time" class="blog-img group-hover:opacity-70 transition" />
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+            <h3 class="text-2xl font-bold">We Live in Time</h3>
+            <p class="text-base mt-1 font-medium">by ELS · May 2025</p>
+            <p class="text-sm mt-2">A melancholic exploration of memory, time, and tenderness through cinema.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Third Blog -->
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+        <a href="blogs/waiting_for_the_letter_of_her_love.html">
+          <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="Waiting for the letter of her love" class="blog-img group-hover:opacity-70 transition" />
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+            <h3 class="text-2xl font-bold">Waiting For The Letter OF her Love</h3>
+            <p class="text-base mt-1 font-medium">by ELS · May 2025</p>
+            <p class="text-sm mt-2">A poem dedicated to the wait for his love to confess her love to him.</p>
+          </div>
+        </a>
+      </div>
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+        <a href="blogs/Spirit_of_the_oak_tree.html">
+          <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit Of The Oak Tree" class="blog-img group-hover:opacity-70 transition" />
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">Spirit Of The Oak Tree</h3>
+            <p class="text-base mt-1 font-medium">by Satyaki Banerjee · May 2025</p>
+            <p class="text-sm mt-2">A poem dedicated to the wait for his love to confess her love to him.</p>
+          </div>
+        </a>
+      </div>
+      <!-- More blog cards can be added similarly -->
+    </div>
+  </section>
 
-    <!-- Add more blog posts here -->
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="mt-32 text-center text-gray-500 text-sm max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up" data-aos-delay="500">
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
     &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
+    AOS.init({ duration: 800, once: true });
   </script>
 </body>
 </html>
