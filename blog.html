@@ -29,8 +29,9 @@
     }
     .blog-img {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      height: 300px;
+      object-fit: cover;
+      background-color: #f3f4f6; /* Placeholder bg */
     }
   </style>
 </head>
@@ -55,11 +56,30 @@
     <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">A window into words that move, provoke, and inspire—curated by the writers of ELS.</p>
   </section>
 
+  <!-- Filter and Search Section -->
+  <section class="max-w-screen-xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="flex gap-4 flex-wrap">
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="All">All</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Poem">Poem</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Review">Review</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Article">Article</button>
+    </div>
+    <div class="flex gap-4 mt-4 md:mt-0">
+      <select class="px-4 py-2 rounded-full border border-gray-300 text-sm">
+      <option value="Latest">Sort by: Latest</option>
+      <option value="Oldest">Oldest</option>
+      <option value="Alphabetical">Alphabetical</option>
+    </select>
+      <input type="text" placeholder="Search blog..." class="px-4 py-2 border border-gray-300 rounded-full text-sm" />
+    </div>
+  </section>
+
   <!-- Blog Grid Section -->
   <section class="max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <!-- Blog Card -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="blog-grid">
+      <!-- Blog cards with data-category attributes will go here -->
+                
+      <div class="group relative rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300 w-ful h-[300px] flex items-center justify-center overflow-hidden" data-category="Review">
         <a href="blogs/The_Substance.html">
           <img src="images/blogs/The_Substance.png" alt="The Substance" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
@@ -71,7 +91,7 @@
       </div>
 
       <!-- Second Blog Card Example -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
         <a href="blogs/we_live_in_a_time.html">
           <img src="images/blogs/we_live_in_time.png" alt="We Live In Time" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
@@ -82,7 +102,7 @@
         </a>
       </div>
       <!-- Third Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
         <a href="blogs/waiting_for_the_letter_of_her_love.html">
           <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="Waiting for the letter of her love" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
@@ -92,7 +112,7 @@
           </div>
         </a>
       </div>
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
         <a href="blogs/Spirit_of_the_oak_tree.html">
           <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit Of The Oak Tree" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">Spirit Of The Oak Tree</h3>
@@ -101,7 +121,9 @@
           </div>
         </a>
       </div>
-      <!-- More blog cards can be added similarly -->
+
+
+
     </div>
   </section>
 
@@ -112,6 +134,53 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
+
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        const cards = document.querySelectorAll('[data-category]');
+
+        cards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          card.style.display = (filter === 'All' || category === filter) ? 'block' : 'none';
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('bg-gray-300');
+          btn.classList.add('bg-gray-200');
+        });
+        button.classList.remove('bg-gray-200');
+        button.classList.add('bg-gray-300');
+      });
+    });
   </script>
+  <script>
+  const sortSelect = document.querySelector('select');
+  const blogGrid = document.getElementById('blog-grid');
+
+  sortSelect.addEventListener('change', () => {
+    const cards = Array.from(blogGrid.children);
+    const sortBy = sortSelect.value;
+
+    let sorted;
+    if (sortBy === "Alphabetical") {
+      sorted = cards.sort((a, b) =>
+        a.dataset.title.localeCompare(b.dataset.title)
+      );
+    } else if (sortBy === "Oldest") {
+      sorted = cards.sort((a, b) =>
+        new Date(a.dataset.date) - new Date(b.dataset.date)
+      );
+    } else {
+      // Latest
+      sorted = cards.sort((a, b) =>
+        new Date(b.dataset.date) - new Date(a.dataset.date)
+      );
+    }
+
+    blogGrid.innerHTML = "";
+    sorted.forEach(card => blogGrid.appendChild(card));
+  });
+</script>
 </body>
 </html>
