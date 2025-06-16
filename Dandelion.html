@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dandelion | ELS IIT Kanpur</title>
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      scroll-behavior: smooth;
+    }
+    nav a:hover {
+      text-decoration-thickness: 2px;
+      transition: text-decoration-thickness 0.3s;
+    }
+    .hover-overlay-text {
+      font-family: 'Libre Baskerville', serif;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .dandelion-fall {
+  position: absolute;
+  width: 60px; /* increased from 40px */
+  height: 60px;
+  background-image: url('dandelion_seed.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 0.7;
+}
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+  </style>
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between items-center py-4 px-6">
+      <h2 class="text-2xl font-bold tracking-wide">English Literary Society IIT Kanpur</h2>
+      <nav class="mt-4 md:mt-0 space-x-6 text-sm uppercase font-light tracking-widest">
+        <a href="index.html" class="hover:text-gray-700">Home</a>
+        <a href="about.html" class="hover:text-gray-700">About</a>
+        <a href="events.html" class="hover:text-gray-700">Events</a>
+        <a href="blog.html" class="hover:text-gray-700">Blog</a>
+        <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <a href="contact.html" class="hover:text-gray-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dandelion Cover Section -->
+  <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+  <!-- Hero Text with Animation -->
+  <div class="z-10 bg-white/70 backdrop-blur-md px-10 py-8 rounded-xl shadow-xl max-w-3xl" data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out-cubic">
+    <h1 class="text-6xl md:text-7xl font-bold italic mb-6">Dandelion</h1>
+    <p class="text-lg md:text-xl text-gray-800 leading-relaxed">
+      Dandelion is the annual literary magazine of the English Literary Society at IIT Kanpur. 
+      It captures the introspections, imaginations, and inquiries of the campus community — 
+      a space where creative minds express themselves through poetry, prose, essays, and visual art. 
+      Each issue is a delicate bloom of thoughts, crafted with care, intellect, and emotion, 
+      fluttering like seeds in the wind — resonating with every reader in a different way.
+    </p>
+  </div>
+
+  <!-- Floating Dandelions -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+    <div class="dandelion-fall" style="left: 2%; animation-duration: 14s, 5s;"></div>
+    <div class="dandelion-fall" style="left: 8%; animation-duration: 18s, 6s;"></div>
+    <div class="dandelion-fall" style="left: 14%; animation-duration: 22s, 4.5s;"></div>
+    <div class="dandelion-fall" style="left: 21%; animation-duration: 20s, 6.5s;"></div>
+    <div class="dandelion-fall" style="left: 30%; animation-duration: 17s, 5s;"></div>
+    <div class="dandelion-fall" style="left: 38%; animation-duration: 24s, 7s;"></div>
+    <div class="dandelion-fall" style="left: 47%; animation-duration: 19s, 6s;"></div>
+    <div class="dandelion-fall" style="left: 56%; animation-duration: 23s, 5.5s;"></div>
+    <div class="dandelion-fall" style="left: 65%; animation-duration: 26s, 4.8s;"></div>
+    <div class="dandelion-fall" style="left: 74%; animation-duration: 21s, 6.2s;"></div>
+    <div class="dandelion-fall" style="left: 83%; animation-duration: 25s, 7s;"></div>
+    <div class="dandelion-fall" style="left: 92%; animation-duration: 16s, 5.8s;"></div>
+  </div>
+</section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-6.pdf" target="_blank">
+        <img src="dandelion/images/issue_6.png" alt="Dandelion Issue 6 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 6</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-5.pdf" target="_blank">
+        <img src="dandelion/images/issue_5.png" alt="Dandelion Issue 5 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 5</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-4.pdf" target="_blank">
+        <img src="dandelion/images/issue_4.png" alt="Dandelion Issue 4 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 4</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-3.pdf" target="_blank">
+        <img src="dandelion/images/issue_3.png" alt="Dandelion Issue 3 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 3</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-2.pdf" target="_blank">
+        <img src="dandelion/images/issue_2.png" alt="Dandelion Issue 2 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 2</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <div class="group relative inline-block">
+      <a href="dandelion/pdf/dandelion-issue-1.pdf" target="_blank">
+        <img src="dandelion/images/issue_1.png" alt="Dandelion Issue 1 Cover" class="mx-auto rounded-lg shadow-lg w-full max-w-xl hover:scale-105 transition-transform duration-300" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center rounded-lg transition duration-300">
+          <span class="hover-overlay-text text-white text-3xl font-semibold">Dandelion Issue 1</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+  </script>
+</body>
+</html>

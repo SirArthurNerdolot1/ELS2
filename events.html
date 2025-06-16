@@ -10,7 +10,7 @@
   <style>
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #F0D8B6; /* fallback light warm color */
+      background-color: #fef9f4; /* fallback light warm color */
       background-image: url('paper-texture-wide.png');
       background-repeat: repeat-x;   /* repeat horizontally like wide paper */
       background-position: top center;
@@ -30,43 +30,65 @@
   </style>
 </head>
 <body>
-
   <!-- Header -->
-  <header class="mb-16 flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-down">
-    <h1 class="text-4xl font-bold tracking-wide">English Literary Society</h1>
-    <nav class="mt-6 md:mt-0 space-x-8 text-lg font-light uppercase tracking-widest">
-      <a href="index.html" class="hover:text-gray-700">Home</a>
-      <a href="about.html" class="hover:text-gray-700">About</a>
-      <a href="events.html" class="hover:text-gray-700">Events</a>
-      <a href="blog.html" class="hover:text-gray-700">Blog</a>
-      <a href="contact.html" class="hover:text-gray-700">Contact</a>
-    </nav>
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between items-center py-4 px-6">
+      <h2 class="text-2xl font-bold tracking-wide">English Literary Society IIT Kanpur</h2>
+      <nav class="mt-4 md:mt-0 space-x-6 text-sm uppercase font-light tracking-widest">
+        <a href="index.html" class="hover:text-gray-700">Home</a>
+        <a href="about.html" class="hover:text-gray-700">About</a>
+        <a href="events.html" class="hover:text-gray-700">Events</a>
+        <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <a href="blog.html" class="hover:text-gray-700">Blog</a>
+        <a href="contact.html" class="hover:text-gray-700">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Events List -->
-  <main class="max-w-4xl mx-auto px-6 mb-24" data-aos="fade-up">
-    <h2 class="text-4xl font-semibold mb-8 border-b-2 border-gray-300 pb-2">Upcoming Events</h2>
-    <ul class="list-disc list-inside space-y-4 text-gray-700">
-      <li>
-        <h3 class="text-2xl font-semibold">Poetry Reading Night</h3>
-        <p>Date: June 15, 2025</p>
-        <p>Join us for an evening of poetry readings by students and guest poets.</p>
-      </li>
-      <li>
-        <h3 class="text-2xl font-semibold">Creative Writing Workshop</h3>
-        <p>Date: July 10, 2025</p>
-        <p>A hands-on workshop focused on developing your creative writing skills.</p>
-      </li>
-      <li>
-        <h3 class="text-2xl font-semibold">Annual Literary Fest</h3>
-        <p>Date: August 20, 2025</p>
-        <p>Celebrate literature with competitions, performances, and guest lectures.</p>
-      </li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <h1 class="text-5xl md:text-6xl font-bold italic mb-6">Events</h1>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+      A showcase of the literary spirit at IIT Kanpur — from poetic nights and writing workshops to full-fledged fests. Step in.
+    </p>
+  </section>
+
+  <!-- Events Grid -->
+  <main class="max-w-6xl mx-auto px-6 pb-24" data-aos="fade-up">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      
+      <!-- Event Card -->
+      <div class="bg-white/90 backdrop-blur-lg rounded-xl border border-gray-200 p-6 shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Poetry Reading Night</h3>
+        <p class="text-sm uppercase tracking-wide text-gray-600 mb-3">June 15, 2025</p>
+        <p class="text-gray-700 leading-relaxed">
+          Join us for an intimate evening of poetry readings by students and guest poets. Let the words linger.
+        </p>
+      </div>
+
+      <!-- Event Card -->
+      <div class="bg-white/90 backdrop-blur-lg rounded-xl border border-gray-200 p-6 shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Creative Writing Workshop</h3>
+        <p class="text-sm uppercase tracking-wide text-gray-600 mb-3">July 10, 2025</p>
+        <p class="text-gray-700 leading-relaxed">
+          A hands-on workshop to explore your voice and refine your craft across fiction, poetry, and beyond.
+        </p>
+      </div>
+
+      <!-- Event Card -->
+      <div class="bg-white/90 backdrop-blur-lg rounded-xl border border-gray-200 p-6 shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-2xl font-semibold mb-2">Annual Literary Fest</h3>
+        <p class="text-sm uppercase tracking-wide text-gray-600 mb-3">August 20, 2025</p>
+        <p class="text-gray-700 leading-relaxed">
+          A celebration of stories and expression—featuring competitions, guest speakers, and artistic performances.
+        </p>
+      </div>
+
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="mt-32 text-center text-gray-500 text-sm max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up" data-aos-delay="500">
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
     &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
   </footer>
 
@@ -79,4 +101,3 @@
     });
   </script>
 </body>
-</html>
