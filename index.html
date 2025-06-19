@@ -213,6 +213,8 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   </head>
   <body>
     <!-- Hero Fullscreen Title -->
@@ -230,13 +232,13 @@
         <img
           src="images/quill.png"
           class="hero-float"
-          style="top: 15%; left: 20%;"
+          style="top: 1%; left: 1%;"
           alt="Quill"
         />
         <img
           src="images/scrabble.png"
           class="hero-float"
-          style="top: 30%; left: 58%; width: 300px;"
+          style="top: 29%; left: 58%; width: 200px;"
           alt="Scrabble"
         />
         <img
@@ -248,13 +250,13 @@
         <img
           src="images/JAM.png"
           class="hero-float"
-          style="top: 70%; left: 75%;"
+          style="top: 70%; left: 70%;"
           alt="JAM"
         />
         <img
           src="images/drama.png"
           class="hero-float"
-          style="top: 15%; left: 75%;"
+          style="top: 17%; left: 60%;"
           alt="Drama"
         />
         <img
@@ -278,7 +280,7 @@
         <img
           src="images/edgar.png"
           class="hero-float"
-          style="top: 80%; left: 10%;"
+          style="top: 20%; left: 10%;"
           alt="Edgar"
         />
       </div>
@@ -298,28 +300,74 @@
       <img src="images/edgar.png" class="floating-item" style="top: 85%; left: 12%; width: 90px;" alt="Edgar" />
     </div>
 
-    <!-- Sticky Navigation Bar -->
-    <header
-      class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200"
-    >
-      <div
-        class="flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto px-6 py-4"
-      >
-        <h2 id="navbar-title" class="text-2xl font-bold tracking-wide hidden md:block">
-          English Literary Society IIT Kanpur
-        </h2>
-        <nav
-          class="mt-2 md:mt-0 space-x-6 text-sm md:text-base font-light uppercase tracking-widest"
-        >
-          <a href="index.html" class="hover:text-gray-700">Home</a>
-          <a href="about.html" class="hover:text-gray-700">About</a>
-          <a href="events.html" class="hover:text-gray-700">Events</a>
-          <a href="blog.html" class="hover:text-gray-700">Blog</a>
-           <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
-          <a href="contact.html" class="hover:text-gray-700">Contact</a>
-        </nav>
-      </div>
-    </header>
+<!-- Sticky Navigation Bar -->
+<header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo + Title -->
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+      </a>
+      <h2 id="navbar-title" class="text-xl sm:text-2xl font-bold tracking-wide hidden md:block">
+        English Literary Society IIT Kanpur
+      </h2>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+      <a href="index.html" class="hover:text-gray-700">Home</a>
+      <a href="about.html" class="hover:text-gray-700">About</a>
+      <a href="events.html" class="hover:text-gray-700">Events</a>
+      <a href="blog.html" class="hover:text-gray-700">Blog</a>
+      <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      <a href="contact.html" class="hover:text-gray-700">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Slide-Down Mobile Nav -->
+  <nav id="mobile-menu"
+       class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+    <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+    <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
+    <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+    <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+    <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+    <a href="contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>
+  </nav>
+</header>
+
+
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
+
+
+
 
     <!-- About Section -->
     <section class="spacious-section" data-aos="fade-up">
@@ -352,7 +400,7 @@
     <div class="swiper eventsSwiper">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
-        <a href="events/poetry-week.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+        <a href="events/poetry_week/poetry_week.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
           <img src="images/Poetry_week.png" alt="Poetry Week" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
           <h3 class="text-xl font-semibold">Poetry Week</h3>
           <p class="text-sm">ELS is bringing you 10 days of poetic magic with Poetry Week.</p>
@@ -389,63 +437,80 @@
 
 
 <!-- Blog Section -->
-<section class="py-12 bg-gray-50" data-aos="fade-up">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="mb-8 text-2xl font-bold text-center">Latest Blogs</h2>
+<section class="spacious-section" data-aos="fade-up">
+  <div class="content-box">
+    <h2 class="mb-6">Latest Blogs</h2>
 
     <!-- Swiper Container -->
-    <div class="swiper blogsSwiper">
+    <div class="swiper eventsSwiper">
       <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <a href="blogs/The_Substance.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/The_Substance.png" alt="The Substance" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">The Substance</h3>
+          <p class="text-sm">by Soumadittya Chandra · May 2025</p>
+          <p class="text-sm mt-1">
+            A review of Coralie Fargeat’s body-horror film dissecting beauty, identity, and society’s obsession with youth.</p>
+        </a>
 
-        <!-- Blog 1 -->
-        <div class="swiper-slide">
-          <a href="blogs/The_Substance.html" class="block rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden bg-white">
-            <img src="images/blogs/The_Substance.png" alt="The Substance" class="w-full h-48 object-cover" />
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">The Substance</h3>
-              <p class="text-sm text-gray-600 mt-2">A look at how contemporary voices are redefining traditional poetic forms.</p>
-            </div>
-          </a>
-        </div>
+        <!-- Slide 2 -->
+        <a href="blogs/we_live_in_a_time.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/we_live_in_time.png" alt="We Live in time" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">We Live in Time</h3>
+          <p class="text-sm">by Sritama Sarkar · March 3,2025</p>
+          <p class="text-sm mt-1">
+            A melancholic exploration of memory, time, and tenderness through cinema.
+          </p>
+        </a>
+        <a href="blogs/waiting_for_the_letter_of_her_love.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="waiting_for_the_letter_of_her_love" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">Waiting For The Letter of her Love</h3>
+          <p class="text-sm">by Shivam Tyagi · October 25, 2024</p>
+          <p class="text-sm mt-1">
+            A poem dedicated to the wait for his love to confess her love to him.
+          </p>
+        </a>
+        <a href="blogs/Spirit_of_the_oak_tree.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit_of_the_oak_tree" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">Spirit of the Oak Tree</h3>
+          <p class="text-sm">by Satyaki Banerjee · 25 October 2024</p>
+          <p class="text-sm mt-1">
+            A spiritually introspective piece composed in a unique numerological constraint—27 lines of exactly 27 letters Each
+          </p>
+        </a>
+        <a href="blogs/Infatuation.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/Infatuation.png" alt="Infatuation" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">Infatuation</h3>
+          <p class="text-sm">by Kajori · October 25, 2024</p>
+          <p class="text-sm mt-1">
+            A dark wizard, exiled in a void for a century, rediscovers hope, love, and purpose upon realizing a girl from the real world is reading his story—and may be the one his dying mother foresaw.
+          </p>
+        </a>
+        <a href="blogs/Prisoners_of_Fate.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="images/blogs/Prisoners_of_Fate.png" alt="Prisoners_of_Fate" class="w-full h-64 object-cover rounded-xl shadow mb-4" />
+          <h3 class="text-xl font-semibold">Prisoner of Fate</h3>
+          <p class="text-sm">by Aditya V · October 12, 2024</p>
+          <p class="text-sm mt-1">
+            A dark wizard, exiled in a void for a century, rediscovers hope, love, and purpose upon realizing a girl from the real world is reading his story—and may be the one his dying mother foresaw.
+          </p>
+        </a>
 
-        <!-- Blog 2 -->
-        <div class="swiper-slide">
-          <a href="blogs/blog2.html" class="block rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden bg-white">
-            <img src="images/blog2-thumb.jpg" alt="Blog 2" class="w-full h-48 object-cover" />
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">Storytelling Through Flash Fiction</h3>
-              <p class="text-sm text-gray-600 mt-2">Tiny tales with big emotions — how to write stories in under 300 words.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Blog 3 -->
-        <div class="swiper-slide">
-          <a href="blogs/blog3.html" class="block rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden bg-white">
-            <img src="images/blog3-thumb.jpg" alt="Blog 3" class="w-full h-48 object-cover" />
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">The Power of Literary Critique</h3>
-              <p class="text-sm text-gray-600 mt-2">How dissecting great works sharpens your own creative expression.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Add more blog slides as needed -->
+        <!-- Add more slides as needed -->
       </div>
 
-      <!-- Navigation & Pagination -->
-      <div class="swiper-button-next text-gray-700"></div>
-      <div class="swiper-button-prev text-gray-700"></div>
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-next text-gray-800"></div>
+      <div class="swiper-button-prev text-gray-800"></div>
+      <!-- Optional pagination -->
       <div class="swiper-pagination mt-4"></div>
     </div>
 
-    <div class="text-center mt-8">
-      <a href="blog.html" class="text-blue-600 hover:underline font-medium">
-        View all blog posts →
-      </a>
-    </div>
+    <a href="blog.html" class="text-blue-600 hover:underline mt-6 inline-block">
+      View all blogs →
+    </a>
   </div>
 </section>
+
 
 
 
@@ -519,6 +584,33 @@
         clickable: true,
       },
     });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const blogSwiper = new Swiper(".blogsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1.2,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
   });
 </script>
 
