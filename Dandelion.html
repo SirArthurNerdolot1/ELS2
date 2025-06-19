@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="images/logo-bg.png" type="image/png" />
   <title>Dandelion | ELS IIT Kanpur</title>
   <!-- Fonts & Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -43,6 +44,25 @@
   0% { transform: translateY(-100px) rotate(0deg); }
   100% { transform: translateY(100vh) rotate(360deg); }
 }
+.floating-dandelion {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('dandelion_seed.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  25%  { transform: translateY(-10px) translateX(5px) rotate(5deg); }
+  50%  { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  75%  { transform: translateY(-8px) translateX(-5px) rotate(-5deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+}
+
   </style>
 </head>
 <body>
@@ -140,6 +160,8 @@
     <div class="dandelion-fall" style="left: 74%; animation-duration: 21s, 6.2s;"></div>
     <div class="dandelion-fall" style="left: 83%; animation-duration: 25s, 7s;"></div>
     <div class="dandelion-fall" style="left: 92%; animation-duration: 16s, 5.8s;"></div>
+  
+
   </div>
 </section>
   <section class="max-w-4xl mx-auto px-4 py-20 text-center">
