@@ -10,12 +10,12 @@
   <style>
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #fef9f4; /* fallback light warm color */
+      background-color: #fef9f4;
       background-image: url('paper-texture-wide.png');
-      background-repeat: repeat-x;   /* repeat horizontally like wide paper */
+      background-repeat: repeat-x;
       background-position: top center;
-      background-attachment: fixed;  /* keep background fixed when scrolling */
-      background-size: auto;         /* use actual image size, or adjust below */
+      background-attachment: fixed;
+      background-size: auto;
       color: #111;
       scroll-behavior: smooth;
     }
@@ -30,11 +30,23 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Navigation Header -->
   <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
-    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between items-center py-4 px-6">
-      <h2 class="text-2xl font-bold tracking-wide">English Literary Society IIT Kanpur</h2>
-      <nav class="mt-4 md:mt-0 space-x-6 text-sm uppercase font-light tracking-widest">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        </a>
+        <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
+
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
         <a href="index.html" class="hover:text-gray-700">Home</a>
         <a href="about.html" class="hover:text-gray-700">About</a>
         <a href="events.html" class="hover:text-gray-700">Events</a>
@@ -42,63 +54,80 @@
         <a href="blog.html" class="hover:text-gray-700">Blog</a>
         <a href="contact.html" class="hover:text-gray-700">Contact</a>
       </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
+
+    <!-- Slide-Down Mobile Nav -->
+    <nav id="mobile-menu"
+         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+      <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+      <a href="contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="text-center py-20 bg-[#fef9f4]" data-aos="fade-down">
-  <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Gatherings</h1>
-  <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-    A celebration of stories, voices, and literary camaraderie — through events that unite us in thought and expression.
-  </p>
-</section>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Gatherings</h1>
+    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+      A celebration of stories, voices, and literary camaraderie — through events that unite us in thought and expression.
+    </p>
+  </section>
 
   <!-- Events Grid -->
   <main class="max-w-6xl mx-auto px-6 pb-24" data-aos="fade-up">
-    <!-- Events Section -->
-<section class="max-w-6xl mx-auto px-6 py-20" data-aos="fade-up">
-  <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-    
-    <!-- Event Card 1 -->
-    <a href="events/poetry_week/poetry_week.html" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-  <div class="h-48 bg-gray-200 overflow-hidden">
-    <img src="events/poetry_week/poster.png" alt="Poetry Reading Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-  </div>
-  <div class="bg-white p-6">
-    <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Poetry Reading Night</h3>
-    <p class="text-sm text-gray-600 mb-1">Date: June 15, 2025</p>
-    <p class="text-gray-700">A week of soul-stirring poetry shared by students of IIT Kanpur.</p>
-  </div>
-</a>
+    <section class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 
+        <!-- Event Card 1 -->
+        <a href="events/poetry_week/poetry_week.html" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gray-200 overflow-hidden">
+            <img src="events/poetry_week/poster.png" alt="Poetry Reading Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Poetry Reading Night</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: June 15, 2025</p>
+            <p class="text-gray-700">A week of soul-stirring poetry shared by students of IIT Kanpur.</p>
+          </div>
+        </a>
 
-    <!-- Event Card 2 -->
-    <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div class="h-48 bg-gray-200 flex items-center justify-center">
-        <span class="text-gray-500 text-sm">Image Placeholder</span>
+        <!-- Event Card 2 -->
+        <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gray-200 flex items-center justify-center">
+            <span class="text-gray-500 text-sm">Image Placeholder</span>
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Creative Writing Workshop</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: July 10, 2025</p>
+            <p class="text-gray-700">A hands-on session to hone storytelling and unleash creative expression.</p>
+          </div>
+        </a>
+
+        <!-- Event Card 3 -->
+        <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48 bg-gray-200 flex items-center justify-center">
+            <span class="text-gray-500 text-sm">Image Placeholder</span>
+          </div>
+          <div class="bg-white p-6">
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Annual Literary Fest</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: August 20, 2025</p>
+            <p class="text-gray-700">A grand celebration with competitions, performances, and literary showcases.</p>
+          </div>
+        </a>
+
       </div>
-      <div class="bg-white p-6">
-        <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Creative Writing Workshop</h3>
-        <p class="text-sm text-gray-600 mb-1">Date: July 10, 2025</p>
-        <p class="text-gray-700">A hands-on session to hone storytelling and unleash creative expression.</p>
-      </div>
-    </a>
-
-    <!-- Event Card 3 -->
-    <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div class="h-48 bg-gray-200 flex items-center justify-center">
-        <span class="text-gray-500 text-sm">Image Placeholder</span>
-      </div>
-      <div class="bg-white p-6">
-        <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Annual Literary Fest</h3>
-        <p class="text-sm text-gray-600 mb-1">Date: August 20, 2025</p>
-        <p class="text-gray-700">A grand celebration with competitions, performances, and literary showcases.</p>
-      </div>
-    </a>
-
-  </div>
-</section>
-
+    </section>
   </main>
 
   <!-- Footer -->
@@ -106,12 +135,26 @@
     &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    // Hamburger Toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
     });
   </script>
 </body>
+</html>

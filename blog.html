@@ -36,19 +36,69 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Navigation Bar -->
+<!-- Navigation Header -->
   <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto px-6 py-4">
-      <h2 class="text-2xl font-bold tracking-wide hidden md:block">English Literary Society IIT Kanpur</h2>
-      <nav class="mt-2 md:mt-0 space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        </a>
+        <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
+
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
         <a href="index.html" class="hover:text-gray-700">Home</a>
         <a href="about.html" class="hover:text-gray-700">About</a>
         <a href="events.html" class="hover:text-gray-700">Events</a>
-        <a href="blog.html" class="hover:text-gray-700 font-semibold underline">Blog</a>
+        <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <a href="blog.html" class="hover:text-gray-700">Blog</a>
         <a href="contact.html" class="hover:text-gray-700">Contact</a>
       </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
+
+    <!-- Slide-Down Mobile Nav -->
+    <nav id="mobile-menu"
+         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+      <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+      <a href="contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>
+    </nav>
   </header>
+  <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
+
 
   <!-- Blog Hero Section -->
   <section class="text-center py-20 bg-[#fef9f4]" data-aos="fade-down">
@@ -63,14 +113,6 @@
       <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Poem">Poem</button>
       <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Review">Review</button>
       <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Article">Article</button>
-    </div>
-    <div class="flex gap-4 mt-4 md:mt-0">
-      <select class="px-4 py-2 rounded-full border border-gray-300 text-sm">
-      <option value="Latest">Sort by: Latest</option>
-      <option value="Oldest">Oldest</option>
-      <option value="Alphabetical">Alphabetical</option>
-    </select>
-      <input type="text" placeholder="Search blog..." class="px-4 py-2 border border-gray-300 rounded-full text-sm" />
     </div>
   </section>
 
@@ -146,7 +188,7 @@
         </a>
       </div>
       <!-- Seventh Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
         <a href="blogs/A_little_life_by_Hanya_Yanagihara.html">
           <img src="images/blogs/A_little_life_by_Hanya_Yanagihara/Hero.png" alt="A little life by Hanya Yanagihara" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
@@ -157,7 +199,7 @@
         </a>
       </div>
       <!-- Eighth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
         <a href="blogs/Sex_Education_Season_1.html">
           <img src="images/blogs/Sex_Education.png" alt="Sex Education" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
@@ -169,8 +211,8 @@
       </div> 
       <!-- Ninth Blog -->
        <!-- Eighth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
-        <a href="blogs/Sex_Education_Season_1.html">
+      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+        <a href="blogs/Gone_with_the_wind.html">
           <img src="images/blogs/Gone_with_the_wind.png" alt="Gone With The Wind" class="blog-img group-hover:opacity-70 transition" />
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Book Review: Gone With The Wind</h3>

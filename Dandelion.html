@@ -46,20 +46,71 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Navigation -->
-  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
-    <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row md:justify-between items-center py-4 px-6">
-      <h2 class="text-2xl font-bold tracking-wide">English Literary Society IIT Kanpur</h2>
-      <nav class="mt-4 md:mt-0 space-x-6 text-sm uppercase font-light tracking-widest">
-        <a href="index.html" class="hover:text-gray-700">Home</a>
-        <a href="about.html" class="hover:text-gray-700">About</a>
-        <a href="events.html" class="hover:text-gray-700">Events</a>
-        <a href="blog.html" class="hover:text-gray-700">Blog</a>
-        <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
-        <a href="contact.html" class="hover:text-gray-700">Contact</a>
-      </nav>
+<!-- Sticky Navigation Bar -->
+<header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo + Title -->
+    <div class="flex items-center space-x-3">
+      <a href="index.html">
+        <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+      </a>
+      <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
     </div>
-  </header>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+      <a href="index.html" class="hover:text-gray-700">Home</a>
+      <a href="about.html" class="hover:text-gray-700">About</a>
+      <a href="events.html" class="hover:text-gray-700">Events</a>
+      <a href="blog.html" class="hover:text-gray-700">Blog</a>
+      <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      <a href="contact.html" class="hover:text-gray-700">Contact</a>
+    </nav>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Slide-Down Mobile Nav -->
+  <nav id="mobile-menu"
+       class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+    <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+    <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
+    <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+    <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+    <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+    <a href="contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>
+  </nav>
+</header>
+
+
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
 
   <!-- Dandelion Cover Section -->
   <section class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
