@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>We Live in Time | ELS IIT Kanpur</title>
+    <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+    <!-- Fonts & Tailwind -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fef9f4;
+            background-image: url('../paper-texture-wide.png');
+            background-repeat: repeat-x;
+            background-position: top center;
+            background-attachment: fixed;
+            background-size: auto;
+            color: #111;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo + Title -->
+            <div class="flex items-center space-x-3">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+                </a>
+                <h2 id="navbar-title"
+                    class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+                    English Literary Society IIT Kanpur
+                </h2>
+
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+                <a href="../index.html" class="hover:text-gray-700">Home</a>
+                <a href="../about.html" class="hover:text-gray-700">About</a>
+                <a href="../events.html" class="hover:text-gray-700">Events</a>
+
+                <a href="../blog.html" class="hover:text-gray-700">Blog</a>
+                <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+                <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
+            </nav>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Slide-Down Mobile Nav -->
+        <nav id="mobile-menu"
+            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+            <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+            <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+            <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+
+            <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+            <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+            <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
+        </nav>
+    </header>
+    <script>
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let isOpen = false;
+        toggleBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isOpen = false;
+                mobileMenu.style.maxHeight = "0px";
+            });
+        });
+    </script>
+
+
+
+    <!-- Hero Section with animations, blurred background, and image shadow -->
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+        <!-- Blurred Background -->
+        <div class="absolute inset-0 z-0">
+            <img src="../images/blogs/Culpability_Of_The_Thaumaturge/Hero.png" alt="Blurred Background"
+                class="w-full h-full object-cover blur-2xl scale-125 opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
+        </div>
+
+        <!-- Foreground Image and Text -->
+        <div class="relative z-10 flex flex-col items-center justifyF-center px-4">
+            <!-- Animated Image -->
+            <img src="../images/blogs/Culpability_Of_The_Thaumaturge/Hero.png" alt="Culpability Of The Thaumaturge"
+                class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up" />
+
+            <!-- Animated Text -->
+            <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Culpability Of The Thaumaturge</h1>
+                <p class="text-sm md:text-base text-gray-700">by Parikshit Tomar · October 9, 2021</p>
+            </div>
+        </div>
+
+        <!-- Optional Scroll Down Indicator -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+            <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+        </div>
+    </section>
+
+
+
+    <!-- Blog Body -->
+    <main class="max-w-3xl mx-auto px-6 py-19" data-aos="fade-up">
+        <div class="prose max-w-none text-lg leading-relaxed text-gray-900 prose-p:mb-4">
+            <br><p><strong>Thaumaturge : A worker of wonders and performer of miracle.</strong></p>
+            <br><p>The sun slowly crept up the hillside as the last dredges of the night faded away and the smell of early
+                morning dew prevailed the dingy halls of Kaiser Wilhelm Institute.</p>
+            <br><p>The Assistant walked briskly through the early morning crowd. His attention focused on arranging the
+                loose sheets of documents in his hands which earned him contemptuous looks from the group of students
+                for disturbing the overall tranquility of a quiet morning. He held in his hands a stack of papers, and
+                peeking out from the middle of the pile was the morning daily with the headline “Werner Heisenberg: The
+                Columbus of quantum mechanics” faintly visible over a circular shaped coffee stain on the photograph of
+                Heisenberg, his boyishly handsome face smiling at the camera and his piercing blue eyes gazing distantly
+                as if thinking about a secret only he knew.</p>
+            <br><p>As the Assistant reached the stairs, he stopped for a moment and wiped the sheen of sweat that had formed
+                on his brow. As he climbed the stairs to his intended destination, he prepared what he had to speak
+                beforehand to the Director. Albert Einstein was known to be prone to…outbursts at times. His genius was
+                undeniable, but his temper was also infamous.<br>“Herr Director, I have been requested by the
+                board…Agh…Nein, Herr Director, I am sure you have heard of Werner Heisenberg…” Mumbling to himself, he
+                walked up to the engraved door, waited for a moment to gather his thoughts and then knocked.</p>
+            <br><p>“Enter,” said a deep calm voice. Upon entering the room, the Assistant was greeted by the sight of the
+                Director, deep in thought, writing on his chalkboard.</p>
+            <br><p>“Sit, Jurgen”, Einstein said, and the Assistant sat upon the chair offered. “Herr Director, I have been
+                requested…….”. “No”. “….sorry, director?” I said no, I will not be endorsing Heisenberg’s….principle.”
+                “But director..why?” said the assistant flustered.<br>“Why? I thought it was self-evident, Jurgen
+                because it is wrong,” Einstein said and went about writing on the chalkboard.</p>
+            <figure class="flex justify-center my-8">
+                <a href="../images/blogs/Culpability_Of_The_Thaumaturge/image1.png">
+                    <img src="../images/blogs/Culpability_Of_The_Thaumaturge/image1.png" alt="rimages" class="rounded-xl shadow-md"
+                        style="width: 469px; height: auto;" />
+                </a>
+            </figure>
+            <br><p>The Assistant was flummoxed and, for a moment, sat in silence wondering what to say next. The room was
+                silent but for the Director’s chalk tapping on the chalkboard. After a few seconds, the Assistant said,
+                “But how Director. Heisenberg’s principle is a hallmark achievement in science, its maths is
+                irrefutable, and its implications..are ineffable.” For a moment, Einstein said nothing, and the
+                Assistant was going to try again when Einstein stopped writing on the chalkboard, kept the sheets of
+                paper he had in his hands on the table, looked at Jurgen right in the eyes and said very slowly.</p>
+            <br><p>“Ineffable, you say.”</p>
+            <br><p>“The only efficacy that principle has is that of a party trick. You can’t possibly know the position and
+                the momentum of an electron at the same time. Honestly, Jurgen, don’t tell me you have given in to the
+                rhetoric of journalists. A man of science accepting a theory as fallacious as this, it is outrageous
+                really.” Jurgen sat silently for a moment, thinking about what he was going to say next. He had to
+                convince the Director, the board had entrusted him with the task, and he could not fail. Succeeding in
+                this might mean an approval of his thesis or maybe even a professorship, and so he tried again.</p>
+            <br><p>“Director Heisenberg’s theory has successfully disproved the Bohr model of atom, and Bohr himself has
+                accepted the flaws in his model. In fact, Bohr has been defending the principle rather fervently in the
+                Oxford circuit. The proof is sound, and better still, it does not make any assumptions. Surely you don’t
+                mean to discredit such a momentous theory as a party trick. Only the other day, Professor Lindengard was
+                telling me how wide the implications are not just scientifically but mathematically as well…”<br>“THE
+                MATH IS NOTHING, THE PROOF IS JUST A MATHEMATICAL TRICK NOTHING ELSE. This principle of yours goes
+                against the fundamental tenets of science. It is an attack on everything we hold dear in the scientific
+                community. Do you not see, if this monstrosity lasts, we will lose everything we hold dear.”</p>
+            <br><p>The Assistant looked stunned at the sudden display of emotion. Einstein was standing up to his full
+                height now. Pure emotion showed in his watery eyes, which were beginning to tear up. His hand was
+                quivering, and the chalk he had been holding had fallen to the floor and had been neatly broken in two.
+                The Director paused for a moment, took a deep breath and then said,</p>
+            <br><p>“As a kid, I was an inquisitive child. We all were. That’s why we are where we are today. I wanted to
+                know everything about the world, everything from my mother’s wardrobe to why the sky was blue. Once my
+                father took me to a gipsy carnival where a great Thaumaturge was coming. He was a performer of miracles.
+                It was said he could levitate objects into the air. I remember being in sheer awe of the marvel.
+                Everyone in our town went to see him. As I watched the miracle unfold before my very eyes, I saw a man
+                in the crowd smile at the Conjurer and then, laughing gently to himself, went away. I wondered what
+                could have possibly caused the man to laugh at such a miraculous feat. So I followed him and asked him
+                just that. He started laughing heartily at my question, and then after ruffling my hair, he said, “Oh my
+                child, you do not see, it is a magnet, nothing more, nothing less. Your Thaumaturge is an intelligent
+                man, but he is not the true magician here. The real magic is the science behind his incredible feat.
+                That is the real miracle.”</p>
+            <br><p>“I did not sleep that night. Naturally, I wanted to be a magician as well. So I embarked on a journey
+                into the scientific world, and I have never stopped since. So you see, why I am a scientist today?
+                Because a scientist is a true Thaumaturge, a performer of wonders. I want to uncover every secret that
+                the universe holds, to know why the world is the way it is. And the only way to do that is through
+                science, the omnipotent, the omnipresent and the omniscient.”<br>Einstein turned away from Jurgen and
+                went up to the window in his room and looked at the bright morning outside.</p>
+            <br><p>“My entire life,” he said in a low voice. “Has been built around this one idea, that science knows all,
+                that I, given the right tools, can uncover the secrets of the universe, that there is a fundamental
+                clockwork to things and all can be revealed. And now Heisenberg tells me that I cannot know the position
+                and momentum of an electron simultaneously.”</p>
+            <br><p>This is not meant as an experimental challenge, rather a challenge to all of science, because Heisenberg
+                says that Science does not want you to know. This statement in and of itself is a paradox because how
+                can science not know such a trivial thing. Can it really be that my life has been built around a lie,
+                that our world is indeed random, and there is no way to really know all the secrets of the universe?”
+            </p>
+            <br><p>“Is the Thaumaturge’s wonder just a fatal trick? Does science …..really not have all the answers? Tell me
+                that I am wrong, that this principle does not encroach upon the ideals that have shaped our human
+                existence in the past century. That Heisenberg does not attack our very core as a species. Tell me,
+                Jurgen, answer these questions for me, and I will gladly endorse this principle of yours.”</p>
+            <br><p>The Assistant sat in stunned silence. He lowered his eyes. He could not answers the Directors questions.
+                He stared at the hard ground and wondered if the Director was right. As the silence stretched out,
+                Jurgen stood up from the chair, “Auf Wiedersehen Herr Director” and stepped out of the room Einstein
+                took a deep breath and went to work, his chalk lightly tapping away at the board as a cool breeze blew
+                through the room from the open window ruffling his short hair.</p>
+            <figure class="flex justify-center my-8">
+                <a href="../images/blogs/Culpability_Of_The_Thaumaturge/image2.png">
+                    <img src="../images/blogs/Culpability_Of_The_Thaumaturge/image2.png" alt="rimages" class="rounded-xl shadow-md"
+                        style="width: 469px; height: auto;" />
+                </a>
+            </figure>
+            <br><ul class="wp-block-list">
+                <li><em>In December 1927, Heisenberg published his Uncertainty Principle.</em><em></em></li>
+            </ul>
+            <br><ul class="wp-block-list">
+                <li><em>In 1955 Albert Einstein would succumb to aortic aneurysm, till his dying day he would not accept
+                        the uncertainty principle.</em></li>
+            </ul>
+            <br><hr class="wp-block-separator is-style-dots">
+<ul class="wp-block-list">
+                <li><em>In 1996, 3 German scientists would prove the Heisenberg Uncertainty principle
+                        irrefutably…correct</em></li>
+            </ul>
+            </div>
+
+        <!-- Back Button -->
+        <div class="mt-12 text-center">
+            <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+                ← Back to all blog posts
+            </a>
+        </div>
+    </main>
+
+    <!-- AOS Init -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

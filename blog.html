@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog | English Literary Society IIT Kanpur</title>
   <link rel="icon" href="images/logo-bg.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -20,24 +22,30 @@
       color: #111;
       scroll-behavior: smooth;
     }
-    nav a:hover, h3:hover {
+
+    nav a:hover,
+    h3:hover {
       text-decoration-thickness: 2px;
       transition: text-decoration-thickness 0.3s ease;
     }
+
     button:hover {
       transform: scale(1.05);
       transition: transform 0.3s ease;
     }
+
     .blog-img {
       width: 100%;
       height: 300px;
       object-fit: cover;
-      background-color: #f3f4f6; /* Placeholder bg */
+      background-color: #f3f4f6;
+      /* Placeholder bg */
     }
   </style>
 </head>
+
 <body>
-<!-- Navigation Header -->
+  <!-- Navigation Header -->
   <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo + Title -->
@@ -46,8 +54,8 @@
           <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
         </a>
         <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
-  English Literary Society IIT Kanpur
-</h2>
+          English Literary Society IIT Kanpur
+        </h2>
 
       </div>
 
@@ -56,66 +64,70 @@
         <a href="index.html" class="hover:text-gray-700">Home</a>
         <a href="about.html" class="hover:text-gray-700">About</a>
         <a href="events.html" class="hover:text-gray-700">Events</a>
-        
+
         <a href="blog.html" class="hover:text-gray-700">Blog</a>
         <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
-       <!--- <a href="contact.html" class="hover:text-gray-700">Contact</a>-->
+        <!--- <a href="contact.html" class="hover:text-gray-700">Contact</a>-->
       </nav>
 
       <!-- Hamburger Button (Mobile) -->
       <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"></path>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
 
     <!-- Slide-Down Mobile Nav -->
     <nav id="mobile-menu"
-         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
       <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
       <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
       <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
-      
+
       <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
       <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
       <!--<a href="contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
     </nav>
   </header>
   <script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  let isOpen = false;
-  toggleBtn.addEventListener('click', () => {
-    isOpen = !isOpen;
-    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      isOpen = false;
-      mobileMenu.style.maxHeight = "0px";
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
     });
-  });
-</script>
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
 
 
   <!-- Blog Hero Section -->
   <section class="text-center py-20 bg-[#fef9f4]" data-aos="fade-down">
     <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Reflections</h1>
-    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">A window into words that move, provoke, and inspire—curated by the writers of ELS.</p>
+    <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">A window into words that move, provoke, and
+      inspire—curated by the writers of ELS.</p>
   </section>
 
   <!-- Filter and Search Section -->
   <section class="max-w-screen-xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
     <div class="flex gap-4 flex-wrap">
-      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="All">All</button>
-      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Poem">Poem</button>
-      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Review">Review</button>
-      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm" data-filter="Article">Article</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm"
+        data-filter="All">All</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm"
+        data-filter="Poem">Poem</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm"
+        data-filter="Review">Review</button>
+      <button class="filter-btn px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-full text-sm"
+        data-filter="Article">Article</button>
     </div>
   </section>
 
@@ -123,23 +135,32 @@
   <section class="max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="blog-grid">
       <!-- Blog cards with data-category attributes will go here -->
-                
-      <div class="group relative rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300 w-ful h-[300px] flex items-center justify-center overflow-hidden" data-category="Review">
+
+      <div
+        class="group relative rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300 w-ful h-[300px] flex items-center justify-center overflow-hidden"
+        data-category="Review">
         <a href="blogs/The_Substance.html">
-          <img src="images/blogs/The_Substance.png" alt="The Substance" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/The_Substance.png" alt="The Substance"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">The Substance</h3>
             <p class="text-base mt-1 font-medium">by Soumadittya Chandra · March 4,2025</p>
-            <p class="text-sm mt-2">A review of Coralie Fargeat’s body-horror film dissecting beauty, identity, and society’s obsession with youth.</p>
+            <p class="text-sm mt-2">A review of Coralie Fargeat’s body-horror film dissecting beauty, identity, and
+              society’s obsession with youth.</p>
           </div>
         </a>
       </div>
 
       <!-- Second Blog Card Example -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Review">
         <a href="blogs/we_live_in_a_time.html">
-          <img src="images/blogs/we_live_in_time.png" alt="We Live In Time" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/we_live_in_time.png" alt="We Live In Time"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">We Live in Time</h3>
             <p class="text-base mt-1 font-medium">by Sritama Sarkar · March 3,2025</p>
             <p class="text-sm mt-2">A melancholic exploration of memory, time, and tenderness through cinema.</p>
@@ -147,10 +168,14 @@
         </a>
       </div>
       <!-- Third Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Poem">
         <a href="blogs/waiting_for_the_letter_of_her_love.html">
-          <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="Waiting for the letter of her love" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="Waiting for the letter of her love"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Waiting For The Letter of her Love</h3>
             <p class="text-base mt-1 font-medium">by Shivam Tyagi · October 25, 2024</p>
             <p class="text-sm mt-2">A poem dedicated to the wait for his love to confess her love to him.</p>
@@ -158,112 +183,194 @@
         </a>
       </div>
       <!--Forth Blog-->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Poem">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Poem">
         <a href="blogs/Spirit_of_the_oak_tree.html">
-          <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit Of The Oak Tree" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit Of The Oak Tree"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Spirit of the Oak Tree</h3>
             <p class="text-base mt-1 font-medium">by Satyaki Banerjee · 25 October 2024</p>
-            <p class="text-sm mt-2">A spiritually introspective piece composed in a unique numerological constraint—27 lines of exactly 27 letters each—exploring the awakening of the self through a mystical encounter with a symbolic oak tree that embodies memory, divinity, and inner transformation.</p>
+            <p class="text-sm mt-2">A spiritually introspective piece composed in a unique numerological constraint—27
+              lines of exactly 27 letters each—exploring the awakening of the self through a mystical encounter with a
+              symbolic oak tree that embodies memory, divinity, and inner transformation.</p>
           </div>
         </a>
       </div>
       <!-- Fifth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Article">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
         <a href="blogs/Infatuation.html">
-          <img src="images/blogs/Infatuation.png" alt="Infatuation" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Infatuation.png" alt="Infatuation"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Infatuation</h3>
             <p class="text-base mt-1 font-medium">by Kajori · October 25, 2024</p>
-            <p class="text-sm mt-2">A dark wizard, exiled in a void for a century, rediscovers hope, love, and purpose upon realizing a girl from the real world is reading his story—and may be the one his dying mother foresaw.</p>
+            <p class="text-sm mt-2">A dark wizard, exiled in a void for a century, rediscovers hope, love, and purpose
+              upon realizing a girl from the real world is reading his story—and may be the one his dying mother
+              foresaw.</p>
           </div>
         </a>
       </div>
       <!-- Sixth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Article">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
         <a href="blogs/Prisoners_of_Fate.html">
-          <img src="images/blogs/Prisoners_of_Fate.png" alt="Prisoners_of_Fate" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Prisoners_of_Fate.png" alt="Prisoners_of_Fate"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Prisoners of Fate</h3>
             <p class="text-base mt-1 font-medium">by Aditya V · October 12, 2024</p>
-            <p class="text-sm mt-2">A haunting reflection on resignation, complicity, and the quiet despair of a man who chooses survival over freedom in the face of an unforgiving world.</p>
+            <p class="text-sm mt-2">A haunting reflection on resignation, complicity, and the quiet despair of a man who
+              chooses survival over freedom in the face of an unforgiving world.</p>
           </div>
         </a>
       </div>
       <!-- Seventh Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Review">
         <a href="blogs/A_little_life_by_Hanya_Yanagihara.html">
-          <img src="images/blogs/A_little_life_by_Hanya_Yanagihara/Hero.png" alt="A little life by Hanya Yanagihara" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/A_little_life_by_Hanya_Yanagihara/Hero.png" alt="A little life by Hanya Yanagihara"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">A little life by Hanya Yanagihara</h3>
             <p class="text-base mt-1 font-medium">by Sritama Sarkar · October 11, 2024</p>
-            <p class="text-sm mt-2">A poem exploring the darkness of despair and the faint glimmer of hope that can pierce through it.</p>
-      </div>
+            <p class="text-sm mt-2">A poem exploring the darkness of despair and the faint glimmer of hope that can
+              pierce through it.</p>
+          </div>
         </a>
       </div>
       <!-- Eighth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Review">
         <a href="blogs/Sex_Education_Season_1.html">
-          <img src="images/blogs/Sex_Education.png" alt="Sex Education" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Sex_Education.png" alt="Sex Education"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Show Review: Sex Education (Season 1)</h3>
             <p class="text-base mt-1 font-medium">by Aayush Kumar, Ishita Vyavahare · December 11, 2021</p>
-            <p class="text-sm mt-2">A heartfelt and hilarious review of Sex Education Season 1 that celebrates its nuanced characters, casual approach to sex, and bold storytelling, while acknowledging its occasional narrative shortcomings.</p>
-      </div>
+            <p class="text-sm mt-2">A heartfelt and hilarious review of Sex Education Season 1 that celebrates its
+              nuanced characters, casual approach to sex, and bold storytelling, while acknowledging its occasional
+              narrative shortcomings.</p>
+          </div>
         </a>
-      </div> 
+      </div>
       <!-- Ninth Blog -->
-       <!-- Eighth Blog -->
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+      <!-- Eighth Blog -->
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Review">
         <a href="blogs/Gone_with_the_wind.html">
-          <img src="images/blogs/Gone_with_the_wind.png" alt="Gone With The Wind" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Gone_with_the_wind.png" alt="Gone With The Wind"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Book Review: Gone With The Wind</h3>
             <p class="text-base mt-1 font-medium">by Rose Agarwal · December 11, 2021</p>
-            <p class="text-sm mt-2">A bold and poetic take on Gone with the Wind, unpacking its romanticized past, complex characters, and troubling glorification of racism—ending in emotional wreckage and quiet disillusionment.</p>
-      </div>
+            <p class="text-sm mt-2">A bold and poetic take on Gone with the Wind, unpacking its romanticized past,
+              complex characters, and troubling glorification of racism—ending in emotional wreckage and quiet
+              disillusionment.</p>
+          </div>
         </a>
-      </div> 
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Article">
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
         <a href="blogs/Tania.html">
           <img src="images/blogs/Tania.png" alt="Tania" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Tania- Music on Rails</h3>
             <p class="text-base mt-1 font-medium">by Subhadeep Bakshi · December 11, 2021</p>
-            <p class="text-sm mt-2">A heartfelt exploration of Tania's character, her love for music, and the impact of a fleeting train journey on a young boy's life.</p>
-      </div>
+            <p class="text-sm mt-2">A heartfelt exploration of Tania's character, her love for music, and the impact of
+              a fleeting train journey on a young boy's life.</p>
+          </div>
         </a>
-      </div> 
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Article">
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
         <a href="blogs/Maybe_Tomorrow.html">
-          <img src="images/blogs/Maybe_Tomorrow.png" alt="Maybe Tomorrow" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Maybe_Tomorrow.png" alt="Maybe Tomorrow"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Maybe Tomorrow</h3>
             <p class="text-base mt-1 font-medium">by Aayush Kumar · December 11, 2021</p>
-            <p class="text-sm mt-2">A poignant exploration of hope, dreams, and the passage of time, as seen through the eyes of a young boy on the brink of adulthood.</p>
-      </div>
+            <p class="text-sm mt-2">A poignant exploration of hope, dreams, and the passage of time, as seen through the
+              eyes of a young boy on the brink of adulthood.</p>
+          </div>
         </a>
-      </div> 
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Review">
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Review">
         <a href="blogs/Doestovsky.html">
           <img src="images/blogs/Doestovsky.png" alt="Doestovsky" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Doestovsky- The self-depreciative existentialist</h3>
             <p class="text-base mt-1 font-medium">by Mudit Chand · December 5, 2021</p>
-            <p class="text-sm mt-2">A poignant exploration of the human condition, delving into themes of suffering, redemption, and the search for meaning in a chaotic world.</p>
-      </div>
+            <p class="text-sm mt-2">A poignant exploration of the human condition, delving into themes of suffering,
+              redemption, and the search for meaning in a chaotic world.</p>
+          </div>
         </a>
-      </div> 
-      <div class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300" data-category="Article">
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
         <a href="blogs/Poetry_and_the_smiths.html">
-          <img src="images/blogs/Poetry_and_the_smiths.png" alt="Poetry and the Smiths" class="blog-img group-hover:opacity-70 transition" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+          <img src="images/blogs/Poetry_and_the_smiths.png" alt="Poetry and the Smiths"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
             <h3 class="text-2xl font-bold">Poetry and the Smiths</h3>
             <p class="text-base mt-1 font-medium">by Aayush Priyadarshi · October 18, 2021</p>
-            <p class="text-sm mt-2">A deep dive into the lyrical genius of The Smiths, exploring themes of love, alienation, and the human experience.</p>
-      </div>
+            <p class="text-sm mt-2">A deep dive into the lyrical genius of The Smiths, exploring themes of love,
+              alienation, and the human experience.</p>
+          </div>
         </a>
-      </div> 
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Article">
+        <a href="blogs/Culpability_Of_The_Thaumaturge.html">
+          <img src="images/blogs/Culpability_Of_The_Thaumaturge/Hero.png" alt="Culpability Of The Thaumaturge"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+            <h3 class="text-2xl font-bold">Culpability Of The Thaumaturge</h3>
+            <p class="text-base mt-1 font-medium">by Parikshit Tomar · October 9, 2021</p>
+            <p class="text-sm mt-2">A deep dive into the themes of morality, responsibility, and the consequences of
+              one's actions in the context of magical practices.</p>
+          </div>
+        </a>
+      </div>
+      <div
+        class="group relative overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-all duration-300"
+        data-category="Poem">
+        <a href="blogs/Midnight_Leaves.html">
+          <img src="images/blogs/Midnight_Leaves.png" alt="Midnight Leaves"
+            class="blog-img group-hover:opacity-70 transition" />
+          <div
+            class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition p-4 text-white">
+            <h3 class="text-2xl font-bold">Midnight Leaves</h3>
+            <p class="text-base mt-1 font-medium">by Vaishali Rawat · October 9, 2021</p>
+            <p class="text-sm mt-2">A deep dive into the themes of nature, solitude, and the passage of time in the
+              context of midnight reflections.</p>
+          </div>
+        </a>
+      </div>
 
   </section>
 
@@ -295,32 +402,33 @@
     });
   </script>
   <script>
-  const sortSelect = document.querySelector('select');
-  const blogGrid = document.getElementById('blog-grid');
+    const sortSelect = document.querySelector('select');
+    const blogGrid = document.getElementById('blog-grid');
 
-  sortSelect.addEventListener('change', () => {
-    const cards = Array.from(blogGrid.children);
-    const sortBy = sortSelect.value;
+    sortSelect.addEventListener('change', () => {
+      const cards = Array.from(blogGrid.children);
+      const sortBy = sortSelect.value;
 
-    let sorted;
-    if (sortBy === "Alphabetical") {
-      sorted = cards.sort((a, b) =>
-        a.dataset.title.localeCompare(b.dataset.title)
-      );
-    } else if (sortBy === "Oldest") {
-      sorted = cards.sort((a, b) =>
-        new Date(a.dataset.date) - new Date(b.dataset.date)
-      );
-    } else {
-      // Latest
-      sorted = cards.sort((a, b) =>
-        new Date(b.dataset.date) - new Date(a.dataset.date)
-      );
-    }
+      let sorted;
+      if (sortBy === "Alphabetical") {
+        sorted = cards.sort((a, b) =>
+          a.dataset.title.localeCompare(b.dataset.title)
+        );
+      } else if (sortBy === "Oldest") {
+        sorted = cards.sort((a, b) =>
+          new Date(a.dataset.date) - new Date(b.dataset.date)
+        );
+      } else {
+        // Latest
+        sorted = cards.sort((a, b) =>
+          new Date(b.dataset.date) - new Date(a.dataset.date)
+        );
+      }
 
-    blogGrid.innerHTML = "";
-    sorted.forEach(card => blogGrid.appendChild(card));
-  });
-</script>
+      blogGrid.innerHTML = "";
+      sorted.forEach(card => blogGrid.appendChild(card));
+    });
+  </script>
 </body>
+
 </html>

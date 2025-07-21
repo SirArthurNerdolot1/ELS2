@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maybe Tomorrow | ELS IIT Kanpur</title>
-    <link rel="icon" href="../images/logo-bg.png" type="image/png" />
 
-    <!-- Fonts & Tailwind -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maybe Tomorrow | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
 
-    <!-- AOS for animations -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      body {
-        font-family: 'Playfair Display', serif;
-        background-color: #fef9f4;
-        background-image: url('../paper-texture-wide.png');
-        background-repeat: repeat-x;
-        background-position: top center;
-        background-attachment: fixed;
-        background-size: auto;
-        color: #111;
-      }
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-      .hero-overlay {
-        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
-      }
-    </style>
-  </head>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
 
-  <body>
-<!-- Navigation Header -->
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Header -->
   <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo + Title -->
@@ -45,8 +43,8 @@
           <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
         </a>
         <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
-  English Literary Society IIT Kanpur
-</h2>
+          English Literary Society IIT Kanpur
+        </h2>
 
       </div>
 
@@ -55,7 +53,7 @@
         <a href="../index.html" class="hover:text-gray-700">Home</a>
         <a href="../about.html" class="hover:text-gray-700">About</a>
         <a href="../events.html" class="hover:text-gray-700">Events</a>
-        
+
         <a href="../blog.html" class="hover:text-gray-700">Blog</a>
         <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
         <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
@@ -63,108 +61,215 @@
 
       <!-- Hamburger Button (Mobile) -->
       <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"></path>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
 
     <!-- Slide-Down Mobile Nav -->
     <nav id="mobile-menu"
-         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
       <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
       <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
       <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
-      
+
       <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
       <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
       <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
     </nav>
   </header>
   <script>
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  let isOpen = false;
-  toggleBtn.addEventListener('click', () => {
-    isOpen = !isOpen;
-    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      isOpen = false;
-      mobileMenu.style.maxHeight = "0px";
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
     });
-  });
-</script>
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
 
 
-<!-- Hero Section with animations, blurred background, and image shadow -->
-<section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
-  <!-- Blurred Background -->
-  <div class="absolute inset-0 z-0">
-    <img
-      src="../images/blogs/Maybe_Tomorrow.png"
-      alt="Blurred Background"
-      class="w-full h-full object-cover blur-2xl scale-125 opacity-60"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
-  </div>
-
-  <!-- Foreground Image and Text -->
-  <div class="relative z-10 flex flex-col items-center justifyF-center px-4">
-    <!-- Animated Image -->
-    <img
-      src="../images/blogs/Maybe_Tomorrow.png"
-      alt="Maybe Tomorrow"
-      class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up"
-    />
-
-    <!-- Animated Text -->
-    <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
-      <h1 class="text-4xl md:text-5xl font-bold mb-2">Maybe Tomorrow</h1>
-      <p class="text-sm md:text-base text-gray-700">by Aayush Kumar · December 11, 2021</p>
+  <!-- Hero Section with animations, blurred background, and image shadow -->
+  <section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+    <!-- Blurred Background -->
+    <div class="absolute inset-0 z-0">
+      <img src="../images/blogs/Maybe_Tomorrow.png" alt="Blurred Background"
+        class="w-full h-full object-cover blur-2xl scale-125 opacity-60" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
     </div>
-  </div>
 
-  <!-- Optional Scroll Down Indicator -->
-  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-    <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
-  </div>
-</section>
+    <!-- Foreground Image and Text -->
+    <div class="relative z-10 flex flex-col items-center justifyF-center px-4">
+      <!-- Animated Image -->
+      <img src="../images/blogs/Maybe_Tomorrow.png" alt="Maybe Tomorrow"
+        class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up" />
 
-
-
-    <!-- Blog Body -->
-    <main class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
-      <div class="prose max-w-none text-lg leading-relaxed text-gray-800 prose-p:mb-4">
-        <p>A bright and immediate flash of white.<br>‘No, no, but seriously, would you rather find out you have a day or a year to live?’ I’m washing my face. Wait, what? Where am I? I stop the rusty old faucet and stare at the grimy mirror above. Jesus Christ, what happened to me? There’s vomit all over me – wait, wait, what is this place?<br>I look around at the pale, cracked walls, with random scribbles on them – call 9900780311 for fun, J&amp;S forever, your usual run-of-the-mill bullshit. Ah – I’m in a public restroom. The smell should’ve told me. And right as I realize that, the full extent of the smell hits me – shit, I need to get out of here (pun intended). The watchman sitting outside is saying something. It seems to be positive.<br>‘Thank you, saab.’<br>I stumble a little as I try to focus on this guy’s face.<br>‘Sir? Are you okay?’ He stands up, apparently to support me.<br>‘Hey, hey, woah, I’m fine.’<br>I’m not though, at least that’s what my feet are telling me. It takes all of my will which, to be honest, isn’t saying much – to walk 5 steps without falling.<br>‘Come on, obviously a year.’<br>‘No, no, you haven’t thought about this as I have though.’</p>
-<br><p>Ok, this is me talking to Naveen, that sketchy guy from work. Yeah, this happened earlier in the evening.<br>‘Why have you thought about this though?’ Naveen slurs through his alcohol-stained breath, taking what must be at least his 523rd swig from what must be at least his 46th bottle. Even in the lounge, it’s tough for me to make out his words through the loud foggy noise of the club.<br>‘Yeah, I have cancer. Doctors give me a year to live.’<br>Naveen looks at me, very serious for all of one second. The gentleman that he is, starts laughing immediately after his one second of deliberation, in the process spitting on me pretty generously.<br>‘Jesus, that’s disgusting. Get a grip on yourself, man.’<br>‘I just can’t believe that you almost got me for a second there.’<br>‘Yeah, fine, I don’t have cancer or anything. But still, I kinda just wanna – I don’t know, let go, I guess.’<br>‘More than you have already? I’ve never seen you let yourself go this much granted, I don’t really know you that well.’<br>Yeah, I guess I’d forgotten that I was on my second or third bottle too.<br>‘Okay, I’m pretty uh, crapfaced, so-’<br>Naveen bursts into typically outrageous laughter.<br>‘You have to know that that’s not the word, right?’<br>‘What?’<br>‘Never mind, continue, good sir.’<br>His condescension bothered me, but I needed him. Wait, what, why did I need him?<br>‘Point being, I feel like shit, so I need something that will, you know, pull me up again.’<br>‘Well, what exactly are you looking for, ma-’<br>‘Look, you’ve figured out by now I don’t know too much about this stuff. So just give me anything that-’<br>Darkness. No wait, my eyes are closed. Something’s shaking me. God, I hope it’s not a rat.<br>‘Sir? Sir? Are you okay?’<br>Nope, it’s the guy from earlier. I somehow haul myself up and dust off – only to remember that I looked and smelled like I bathed in filth so there was no real point.<br>‘Yeah, sorry, I’m fine.’ I was trying to figure out why this guy hadn’t just run off with my wallet when it hit me – I’d just given him 2000 rupees to use the public restroom. Ah.<br>I turned around to see smoke emerging from somewhere nearby. Oh no, no, no, no</p>
-<br><p>I’m driving. Crying. Or laughing? Hard to say. Anyway, there’s not too much traffic, it’s too late at night. I get my phone out to call Kavya – oh god, what’s Kavya gonna say when she sees me like this?<br>Oh, never mind. ‘Veer? What the hell is going on? Why aren’t you home yet?’<br>‘Kavya, I was just, uh, this is insane timing.’ I flip through the glove compartment and find that beautifully scary box – with her initials on them. I’d had it for a couple of weeks now but was still too chicken to ask. I hold it in my hand and just look – just look at it- wondering how something so small could be something so significant.<br>Upon hearing my crying (laughing?) voice, Kavya’s angry tone immediately melts.<br>‘Hey, V? Where are you, are you ok?’<br>‘I – uh – you know, it’s actually not a great time to answer that question.’ I start laughing at my own sick joke as I slide the box into my pocket.<br>‘I – I was just thinking, I want what’s best, you know? Not the longest. Not the saddest. The best. You get that, right, Kavi?’<br>‘Veer. Come home.’<br>‘Bye, Kavi.’ I cut the phone.<br>I reach into my pocket, and all I can come up with is a bunch of empty packets. Finally, I find one that isn’t. I dump all of the white powder out on my hand. My face seems to be getting curiously close to it-<br>‘Okay, now make sure not to take more than 2 of these things together. That’ll screw up your heart or something, I don’t know the exact details, but you get the poi-’<br>‘Yeah thanks’, I blurt out and quickly grab the handful of packets that Naveen was not so discreetly handing to me.<br>‘And, it’s uh, how much?’, I ask nervously, shuffling through the newly withdrawn notes in my wallet.<br>Ok, uh, keep going. Yeah, that’s enough.’ He takes the cash from me, again being far more obvious than I had wanted. He seems pretty happy. It’s very possible he just ripped me off. I’d have no way of knowing.&nbsp;<br>‘I’ll be honest, I didn’t expect that I’d be getting a call from you today. Especially a call about something like this. I usually have a radar for these kinds of things, and you didn’t strike me as someone who’d potentially be a customer.’ I just looked at him, buzzed enough not to know what my expression was. What reply could I give to something like that?&nbsp;<br>He didn’t care enough to probe further. He started to get up.&nbsp;<br>‘Well, anyway, pleasure doing business with you.’&nbsp;<br>Just as he started walking out, Naveen stopped for one final question. ‘Hey, uh, what’s <em>your </em>answer?’&nbsp;<br>‘What?’&nbsp;<br>‘Would you rather find out you have to live for a year or a day?’ I hesitated for a moment or two before responding.&nbsp;<br>‘Let’s say you have a year. You go home, tell your loved ones, eventually your coworkers, and at some point your illness or whatever becomes the news of the day for some people you met once at an office party. You get your affairs in order, make peace with everyone, maybe even eke out a happy moment or two cloaked by a shadow of sadness, and wait for the day to come when you eventually croak, in a hospital bed, your loved ones gathered round.’ Naveen looks at me, almost smirking as he asks me:<br>‘And if you have a day?’&nbsp;<br>‘You could decide to say a big old fuck you to everything and have one crazy night where you go out in a blaze of something. Probably not glory, but at least there’s a blaze.’</p>
-<br><p>And a blaze there is. The smoke isn’t indicative of a fire, so I should be okay in that aspect. Luckily the car just hit a tree; an electrical pole or something could’ve really screwed things up. Jesus, what was I thinking? I could’ve easily killed someone. And I don’t even have a driver to blame it on. Once again, I proceed to laugh at a joke I made. Didn’t even say this one out loud. Kavya would’ve loved it though. She always loved my jokes. It dawns on me that I probably have cracked ribs. I can’t feel too much pain, but I can see just the slightest tinge of red on my shirt. Airbags work, but they hurt like a bitch. The guy from the bathroom is still bugging me. Does he want <em>more </em>money? ‘Sir? Should I call a cab home for you?’&nbsp;<br>‘Hey, how many times do I have to tell you, I’m-’&nbsp;<br>The purest stream of vomit emerges from my mouth. The guy jumped out just in time so it wouldn’t hit him. It looked pretty funny actually, I would’ve laughed if I wasn’t gonna hit the footpath in a se&nbsp;<br>The doctor walked in as I sat waiting in his office, feeling far more nervous now than I had been when I first came here yesterday.&nbsp;<br>He walked in with the air of a person who was here to deliver bad news. It seemed like he was doing it on purpose, to stop me from having any false hopes. He took out the scans and talked to me while pointing to some spots on them, explaining some things – I barely paid any attention. I don’t even know if he said the c word or not, though I’m pretty sure he did. I was thinking about what everyone’s reaction would be – Mom and Dad, people at work, and Kavya – damn it, I’d have to tell Kavya too. I suddenly realised he’d stopped talking. ‘So, uh, treatments?’, in the situation I couldn’t articulate myself much better than that.&nbsp;<br>‘There are some experimental methods we can try out, but to be frank their success rates aren’t very promising.’&nbsp;<br>That I wasn’t ready to hear. I felt this massive knot in my chest – which in an incredibly sick way, is funny, because the chest pains are why I’d come here in the first place.&nbsp;<br>‘Oh, ok’, I croaked out, after a solid 10 seconds of silence. I say croaked because I’m pretty sure that’s how my voice sounded- you know, how you sound when you’re trying not to cry?<br>‘So, uh, how long is the usual- uh, expected-’&nbsp;<br>The doctor graciously interrupted me so I wouldn’t have to finish my incredibly obvious and also incredibly awkward question.&nbsp;<br>‘Well, if you come in regularly, take your medicine, make a few dietary and lifestyle changes, a year is definitely within reach.’&nbsp;<br>Oh, god. This is the kind of scenario people have nightmares about, isn’t it? I begged myself to wake up, but all I felt was some moistness on my cheeks. ‘Veer, take your time, this isn’t news anyone should have to – just be back here tomorrow before noon, ok? We’ll figure out how to proceed from there.’ I know that I walked out, went and sat in my car, honked at least a couple of times while still parked, and cried a whole bunch, but I really don’t remember anything specific until the phone call.</p>
-<br><p>My eyes are adjusting to the brightness above me – a couple of guys in white coats are pushing me on my surprisingly soft bed through a hallway with a ridiculous number of lights on the ceiling. The bathroom guy had the decency to get me to a hospital, huh? Shame I didn’t get his name. Would’ve been nice to meet one last new person.</p>
-<br><p>I stare at the phone as it waits for Kavya to pick up. I just <em>have </em>to talk to someone about this news; I can’t keep crying in my car.&nbsp;<br>‘Yeah Veer what happened?’&nbsp;<br>I sob noiselessly as I try to compose myself to any degree I can before I answer. I can’t help but think how this conversation will go – an awkward phase where Kavya isn’t sure if this is real or a lie, then eventually she starts crying, probably in a not very private place, then we head home and cry some more – I didn’t want that.&nbsp;<br>I tried to think of something to say to her, but I came up blank. All I could do is stare at my glove compartment.&nbsp;</p>
-<br><p>Now I seem to be in an operation room – clearly, this isn’t going very well, they’re all panicky and oh- I don’t think they expected me to be awake for this, someone’s putting a mask over my fa-&nbsp;<br>‘Hello? Veer?’&nbsp;<br>Of course, I had to tell her that I was going to propose. No way I could hide that for more than a week, and then she’d probably say yes, and that we were going to fight through this, but for her it would probably just mean a year of sadness and concern, followed by a year of sadness and helplessness. ‘Veer, you’ve got to stop butt-dialling me.’ She cut the call.&nbsp;<br>I love how she chose to <em>say </em>that I’d been butt-dialling her. Clearly, she thought that I wasn’t on the call, which means she only did it for herself. God, I’ll miss her.&nbsp;<br>I make another phone call.&nbsp;<br>‘Hey, Naveen?’</p>
-<br><p>I’m back to the world of the conscious, and for some reason, I don’t feel anything. No pain at all. I don’t think that’s a good sign. My right hand’s connected to a myriad of wires, but I somehow manage to get it in my pants’ front pocket. I feel around and – yep, it’s still there. With my other hand, I tug at a nurse’s lab coat. I’m fading now, I gotta do this fast. He turns and looks at me, confused, for a lot of reasons I’m guessing. I take out the box with the ring and I don’t have the strength to give it to him but he notices it. I can barely hear myself though I think I can get the words out.&nbsp;<br>‘Give to Kavya, and tell her – maybe next time.’&nbsp;<br>I let go.&nbsp;<br>A bright and immediate flash of white.</p>
-        </div>
-
-      <!-- Back Button -->
-      <div class="mt-12 text-center">
-        <a
-          href="../blog.html"
-          class="inline-block text-blue-600 hover:underline font-medium text-sm"
-        >
-          ← Back to all blog posts
-        </a>
+      <!-- Animated Text -->
+      <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Maybe Tomorrow</h1>
+        <p class="text-sm md:text-base text-gray-700">by Aayush Kumar · December 11, 2021</p>
       </div>
-    </main>
+    </div>
 
-    <!-- AOS Init -->
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    <!-- Optional Scroll Down Indicator -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+      <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+    </div>
+  </section>
+
+
+
+  <!-- Blog Body -->
+  <main class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+    <div class="prose max-w-none text-lg leading-relaxed text-gray-800 prose-p:mb-4">
+      <p>A bright and immediate flash of white.<br>‘No, no, but seriously, would you rather find out you have a day or a
+        year to live?’ I’m washing my face. Wait, what? Where am I? I stop the rusty old faucet and stare at the grimy
+        mirror above. Jesus Christ, what happened to me? There’s vomit all over me – wait, wait, what is this
+        place?<br>I look around at the pale, cracked walls, with random scribbles on them – call 9900780311 for fun,
+        J&amp;S forever, your usual run-of-the-mill bullshit. Ah – I’m in a public restroom. The smell should’ve told
+        me. And right as I realize that, the full extent of the smell hits me – shit, I need to get out of here (pun
+        intended). The watchman sitting outside is saying something. It seems to be positive.<br>‘Thank you, saab.’<br>I
+        stumble a little as I try to focus on this guy’s face.<br>‘Sir? Are you okay?’ He stands up, apparently to
+        support me.<br>‘Hey, hey, woah, I’m fine.’<br>I’m not though, at least that’s what my feet are telling me. It
+        takes all of my will which, to be honest, isn’t saying much – to walk 5 steps without falling.<br>‘Come on,
+        obviously a year.’<br>‘No, no, you haven’t thought about this as I have though.’</p>
+      <br>
+      <p>Ok, this is me talking to Naveen, that sketchy guy from work. Yeah, this happened earlier in the
+        evening.<br>‘Why have you thought about this though?’ Naveen slurs through his alcohol-stained breath, taking
+        what must be at least his 523rd swig from what must be at least his 46th bottle. Even in the lounge, it’s tough
+        for me to make out his words through the loud foggy noise of the club.<br>‘Yeah, I have cancer. Doctors give me
+        a year to live.’<br>Naveen looks at me, very serious for all of one second. The gentleman that he is, starts
+        laughing immediately after his one second of deliberation, in the process spitting on me pretty
+        generously.<br>‘Jesus, that’s disgusting. Get a grip on yourself, man.’<br>‘I just can’t believe that you almost
+        got me for a second there.’<br>‘Yeah, fine, I don’t have cancer or anything. But still, I kinda just wanna – I
+        don’t know, let go, I guess.’<br>‘More than you have already? I’ve never seen you let yourself go this much
+        granted, I don’t really know you that well.’<br>Yeah, I guess I’d forgotten that I was on my second or third
+        bottle too.<br>‘Okay, I’m pretty uh, crapfaced, so-’<br>Naveen bursts into typically outrageous
+        laughter.<br>‘You have to know that that’s not the word, right?’<br>‘What?’<br>‘Never mind, continue, good
+        sir.’<br>His condescension bothered me, but I needed him. Wait, what, why did I need him?<br>‘Point being, I
+        feel like shit, so I need something that will, you know, pull me up again.’<br>‘Well, what exactly are you
+        looking for, ma-’<br>‘Look, you’ve figured out by now I don’t know too much about this stuff. So just give me
+        anything that-’<br>Darkness. No wait, my eyes are closed. Something’s shaking me. God, I hope it’s not a
+        rat.<br>‘Sir? Sir? Are you okay?’<br>Nope, it’s the guy from earlier. I somehow haul myself up and dust off –
+        only to remember that I looked and smelled like I bathed in filth so there was no real point.<br>‘Yeah, sorry,
+        I’m fine.’ I was trying to figure out why this guy hadn’t just run off with my wallet when it hit me – I’d just
+        given him 2000 rupees to use the public restroom. Ah.<br>I turned around to see smoke emerging from somewhere
+        nearby. Oh no, no, no, no</p>
+      <br>
+      <p>I’m driving. Crying. Or laughing? Hard to say. Anyway, there’s not too much traffic, it’s too late at night. I
+        get my phone out to call Kavya – oh god, what’s Kavya gonna say when she sees me like this?<br>Oh, never mind.
+        ‘Veer? What the hell is going on? Why aren’t you home yet?’<br>‘Kavya, I was just, uh, this is insane timing.’ I
+        flip through the glove compartment and find that beautifully scary box – with her initials on them. I’d had it
+        for a couple of weeks now but was still too chicken to ask. I hold it in my hand and just look – just look at
+        it- wondering how something so small could be something so significant.<br>Upon hearing my crying (laughing?)
+        voice, Kavya’s angry tone immediately melts.<br>‘Hey, V? Where are you, are you ok?’<br>‘I – uh – you know, it’s
+        actually not a great time to answer that question.’ I start laughing at my own sick joke as I slide the box into
+        my pocket.<br>‘I – I was just thinking, I want what’s best, you know? Not the longest. Not the saddest. The
+        best. You get that, right, Kavi?’<br>‘Veer. Come home.’<br>‘Bye, Kavi.’ I cut the phone.<br>I reach into my
+        pocket, and all I can come up with is a bunch of empty packets. Finally, I find one that isn’t. I dump all of
+        the white powder out on my hand. My face seems to be getting curiously close to it-<br>‘Okay, now make sure not
+        to take more than 2 of these things together. That’ll screw up your heart or something, I don’t know the exact
+        details, but you get the poi-’<br>‘Yeah thanks’, I blurt out and quickly grab the handful of packets that Naveen
+        was not so discreetly handing to me.<br>‘And, it’s uh, how much?’, I ask nervously, shuffling through the newly
+        withdrawn notes in my wallet.<br>Ok, uh, keep going. Yeah, that’s enough.’ He takes the cash from me, again
+        being far more obvious than I had wanted. He seems pretty happy. It’s very possible he just ripped me off. I’d
+        have no way of knowing.&nbsp;<br>‘I’ll be honest, I didn’t expect that I’d be getting a call from you today.
+        Especially a call about something like this. I usually have a radar for these kinds of things, and you didn’t
+        strike me as someone who’d potentially be a customer.’ I just looked at him, buzzed enough not to know what my
+        expression was. What reply could I give to something like that?&nbsp;<br>He didn’t care enough to probe further.
+        He started to get up.&nbsp;<br>‘Well, anyway, pleasure doing business with you.’&nbsp;<br>Just as he started
+        walking out, Naveen stopped for one final question. ‘Hey, uh, what’s <em>your
+        </em>answer?’&nbsp;<br>‘What?’&nbsp;<br>‘Would you rather find out you have to live for a year or a day?’ I
+        hesitated for a moment or two before responding.&nbsp;<br>‘Let’s say you have a year. You go home, tell your
+        loved ones, eventually your coworkers, and at some point your illness or whatever becomes the news of the day
+        for some people you met once at an office party. You get your affairs in order, make peace with everyone, maybe
+        even eke out a happy moment or two cloaked by a shadow of sadness, and wait for the day to come when you
+        eventually croak, in a hospital bed, your loved ones gathered round.’ Naveen looks at me, almost smirking as he
+        asks me:<br>‘And if you have a day?’&nbsp;<br>‘You could decide to say a big old fuck you to everything and have
+        one crazy night where you go out in a blaze of something. Probably not glory, but at least there’s a blaze.’</p>
+      <br>
+      <p>And a blaze there is. The smoke isn’t indicative of a fire, so I should be okay in that aspect. Luckily the car
+        just hit a tree; an electrical pole or something could’ve really screwed things up. Jesus, what was I thinking?
+        I could’ve easily killed someone. And I don’t even have a driver to blame it on. Once again, I proceed to laugh
+        at a joke I made. Didn’t even say this one out loud. Kavya would’ve loved it though. She always loved my jokes.
+        It dawns on me that I probably have cracked ribs. I can’t feel too much pain, but I can see just the slightest
+        tinge of red on my shirt. Airbags work, but they hurt like a bitch. The guy from the bathroom is still bugging
+        me. Does he want <em>more </em>money? ‘Sir? Should I call a cab home for you?’&nbsp;<br>‘Hey, how many times do
+        I have to tell you, I’m-’&nbsp;<br>The purest stream of vomit emerges from my mouth. The guy jumped out just in
+        time so it wouldn’t hit him. It looked pretty funny actually, I would’ve laughed if I wasn’t gonna hit the
+        footpath in a se&nbsp;<br>The doctor walked in as I sat waiting in his office, feeling far more nervous now than
+        I had been when I first came here yesterday.&nbsp;<br>He walked in with the air of a person who was here to
+        deliver bad news. It seemed like he was doing it on purpose, to stop me from having any false hopes. He took out
+        the scans and talked to me while pointing to some spots on them, explaining some things – I barely paid any
+        attention. I don’t even know if he said the c word or not, though I’m pretty sure he did. I was thinking about
+        what everyone’s reaction would be – Mom and Dad, people at work, and Kavya – damn it, I’d have to tell Kavya
+        too. I suddenly realised he’d stopped talking. ‘So, uh, treatments?’, in the situation I couldn’t articulate
+        myself much better than that.&nbsp;<br>‘There are some experimental methods we can try out, but to be frank
+        their success rates aren’t very promising.’&nbsp;<br>That I wasn’t ready to hear. I felt this massive knot in my
+        chest – which in an incredibly sick way, is funny, because the chest pains are why I’d come here in the first
+        place.&nbsp;<br>‘Oh, ok’, I croaked out, after a solid 10 seconds of silence. I say croaked because I’m pretty
+        sure that’s how my voice sounded- you know, how you sound when you’re trying not to cry?<br>‘So, uh, how long is
+        the usual- uh, expected-’&nbsp;<br>The doctor graciously interrupted me so I wouldn’t have to finish my
+        incredibly obvious and also incredibly awkward question.&nbsp;<br>‘Well, if you come in regularly, take your
+        medicine, make a few dietary and lifestyle changes, a year is definitely within reach.’&nbsp;<br>Oh, god. This
+        is the kind of scenario people have nightmares about, isn’t it? I begged myself to wake up, but all I felt was
+        some moistness on my cheeks. ‘Veer, take your time, this isn’t news anyone should have to – just be back here
+        tomorrow before noon, ok? We’ll figure out how to proceed from there.’ I know that I walked out, went and sat in
+        my car, honked at least a couple of times while still parked, and cried a whole bunch, but I really don’t
+        remember anything specific until the phone call.</p>
+      <br>
+      <p>My eyes are adjusting to the brightness above me – a couple of guys in white coats are pushing me on my
+        surprisingly soft bed through a hallway with a ridiculous number of lights on the ceiling. The bathroom guy had
+        the decency to get me to a hospital, huh? Shame I didn’t get his name. Would’ve been nice to meet one last new
+        person.</p>
+      <br>
+      <p>I stare at the phone as it waits for Kavya to pick up. I just <em>have </em>to talk to someone about this news;
+        I can’t keep crying in my car.&nbsp;<br>‘Yeah Veer what happened?’&nbsp;<br>I sob noiselessly as I try to
+        compose myself to any degree I can before I answer. I can’t help but think how this conversation will go – an
+        awkward phase where Kavya isn’t sure if this is real or a lie, then eventually she starts crying, probably in a
+        not very private place, then we head home and cry some more – I didn’t want that.&nbsp;<br>I tried to think of
+        something to say to her, but I came up blank. All I could do is stare at my glove compartment.&nbsp;</p>
+      <br>
+      <p>Now I seem to be in an operation room – clearly, this isn’t going very well, they’re all panicky and oh- I
+        don’t think they expected me to be awake for this, someone’s putting a mask over my fa-&nbsp;<br>‘Hello?
+        Veer?’&nbsp;<br>Of course, I had to tell her that I was going to propose. No way I could hide that for more than
+        a week, and then she’d probably say yes, and that we were going to fight through this, but for her it would
+        probably just mean a year of sadness and concern, followed by a year of sadness and helplessness. ‘Veer, you’ve
+        got to stop butt-dialling me.’ She cut the call.&nbsp;<br>I love how she chose to <em>say </em>that I’d been
+        butt-dialling her. Clearly, she thought that I wasn’t on the call, which means she only did it for herself. God,
+        I’ll miss her.&nbsp;<br>I make another phone call.&nbsp;<br>‘Hey, Naveen?’</p>
+      <br>
+      <p>I’m back to the world of the conscious, and for some reason, I don’t feel anything. No pain at all. I don’t
+        think that’s a good sign. My right hand’s connected to a myriad of wires, but I somehow manage to get it in my
+        pants’ front pocket. I feel around and – yep, it’s still there. With my other hand, I tug at a nurse’s lab coat.
+        I’m fading now, I gotta do this fast. He turns and looks at me, confused, for a lot of reasons I’m guessing. I
+        take out the box with the ring and I don’t have the strength to give it to him but he notices it. I can barely
+        hear myself though I think I can get the words out.&nbsp;<br>‘Give to Kavya, and tell her – maybe next
+        time.’&nbsp;<br>I let go.&nbsp;<br>A bright and immediate flash of white.</p>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <!-- AOS Init -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

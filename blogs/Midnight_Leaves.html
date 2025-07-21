@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Waiting For The Letter Of Her Love | ELS IIT Kanpur</title>
+<link rel="icon" href="../images/logo-bg.png" type="image/png" />
+    <!-- Fonts & Tailwind -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      body {
+        font-family: 'Playfair Display', serif;
+        background-color: #fef9f4;
+        background-image: url('../paper-texture-wide.png');
+        background-repeat: repeat-x;
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: auto;
+        color: #111;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+      }
+    </style>
+  </head>
+
+  <body>
+<!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        </a>
+        <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
+
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        
+        <a href="../blog.html" class="hover:text-gray-700">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Slide-Down Mobile Nav -->
+    <nav id="mobile-menu"
+         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+      <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
+    </nav>
+  </header>
+  <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
+
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="../images/blogs/Midnight_Leaves.png"
+          alt="Blurred Background"
+          class="w-full h-full object-cover blur-2xl scale-125 opacity-60"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center px-4">
+        <img
+          src="../images/blogs/Midnight_Leaves.png"
+          alt="Midnight Leaves"
+          class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up"
+        />
+
+        <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="text-4xl md:text-5xl font-bold mb-2">Midnight Leaves</h1>
+          <p class="text-sm md:text-base text-gray-700">by Vaishali Rawat · October 9, 2021</p>
+        </div>
+      </div>
+
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+      </div>
+    </section>
+
+    <!-- Blog Body with animated lines -->
+    <main class="max-w-3xl mx-auto px-4 py-20">
+      <div class="text-center text-xl md:text-2xl leading-[2.5rem] text-gray-800 space-y-6">
+        <!-- Poem lines with scroll animation -->
+        <div class="space-y-6">
+          <!-- Each line wrapped with AOS fade-up -->
+          <p data-aos="fade-up" data-aos-delay="0">The air is soggy, we’ve smoked all hope </p>
+          <p data-aos="fade-up" data-aos-delay="50">come evening, come sundown, this cold; </p>
+          <p data-aos="fade-up" data-aos-delay="100">our hands put out cigarettes against roses, </p>
+          <p data-aos="fade-up" data-aos-delay="150">and braid them into the few stray locks </p>
+          <p data-aos="fade-up" data-aos-delay="200">Of moonlight; We revel in shared hostility. </p>
+          <p data-aos="fade-up" data-aos-delay="250">To every man who looks, </p>
+          <p data-aos="fade-up" data-aos-delay="300">She is lovely. But my lovely, you and me,</p>
+          <p data-aos="fade-up" data-aos-delay="350">We avert our gazes discreetly. </p>
+          <p data-aos="fade-up" data-aos-delay="400">For only the perpetrators bear witness </p>
+          <p data-aos="fade-up" data-aos-delay="450">to the true doing even as theorists cower </p>
+          <p data-aos="fade-up" data-aos-delay="500">in their hypothesis and the victims </p>
+          <p data-aos="fade-up" data-aos-delay="550">in their disbelief. </p>
+          <p data-aos="fade-up" data-aos-delay="600">Why roses, sweet sultry roses? </p>
+          <p data-aos="fade-up" data-aos-delay="650">oh there are enough holes in our jeans. </p>
+          <br><p data-aos="fade-up" data-aos-delay="700">We drink solitude to dissolve the yellow </p>
+          <p data-aos="fade-up" data-aos-delay="750">from our ugly teeth; Outside dew trickles </p>
+          <p data-aos="fade-up" data-aos-delay="800">in vain to put out ashes. </p>
+          <p data-aos="fade-up" data-aos-delay="850">We savour the criminal thrill </p>
+          <p data-aos="fade-up" data-aos-delay="900">of moonlight vandalism, all our figurative </p>
+          <p data-aos="fade-up" data-aos-delay="950">crimes like smoke rings blown from </p>
+          <p data-aos="fade-up" data-aos-delay="1000">Magritte’s Pipe. </p>
+          <p data-aos="fade-up" data-aos-delay="1050">So play the ending notes my arriviste </p>
+          <p data-aos="fade-up" data-aos-delay="1100">as we linger in high society and clink </p>
+          <p data-aos="fade-up" data-aos-delay="1150">to our swindlers’ fancy; No penance </p>
+          <p data-aos="fade-up" data-aos-delay="1200">is so snide as that of a criminal made to </p>
+          <p data-aos="fade-up" data-aos-delay="1250">feel unworthy of a crime. </p>
+          <p data-aos="fade-up" data-aos-delay="1300">If you looked closer, you must think, </p>
+          <p data-aos="fade-up" data-aos-delay="1350">who shot the moon and what a poor shot! </p>
+          <p data-aos="fade-up" data-aos-delay="1400">They got the roses in her hair, those imbeciles. </p>
+          <br><p data-aos="fade-up" data-aos-delay="1450">The threat of dawn wails like air raid sirens </p>
+          <p data-aos="fade-up" data-aos-delay="1500">on our intellectual horizons, </p>
+          <p data-aos="fade-up" data-aos-delay="1550">All the debauchery of thoughts suspended</p>
+          <p data-aos="fade-up" data-aos-delay="1600">like enemy bombs every night passes on </p>
+          <p data-aos="fade-up" data-aos-delay="1650">as we confide in sleep, shelter alike </p>
+          <p data-aos="fade-up" data-aos-delay="1700">with enemies and enemies. </p>
+          <p data-aos="fade-up" data-aos-delay="1750">It is not so ridiculous to fear light </p>
+          <p data-aos="fade-up" data-aos-delay="1800">as the inflictor of shadows, we must </p>
+          <p data-aos="fade-up" data-aos-delay="1850">begin to fear ourselves. </p>
+          <p data-aos="fade-up" data-aos-delay="1900">Every morning I walk the path</p>
+          <p data-aos="fade-up" data-aos-delay="1950">of midnight leaves with sallow eyes, </p>
+          <p data-aos="fade-up" data-aos-delay="2000">a waning smile, crunching them under my </p>
+          <p data-aos="fade-up" data-aos-delay="2050">fascist feet and wait to be wanted</p>
+          <p data-aos="fade-up" data-aos-delay="2100">even if only on posters in alleyways.</p>
+          </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="mt-16 text-center">
+        <a
+          href="../blog.html"
+          class="inline-block text-blue-600 hover:underline font-medium text-sm"
+        >
+          ← Back to all blog posts
+        </a>
+      </div>
+    </main>
+
+    <!-- AOS Init -->
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+      });
+    </script>
+  </body>
+</html>
