@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tania- Music on Rails | ELS IIT Kanpur</title>
+    <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+    <!-- Fonts & Tailwind -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      body {
+        font-family: 'Playfair Display', serif;
+        background-color: #fef9f4;
+        background-image: url('../paper-texture-wide.png');
+        background-repeat: repeat-x;
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: auto;
+        color: #111;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+      }
+    </style>
+  </head>
+
+  <body>
+<!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        </a>
+        <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
+
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        
+        <a href="../blog.html" class="hover:text-gray-700">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Slide-Down Mobile Nav -->
+    <nav id="mobile-menu"
+         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+      <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
+    </nav>
+  </header>
+  <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
+
+
+<!-- Hero Section with animations, blurred background, and image shadow -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+  <!-- Blurred Background -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="../images/blogs/Tania.png"
+      alt="Blurred Background"
+      class="w-full h-full object-cover blur-2xl scale-125 opacity-60"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
+  </div>
+
+  <!-- Foreground Image and Text -->
+  <div class="relative z-10 flex flex-col items-center justifyF-center px-4">
+    <!-- Animated Image -->
+    <img
+      src="../images/blogs/Tania.png"
+      alt="Tania"
+      class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up"
+    />
+
+    <!-- Animated Text -->
+    <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Tania- Music on Rails</h1>
+      <p class="text-sm md:text-base text-gray-700">by Subhadeep Bakshi · December 11, 2021</p>
+    </div>
+  </div>
+
+  <!-- Optional Scroll Down Indicator -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+  </div>
+</section>
+
+
+
+    <!-- Blog Body -->
+    <main class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+      <div class="prose max-w-none text-lg leading-relaxed text-gray-800 prose-p:mb-4">
+        <p>I was skimming through the contact list of my dad’s old, now unused phone. You would ask me why, but I have no answer to that because once in a while I do stuff which might not be a need but a fetish. It weirdly somehow makes life more than just a struggle for survival. As I scrolled past the ‘S’ names, a name caught my glance, rang a bell in my memory. It was such a wonderful coincidence that just before the phone was to be given away to our household help, that name crossed my path yet again. It read ‘Tania’.</p>
+        <br><p>Tania did ring a bell in my mind because it’s been nearly 10 years and I still vividly remember our first and only encounter. There are a few things I remember about people, like their eyes and, as you will see, first meetings. Having said that, Tania held an even more special place in my memory. I and my family were on the yearly vacation tour that I look forward to, even today. We were on a train to Chennai and the heat during that time of the year was killing me, all drenched in sweat and irritation. That is the first time I met Tania.</p>
+        <br><p>That is what I love about train journeys, you meet people whom you never planned to meet, no promises made, no strings attached. Everyone waiting eagerly for their destination, sharing stories and trivia with usually, no ulterior motives. Now, let me tell you beforehand, I am not a very great talker but a very attentive listener who will intervene you only with an occasional nod or an honest comment. Tania on the other hand turned out to be full of words and stories. She started with “Bhaiya, my name is Tania” and kept on rumbling for the rest of the journey. I had nothing better to do, so I paid attention to what she had to say.</p>
+        <br><p>She mostly spoke about music but with the kind of passion, I have hardly seen in anyone since then. I did pretend to understand her passion but felt guilty too. Guilty because at that time I was not a very avid listener of music although I did listen to it on and off. My dad had tried very hard to make me love music because he said ” A person who does not love music is dead inside.”(which I later realized was the derivation of a Shakespearean quote).</p>
+        <br><p>Meanwhile, when we were a few kilometers from Chennai, Tania finally tired with all the talking, dozed off. That is when her mother told us that they were traveling to Chennai for the treatment of Tania’s leukemia.</p>
+        <br><p>She had a twin sister who was supposed to donate her bone marrow to Tania, although her chances of survival were thin. She was young in age but was much more aware of her situation than any other kid of her age would be. For a moment, my windpipe was caught in a knot. I couldn’t imagine then, neither can I imagine now, how that joyous, little girl could double up in laughter at every little joke.</p>
+        <br><p>Before boarding off the train, she asked me “Bhaiya, who is your favourite singer?”. I always believe in being honest in conversations but at that moment I was prepared to do anything to make her believe that I understood what inspiration she took from music. So, off the top of my head, I said “Alka Yagnik”.</p>
+        <br><p>My taste in music has improved a lot since then but I am still not a fan of Alka Yagnik and neither do I share the same passion as she did/does. I don’t know whether today Tania is alive or not because I never contacted her after that day but for me, she is still the same lively girl I had met on a train to Chennai. I do not remember her face but for me, she is still the joyous vibe of hope in the face of adversity, the infectious laughter in the eerie of silence.</p>
+        <br><p>I have changed many phones and many numbers but even today if you scroll through my contact list you will find a name there that says ‘Tania’.</p>
+        </div>
+
+      <!-- Back Button -->
+      <div class="mt-12 text-center">
+        <a
+          href="../blog.html"
+          class="inline-block text-blue-600 hover:underline font-medium text-sm"
+        >
+          ← Back to all blog posts
+        </a>
+      </div>
+    </main>
+
+    <!-- AOS Init -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

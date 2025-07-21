@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doestovsky, The self-depreciative existentialist | ELS IIT Kanpur</title>
+    <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+    <!-- Fonts & Tailwind -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+      body {
+        font-family: 'Playfair Display', serif;
+        background-color: #fef9f4;
+        background-image: url('../paper-texture-wide.png');
+        background-repeat: repeat-x;
+        background-position: top center;
+        background-attachment: fixed;
+        background-size: auto;
+        color: #111;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+      }
+    </style>
+  </head>
+
+  <body>
+<!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo + Title -->
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        </a>
+        <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
+  English Literary Society IIT Kanpur
+</h2>
+
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        
+        <a href="../blog.html" class="hover:text-gray-700">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+        <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Slide-Down Mobile Nav -->
+    <nav id="mobile-menu"
+         class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
+      <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
+    </nav>
+  </header>
+  <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  let isOpen = false;
+  toggleBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      mobileMenu.style.maxHeight = "0px";
+    });
+  });
+</script>
+
+
+<!-- Hero Section with animations, blurred background, and image shadow -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
+  <!-- Blurred Background -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="../images/blogs/Doestovsky.png"
+      alt="Blurred Background"
+      class="w-full h-full object-cover blur-2xl scale-125 opacity-60"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
+  </div>
+
+  <!-- Foreground Image and Text -->
+  <div class="relative z-10 flex flex-col items-center justifyF-center px-4">
+    <!-- Animated Image -->
+    <img
+      src="../images/blogs/Doestovsky.png"
+      alt="Doestovsky, The self-depreciative existentialist"
+      class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up"
+    />
+
+    <!-- Animated Text -->
+    <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Doestovsky, The self-depreciative existentialist</h1>
+      <p class="text-sm md:text-base text-gray-700">by Mudit Chand · December 5, 2021</p>
+    </div>
+  </div>
+
+  <!-- Optional Scroll Down Indicator -->
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+  </div>
+</section>
+
+
+
+    <!-- Blog Body -->
+    <main class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+      <div class="prose max-w-none text-lg leading-relaxed text-gray-800 prose-p:mb-4">
+        <p>I have developed a habit, good or bad is for the readers to decide that whenever the silence inside my head starts ringing louder than the things enveloping me, I rush outside to find a meaning of life in the people walking the streets. I would go and stand like a mast on the corner that leaves the majority of the route to my house conspicuous to let me grab the best view possible, or I will drive to a place, like a cafe, and sit down in a secluded spot just to watch people. How are they doing in their lives, what brought them to this street, or to this particular spot in this particular cafe. Oh, they have a baby with them; is that the reason they ordered ice cream and not a pizza? I oftentimes feel as if my life is not eventful enough and gazing at individuals being so busy yet so much happier than me brings me joy, but a strong sense of hatred for my own life too. And being fully aware that this one habit is making me feel worse, I keep doing it. I watch the 90-year-old, sickly woman coming towards the crossroad, as she bows down and touches the road before murmuring <em>“The government is no good”</em>, and I hate myself for still not having a firm political opinion when even her who has not voted in years has an opinion she can stand strongly with. and that is the moment when Dostoevsky gives two knocks in my mind and the underground man says, “I am a sick man… I am a spiteful man. I am an unpleasant man.”</p>
+<br><p>The Underground Man is a contradiction. There is a distinctive sort of self-consciousness which when compiled with contradiction, is stifling in nature. When you know that everyone around you is happier than you, the self-awareness encapsulates you in its choke and compresses you to suffocation. But at the same time, you realise by the very nature of you being self-aware and understanding, that being wise is way better than all the beings around you who are there with no actual purpose to attain in life. From this, you feel a weird sort of supremacy. Being highly self-aware is a plague when you are a thinker, if you ask me, because that is the moment when you see through the flannel that people inferior to you have all the happiness you want and all you can do is feel miserable.</p>
+<br><p>Dostoevsky’s characters usually tread that line. All his protagonists stand on a high moral ground, way above where the rest surrounding him do, and from there he makes them look down and questions, “Is being down there, under the clowns, ultimately the better and happier way to lead life?” Dostoevsky slaps you with realism. Having had a gun pointed on his head to be saved by a royal courier just before the shots were fired, he watched his prison-mates go mad. He puts you in the front of the same gunshot and makes you look at the beggar, asking you if you want to die like this or if you see the charms in a beggar’s life now when <em>your</em> head is on the gunpoint. His characters are grotesque, they talk like him. They are twisted. Raskolnikov, as deep of a thinker he is, is eventually a murderer. Dostoevsky’s characters do not realise how heinous they are till the crime has been done, and from there he picks up the self-realisation. He keeps diminishing perfection, sort of nihilistically. <em>“Man is a mystery, and I am studying that mystery because I want to be a human being”,</em> Raskolnikov simply puts his thoughts upon you to reflect on. Dostoevsky has always been considered one of the pillars of existential thinking, and his characters believe in being part of this greatness. <em>“It takes more than intelligence to act intelligently.”,</em> Dostoevsky writes and somewhere I believe that it is humanity which always challenges the flow of intellect. Let it be The Underground Man, Raskolnikov or Ivan Karamazov. All of them have a sense of self-realisation, and all of them are so self-absorbed that it becomes hard for them to just disregard everyone else’s effect on their lives. Encoded animation is something which lacks in these characters, they are problematic. Unhindered, even.&nbsp;</p>
+<br><p><em>“Pain and suffering are always inevitable for a large intelligence and a deep heart. The really great men must, I think, have great sadness on earth.”,</em> he argues in <em>Crime and Punishment</em>. And now when everything has been established as inevitable and escapeless, every social construct of how a man should act to become happy renders useless and the idea of God becomes not just an idea but a final shelter to head towards. Dostoevsky watched romanticism die at gunpoint. And from where he was, the only thing that made him write and not to go mad was the exploration of faith and guilt. We often are treated and raised up with the idea of <em>being happy </em>by the end, but sometimes the question just becomes, “What after happiness?” Being sad, lost provides you a purpose to be happy in the end. To finally <em>find</em> it. But what after that?&nbsp;</p>
+<br><p>In <em>The Brothers Karamazov</em>, his greatest novel and one of the greatest staples of existential writing, he plays his masterstroke by naming the most disgusting and unlikeable character in the book as himself. Fyodor Pavlovich Karamazov is a waste of hair, nauseating without giving it a second thought. He organises orgies while being married, keeps a “<em>personal harem</em>”, rapes a mute and mentally dim woman, and never really accepts her child as his own. And then he proceeds to keep a lustful eye on Grushenka, a woman half his age while being aware that his son is in love with her. Characters like Fyodor Karamazov cherish a devilish sort of pleasure from acknowledging their buffoonery and the pain it inflicts upon them, as if accepting their faults puts them on a moral higher ground from where they can laugh on the fact that at least they are true to what they are assumed to be, for remember that let it be physical or mental, self-harm can be a way to derive pleasure and gain distraction from their own shortcomings for a lot of people. Dostoevsky creates a monster, and then he decides to call this lustful, repulsive “buffoon” by his own name. That would be as if I write “Mudit is a frequent masturbator, the only humour he knows cannot be executed without violating the feminine dignity. He almost always reeks of rotting blood and alcohol and the last meal he had was nothing but a dead rat.” And then saying that Mudit is just a character, not me. But for me, whenever I write something about Mudit the character, the first face I would think of is myself. And when I choose to make the character me so profanely disgusting, some self-reflection and generated hatred for my own identity is a no escape. And that is exactly where existentialism starts, through a moment of consciousness of self. It originated from guilt, and self-reflection.&nbsp;Dostoevsky finds a beautifully hedonistic way to approach it, which is by hating himself. “Nothing in this world is harder than speaking the truth, nothing easier than flattery.”, and he wastes no time flattering. In creating humans so real to his own image, he finds the mirror. In between the questions of why he should be, in the mine of self-hatred, he tells you what you should be. When I finished the first reading of The Brothers Karamazov and turned the book around, while reading the “about the author” of the book I found out that a copy of the book was found next to the deathbed of Leo Tolstoy. I wonder if he ever finished it, I doubt he ever did. Because these are the books that are not meant to be read and you will be done, these books are to be picked up again. His consciousness is a thing to have pilgrimages around, and if you want a real meaning to religion sometimes it takes more than just one trip.</p>
+<hr class="wp-block-separator has-css-opacity is-style-dots">
+<p></p>
+    </div>
+
+      <!-- Back Button -->
+      <div class="mt-12 text-center">
+        <a
+          href="../blog.html"
+          class="inline-block text-blue-600 hover:underline font-medium text-sm"
+        >
+          ← Back to all blog posts
+        </a>
+      </div>
+    </main>
+
+    <!-- AOS Init -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
