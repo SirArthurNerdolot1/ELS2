@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>“If you could see your whole life from start to finish, would you change things?” | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>“If you could see your whole life from start to finish, would you change things?”</h1>
+      <p class="manuscript-byline">November 28, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was a freezing winter night; the sky was silky black covered with patches of clouds looking like velvet cushions on an enormous black bedspread. In a cold isolated room of an old broken-down house, a candle was burning with a flickering flame, so dimly that it might disappear any moment. This faintly glowing flame was probably the only thing which kept the emaciated and shriveled creature, too meek to be called a man, alive. The man might have been in his early forty’s but he looked like he might fall into his grave any day. His flesh had been reduced down to a skeleton, his skin looked like a wrinkled wrap cloth for his bone cage and his hair flowed down his tilted head like dried up rivers of sorrow. This man was called Scarus Stephens. He sat curled up in corner of the room near the window staring into the deep open void.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        His deep meaningless trance was broken by sudden stroke of heat as if the sun itself had shown up at his door. He turned his head and saw that the candle which was about to die off now held a huge flame, so big that it wasn’t possible for a candle to produce it, but there it was, blazing in-front of him. In that moment an inexplicable thought got stuck in his mind. He raised his hand and almost mechanically plunged his hand into the flame. Instead of burning him the flame consumed him entirely and he vanished from his room as if he was never there to begin with.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Listening to this, Scarus’s mind went blank. Never had he heard or thought of such a thing being true. It was almost impossible for him to comprehend this, but at the same time it seemed all too familiar. He thought this was a trap, some sort of black magic that might bind him in a loop of time, a vicious cycle from which he might never escape. But alongside this, another thought had sprouted in his mind, he thought that could his life be any worse than it already was? In this conflict he tore his scarce hair apart while the flame burnt in his face. Finally, he took a leap of faith. He said, “If what you say is true then I am ready to make every possible endeavor to make this pathetic life of mine into something more decent, something more fruitful and satisfying. But tell me this why have you brought me here, what significance does this time sequence hold.” But the flame gave no reply, it just started to glow yellow again and engulfed Scarus. When he opened his eyes again, he was at the exact same spot, at the exact same time to where and when he was first teleported to. Once more he ran towards the hut and knocked at the door. Once again the woman opened the door, but this time Scarus gave a feeble smile which almost disappeared immediately and he said, “good madam, I was wandering in the forest about 2 miles from here when I came across this piece of land, and I could tell that I would not die, for across the huge green plain I saw this, I saw your hut. Good madam, please help me, I am thirsty from 2 nights and if I speak anymore, I think my throat my dry up and I may die.” The woman took Scarus inside and gave him a mug full of water. As scarus gulped down the water, she prepared a simple meal for him and told him “You can stay with us for a while, until your health permits you to travel again.” “Thank you, I owe my life to you in more ways than you can ever imagine. But tell me this, you said that “you could stay with us” but I can’t see anyone else apart from you. Does anyone else live here too?” The woman sighed, a sad and devastating look shadowed her face and she said, “My son Scarus lives here with me, at least for now. But he wants to move to the big cities he wants to work in a factory. He considers this life of a farmer as something low and disrespectful and thinks that by working in those cities with smoke for a sky, he can gain respect. I have tried everything to stop him but he won’t budge from his decision. His father went on the same mad trip 3 years ago, and he hasn’t returned. Sometimes I fear he is now one with the smoke.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Scarus realized how apt his mother’s words were. In about 10 years his life would start crumbling apart and he would not be able to stop that. So, to her he said, “Ma’am you have saved my life, let me repay the favor. I think I might be able to reason with your son.” Late in the evening young scarus returned when he saw his older self. “Who is this mother?” The mother said, “This is your uncle Stephen, he works in Manchester in an iron mill. He has come to live with us for a few days.” But young scarus was already lost in his dreams after hearing about Manchester. He rushed to his older self and cried, “Uncle you have to tell me how the big city is, it must be so exciting working in an iron mill away from all this. You have to take me there uncle, I beg of you.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Older Scarus sighed deeply and said, “You have a tender mind child, you cannot see the hardships the big city brings with it. Here you have fresh water, clean air to breathe, a long farm to run. In the city you will be deprived of all this. At your tender age the smoke of the air will ruin your lungs and the water will burn your stomach. Your legs will grow weak and your body frail. Look at me, do you want to look like this when you grow up, do you want to feel as weak and useless I feal right now. Don’t rush to the big cities for so called notions of a respectful job or life. My life is in no way respectful or self-satisfying.” Hearing this young scarus grew wild and yelled, “You have had your time in the big city but when it comes to me you blabber on with these lectures. Why can’t anyone understand my dream of living in big house, in a famous city, with titles so extravagant that people call my name with respect”. “You think you will achieve that by working in an iron mill? You can’t even comprehend how wrong you are. But I don’t want to kill your dream, instead I will show you the right way to shape it into reality.” Saying this he took out what little money he had with him and gave it to young scarus, knowing thirty years earlier even that trivial amount would be like a treasure to him. Seeing this the mother came forward to interrupt but old scarus said, “please don’t refuse this ma’am, you won’t believe me but I really want to repay my debt to you and want to see young scarus as someone respectful and not someone as disgraceful as myself. I give him this money not to travel but I urge him to spend it on something more productive, something that will develop his skills in fields which the big cities lack. The big cities are filled with machine men with mechanical lives but the intellectual capacity of the people is so weak and low that it is almost shameful. But imagine among all those mechanical men there would be a young scholar, someone with a strong intellectual aptitude and command over knowledge so vast that people would look up to him. By the time you achieve that amount of knowledge and come to the cities you would have grown much older and the environmental factors wont effect you with the same severity as they would now.” The last few lines triggered a sort of mania in young scarus. To him if what his so-called uncle had said was true was a golden route to his dream. He cried, “Is it true. Can a scholar command respect of that stature? Is it true that a scholar would be more respected than an iron mill owner? If that is the case you have done me great favor. I will surely try your way of realizing my dreams. If nothing else it might comfort my mother a bit that I would stay back with her for a few more years.” Scarus gave a gentle nod of approval and looked at his mother who was oblivious to who he actually was, for her consent, not that he needed it that that age but it was an old force of habit to seek her approval. The mother too was convinced because it gave her a chance to hold on to her young beloved son a little longer and not lose him right away.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The next day when every one was asleep, scarus snuck out of the house and walked to the spot where he had thrown the candle. It lay there beneath the tree; its flame had died off. Scarus went ahead and picked it up, but the moment he held the candle in his grasp, his surroundings dissolved and he stood on a single piece of rock with red fiery flames swirling around him like a giant vortex. It was as if the sky, the earth and the air itself had started burning and it was all closing in on him. A voiced echoed amidst this chaos, “This is not the end of it scarus, you have only delayed your downfall but it will take much more to save your life from falling apart. Remember every gruesome mistake that you have made. You have to correct the decisions that made your life so distasteful.” With this the flames collapsed onto scarus and he found himself on a street in Manchester. Towards him, a young man was approaching. He wore a borrowed suit, a shabby old overcoat and carried a gigantic trunk by side. It took some time for him to realize that the man was no other than himself, only a few years older than when he had first arrived in the city. It struck scarus at that moment that at that young age he was a mindless, reckless and a spendthrift lad, who had fallen so deep into the vices of the city that they had drained him of all his money. He had surrounded himself with extravagant men, men who were rich and spoiled and hollow from inside, men who had money and time to throw away and men who had pushed him down to that disgraceful life. By the time he shook away the thought, he saw that his younger self had already walked past him, and was going to enter a pub, only he didn’t know that it was one. Old scarus rushed and entered the pub behind his younger self. He saw that young scarus was sitting alone on a table, when a group of men were approaching him. He rushed and took a seat with his younger self before the other men could. Young scarus hadn’t recognized him from the time when he had visited him on the farm, so he asked, “who are you old man, can’t you see that this table is occupied.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I am sorry if I have startled you scarus. I think you don’t remember me and then again why should you. You have only met me once a few years ago and only for a couple of hours. So let me introduce myself again. I am Stephen your uncle”. He saw that young scarus had now started to remember and in few moments, he even exclaimed, Why then its you, uncle Stephen. I can’t believe I didn’t recognize you after what you did for me. I think I have gone down the path you had told me to. I wanted to revert back to my way of doing things but mother always convinced me to the contrary. I have come here only after she said I could go, I realized if I had left her then it would have been devastating, both for her and me. But now we have sold away a part of our land. We have enough money for my travels and education and for her to live happily.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I am so proud of you scarus, that you have achieved something that most men don’t even dream about. I should apologize for leaving you like that back then but I had my reasons which I think you will understand in due time. But this isn’t the end scarus. It’s a long walk ahead and trust me when I say this there are not one but innumerable ways of ruining everything you have achieved till now, and nobody shapes them but you. I know I am in no place to tell this to you when I live in such petty states, have wasted my life and haven’t even cared to ask about you in such a long time, but still think of this as an advice and not the blabbering lectures of an old man. Think about them if you feel fit to do so. You have grown into a fine adult and can think for yourself, but I wish someone had told me all this when I was your age, so I am just doing my part so you don’t feel the same way.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Scarus smiled awkwardly, and why wouldn’t he when a relative who he hadn’t seen in years, had met him in this manner and had started to give him life lessons. He was about to say something when old scarus interrupted and said,” I know all this might sound very strange to you but let’s do one thing, I will walk out of this pub and the group of men drinking at the far end of the room will come up to you and offer you a drink, now it’s up to you what answer you ill give to them. I am not stopping you from drinking, I am just asking you to mind the people you surround yourself with.” Saying this scarus stood up and walked out. After about half an hour, young scarus came out, half drunk and giggling. Scarus approached him and said, “Enjoyed ourselves did we?” young scarus looked and screamed, “Hey uncle Stephan , you are still here? I thought you might have disappeared again. I was not hoping to see you for next couple of years.” Old scarus gave a half earnest smile and said, “Let’s get you home”. Young scarus gave him the address of his new house and he took him there, literally carrying him from time to time. He put young scarus in the bed, undid his shoes and put a blanket over him. The room wasn’t much and didn’t have any thing else to lie on so scarus himself slept on the cold floor. The next morning, he woke up and found his younger self still fast asleep. He shook him till he woke. After young scarus freshened up, he sat down and said,” Uncle Stephen, I had the best time yesterday. That group of men you talked about; they had some really fascinating ideas about living one’s life. They told me a lot of things like, I should dress up in more fancy clothing, should go out with them for drinking more often and the best of all, they told me of a thing called gambling, it sounded so exciting.” “As I had expected.’ Said old scarus. “Try to remember what I told you before leaving. You create your own ways to ruin your life. Tell me once more what your dream was. As far as I can remember it had something to do with commanding respect and achieving a status in the society didn’t it? Tell me this by dressing up in fancy clothing and spend your money on drinking, gambling and living a superfluous life, how would this help in achieving your dream. It might make you look good for a year or two in the eyes of pretentious people but after that you would fall in your own eyes, realizing what a pretentious fool you had been, if just you had not taken that one wrong step, If only you had not forgotten what you really came here for, if only you had not given into worldly temptation but instead had paid little heed to these vices and stuck to your dream you wouldn’t have spoiled away your life like this. Its not too late now, you have just looked into the wrong lane, away from the main path, you haven’t stepped into it. If you tilt your head back to where it was, and keep on walking straight, not turning into ruinous paths, you will achieve something much larger than your dream.” A little of this wise knowledge did get stuck into young scarus’s head. His older self knew that not because of anything young scarus had said as a reply but by the warmth of the burning candle which had reappeared in his trousers. This meant that his job in that time sequence was finished. He took his leave from young scarus. As he walked down the street, he wondered what the flames of time had in store for him next.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Nothing else my friend, just that your hand did phase through the servants and they actually can’t see you. Infect only I can see you. The reason is I am you but now you don’t exist. The old and emaciated scarus doesn’t exist anymore, because neither did he work in a mill to begin with nor did he succumb to worldly vices. He became the man of his dreams, the one u couldn’t become, and the one you became all the same because I am you and the young scarus was also you. So, the person who ruined his life was you, the person who helped you improve yourself was also you, and the person who is standing Infront of you is also you. But you don’t exist anymore because your terrible past doesn’t exist anymore. You don’t have the candle with you because when you changed the past you didn’t find the candle to begin with and hence it remains here with me in this room.” saying this the scarus in the fine clothing pulled out the candle from a drawer in the table. He held one end of it and asked scarus to hold the other. At the moment when both their hands touched the candle, the old emaciated scarus turned into the green flame and sunk into the body of the new scarus. Moments after this transfusion, the new scarus, who had fainted, came to his senses. He was filled with strength and energy which he had never felt in his old emaciated form. He had a sense of pride and dignity about him which he had always dreamt of. On the table top stood the candle, burning with a small fading green flame. Scarus shed a single drop of tear and blew the flames away, uttering a final thank you. He realized that the voice in the flame was his own, pulling him upwards from the deep abyss of chaos he had fallen into.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

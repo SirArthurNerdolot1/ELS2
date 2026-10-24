@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yamlokic Intervention | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header with-plate" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article</p>
+      <h1>Yamlokic Intervention</h1>
+      <p class="manuscript-byline">October 24, 2017</p>
+      <figure class="manuscript-plate">
+        <img src="../images/blogs/inline_11.png" alt="Yamlokic Intervention" loading="eager" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Death as an experience is totally over-hyped.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My expectations from ‘snuffing out’ are rather too abstract to be conveyed in their entirety, but they involve something of an ethereal separation of body and soul, the latter finally unfettered of its earthly bonds. I likened it to the sensation one has on a roller coaster that is about to descend from the global maxima in its curved track. High hopes, basically.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        So I can safely say that dying was a sheer disappointment. First came excruciating pain. And then some more. And some more, until I thought that I’d rather die than die. Then I felt a great constriction, like I was being forced out of a garden hose with its end pinched. Later I came to know it was my soul escaping my body out of some really small orifice.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Then darkness engulfed me, making me one of its own.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        There was no dramatic exit, no rising up like a puff of smoke for a last skyward journey, no final nostalgic glance. But what was more disappointing was that there was no sudden burst of understanding. No closure. I was left confused over how and why I’d died while working on my laptop, and if I’d died why I had not dissolved into oblivion but was floating in that white room.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I say room for want of a better word, but it was more like a white expanse extending indefinitely in all directions. And I say that ‘I’ was floating but it wasn’t my physical self. In fact I couldn’t even have been two eyeballs hanging in space, because I didn’t see the whiteness of the room. I felt it. It seemed like whatever mode of sense I had was getting accustomed to the new fabric around me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Fabric which was beginning to contort madly.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A lot of things happened at once. Things began to take shape and colour around me, forming what was an actual room this time. And in the centre of that room, beaming at me stood Dhinchak Pooja.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I can’t believe you’re actually here!” she said.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        If things are escalating quickly for you, you can’t even begin to imagine what it was like for The room was a sort of an ancient dungeon, with walls of grey stone. Fire burned in four caskets that hung on the wall, granting only dim light to the surroundings. But Dhinchak Pooja stood right in front of me, clearly visible. In high definition too; 720p, full brightness, high contrast, very high volume.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Well not really. That is just an expression. Of course you would be here, I called for you myself. I am your BIGGEST fan!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I thought I’d misheard her when she said fan. I could think of no reason why Dhinchak Pooja would look up to me, except that I sang rather poorly.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “You died too?” I asked.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh no no no. I’m not the earthling that you take me for. I’m just donning her appearance. You see I’m constantly on the lookout for fresh appearances, have to keep up with the times, yo. Can’t be stuck with the horned helmet forever, right.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I noticed something on her left forearm. A tattoo.
+      </p>
+
+      <figure class="my-8">
+        <img src="../images/blogs/inline_11.png" alt="22752583_679315542268294_1885206213_n" class="w-full rounded-lg shadow-md"  loading="lazy" />
+      </figure>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “So you’re…?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Yes. Servant to the Lord of Death. Recaller of disembodied spirits. And also, your #1 fan. You’re THE most deliciously evil human I’ve seen!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ………………………………………………….
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        While she was talking what sounded like utter gibberish, the room was really coming into its own around us. Having evolved from the barely furnished dungeon it now revealed several trinkets. Horrific pictures of Dhinchak Pooja adorned the walls, which I recalled were thumbnails from her previous videos. Some of her misfit outfits hung on the walls.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Interspersed were a few typical Yamdoot pictures, depicting a large hairy dude chauffeuring hordes of spirits into his chariot. But they were slowly transforming into pictures of the cap-donning singer doing the same. The room seemed to be metamorphosing as we spoke.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Yes, you totally define Evil Goals for me. I’ve been following you for the past two years, and yours is a level of subtle yet pure evil that I simply admire. The best thing about you is that you don’t even do it purposefully; it’s totally ingrained in you, which makes you a natural. You’ve clocked the Pro level in each of the seven sins in record time!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Okay. A baby seal I wasn’t. But being an idol for an evil-loving carrier of spirits was surely overdoing it a tad.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Are you sure you have the right soul?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh, this is vintage you! So polite, so modest. I’ve made no mistake. You’re the one who just cleared that godforsaken entrance exam right?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I didn’t know Yamdoots had an interest in JEE. Or bad YouTube singers for that matter.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Yes I’d fit that description.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “For that exam itself I don’t care much for. But boy, has it produced some real evil minds for us! In fact you were hardly an interesting specimen before you started preparing for it… competition really brings out the evil best in you guys.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Please cut to it or else I’m actually going to lose interest.” I said, somewhat irritated by the prolonged ambiguity.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Well, don’t you realize the heights you’ve scaled in evilness? You humans look for evil in acts of massive destruction. But for true connoisseurs, it’s the little things that count. Small vile traits that you adopt in your lives that are the real seeds of evil.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I honestly don’t recall when I’ve been really evil. Care to jog my memory?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh, sure. Which of the Sins do you want to start with…?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        …………………………………………………
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I noticed something weird about the walls of the room. They kept changing in some way or the other while I was talking to Pooja. While the changes were slight initially, the room had a total makeover after she was done explaining. The walls were now a solid dull grey. Iron staples were fixed in the wall with rusty chains dangling from them. While there was nobody else in the room I could almost see rugged prisoners bound there with their bodies and heads hanging in defeat.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Pooja filed her nails some distance away while I ruminated over what she’d just said.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “What has made you strive for the last two years? The driving force? The picture of the gates of IIT that you had in your phone? What was it if not greed? And how did you feel when your mate fared way better than you in your whatchamacallit practice tests? Remind you of envy?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Two years you strived for just one goal…preparing as if that was all there is to life. Exempted from all other responsibilities. Yet you weren’t exactly a happy presence in your house, were you? Irate, anxious, nervous – you blew off the handle on several occasions. There’s anger for you. Gave up all vital physical activities. Zero calories spent. But that didn’t stop you from eating compulsively. All the packets of Sev Bhujia… smacks of gluttony to me. And… lust.” she smirked.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Having followed me so intensely you’ll know I’ve had zero female interaction these two years” I stated.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh I know that is true. But are you to say your eyes have been in your sockets the whole time? Puh-lease, don’t make me say it”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I was totally okay with that.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Pride. Have you not been hovering two inches above the ground ever since the results got out? Shining all your trophies with utmost care?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Sloth wasn’t really your strong point. I feared you’d never get there. But you’re such a star… didn’t do yoga in the morning a single day after the first two.” She sounded almost orgasmic, which didn’t go too well with her voice.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Would that be enough? I thought you’re supposed to be smart, with all these credentials. No questions? Good. Now we talk business. Things are going somewhat slowly at hell. The inmates are earnest in their evilness, the ogres doing their bit to torture and provoke fights. Skewers, vats of hot oil are all in place. But they could use some fresh inspiration – you. I’ve chosen you to be the new custodian of evil at hell!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She went on to elaborate about what my costume would look like and how I’ll have to learn to use the new torture equipment that was in place. But I was hardly listening. She had managed to cut open the doubts I always had about how I’d changed as a person during these years. My family and friends had been saying that for a while. I’d shrugged them off, but deep down I was worried that I wasn’t as human as I was earlier. I’d not yet come out of the zone where achieving targets and coming out on top was everything there was to life.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The old carefree me seemed like an entity of the past. And I was scared as hell that all this was part of my genome now. These doubts had just had a rather damning validation.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        While I had these thoughts, the walls of the room changed around me to the dead, enclosing grey I mentioned.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ………………………………………………..
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “How do you feel about being the first among your friends to get placed? This is a good job you’ve landed, albeit non-core…” she chuckled.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Why me? Were my classmates not equally hungry and selfish as I?” I wasn’t willing to accept my fate just yet.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Indeed, each of you had their set of vices. There were options….but you were top of the class at the end, weren’t you?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Why do you sound so anxious”, she continued. “You’ll love it down there. All the petty evil souls will look up to you, and you’ll still get to swat them like flies! I’ve had you called up especially, arranged for you to have all your memory and consciousness intact unlike the other souls. Besides, you coming would mean that I can get rid of the troll. I hate trolls” she said darkly.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I paused and looked around again. Being a floating presence, I wondered what looking around meant for me since I’d presumed that souls had spherical symmetry. In any case, my vision shifted away from my captor and she somehow noticed it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Interesting décor, right? What colour is it right now? Grey? Black?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Grey. Can’t you see for yourself though?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “That’s the beauty of it! There is no real wall. Each one sees what they expect their surroundings to look like, and Is also a reflection of how you’re feeling. We found it tiring to find out what each inmate hates or fears the most and get their rooms done like that. So we just let them decide for themselves! Some time here and each inmate has THE most gruesome wallpapers ever.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I was hardly listening. I had my means of escape.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I gave in to the fact that I was the sinner she idolised. That I’d been selfish and short-sighted. I’d been foregoing my responsibilities to my family without guilt. Nothing was left but to accept.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Acceptance was the only thing that could free me, both literally and figuratively.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I imagined my body as I’d left it and willed it to materialize around me. My body solidified around me and I felt the sensation of my digits brushing against each other. Slowly but surely, I was looking out of my own eye sockets. I was back.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I took a deep breath and clenched my fists. My head bent towards my body and my shoulders expanded as I let the pain of guilt cut through me like a hot knife. I willed my soul to open up and let out all the self-doubt.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My eyes were shut but I received the audio inputs soon after.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        First the iron chains snapped. While I’d counted four of them initially, the continued ‘clunk’s suggested more of them. The iron rungs groaned as the wall cracked around them, finally falling down with a dull thud of old metal on stone. I heard fires guttering out.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I opened my eyes and the walls and floor had taken on just the colour that I’d willed them to – transparent. That was probably when Pooja realized what I was up to. She made a bewildered face and gave me chase, but I was already off. I willed one of the iron chains to leap at my pursuer and a loud ‘ouch!’ told me it had met its mark. I rushed towards the edge where grey stone met the white sky, as more and more of the room disappeared around me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My plan had succeeded. I was falling down into hell.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        …………………………………………..
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I remember falling a lot. White skies soon gave way to those filled with noxious red and green fumes. I could hear some noise in the distance which was already jarring my ears. The only assurance I had was that I was already dead.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Soon I was engulfed in an endless expanse of white (which I was sure was my senses readjusting) which broke into a typical hellish setting.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I was prepared for it, but it didn’t make it any less grotesque. Huge fifty-feet ogres towered upon masses of shrivelled, bleeding bodies. The ogres didn’t seem to be wearing any clothes, which probably marred the exotic view of the red-green sky for the inmates. The noise I’d heard was several of Dhinchak Pooja’s songs playing at once in huge speakers.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I tried to use my will to change the setting again, but my preoccupations of hell overruled. Meanwhile the ogres’ potato like heads started appearing larger. I could make out the terrible lyrics of a few songs. A few other creatures of doom came into sight. But what caught my attention was the man right below me, wearing the most pained expression on his face. His eyes revealed that all life had been sucked out of him.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I shut my eyes and braced for the impact which never came.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ……………………………………………….
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Pleased as I was to not have crash-landed into the man, I didn’t like the new place I found myself in either. It was a decadent setting, with a thick brown carpet and purple coloured walls. Intricately carved lamps stood at the corners of the room, and glowed with what looked like an orb of golden light inside them. The part I didn’t like was the variety of skulls that rested in hollows in the wall.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Just then a fairly large man started to materialize before me. He was dressed in a formal grey three-piece, with shiny black Burberry shoes. He had thick-set features, shaggy eyebrows, jet-back eyes and a sharp jawline. He would’ve looked fairly dapper had it not been for the golden helmet with black horns which rested on his mat of wild curly hair. Such an attire could only belong to…
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “You were lucky to escape the way you did, kid. My yamdoots are never irresponsible with incoming souls, it’s just that Pooja got too certain that you’d love working with her and gave you too much power to alter your surroundings. As you can see. I have given you no such liberty and this room looks just what a guest room in hell should look like.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My ears twitched on hearing ‘guest’.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Apparently it wasn’t the only mistake she did today.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “She’d mentioned you as a special vessel of evil more than once, but I’d hardly paid attention. I hadn’t an inkling that she would call you out of time. She really does hate those trolls I guess.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “But I do fit the job requirements, don’t I?” I blurted.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Do you really think you are evil? Gone irreparably bad?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I couldn’t speak.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Pooja had some sound points, I’d give her that. You are guilty of all the sins. But you seem to have one quality which all other sinners don’t.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “A good JEE rank?” I ventured.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh, no! You’d be surprised how many sinners hail from those hallowed walls. There’s something with that exam, I know, it can mess with your wiring. But the quality I was referring to is remorse. You are capable of feeling guilt. And potentially capable of mending yourself. I know you’ve fostered a lot of self-hate for the things you’ve done and more particularly those you haven’t in the last two years. Not pursued writing, lost touch with all the cool goings-on, bungled your health and cut-off friends and family. But you’ll never get on with life if you can’t let go. Nothing is so bad that it can’t be fixed and it’s never too late to try.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        His words resonated with some hidden corner of my mind that I’d forgotten existed. Suddenly a huge feeling of regret welled up inside me when I realised that I’d died.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        As if having read my mind, Yamraj raised his hand and shut his eyes.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Grab this chance or you’ll hear from me again. And you don’t want that.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I felt myself getting lighter on my feet, as if on a springboard coiled to release.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Believe me, the journey back was just as dramatic as I could have imagined. No body ever imagines a journey back from hell, do they?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        This was the winning entry for the online fresher’s creative writing competition, on the following prompt:
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

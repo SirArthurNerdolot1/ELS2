@@ -29,6 +29,7 @@
       transition: transform 0.3s ease;
     }
   </style>
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
 <!-- Navigation Header -->
@@ -37,7 +38,7 @@
       <!-- Logo + Title -->
       <div class="flex items-center space-x-3">
         <a href="index.html">
-          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
         </a>
         <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
   English Literary Society IIT Kanpur
@@ -48,7 +49,7 @@
       <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
         <a href="index.html" class="hover:text-gray-700">Home</a>
-        <a href="about.html" class="hover:text-gray-700">About</a>
+        <a href="about.html" class="hover:text-gray-700 nav-current">About</a>
         <a href="events.html" class="hover:text-gray-700">Events</a>
         
         <a href="blog.html" class="hover:text-gray-700">Blog</a>
@@ -70,7 +71,7 @@
     <nav id="mobile-menu"
          class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
       <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
-      <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="about.html" class="py-3 border-t hover:text-gray-700 nav-current">About</a>
       <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
       
       <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
@@ -102,9 +103,9 @@
   <!-- About Content -->
   <main class="max-w-5xl mx-auto px-6 mb-24">
     <section class="py-20 px-6 bg-transparent">
-  <div class="max-w-4xl mx-auto rounded-2xl shadow-xl p-10 text-center bg-white" data-aos="fade-up"
-       style="background: radial-gradient(circle at top left, #fefcf9, #ffffff);">
-    <h1 class="text-5xl font-bold mb-8">About Us</h1>
+  <div class="page-intro is-dropcap" data-aos="fade-up">
+    <p class="page-kicker">Chapter I · Dramatis Personae</p>
+    <h1>About Us</h1>
     <p class="text-xl text-gray-800 mb-6 leading-relaxed">
       The English Literary Society at IIT Kanpur was founded to celebrate literature and foster a vibrant community of readers and writers.
     </p>
@@ -132,7 +133,64 @@
     <!-- Team Section -->
     <section  id="team" class="mt-20" data-aos="fade-up" data-aos-delay="100">
       <h2 class="text-3xl md:text-4xl font-semibold mb-10 border-b-2 border-gray-400 pb-2">Meet the Team</h2>
-      <h3 class="text-2xl font-semibold mb-6">Coordinators</h3>
+
+      <!-- 2026-27 Section -->
+      <div class="mb-20">
+        <h3 class="text-3xl font-bold mb-10 text-gray-800 text-center">2026-27</h3>
+        <h4 class="text-2xl font-semibold mb-6">Coordinators</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="images/members/secretaries/Aashvi_Agarwal.jpeg" alt="Aashvi Agarwal" class="w-full h-80 object-cover" loading="lazy" decoding="async">
+            <div class="p-4 bg-white text-center"><h3 class="text-xl font-semibold">Aashvi Agarwal</h3></div>
+          </div>
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="images/members/secretaries/Kanishk_Sharma.jpeg" alt="Kanishk Sharma" class="w-full h-80 object-cover" loading="lazy" decoding="async">
+            <div class="p-4 bg-white text-center"><h3 class="text-xl font-semibold">Kanishk Sharma</h3></div>
+          </div>
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="images/members/secretaries/Kushagra_Chandra.jpg" alt="Kushagra Chandra" class="w-full h-80 object-cover" loading="lazy" decoding="async">
+            <div class="p-4 bg-white text-center"><h3 class="text-xl font-semibold">Kushagra Chandra</h3></div>
+          </div>
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <img src="images/members/secretaries/Sahishnu_Chaturvedula.jpeg" alt="Sahishnu Chaturvedula" class="w-full h-80 object-cover" loading="lazy" decoding="async">
+            <div class="p-4 bg-white text-center"><h3 class="text-xl font-semibold">Sahishnu Chaturvedula</h3></div>
+          </div>
+        </div>
+
+        <h4 class="text-2xl font-semibold mb-6">Secretaries</h4>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Vinayak_Majumder.jpg" alt="Vinayak Majumder" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Vinayak Majumder</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Nishchay_Kapoor.jpg" alt="Nishchay Kapoor" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Nishchay Kapoor</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Rishikesh_J.jpg" alt="Rishikesh J" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Rishikesh J</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Darsh_Kedia.jpg" alt="Darsh Kedia" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Darsh Kedia</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Rushil_Kumar.jpg" alt="Rushil Kumar" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Rushil Kumar</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Koshin_Khatri.jpg" alt="Koshin Khatri" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Koshin Khatri</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Japneet</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Parth Gupta</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Aarush_Bhatt.jpg" alt="Aarush Bhatt" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Aarush Bhatt</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Saksham_Agarwal.jpg" alt="Saksham Agarwal" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Saksham Agarwal</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Soumil_Aggarwal.jpg" alt="Soumil Aggarwal" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Soumil Aggarwal</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Pugazhendhi G S</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Pratham Arora</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Tulip_Khatri.jpg" alt="Tulip Khatri" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Tulip Khatri</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Kavya_Yadav.jpg" alt="Kavya Yadav" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Kavya Yadav</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Nupur_Sehgal.jpg" alt="Nupur Sehgal" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Nupur Sehgal</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Ishita_Singh.jpg" alt="Ishita Singh" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Ishita Singh</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Adiba Areej Laskar</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Ansh_Nalin.jpg" alt="Ansh Nalin" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Ansh Nalin</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Dishita Singh</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Chinmaygowda_R.jpg" alt="R Chinmaygowda" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">R Chinmaygowda</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Bhavya_Goel.jpg" alt="Bhavya Goel" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Bhavya Goel</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><img src="images/members/2026-27/Aryan_Deshpande.jpg" alt="Aryan Deshpande" class="w-full h-40 object-cover" loading="lazy" decoding="async"><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Aryan Deshpande</p></div></div>
+          <div class="rounded-xl overflow-hidden shadow-md"><div class="w-full h-40 bg-[#efe6dc]" aria-hidden="true"></div><div class="bg-white text-center py-2 min-h-[56px] flex items-center justify-center"><p class="text-sm font-medium px-2 leading-tight">Bhagyashree</p></div></div>
+        </div>
+      </div>
+
+      <!-- 2025-26 Section -->
+      <div class="mb-20">
+        <h3 class="text-3xl font-bold mb-10 text-gray-800 text-center">2025-26</h3>
+        <h4 class="text-2xl font-semibold mb-6">Coordinators</h4>
+
 
       <!-- Coordinators -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-20">
@@ -140,7 +198,7 @@
          
         
         <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <img src="images/members/Anika_Gupta.jpg" alt="Anika Gupta" class="w-full h-80 object-cover">
+          <img src="images/members/Anika_Gupta.jpg" alt="Anika Gupta" class="w-full h-80 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-lg font-medium px-4 text-center">"Live and let live"</p>
           </div>
@@ -149,7 +207,7 @@
           </div>
         </div>
       <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-        <img src="/images/members/aryavart_dahiya - Aryavart Dahiya.jpeg" alt="Aryavart Dahiya" class="w-full h-80 object-cover">
+        <img src="images/members/aryavart_dahiya.jpeg" alt="Aryavart Dahiya" class="w-full h-80 object-cover" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p class="text-white text-lg font-medium px-4 text-center">"Hogwarts didn’t write back. So now I ride through campus chasing my lost sanity instead of Horcruxes    <br>  ;("</p>
         </div>
@@ -158,7 +216,7 @@
         </div>
       </div>
       <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <img src="images/members/ishaan_jain.jpeg" alt="Ishaan Jain" class="w-full h-80 object-cover">
+          <img src="images/members/ishaan_jain.jpeg" alt="Ishaan Jain" class="w-full h-80 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-lg font-medium px-4 text-center">"Putting The L in ELS"</p>
           </div>
@@ -167,7 +225,7 @@
           </div>
        </div>
         <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-          <img src="images/members/Nikhil_Pothuganti.jpeg" alt="Nikhil Pothuganti" class="w-full h-80 object-cover">
+          <img src="images/members/Nikhil_Pothuganti.jpeg" alt="Nikhil Pothuganti" class="w-full h-80 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p class="text-white text-lg font-medium px-4 text-center">"The people who are crazy enough to think they can change the world are the ones who do"</p>
         </div>
@@ -178,11 +236,11 @@
       </div>
 
       <!-- Secretaries -->
-      <h3 class="text-2xl font-semibold mb-6">Secretaries</h3>
+      <h4 class="text-2xl font-semibold mb-6">Secretaries</h4>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         <!-- Repeat for each secretary -->
          <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Aabha_Jalan.jpg" alt="Aabha Jalan" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Aabha_Jalan.jpg" alt="Aabha Jalan" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Life so cooked burnt bread handed me the fire extinguisher."</p>
           </div>
@@ -191,7 +249,7 @@
           </div>
         </div>
          <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Aanya_Nayak.jpg" alt="Aanya Nayak" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Aanya_Nayak.jpg" alt="Aanya Nayak" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Caffeinated, procrastinated, still somehow making it."</p>
           </div>
@@ -200,7 +258,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Aashvi_Agarwal.jpeg" alt="Aashvi Agarwal" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Aashvi_Agarwal.jpeg" alt="Aashvi Agarwal" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"regional to the assistant manager"</p>
           </div>
@@ -209,7 +267,7 @@
         </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Aditya_Pratap_Singh_Baghel.jpg" alt="Aditya Pratap Singh Baghel" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Aditya_Pratap_Singh_Baghel.jpg" alt="Aditya Pratap Singh Baghel" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Life is unpredictable, so do weird stuff. Note, not everyone does what they say"</p>
           </div>
@@ -218,7 +276,7 @@
         </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Akmal_Arif.jpeg" alt="Akmal Arif" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Akmal_Arif.jpeg" alt="Akmal Arif" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"choose life.(watch trainspotting please.)"</p>
           </div>
@@ -227,7 +285,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Akshat_Sathiya_Narayanan.jpg" alt="Akshat Sathiya Narayanan" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Akshat_Sathiya_Narayanan.jpg" alt="Akshat Sathiya Narayanan" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"One great song and I could change the world"</p>
           </div>
@@ -236,7 +294,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Anantika_Prasad.jpg" alt="Anantika Prasad" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Anantika_Prasad.jpg" alt="Anantika Prasad" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Writing what I can't say out loud"</p>
           </div>
@@ -245,7 +303,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Anubha_Jaiswal.jpeg" alt="Anubha Jaiswal" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Anubha_Jaiswal.jpeg" alt="Anubha Jaiswal" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"When grammar meets glamour, every word finds its perfect place.
 "</p>
@@ -255,7 +313,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Anusha_Gupta.jpeg" alt="Anusha Gupta" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Anusha_Gupta.jpeg" alt="Anusha Gupta" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"at the end of the day it's just you with your silly little life , soo be the person you want to be..."</p>
           </div>
@@ -264,7 +322,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Avtansh_Gargya.jpg" alt="Avtansh Gargya" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Avtansh_Gargya.jpg" alt="Avtansh Gargya" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"I'm not superstitious, but I am a little stitious."</p>
           </div>
@@ -273,7 +331,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Bharat_Sharma.jpeg" alt="Bharat Sharma" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Bharat_Sharma.jpeg" alt="Bharat Sharma" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Less Perfection More Authenticity"</p>
           </div>
@@ -282,7 +340,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Dhruv_Gupta.jpeg" alt="Dhruv Gupta" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Dhruv_Gupta.jpeg" alt="Dhruv Gupta" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Trains don’t wait for epiphanies."</p>
           </div>
@@ -291,7 +349,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/DIYUSH_S.jpg" alt="Diyush S" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/DIYUSH_S.jpg" alt="Diyush S" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-1 text-center overflow-hidden">"I call it distraction, but really, it’s me hunting for brilliance while pretending to be busy - or maybe that’s just my inner procrastinator in <br>disguise."</p>
 
@@ -301,7 +359,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Granth_Kothari.jpg" alt="Granth Kothari" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Granth_Kothari.jpg" alt="Granth Kothari" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Too sleep deprived to care."</p>
           </div>
@@ -310,7 +368,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Hrishita_Singh.jpg" alt="Hrishita Singh" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Hrishita_Singh.jpg" alt="Hrishita Singh" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Carpe diem"</p>
           </div>
@@ -319,7 +377,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Ishika_Gupta.jpg" alt="Ishika Gupta" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Ishika_Gupta.jpg" alt="Ishika Gupta" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Literature isn’t an escape—it’s a return to self."</p>
           </div>
@@ -328,7 +386,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Jayaraman_B.jpg" alt="Jayaraman B" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Jayaraman_B.jpg" alt="Jayaraman B" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Success is rented and the rent is due everyday "</p>
           </div>
@@ -337,7 +395,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Kanishk_Sharma.jpeg" alt="Kanishk Sharma" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Kanishk_Sharma.jpeg" alt="Kanishk Sharma" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"I write because therapy is expensive and swords are frowned upon"</p>
           </div>
@@ -346,7 +404,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Karthik_Rao_Varam.jpg" alt="Karthik Rao Varam" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Karthik_Rao_Varam.jpg" alt="Karthik Rao Varam" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Some people chase their dreams. I nap and let mine catch me."</p>
           </div>
@@ -355,7 +413,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Keshav_Agrawal.png" alt="Keshav Agarwal" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Keshav_Agrawal.jpg" alt="Keshav Agarwal" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Kept alive by my love for puns, coffee and football"</p>
           </div>
@@ -364,7 +422,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Kushagra_Chandra.png" alt="Kushagra Chandra" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Kushagra_Chandra.jpg" alt="Kushagra Chandra" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Kept alive by my love for puns, coffee and football"</p>
           </div>
@@ -373,7 +431,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Mudita_Jalan.jpg" alt="Mudita Jalan" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Mudita_Jalan.jpg" alt="Mudita Jalan" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Whatever you do in this life, it's not legendary unless your friends are there to see it - Barney Stinson "</p>
           </div>
@@ -382,7 +440,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Mudita_Roy.jpg" alt="Mudita Roy" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Mudita_Roy.jpg" alt="Mudita Roy" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Quotes are for dumb people who can't think of something intelligent to say on their own."</p>
           </div>
@@ -391,7 +449,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Nideesh_H.jpeg" alt="Nideesh H" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Nideesh_H.jpeg" alt="Nideesh H" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"It always seems impossible until it is done"</p>
           </div>
@@ -400,7 +458,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Nikhilesh Mahesh Pujari.jpeg" alt="Nikhilesh Mahesh Pujari" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Nikhilesh Mahesh Pujari.jpeg" alt="Nikhilesh Mahesh Pujari" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"99% of gamblers quit just before the hit it big."</p>
           </div>
@@ -410,7 +468,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Pradyumn_Vikram.jpeg" alt="Pradyumn Vikram" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Pradyumn_Vikram.jpeg" alt="Pradyumn Vikram" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Aloo bhujiya enthusiast"</p>
           </div>
@@ -419,7 +477,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Sahishnu_Chaturvedula.jpeg" alt="Sahishnu Chaturvedula" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Sahishnu_Chaturvedula.jpeg" alt="Sahishnu Chaturvedula" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"... And one day, we'll look back at where we started and be amazed by how far we've come."</p>
           </div>
@@ -428,7 +486,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Shikhar_Gupta.jpg" alt="Shikhar Gupta" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Shikhar_Gupta.jpg" alt="Shikhar Gupta" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Don't take life too seriously. You'll never get out of it alive."</p>
           </div>
@@ -437,7 +495,7 @@
           </div>
         </div>
         <div class="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
-          <img src="images/members/secretaries/Shruti_Sahu.jpg" alt="Shruti Sahu" class="w-full h-40 object-cover">
+          <img src="images/members/secretaries/Shruti_Sahu.jpg" alt="Shruti Sahu" class="w-full h-40 object-cover" loading="lazy">
           <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <p class="text-white text-sm font-light px-2 text-center">"Playing with words..(literally)"</p>
           </div>
@@ -445,13 +503,51 @@
             <p class="text-sm font-medium px-2 leading-tight text-ellipsis overflow-hidden text-center break-words">Shruti Sahu</p>
           </div>
         </div>
+        </div>
+      </div>
+
+      <div class="mt-6 mb-4 text-center">
+        <h3 class="text-3xl font-bold text-gray-800">Earlier years</h3>
+        <p class="mt-3 text-gray-600">Coordinators from previous tenures.</p>
+      </div>
+      <div class="alumni">
+        <section class="alumni-year"><h4>2024–25</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Sidhant_Thalor.jpg" alt="" loading="lazy" decoding="async"><figcaption>Sidhant Thalor</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ishi_Jain.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ishi Jain</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Nandini_Bhattad.jpg" alt="" loading="lazy" decoding="async"><figcaption>Nandini Bhattad</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Mayur_Agarwal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Mayur Agarwal</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2023–24</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Aviral_Upadhyay.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aviral Upadhyay</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Gauravi_Chandak.jpg" alt="" loading="lazy" decoding="async"><figcaption>Gauravi Chandak</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Niliena_Celine_Biju.jpg" alt="" loading="lazy" decoding="async"><figcaption>Niliena Celine Biju</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Talin_Gupta.jpg" alt="" loading="lazy" decoding="async"><figcaption>Talin Gupta</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2022–23</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Arth_Banka.jpg" alt="" loading="lazy" decoding="async"><figcaption>Arth Banka</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ayush_Anand.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ayush Anand</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ishita_Vyavahare.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ishita Vyavahare</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Rose_Agarwal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Rose Agarwal</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2021–22</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Aayush_Priyadarshi.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aayush Priyadarshi</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Abhimanyu_Sethia.jpg" alt="" loading="lazy" decoding="async"><figcaption>Abhimanyu Sethia</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Aryan_Pandeya.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aryan Pandeya</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Gaurvika_Kapoor.jpg" alt="" loading="lazy" decoding="async"><figcaption>Gaurvika Kapoor</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2020–21</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Ananya_Singh.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ananya Singh</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ankur_Banga.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ankur Banga</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Kartikeya_Dhakad.jpg" alt="" loading="lazy" decoding="async"><figcaption>Kartikeya Dhakad</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Nikhar_Agrawal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Nikhar Agrawal</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2019–20</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Parth_Athale.jpg" alt="" loading="lazy" decoding="async"><figcaption>Parth Athale</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Anirudh_Anil_Ojha.jpg" alt="" loading="lazy" decoding="async"><figcaption>Anirudh Anil Ojha</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Medha_Agarwal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Medha Agarwal</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Pulkit_Deshmukh.jpg" alt="" loading="lazy" decoding="async"><figcaption>Pulkit Deshmukh</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2018–19</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Divyankar_Pratyush.jpg" alt="" loading="lazy" decoding="async"><figcaption>Divyankar Pratyush</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Karan_Jha.jpg" alt="" loading="lazy" decoding="async"><figcaption>Karan Jha</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Sanket_Anand.jpg" alt="" loading="lazy" decoding="async"><figcaption>Sanket Anand</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Siddhanta_Mhambrey.jpg" alt="" loading="lazy" decoding="async"><figcaption>Siddhanta Mhambrey</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2017–18</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Samarth_Chawla.jpg" alt="" loading="lazy" decoding="async"><figcaption>Samarth Chawla</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">SJ</div><figcaption>Shikhar Shivraj Jaiswal</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2016–17</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Kanishk_Gandhi.jpg" alt="" loading="lazy" decoding="async"><figcaption>Kanishk Gandhi</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Nishit_Asnani.jpg" alt="" loading="lazy" decoding="async"><figcaption>Nishit Asnani</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">TT</div><figcaption>Tanmay Thakkar</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Vaidehi_Menon.jpg" alt="" loading="lazy" decoding="async"><figcaption>Vaidehi Menon</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2015–16</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Nihar_Gargava.jpg" alt="" loading="lazy" decoding="async"><figcaption>Nihar Gargava</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Pallav_Goyal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Pallav Goyal</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ritika_Mulagalapalli.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ritika Mulagalapalli</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2014–15</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Adhiraj_Arora.jpg" alt="" loading="lazy" decoding="async"><figcaption>Adhiraj Arora</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">AJ</div><figcaption>Anushka Jha</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Shehzad_Hathi.jpg" alt="" loading="lazy" decoding="async"><figcaption>Shehzad Hathi</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2013–14</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Anurag_Sahay.jpg" alt="" loading="lazy" decoding="async"><figcaption>Anurag Sahay</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">GG</div><figcaption>Govind Gopakumar</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">RP</div><figcaption>Rajat Poovaiah</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">SC</div><figcaption>Sarthak Chandra</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2012–13</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Priyank_Jaini.jpg" alt="" loading="lazy" decoding="async"><figcaption>Priyank Jaini</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">SV</div><figcaption>Siddharth Vishwanath</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2011–12</h4><div class="alumni-people"><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">AG</div><figcaption>Anirudh Gupta</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Prarthana_Prabhakar.jpg" alt="" loading="lazy" decoding="async"><figcaption>Prarthana Prabhakar</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Debosmita_Chaudhuri.jpg" alt="" loading="lazy" decoding="async"><figcaption>Debosmita Chaudhuri</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2010–11</h4><div class="alumni-people"><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">VK</div><figcaption>Vidur Kumar</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Aditya_Gupta.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aditya Gupta</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">TM</div><figcaption>Tanya Mendiratta</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">AB</div><figcaption>Asmita Bhattacharya</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2009–10</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Shashwat_Chandra.jpg" alt="" loading="lazy" decoding="async"><figcaption>Shashwat Chandra</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Aditya_Navin.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aditya Navin</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Ashish_Kharloya.jpg" alt="" loading="lazy" decoding="async"><figcaption>Ashish Kharloya</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">SM</div><figcaption>Soumya Misra</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2008–09</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Aditya_Thareja.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aditya Thareja</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">MS</div><figcaption>Mrinmaya Sachan</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">JD</div><figcaption>Jishnu Das</figcaption></figure></div></section>
+        <section class="alumni-year"><h4>2007–08</h4><div class="alumni-people"><figure class="alumni-person"><img src="images/members/alumni/Aman_Mohunta.jpg" alt="" loading="lazy" decoding="async"><figcaption>Aman Mohunta</figcaption></figure><figure class="alumni-person"><img src="images/members/alumni/Abhiraj_Bhal.jpg" alt="" loading="lazy" decoding="async"><figcaption>Abhiraj Bhal</figcaption></figure><figure class="alumni-person"><div class="alumni-initials" aria-hidden="true">SG</div><figcaption>Soham Ganguly</figcaption></figure></div></section>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="mt-32 text-center text-gray-500 text-sm max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up" data-aos-delay="500">
-    &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

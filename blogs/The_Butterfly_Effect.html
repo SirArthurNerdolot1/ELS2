@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Butterfly Effect | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The Butterfly Effect</h1>
+      <p class="manuscript-byline">June 2, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Butterfly effect or the chaos theory dictates that in a system defined by non linear equations, even a microscopic change in the initial data can lead to unpredictable and often cataclysmic changes in the outcome. The degree, however, depends on how far from the initiation we take the outcome to be. There is in fact a lot of scientific mumbo jumbo in the aforementioned words but not nearly enough to capture the true essence and brilliance of what is. To bring things into perspective, the name sake of this effect, a butterfly flapping its wings can be the reason a hurricane is born a thousand miles away. Such beauty, such deliverance is real reason why the world works the way it does. I, for one, am in awe with the higher powers at work here. I appreciate what is and almost feel bad for the people who don’t. This right here is therefore an attempt to justify why it’s not ‘utter crap’. Doesn’t matter how futile, but an attempt nevertheless. An ode to that unsuspecting butterfly.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        We all have an understanding of the term ‘aftereffect’, lets try to figure out what was before that butterfly flapped its wings. The answer is simple, there was a butterfly. How that butterfly came to be? You might ask and brownie points for asking that because that, precisely, is the point of it all. There is always something that lead to the way things are in this exact moment.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I am not going to pretend that I have a fair understanding of how anything works because frankly, I do not. Your guess is as good as mine, but hey, I was told to be creative. And why everything pans out the way it does, maybe we’ll never know but trying is the most we can do, so try we shall.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It’s pointless turning back the clock, searching for the reasons that transpired this event of me trying to convince you that there is indeed something that we fail to see, for this is as old as time itself. The point is, we are here, alive, kicking, thinking, writing and all because at some point in this infinite continuum of time and space, something was at the right place at the right time. I mean look around you, everything is right where it should be, no more no less. It seems almost impossible and yet, here we are, conscious of ourselves and our thoughts. Just enough to realize the fact that we are unique and for a reason that are still incomprehensible to us.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Humans have this innate ability to associate meaning to everything. That is how the concept of religion was born, people trying to pin the wonder of life to an entity watching over us, deliberating events that lead to an average planet, revolving around a very average star. Trying to give meaning to chaos, and chaos it is, such a beautiful one.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The Chaos theory, to me, is anything but chaos. I believe there is reason to everything is and turns out to be the way it does. Even the most menial of things, water, for example. It’s most dense at 4 degree Celsius, not zero, not any other number but four, for a reason that I will not mention in the interest of our time and ability to tolerate details. Not only that but there are elements and phenomenon that take place with pin point precision, so much so that even a miniscule change would render life impossible and yet we live without a care in the world and everything just takes care of itself. It’s hard not to involve a higher power. The reason, however, still unknown.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        There is just so much beauty around that it almost frustrating that we don’t know who to credit it for. The Butterfly Effect. Maybe it indeed is bullsh*t, complete coincidences piling up and hence, our desperate attempts to pin meaning to something that might not even be there. Theorizing, contemplating, pondering for countless hours instead of doing something that is just as pointless.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        All of this makes me wonder what is the point of it all and eventual nihilism but it’s only justified. Everything you do can be followed up with a ‘why?’ or a ‘what?’ till a point comes where you can no longer justify existence and yet we don’t give up. We strive, we fail, we learn, we laugh, we love and we write. In the grand scheme of things, does it even matter if I write something that you will love or hate? But I write nevertheless. I express myself to a degree that almost annoys you but I ask myself how does it matter in the grand scheme of things and all is well again.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        All is well because I am here and I can think of all the chaos that lead me to this…realization. The realization that maybe everything does happen for a reason and there is indeed a higher power or maybe there isn’t an we are just floating away on a rock with no certain tomorrow. We’d like to think that we are in control and that is what we are taught from the very beginning. Maybe it is the case, maybe it isn’t. Bottom line is, we need to make peace with it and carry on. Pondering upon the purpose and possibilities. Trying to answer the questions that may not have an answer. Seeking purpose, meaning and eventual but eternal happiness.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        You see, everything that you do can be boiled down to happiness. And what exactly is it? Happiness? To your disappointment (and mine as well) it’s just dopamine being released in your brain. How shallow does that make you feel? That everything you do is to convince your brain to release an indifferent arrangement of molecules?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        So, the Butterfly Effect, what is it? I believe it’s just a distraction we created for ourselves to justify our actions that in totality have no consequences. Something we coined to keep us from insanity.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The end?
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

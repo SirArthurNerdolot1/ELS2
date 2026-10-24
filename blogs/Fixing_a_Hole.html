@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixing a Hole | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Fixing a Hole</h1>
+      <p class="manuscript-byline">January 25, 2018</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        \[T]/ When I heard that Dark Souls was getting remastered, I felt my heart (and this is no joke) drop into the pit of my stomach and leap back up into my throat. A d ull thudding and the surging of fresh arterial blood, and all those years dropping away like scabs from an old wound. If only I could be so grossly (incandescent, of course, but also) eloquent that I could express even a little of why that should be so! Sing in me, Muse, and through me tell the story of all those nights, those dark, heart-stopping nights, huddled up in front of dim screens, waiting, parrying, deflecting, striking out when you can, and when patience wears thin. Those terrible nights you could do nothing but fall, when you keep slipping up and misjudging the bounds; down, down, crushed to the ground no matter how hard you tried. Those sleepless nights you spent on forums and tutorials and the like, convinced you were doing something wrong somewhere, but just what that was remained yet to be seen. Those disquieting nights when you would just throw up your hands in sheer frustration and switch things around radically, try out unseemly weapons and crazy tactics and drastic changes to your character, and you would get clubbed into the ground again, but worse than usual, somehow. But you must sing too, then, of the delicate, sensual nights, when everything seems to be going your way, when you find yourself on inroads you never even knew were there. Of when death can’t seem to touch you, of when the doomed world (and all its doomed inhabitants) seem as warm and snug and inviting as your bed back home, of when you can dance your way around the pain, (and dole it out in equal measure, if you so please), of losing yourself completely, effortlessly, and timelessly. And even when you’re done and finished, you’re left looking for the same things in all that you see, that perfect balance between patience and just being, like, a complete bitch all the time, you know? Yes, I have had my way with her sisters two and three, wandered the shores of Cuphead, taken a dip into Hollow Knight, frolicked in the meadows of Titan Souls, dabbled in Salt and Sanctuary, I’ve done it all and something is always missing, something itches just the wrong way, something is always off, something is never just right. So I must return now to her once more, after all this time I kept myself away; to lose everything all over again, to find myself anew. For ‘tis a cruel mistress I seek, and I must prepare to pay in flesh and blood and soul, for ‘tis what she demands of me, that grim, ghastly goddess of mine. (But I shall give them gladly) For if there’s one thing I’ve learned from Dark Souls, it’s that: If one is doomed for a certain time to walk the earth and when everything is already doomed anyway, the only way from there is up. And a lso, of course, git gud. To the girl who sits across from me at the lab and has that smile that’s just right in all the wrong ways or wrong in all the right ways, I write these lines for you, that you may stumble upon them someday, somewhere, and find these moments and glimpses of you that I wished to crystallize in my hapless, infantile words, to be pleasing, perhaps, or even mildly amusing, for that is all I could bear to ask of you. You, the namesake of an unusual, calm river, with aptly wavy hair. Yes, you, of the feminist blog and the thick lenses. You, of the bright eyes like fathomless oceans. You, of the peerless, sultry bloom of youth, and the forbidding, steely tongue that comes with. You, of the acid wit and snappy retorts, half-whispered underbreath. How did you drop into my life so simply and yet irrevocably, like the petals of a jasmine blossom onto a prickly lawn? How have you spread your roots so far and so quick? You dwell in my dreams so, (and so often) and when I awaken they still keep the hollow of your form. Like waves thrashing against cliffs, my thoughts return to you, (and only you) tirelessly. I dig my toes into the sand on your banks, afraid to venture any further, to be swept away and tossed about in the currents, to wash up, gasping for breath, on some unknown shore. I fear too the thirst I seem to have brought along for you, (and only you); it is relentless and unquenchable. So I stay here, and watch your spectacles mist up when you laugh, and I wonder if I shall someday gather myself up and brave your surging waters. Tomorrow, tomorrow, (you of the) endless tomorrows.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

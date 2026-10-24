@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>“So, you claim that you are nothing but a character in a drab little storybook?” | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Review · From the Archive</p>
+      <h1>“So, you claim that you are nothing but a character in a drab little storybook?”</h1>
+      <p class="manuscript-byline">June 8, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        -Thoughtful Thestral
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        [Note: The normal, italicized and the bold text are three separate accounts, not necessarily in the same time frame.]
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The bell rang and I was called in for counselling. I stood up straight, adjusted my tie, tried to put a smile on my face, and walked towards the door. My heart beat heavily against my chest. My throat was dry, and beads of sweat populated my arms. It was getting unbearable. I was in serious doubt, whether I would be able to convince the therapist of my problems. But one thing was certain – this was the only way out. So, I pulled open the door.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The story seems to be going nowhere. Why am I even reading this book? Anyway, I know I have to go on, because the Ibek never recommends a book that I eventually don’t end up liking. The protagonist of this story is a self-centred duffer, who knows nothing better than to seal foolish business deals, dwelling deeper into his own mountain of debt and taking his company down with him. I hope the plot will have more to offer than this cliched narrative, in the pages to come. I do flip through some pages and start reading bits of random chapters on my own at times. It helps to make me feel a bit interested. Now, I guess, I must go and write my diary, before I become too drowsy to pick my pen.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The room was spacious and well illuminated. The temperature was optimum. There was a wooden table at the centre, with a chair on either side of it. The one facing me was occupied by an old man in his fifties, sitting purposefully, but with a broad smile on his face. He asked me to take the other seat, and I readily accepted the offer. There was a soothing air about this man. My nerves relaxed a bit for the first time since last night, as I gave my introduction, and began describing to him the problem that I was facing.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Hmm… this has been a good day so far. Although I have hardly done anything productive, but the story is taking a turn for the better. The build up of this character, Mr. Badger, is taking hold of my senses, and I’m beginning to fall into the book. It’s catching up. Fast. I wonder how the first part of this series must have been, although there seems little connection between the two, because I’m able to understand the events of this sequel very well. I’d like to read it once I get my hands on it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “So, you claim that you are nothing but a character in a drab little storybook?” “Yes.” Actually, I was pretty sure of the fact. It all began a few weeks ago, when I had stopped abruptly in the middle of a board meeting, realising that I had been in that exact situation before. I could not bring up my mind to recollect exactly when, and I thought it was an absurd idea then, because half the members of the board were attending their first meeting. Maybe it was just a random thought that had captured my imagination. At least, that is what I had convinced myself. But this only got worse. When I was watering my little garden four days back, I had the same memories of recollection. How could I be having visions of my future? It seemed scientifically impossible, so I discarded the idea right away. But this happened again. The next day, when I nearly escaped a car accident, it was because I realized that I had had a vision of that car approaching me and me just avoiding an accident. This made my mind blank, and I absently drove right in front of that car. But the driver of that vehicle made it stop at the right moment, just as my vision had predicted. So, I started reading up on these sort of visions. And I came to the conclusion that I was nothing but the character of a story. So was this therapist. “And how does that explain your visions?” he asked me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Today, I didn’t get any time to read the book till the evening. So, I haven’t read much today, but the story is still moving at a good pace. Badger has finally found love and is planning to propose to the girl. His company has stopped crashing, and there seems to be a chance for steady growth. The way all this has been portrayed is quite cool. It somehow reminds me of the way I like writing, though I seem to have lost my flair for some time. I have started flipping through future chapters more often now, as I want to heighten my excitement by reading glimpses of scenes from the later chapters. Oh, it’s getting late. Time to write my diary for the day!
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I explained the theory of storyception. Actually, whenever the reader of my story gave way to his curiosity and started reading a page from the part of the book he hadn’t read till then, I received a vision of my future. The reader and I were connected, as if by strings. When he saw a glimpse of my future, I saw it too. And this had been making me paranoid since the last few days. I wanted to get out of the story, as quickly as I could. I don’t know why I thought that this therapist must have a solution to my problem. After listening to me, he instructed me to take a few pills that he gave me, wrote me a bill of a few hundred dollars, and took my signature on some record. I could hardly call my name my own. Mr. Harvill Badger sounded so familiar, yet so unfamiliar. It felt as if this was just the kind of name a crazy author would give me. I took the pills and walked downstairs.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I have grown affectionate towards this guy Badger now. Maybe the long, first person narrative is what makes me connect to him so well. By the way, I am excited right now because I have started my own venture with my friends. The legal formalities were completed today and the investors think our business plan makes a lot of sense, and has the potential to transform lives in the coming days. I hope I make it big, and make my Dad feel proud of me. “Well done, Harvill!” Yes, that’s what he will say. I think I’ll finish the book in a couple of days, as I set out on serious operations for my company.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I went to the local pub and had a drink to soothe my nerves. I also swallowed the pills, and prepared to leave for my house, hoping that they would have a positive effect on my trauma.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I haven’t been reading much since some time now. The business has had a slow start, but I hope it will pick up in the blissful times to come. The stock market is expected to rise soon. I hope my diary helps me feel proud of myself when I’m successful, maybe a few years down the line, when I read about my present struggles.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The drive calmed my senses further. It’s funny how routine activities can help you relax in times of utter chaos. I was driving up the City Bridge. That was when I had the vision of my death.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Okay. This is getting weirder by the day. The company has registered heavy losses for the first month of its operations. My co-founders seem ready to desert me. I don’t know how the future will turn out. The only good thing about the present is that the book is going nicely. I flipped through a few pages again, and guess what? The next chapter will have an account of Badger’s close shave with death on the road! I wish I hadn’t read that now.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The reader put the book down, smirking as he did. He pitied the protagonist of this collection of diary entries for being completely indifferent to the fact that his diary was to be the first part of the story to which the book he was reading was the sequel. The phone rang. The reader picked it up. He hung up ten minutes later, satisfied as he now had another book to read before his vacations ended. And he was sure it was going to be an exciting read, as none other than his friend The Ibek had recommended it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        [Editor’s Note: This was the best entry in the creative writing competition conducted during the summers. The entry is on topic #2]
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

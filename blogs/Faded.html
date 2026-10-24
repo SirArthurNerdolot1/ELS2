@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faded | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Faded</h1>
+      <p class="manuscript-byline">August 24, 2018</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I shoveled a slice of a sandwich down my throat, burned my taste buds with hot milk and came out of the hall to zombie my way to the class. It was a long walk with no music in my ears to amuse. That, I feared, would leave my mind warbling into melancholic symphonies of thoughts reminding me reasons to feel dejected. And it did; my parents were coming to meet me because I had avoided going home for too long. I was sure it wasn’t out of concern. It was just their whim to prize a chance to condemn the free will I happened to use and teach me life lessons they did not follow themselves. I did not want to sit alone; I thought when I imagined my 8 AM class filled with people looking at their phones after getting frustrated from the fugly board work and professor’s irksome habit of repeating everything twice. Who would I sit next to? Who could I sit next to? Should I sit next to Anmol? He was probably more comfortable with that wing mate of his. Besides, I might say one too many jokes to repel him, either at his expense or his friend’s. Should I sit next to Karan and Saksham? Saksham would pass some remark on my annoying face or the apparent blight of my existence. Should I sit next to Priyal? She talks nicely to me online, but I don’t want to scare her off with this persona of a forlorn freak. She wouldn’t ever understand the afflictions behind these wide, bright foolish grins and it would end abysmally even if she did. Tragedies were an expense that I couldn’t afford in those hard times, at least not for her. I decided to sit with strangers and focus on the class instead. With wounds of the recent mid-semester test afresh, I witnessed my will to learn to build up and but it got down gradually as the uninspiring lecture about something even more uninspiring, wrapped in South Indian accent and semantic errors, continued maintaining its consistency of boredom. After the class, I joined Karan and Saksham in CCD where I tried to study but ended up engaged in their rants about the pointlessness of technical arts courses. I did not say anything. I did not wish to talk at all for some reason that day. Even when I wanted to say anything, I would realize immediately that my words felt cozier and more revered in my head than out in the outside world, full of eyes and frowns dancing around them. Sheera arrived soon after. “Is he still missing?” She asked looking at us. Strangely, she did not even glance at me though she was one of the few people who did not hate me, even when I was busy being the bitterest of an asshole. “It’s quite unfortunate. What do you think happened?” Karan questioned but not in an inquisitive demeanor. I could sense they were expecting the inevitable, but none of them wanted to be the one to say it loud. Karan then told us how the boy’s parents were consistently calling everyone including him. It was one of the people of their friend’s circle. Karan looked worried. Others, a tad less. I, however, had no worries because I did not belong to that circle. They made sure of that by not inviting me to their outings. It wasn’t their fault. Or at least it wasn’t theirs as much as it was everyone else’s since there was supposedly no flock where my feathers belonged. “Hasn’t there been another one in Girls’ Hostel? I heard someone saying something about a missing girl.” Oh no . I had made a guess. I needed to know her name. “Do you know who she is?”, Saksham asked before I could. “N..”. The sound of ‘N” was enough for me. I knew her, well enough to not want to hear someone say her name. We both had found a far cry in this institute, a seemingly unfathomed ocean of opportunities bound by four walls, filled underneath with preys and predators of hopelessness and shattered dreams. Nothing appealed to me deep down. Maths was too high up its ass. Competitive coding was too competitive. My branch was too predictable and uninteresting. The drive was gone. The fire was gone. I had tried to light it back up by trying to feel for a face and to make that face care for me, but mine wasn’t pretty enough to fool someone with something false, or even with something true. I hadn’t talked to her much, but I had sensed that same exhaustion of trying everything and failing nonetheless in those severe eyes below those low blase brows. I did see both of us as the grits thrown out from between the wheels of this larva of a society. I considered looking for her. It wasn’t for any infatuation. She wasn’t the beautiful-dateable type. She looked more like the one you’d live with, in a post-apocalyptic world and fuck before going out to hunt for food or oil or something. But that’s not the point. Both of us had seen something dark and bizarre that lurked somewhere the corners of our eyes end between our minds begin. Because of that and a strange feeling of the gut, I decided to give it a try. I was at the front gate of GH(girls’ hostel) when I realized I had not brought my identity card with me to pass through the guard. I took my chances by sneaking into the group of friends that I had hung out with, in the first winter. After successfully getting through, I quickly left them without any chat and took the elevator. Elevator took some long restless seconds to get to the top floor. I tried to hold back my loud anxiety growing as the door opened. I controlled my breath and pumped my fist hoping it would slow down my heart while pacing towards her room. The door lay wide open as everything stood silent and still in the room, undeterred by the wind and dust from the balcony. The evening seemed to grow bluer and more silent when I observed tranquil shrill screams dropping with sobs from the verandah. “Why?” A whisper escaped, or I thought it did. I stepped onto the balcony. In the corner, with messed up hair, thighs relaxing in an unshy way and tear-filled eyes fixed on me as I looked at her, there she was. We both looked confused. “Please tell me you can see me.” “What?” “Shit, you can see me. How?” “Wait, what? What do you mean?” “Something’s wrong. No one can see me. No one can hear me. Am I a ghost? I don’t know what’s happening. It’s worse than death; it would be…”, she looked at me with a frown and looked away outside. I didn’t know whether or how to comfort her. I wanted to calm her shoulders and give her a warm hug, but I held myself back with apprehension and confusion. The reasonable answer cued mental instability. How else could it be explained? An answer came into my mind. The thing we tried running away from, looked right back at me in a flash at the back of my eyelids. Wait . I reflected on my day. I slowly left the room without drawing back her attention. I stared at the guard as I passed straight through the gate. Something appalling struck my mind. I ignored that thought and looked at my watch. My parents would have arrived by now. I was going to hear more of their “emphasized knowledge” for not calling them to ask about their whereabouts and wellbeing during their journey. I was outside my room bracing myself and mentally preparing to explain to them that I am okay and trying not to hammer my head to the wall while they’d keep repeating their same old sermons with more belligerence each time. I opened the door. My roommate was out. And my dad was standing while my mom was sitting on my bed. They were discussing how my elder brother was continuing to mess up his life and bringing them shame. They did not notice me. That thought came back haunting. I stood between them. They did not stop. Now I knew who the guy who had gone missing was. It was me. Figures . Unheard and unseen, caught between those hateful disses from my parents, I realized that my existence had finally faded. Indeed it was worse than death. With an exhale, I went back out where the bright day had ended and imperceptible night had risen. I glanced through the footpaths. There were people so many. None I knew. I might have known a few, but there wasn’t one soul that understood me nor was there someone I understood. Far away, I saw her again. We looked at each other. Desperation escaped through my face. She rolled her eyes to the left and looked back again. Sympathy died as apprehension kicked in. We both turned our back and went our ways. I peeked at her again while walking away. She had faded away for me as well. Perhaps, I too had, for her. I kept waiting for the moment when I would vanish away from myself.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

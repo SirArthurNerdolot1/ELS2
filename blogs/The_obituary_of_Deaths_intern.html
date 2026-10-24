@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The obituary of Death’s intern | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The obituary of Death’s intern</h1>
+      <p class="manuscript-byline">by Ishita Vyavahare · August 25, 2021</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        In the early 2000s, one night- the sky, a coal-coloured membrane, with thunder so loud, it felt like two great hands were ripping the sky apart. The downpour was corrosively cold while the creaks of doors could melt stones.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Crow:
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I’ve often been told that my work isn’t exactly dignified. It’s the butt of dark humor, it’s widely feared, it’s kind of product you will have to buy from us, one day or another, it moves poets in their youth and the non-poets in their non-youth.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        So, who exactly told me that my work isn’t dignified? The only other being that’s in the business. I’m 19 now and two years ago, I was renamed Crow, had the best chunk of my memory wiped out and was appointed as an intern to Death. I said the name was too dramatic and asked if I could call him “Unicorn baby”. He looked me straight in the face and I joked about it being a ‘deathly stare’ and all I got was a shut-your-talking-organ look. Death has always been very dramatic and prefers to call me “apprentice”. My hands and neck have blackened over time. When I asked Death about it, he says that’s it because the hands and the neck are sensitive areas, made for making art, passing judgements on people’s lives darkens them. I was going to ask more questions about sensitive areas but he cut me short. He is very professional about his work and we never have days off; although I get a month every year to myself to go out and be a human. This was the time I met a girl named Sakura.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Now that I have only so much time to live, I might as well get working. I pull out some sheets of paper from the drawer and start writing.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I am now a dead person. Another one bites the dust (great song by the way). I am no more. I have deceased. I am bereft of life. I have wrung down the curtain and gone to join the choir invisible. I have expired. I have left to meet my maker. That being said, let’s talk business. I never got to do things like talk about my personality but I guess this is what I will do before my employer takes my life.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I never really liked pretty things. I took refuge in my sardonic humor. I never understood why humans took death so seriously and I always thought of myself as a pragmatic individual. I had the decent job of keeping an account of Death’s clients and I had to save a copy of their life’s memories onto a pen drive. I had pitch black and numb hands and neck. We travelled effortlessly across the globe and often jumped out of windows after lingering shamelessly near deathbeds, it gave Death a kick to do that and I thought it was neat. I can’t remember much of my earlier life but I bet I’d be one of these humans if I wasn’t his intern. It was all going good till I met her.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She used to idly draw triangles in the sand and told you that something was stuck in your teeth without making it embarrassing. She often sat down while she heard someone talking and always looked people in the eyes. She loved to sing and it was infectious. She used to get frustrated easily and used to mumble a lot. She never gave up on hard things and I wish I could do that. She had ears that stuck out. I’d notice tiny details about her and she made me question my sultry attitude toward emotion. Her hand brushed my neck once and that patch wasn’t numb or black anymore.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I never really got to spend enough time with her. The day Death and I turned invisible and lingered near her deathbed, my heart skipped a beat. I remember how I threw her pen drive and stomped on it so hard that it broke. I ran but it was of no use, Death whipped his robes and dragged me down by my feet; there’s no running away from Death, quite literally. He told me I had two hours before I was to die and that he would not tolerate someone who couldn’t be neutral to something as death.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        To meet her was a plaything of circumstance. I know that she is dead by now but whether or not she was with me ceased to be of importance. I could reach out my hand and could touch her. Love and death weren’t opposites but merely things that made humans yearn for life. I can’t remember what my folks were like but I want to put it down on paper that I have felt love and I will have felt death. If she were alive, I think I’d let her know about what I thought of her. Maybe I will have been born twice, as Ian Fleming said, once from the womb and once when I look at Death in the eye.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I hope this obituary finds it’s place in this universe, in the form of ashes or in the hands of someone who can’t read or as toilet paper for a dog. Whatever it is, maybe one thing I can affirm is that like death, I accept this, I am human after all. Uh, how do I end this? Thank you? Man, I really wish I died old school style with the whole piano falling on you in slow motion.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        That day, Death returned to this grieving youth. Death was greeted in that two-bedroom apartment with a smirk and in invitation to share a Jack Daniels. Death was livid.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        He fixed his stare upon him and the boy found himself sucked into a never-ending abyss lined with millions of stars, each representing the duration of a life, some exploding, some flaring up and some turning into black holes. Against the jet-black vacuum of space, stars indulged in a cosmic dance, disintegrating, consuming and burning. Death reduced him to a self-constricting star, on the verge of implosion, his life dwindling and the boy, made peace with his fate till be was reduced to nothing but a nebula of gas, then to a wisp of smoke and eventually, nothing.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Death stood motionless in the bedroom. He quietly bent over the body and used a pen drive to suck up Crow’s memories. He then, straightened his three-piece suit and grumbled about the inefficiencies of human apprentices.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

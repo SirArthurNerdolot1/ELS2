@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Circular Butterfly | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The Circular Butterfly</h1>
+      <p class="manuscript-byline">June 9, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was a typical January evening accompanied by an eerie winter breeze. A crestfallen man trudged along the snow, hunched in the soft moonlight, an aura of paranoia and alertness around him, a war veteran I supposed. He moved briskly but silently, like a predator lurking in the dark, scouring his victim with those two perfect yellow eyes. Dark chased light as the final rays of hope vanished into the night and the man seemed to disappear with it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My day had been a weird one, albeit the fact they all have the same level of monotony around them but today was especially weird. I looked at the scene with interest particularly because the mystery around the character impulsively induced a feeling of déjà vu. I couldn’t place it then and it didn’t seem to matter because I had a perfectly good gaming system set up inside my safe haven, considering how I was made to sit through the screening of The Butterfly Effect. The only thing that had piqued my attention today had left, that ancient trophy wading through the trail.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The cold wind made me realise I had left my jacket on the couch, and on top of that there was no one at the door. This was frustrating. In all of my rage of being called without any reason and my dreams of playing football professionally, I threw the cola can high into the air. It matched the sun on its trajectory and I returned before it could hit the road.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ********************************************************************************
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I opened my eyes. I knew it was my job to pry out of the cryo chamber immediately, but the sleep had taken its toll on my physicality. My first impulse was to throw up. Alarms blared in the distance, lights flashing around, but everything was in a daze. I remember thinking about how beautiful life seemed but I had a job to do. I rushed to the bridge. My training had taught me that this situation meant death but how does one give up on hope. Experimental missions have their own chances at risk, mostly those that are off the books too. We were never supposed to return but in the chaos and flames, I could not figure out what went haywire. If I couldn’t have saved the ship then no one could have. I turned to Camera 12A to see the calm expressions on the faces of my crew. I frantically hit the buttons, and in the process thanked them for their service. Then everything went white, a symphony played in the background as I went to sleep again.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ********************************************************************************
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Blood flowed through the drains. The rain only added to the mess. Bullet shells on the field and a few policemen interspersed with bullets, catching their last breaths. Over at the place where the inmate escaped was the body of a prisoner stabbed in the throat. A walkie-talkie switched from static to signal, “Inmate AG567 escaped custody today. Be advised subject is extremely dangerous and highly delusional, considers himself to be a little girl. Send ambulances over to the scene. Four dead and 3 critical in the escape carried out. The subject and accomplices escaped in an ice cream van, I repeat, an ice cream van.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ********************************************************************************
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The cola reached the peak of its trajectory and landed on the sidewalk, with a single person to witness the event who kept his pace on.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Unaware of his surroundings, well lost in his thoughts, the strange looking man with a strange sounding name tripped on the can. He hit the sidewalk hard, cursed his fate and got up in pain. He resolved to confront the perpetrator and followed him to his house. The person invited himself in to give him a piece of his mind. After about a minute of a heated argument, presumably over a can but more accurately over the ethics and procedure of can throwing, he noticed the resident’s gaming set-up. It promised the quintessential change in technology, major modifications never seen before, running a game no one had ever heard of before. He asked to be let in to study it in a greater detail. Closer inspection revealed almost fantastic research ideas, exquisite modified setups, proper codes and exceptional innovation. The resident was the perfect candidate for the CONSILIUM mission. The person, a professor, invited the resident to become a part of the space confidentiality, to lead a mission off the books, something so extravagant such that it could not be defined in normal terms. The professor knew that he was rushing things even after a couple years of training but it was essential to do so.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I took the lead of the CONSILIUM mission. I did not know the exact purpose. Rather no one knew, everyone knew only parts of the final solution, compartmentalisation we called it. It gave me the opportunity to get out of the house and maybe as cheesy as it sounds, to use my abilities to my potential. As we got into Earth’s orbit, all everyone had was second thoughts. We were never going to return again. The professor had chosen all of us as we had nothing to do and would rather be part of something rather than sit alone at home. It had worked. He was pretty successful in setting up a team and we had embarked on our mission. I still didn’t know the purpose behind the mission. We were promised all answers when we reached Europa, the place where we would finally understand the mission that was apparently supposed to be the most important mission till date, something so confidential that even the team involved could not be trusted with the information let alone the general public. Bubbling with curiosity we all entered cryo sleep.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Little did I know.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I opened my eyes again. This time in a stark white room. It was a mental asylum. 3 years had passed since the crash. I was not supposed to be alive but one cannot mess with causality. The doctors explained to me the events that had happened, how the mission failed, how the crew died. How PTSD and vertigo were to be my defining traits now. Therapy and Counselling outlined my day.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Those times were tough.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        But they were happy to me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I played in the garden, under the sun and shade, on top of trees and hiding throughout the space. I felt joy in that space.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I learnt a new word in those days.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Schizophrenia”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Years passed.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        And people thought that I was going to be completely okay.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Little did they know.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The next time I opened my eyes again was in a different garden. I was introduced to my parents. I liked them. I stayed there for years I think. But I craved some ice-cream. I guess they did too. Because they fell to the ground in joy when they were showered with the rainbow sprinkles. I felt proud. I got on the van and we left riding on a rainbow towards my dreams.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Finally Free.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I lost my garden that day. The man dropped me off at a house. I didn’t see a garden rather a house that felt my own. I looked back, wondering where I was these past few years. I turned back. The ice cream man was the professor, the same guy who had given me the job. How strange to have snapped out of it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        What was the word again?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Schizophrenia”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Had it ended, I didn’t really care.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I asked the professor about the mission and how it had failed.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “It did work exactly how it was supposed to.” The professor said.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I didn’t understand. Maybe my confused expression demanded an explanation.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I know you don’t understand. But realise, remember, comprehend, scrutinise this, Time is now circular.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I looked into the mirror. I was an old man now. I looked exactly like the professor.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        He asked me out on a movie. I agreed.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “The Butterfly Effect.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        What an utter piece of crap it was.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I returned back home, trudging along the snow. It was a typical January evening accompanied by an eerie winter breeze.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I noticed someone staring at me from across the road. A can of cola in his hand. I looked at the scene with interest particularly because the mystery around the character impulsively induced a feeling of déjà vu…
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

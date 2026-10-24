@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Negative Space | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Negative Space</h1>
+      <p class="manuscript-byline">November 9, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Many a full moon fell from the murky skies Frequently accompanied by the fleeting stars; Here, as my vain feathers screeched on mellowing lines, A few wayward teardrops blurred their receding marks, And lightly, through dusty hourglasses Time ran out Obscuring words- words that would never again count. The syllables shortened as the ink dried up. The pen’s tip stuttered on some familiar strokes. With not as much as another careless footstep, Silence vanquished my verse, it silenced all my notes. And only when inside, the lamps flared not as bright Outside, I noticed no stars; the missing moonlight. The margins crawled inwards upon the absent blots: Characters thus hidden were characters unlearned; On darker nights, dazzling city lights drove my thoughts, On the darkest night, not a single candle burned. Clearly now, in this nothingness around I see A negative space where once letters used to be. And in this void great oceans rose, great wars raged, And greatly did leaden galleons splice the shores; But words, which dared invade the space, were soon erased- The crumpled sheets stayed as blank as they were before. Poets fought, poets yearned, the battle still was lost, Spurned by Love, they set sail, and not one rhyme was cast. The night ticked on beneath Silence’s watchful gaze, Spread outside the reach of vulgar arms; a canvas, Which had yet kept those same defamed minstrels at bay Who had spilled not ink when emotions came to pass, Deceived the best of them, the ones sworn to deceive Even the subtlest of sins that mortals perceive. Their chronicles before had accounted no fear Of beastly, baser instincts in commoner charms. The armour on their breasts, the steel they held so dear In life, promised many songs that their tips would carve. Where lies that armour now when the lamps burn low? Where the steel, and the songs it carved, when no words flow? And I barred my doors, and I shut my windows tight. I revived the lamps and I pinned another scroll. While darkness ravaged words in the cavernous night I forged my own steel, and I armoured my own soul. Alas! The words that label do not act at will, For when Love came singing, all my defences fell. Her melody echoed along the brooks she graced. She danced with abandon on the deserted steppes. The inns heard her laugh, the narrow roads heard her praise; She passed lovers’ tenements on soft, tiptoed steps. And she a peasant in the streets, of darkness born, Shook castles of the Bards, proprietors of the Dawn. Watch then, oh wise folks, how this nature comes to pass. Behold the plight of men, of Gods, of mighty Time. Noble blood lost above; below a carefree lass In a stranger world could make dead syllables rhyme. But strangest is this stilled chance to which we succumb, For the ones sworn to scorn her, were the ones in Love. Down in the plains, in the maiden’s wake you will hear Eloisa’s last sighs, painted in Pope’s own hands. Ask yourselves, since he who felt Love’s breath high up there Could he now paint himself, as the master proclaims? Observe, how many subtleties Fortune does craft- The knight in the tower, the dame on the plains is cast. And what becomes of you, who are in Love intense? From where shall such words spout if all the lights escape? Over hearts, mistletoe and the white picket fence, What shall happen to that numbing negative space? Think then, perhaps, of the robes and the roles we wore, And question through your own walls why I barred my door. Had Love knocked on my windows disguised as the night And demeaned my verses with her youthful rhythm, Like fair Cleopatra’s sweet kiss in the ebbing light, I’d tease her, I’d taunt her, I would mock her attempt. But she left this place swiftly as she had entered, She came, she saw, and in leaving she had conquered. Perhaps, I saw no sin when I beckoned her in; I showed her the mellowed sheets that yet lay all plain. And she mocked the pages, she ridiculed my pen; In innocent laughter she taunted me again. Dear friends, witness! The Bard’s pride retained no disgrace For the unassuming night had just filled the space. And in this space now flowers bloomed, great tales emerged; Greatly did affairs of the heart colour the scrolls. The flame died; the night a little longer lingered, The morning trapped me in its fortified walls. What answers have I, and what reason for a blame, When no tremors were felt, and no terrible storms came? The inns overflowed into the bleak steppes by noon. By evening the city lay deserted again. The clouded night sky, the dark, and the truant Moon Treacherous lamps ablaze, and this persistent pain: If this is love that kindles mortals to folly, How may Gods be virtuous, what saves divinity? From your plush seats, judge not these foolish hearts in love. Ask not why the damsel returned, why the steel failed. The city’s unturned below, the clouds same above, The tower blissfully stands, though all its words be stained. The margin is still unclear, there are no marks drawn. The space fills the room now, though its mistress is gone. In my November walks through familiar paths When autumn’s parted leaves fly in a crimson sky, A few birds sing of Love, and of glorious pasts, And few of those poets of a different time. And here stands no castle, no unpeopled steppes, no inn If Truth itself is so fake, is Falsehood a sin? What restraints bind the prayers of those tainted saints! That speechlessness abhorred, and that speechlessness wrought; Quaint are the intricacies of the hand that paints- When sketching Silence’s fate, all silence is lost. While drenched in love, the peasants too could weave a rhyme, When lost in love, the greatest pens faltered awhile. And then came a fine night, when the moon again rose; The clouds had since left, the darkness resigned to light. The tower was the same, with its poet and its pose, The steppes- they heard no tune, no vagrant was in sight. The words were back, placed in rows, on sheets that he held; Though old, the colour on them had not faded yet. And autumn went by, fleeting in a moment’s wait. I stopped, and missed all those ships that would take me home. When the last man left, and I noticed it was late I resigned to Fate, like the poet in this poem. I walked beyond the margins, I stood on the shore, And I waited in love, till I waited no more.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

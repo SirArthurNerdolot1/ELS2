@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haikuing in Winters: Adjudicator’s Voice | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Haikuing in Winters: Adjudicator’s Voice</h1>
+      <p class="manuscript-byline">January 6, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        As I decide the best in this contest (a mammoth task as there are so many that are so good), I wanted to tell you what I am going to do with all those entries you’ve sent to me. There were a few that I personally loved, which I had to let go, because as a judge one tries to be as impersonal/impartial as possible. So instead of looking at the entries as a creative person, I’ve tried to look at these pieces of art as an editor, with a critic’s eye. I thought it only fair to share what elements I’ve looked at with all of you, we belonging to a democratic country and all that.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Local sensual/visual quality: Give me a few simple words that build up a world or a technicolour dream. After all, a winter haiku should give you the smell of fog, the taste of snow, the way cold needles pierce deep into your bones. That’s what I am looking for.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Tight structure: You might have started with a brilliant concept/idea/emotion, but if you’ve structured it loosely, I’ve marked the art piece down. Structure is very important in a poetic form as short as a haiku. So I am looking for a tight stitch, a well edited, well thought through venture. There shouldn’t be a single word loose, unneeded or unheeded.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Beyond tradition: I remain a rebel of sorts. All of you would’ve read what technically constitutes a haiku. So I’ve let go of the strict structure, in terms of syllables. Instead, I’ve marked something that surprises me, which is on the border of a haiku, about to become something else, where I get a ‘aha’ moment. But not so far that it becomes a short poem and doesn’t remain a haiku!
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Harmony: Haikus are brief, so it’s the rhythm of the language (English in this case, though they originated in the Japanese language) which I want to see. How well have you heard the words? The harmony of letters, how they flow into one another. Any forced literary styles, alliterations and the like are struck down with vengeance. I am looking for the way one word flows into the other, one word stiches with another to create a feeling or a visual.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Simplicity: The Japanese are form is brief, simple, using a basic vocabulary to portray something fetching. As a writer who has written books for kids, I appreciate a dose of simplicity in your word usage.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Emotional chord: Here I’ve let the creative person in me take control. The right elements, structure and words are all good, but if the haiku doesn’t touch me, doesn’t make me linger at the poem, or dream, or think of an evening I spent with someone I love, or shiver in cold or fright, I have marked it low in priority. After all, a good poetess is not only someone who can write well, but who can jump deep into the abyss that’s our subconscious. So here I’ve let my instinct decide.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A final note: As a creative writer who has just had a novel out, I know how hard it is to allow another pair of eyes, a casual criticism or judging glare into something that is built with broken parts of your own heart. So thank you for being so brave and participating in this contest. Don’t let yourself feel inadequate/insecure about anything creative you do in life. The critic or the judge is just one person. There will be some who connect with your work, some who won’t. It doesn’t make you better or worse. Thank you for sharing these little pieces of your heart with me and your batchmates.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Keep writing, fellas! Shweta
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

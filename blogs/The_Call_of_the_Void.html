@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Call of the Void | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The Call of the Void</h1>
+      <p class="manuscript-byline">November 25, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ~Vijay Bharadwaj
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Orange leaked from the clerestory. Ankush nudged me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “What’s the time?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Almost six.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Man, wish we had some powers and stuff to get them out of this line, this hunger is uncontrollable now.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Yeah, I guess”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        We’re not in some surreal dimension, Anks. Grow up. It was good food for the imagination, though, but we needed none of it right now. The queue at the Cultural Programme Registration Desk was dawdling. You couldn’t have seen the line moving if you weren’t in it for at least half-an-hour, like we were. The weight of the Les Paul on my shoulders was proving to be less tolerable minute by minute. Finally our turn came. We all smiled. The senior at the desk looked at us three.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “What’s the band called?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “The Void”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Tushar came up with that name. He thought the moniker went well with our grungy, dark style of music. He was right – the name did feel apt.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “How long will your performance be?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “5 minutes?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Yeah, 5 minutes.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Do you have a title for your performance that our anchors can use?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Wait, we didn’t give it a thought. Suddenly, the two swagger looking dudes on either side looked a bit dazed. We started prodding each other and whispering – “Say something?!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The desk interrupted the chaotic murmuring.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Guys, if you haven’t decided a name for your performance yet, take some time and convey it to the anchor before your gig on the stage, fair?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        We yeah’d our way out of there after writing down our names and phone numbers on the list.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The sky had turned into a more serious orange. We were on our ways back home. Ankush started humming ‘Back It Up’ to the beats of our footsteps, which became faintly perceptible when Big T started patting his thighs to mimic the claps. It was the first song we’d written together as a power trio. Anks did the drums, Tushar did the bass and I did the axe (and we still do). I did most of the singing as well. We loved that song – it had banged at all the audiences we had performed it in front of and we were certainly going to start our performance this Friday with it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Hey you two, let’s meet tomorrow morning at 11. Practice ‘At Hell’s Door’. The chords are gonna need some serious preparation. We’ll do it again together when we meet.” We wrote ‘At Hell’s Door’ and ‘You Can Do It’ during the Summer Camp a couple of years back. We were going to perform these two as well in our 5-minute feat for the Cultural Programme of the School Fest ‘Angaara’. Writing songs like this would eventually become our refuge from the usual mundane. It was one essential dynamic that fueled this friendship.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I was near the Town Clinic when I saw this squirrel, bang in the middle of the road, absolutely still. It was probably enjoying getting baked in the sun or something – how do I know? I was looking at it the whole time – wondering what it’d do next. Suddenly, I see this grey Alto making a sharp turn from a decent distance. Any animal with a little aptitude would have easily shown a bit of reflex action and got out of the way. This cute little idiot however, decided to jump intentionally right into the bumper of the car when it came speeding closer. All I saw next was the car going past me. Why would it do that? I shoved away the thought quickly though, since it seemed equally idiotic to be thinking about each and every of those thousands of animals that become victim to such incidents.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Rest in power, Mr. Acorns.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Ways separated at the township ring road crossing and I reached home. Profuse sweating and a busy day at the rehearsal had dampened me literally and mentally, and I needed a towel, so I asked Sneha for it. A towel arrived flying from where the living room bends into the kitchen. While I was drying myself, something rustled under me. It was a letter, which had developed creases for obvious reasons. Next thing, my interest was piqued.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was addressed to me. In the history of our living at this house, never ever had we received a letter addressed to me. We’d seen many improbable things – snakes in our bath, chasing monkeys inside our living room, Grandma threading a needle in the very first go, but this one was new. Maybe it was a conspiracy ploy by all the crores of Gods that exist in my faith, to keep me from creating a nuisance for Mom, Dad, Sneha or for that matter, anyone around me. They perceived me as this highly volatile and ambitious figure that can get upset or anxious or excited about ANYTHING. That’s what they say, at least. I respectfully disagree, however. Indian families do exaggerate things.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Coming back to the letter, it said on the cover:
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Mr. Vijay Bharadwaj,
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        F-21, Nand Gram,
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Gandhi Road, Delhi-18”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        and that wasn’t it. The handwriting. It almost looked typed. It was so perfect – it wouldn’t had given itself away if it wasn’t for the ink that got diffused at a few spots. Perfect Didot-style typography and ligatures. “Jeez, that’s some talent right there.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Was it some famous artist that noticed our music and wanted to call us in to work with them? Nah, that would’ve been a stretch too far. We weren’t even the best band in our own school. Wait, I did turn all my work in before the deadline, didn’t I? Yeah I did. Besides, Miss Gautam wasn’t going to take the hardship of writing an actual letter, especially when I did attend her classes sincerely. Neither was it a handwriting that I recognized from before. My brain was on the verge of going bonkers.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        But there were no stamps. No idea why. I hadn’t even opened the envelope yet, and it was raising an alarming number of question marks in my head. Sneha asked me to stop shrieking. I have always had suspicions about her not being right in the head.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        So, I took out the sheet of paper inside the envelope and I remember gawking at it consistently for the next fifteen minutes. It said:
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Welcome. Use it wisely.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Regards,
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I thought the sender’s name would appear magically or something. I held it up against the lamp, tried shaking the paper, even put it in water, as the movies do it. Nothing appeared. And besides, welcome WHERE and use WHAT wisely?! This was probably a joke by one of my classmates. God bless their sense of humour, if they have any. There was no use for soaking wet junk like this. My aims for the dustbin have never been better.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I dozed off and woke up for dinner. At the dinner table, everything was pretty usual. The food was not the most exciting thing so I was engaged in thought about every other random thing that was in the room. Amongst the usual clatter of the cutlery, my fluttering eyes got distracted by a desperate Sneha trying to reach that last piece of pickle at the bottom of the jar. She kept poking a spoon at the bottom of the jar with increasing impetus and decreasing patience. As soon as my eyes focused at her, something brought a prompt change to her facial expression – as if some inexplicable power had captured the reins of her reason; it was a sudden change from a mildly displeased poker face to one of extreme frustration. Did some unknown force possess her? What possibly could’ve happened? The next thing that happens – there is a nasty shatter. Sneha threw the jar onto the floor in a fit of bitter vexation
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        and it got smashed into a thousand pieces, scattered all across the wooden tiling in the room. Fortunately, no shards of glass aimed itself towards the table, so there were no injuries.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Are you mad or what? Why did you throw it?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Ugh, guess who has to go to the market again.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Sorry sorry sorry sorry, I don’t know how, I just… sorry.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I remained silent. There was something wrong with how the course of things went today. The squirrel and then Sneha. It was not typical of what I would see every day. Was the letter also related to what happened today? The mental exhaustion caused by this mystery was too much to handle.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Not a good night’s sleep. I had already slept half of my evening with that siesta and all I was doing now was staring at the ceiling and thinking what on God’s lovely Earth was that all about.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        There was certainly some third party involved. It couldn’t have just been a coincidence. Even if it was, my sense won’t accept its existence. And what was the letter about? Who wrote it? Why were there no stamps? What was the text about? Imagine a cartoon of a person and squiggle a big fat ‘Ugh’ on the head. That was me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Was it really a possession of a power? Wait, did the power itself write the letter? That could’ve been a reason as to why there was no sender’s name. But what did it want from me? It seemed too surreal to be true.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        But had there been incidents in other parts of the city, there must have been a report. Out of all us mortals, why did it only happen to me? For a good hour while I was thinking what did power would look like – nasty blood-lathered creature with horns or a ghost with a handlebar and a vintage monocle? Also, if I assume it only happened to me, do I happen to possess that power? I mean, things only happened when I looked at them. The squirrel was well and conscious and then it suddenly stops as soon as I see it? Sneha was on her own trying to get the pickle out and as soon as my eyes focused at her, she throws that jar away out of nowhere? People…do things…when I see them?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Wish I could summon…”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A howling wind started blowing outside as soon as I thought of summoning the mysterious being. Eerie scenes. Suddenly, I was gasping for breath. I couldn’t see anything. Darkness, not even the faint moonlight that peeked through the curtains. Something held onto my throat tightly. I cried for help but even I couldn’t hear it. For a moment, there was peaceful oblivion and suddenly, it seemed like I was let go. There was light. My senses worked. I guess I knew now what the story was.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I had the power to enforce people’s intrusive thoughts upon looking at them. Inducing the Call Of The Void, as Google says. Some unnamed power had endowed this ability to me, out of nowhere and it expected me to use it wisely. Wait, didn’t I imagine having a power while I was in queue for the
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        registration? I had this power all that time? Well, shove it. I guess I am going to have some fun tomorrow.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I woke up in a jolly good mood. I felt like a superhero, with newborn abilities. My eyes were my weapons and my shields. And I felt pretty good about it. It was showtime for some much needed mayhem in this ordered world. The road joining my residence to the school was my arena. Starting from my house, the first victim was my pet Labrador Jimmy. My mom was watering the plants in the lawn right in front of Jimmy’s eyes. As soon as it got close to mom, I shifted my focus on Jimmy and it jumped straight into the wet soil under the watering can, to have a shower. The poor boy must have resisted the urge so badly! Jimmy got dirty in the cool mud and certainly enjoyed it, unlike my mom who was looking at her squished marigolds that she had grown with weeks of patience and care, with immense disappointment.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Stupid creature.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        On my way, there were a lot of wild roadside flowers. They didn’t budge a bit when I directed my sight at them, so I guess plants don’t have intrusive thoughts. It would have been cool if they did.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The very next minute, a boy in his early teens came cycling from the turn ahead of me. It was time to put my powers to test again. A car followed from behind speeding past me. As soon as the car came parallel to the cycle, the powers captured control of the boy and induced the boy’s urge to speed his cycle into the car. Good thing, I looked away immediately, so all the boy experienced was a little wobble.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Phew, that was a close call. With great power, indeed comes great responsibility. Not too sure if I would care about it that much, though.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The road was didn’t have much bustle, so I couldn’t have any more lab rats to test on. I was assured, however, that I would get a lot of them when I reach school.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was preparation time for everyone at school for the Programme so not a lot of studying was happening. I saw a corridor on the second floor with a lot of juniors involved in decorating the artboards. I walked through the pathway giving a generous amount of eye to every being. The peaceful passage transformed into a warzone of utter chaos when I trodded upon the scene. There were glue bottles and paintbrushes being hurled down the second floor. I am pretty sure a few would have jumped down, had I not closed my eyes immediately. One little chap tried to hang himself to a nail in the wall with both his hands like a house calendar and fell down, becoming a subject of immense laughter for those around him. One could film this in slow-motion and create a serious hero entry cutscene, no kidding. The intensity of things happening was incomprehensible. The most enjoyable part of all this was how quickly the victims of this power’s summons change their mind about doing what they had the urge to do, when I take my eyes off of them. It was instantaneous and highly comical to look at.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I went to an empty classroom where I was supposed to meet Ankush and Tushar for the rehearsal. “Hey, did you think of any names for the performance?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oops.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Ugh, think of it and tell me soon. The anchors are pestering me for it, saying they need it for practicing their script.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        *my phone rings*
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “If you sneak in a phone like that into school, remember to put it on silent at least.”, Anks said.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was a call from Kshitij, my best friend from my old school. Man, 5 years since I last talked to him. Unfortunately the call got disconnected and a voicemail followed, which said,
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Hey Vijay, this is Kshitij from Bal Bharati. See, I am here with a few other of your classmates from your time and we wished if you could meet us here. Come to the tank terrace of the Acad Wing.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The offer to meet Kshitij and a few of my other old schoolmates couldn’t be turned down. It was a lot of good memories with them, and I couldn’t wait to meet them after such a long time!
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was a 15 minute walk by road but one could reach there through an unpaved road through the township jungle in 10 minutes. So I took the shorter route. It was a dense jungle in those times, and had grown even more so, over these years. After 10 odd minutes of solitary trodding amongst these vines and shrubs and under these mighty canopies, a ray of light peeked the sea of green and there was Bal Bharati in front of me.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was a desolate sight. It was probably a school holiday – no one to be seen around, not even the guards. The school hadn’t changed one bit in these years. Still the dusty brown paint on the patterned walls, the same rusty gates, the same corridors and even the classroom windows weren’t changed. I paced up the stairs to reach the rooftop where I meet Kshitij, Arhum, Kshuanish and Prashant.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “The five Pandavas are back, what say, my fellas!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Man, it’s been so long…”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A string of high-fives followed. It was an anecdotal trip down the memory lane. Everyone had their fair share of stories and incidents to converse about. Arhum even brought the classic salted wafers from the halwai near his residence, as he always used to do when such rooftop powwows were scheduled (no wonder he’s gained a sizable amount of weight in these years).
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was 3 pm. As we were talking to each other, I walked towards the small railing of the terrace to check the view out. The vines that grew, as if they eavesdropped on the melting pot of memories that was being filled here, the whole township that looked very small in scale. Even the famous Wall Of Confession of our terrace where a lot of cheesy rumours about student couples were born, was even more coloured by now. Guess the culture never died.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        But as soon as I looked down, a strange power looked to dominate me. It was a very evident déjà vu, from last night. My senses withdrew from my body, there was darkness. My body felt heavier and out of my control. An uncalled-for power hindered my breathing. My shoulder drooped down like a withered Mimosa flower. Something was hammering my insides to make me jump down the railing. It seemed
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        like a coma. My consciousness got sapped out of my soul slowly. As hard as I tried to fight it by jerking my hands, it was pulling me to the edge as if I had no energy of my own, quite effortlessly. Then, there was nothing.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Next thing I know, Kshitij and others were around me, trying to wake me up. As I regained my senses, I looked around at the blurry world around me. And then,
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        *Missed Call from The Void*
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Call of… the Void?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        *1 new message from The Void*
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Back At You.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Back at me? My body started to shiver at the sight of this message. I felt helpless and limp. Blots of darkness again started appearing in the nooks of my eye. What was happening and what did I do to deserve it? I was breathing heavily, as if a choked throat was let go. I coughed and even threw up. Prashant passed some water for me to drink, but then…
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        *2 new messages*
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “The first words of the three songs that we’re going to perform!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “The name for our performance!”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The sky was orange. Yet again.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

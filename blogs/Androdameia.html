@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Androdameia | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Androdameia</h1>
+      <p class="manuscript-byline">December 11, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        An Irish law from the year 697 forbids women to be soldiers – which means that women had been soldiers previously. Peoples who over the centuries have recruited female soldiers include Arabs, Berbers, Kurds, Rajputs, Chinese, Filipinos, Maoris, Papuans, Australian aborigines, Micr onesians and American Indians. There is a wealth of legend about fearsome female warriors from ancient Greece. These tales speak of women warriors from ancient Greece. These tales speak of women who were trained in the arts of war from childhood – in the use of weapons, and how to cope with physical privation. They lived apart from the men and went to war in their own regiments. The tales tell us that they conquered men on the field of battle. Amazons occur in Greek literature in the Iliad of Homer, for example, in 600 B.C. It was the Greeks who coined the term Amazon. The word literally means “without breast”. It is said that in order to facilitate the drawing of a bow, the female’s right breast was removed, either in early childhood or with a red-hot iron after she became an adult. Even though the Greek physicians Hippocrates and Galen are said to have agreed that this operation would enhance the ability to use weapons, it is doubtful whether such operations were actually performed. Herein lies a linguistic riddle – whether the prefix “a-” in Amazon does indeed mean “without”. It has been suggested that it means the opposite – that an Amazon was a woman with especially large breasts. Nor is there a single example in any museum of a drawing, amulet or statue of a woman without her right breast, which should have been a common motif had the legend about breast amputation been based on fact . An excerpt from The Girl Who Kicked the Hornet’s Nest by Stieg Larsson The obsidian of the spearhead was still red. It was the wooden shaft that was decaying. This should have bothered her. The spear was her proclamation to the world that she was Androdameia, the one who had subdued men. However, only termites had found good use of the spear since it had picked the brains of some Greek general. She did not care. Now, it lay beside her bed like a relic from her Amazonian past. It would not even chase the shadows, the shadows that had taken to tormenting her whenever she went out; for she had instructed the slaves once not to light her chamber. That was also a while ago. These days she could do without voice. So when the queen came to talk to her the other day, her voice creaked from disuse. Cyrene did not understand much of what she said but the queen was bound by customs. The queen of Amazons was her daughter. It should have delighted her. It didn’t. She was also a queen once, the queen who had warded off raids by the Doric. It was said of her that she had tamed more men than horses. Unfortunately, the slaves that served her now were too meek to tame. Apollonia was the city for Amazons. It was a symbol of protest; a place eradicated of all phallic injustice, vices propagated by men during centuries of patriarchy. Men were slaves here. If a male child was born to an Amazon, she would relinquish him so that Apollonia could fashion a slave out of him. She would let him live because even though men were a pestilence here, they were a necessary pestilence. If they gave her slaves, they also gave her daughters who would one day become proud and fierce Amazons. Androdameia, although past her prime, still led her forces into battle. Amazons saw strength as the greatest virtue in their queen, for they worshipped Artemis, the mighty huntress. For them, physical beauty was an illusion created by men to keep women engaged in futile efforts to appease men. To say that Androdameia was not beautiful would be shallowness. Yet, she was certainly not dainty. She had muscular limbs and wide hips. Her facial features were broad. But she had full lips, even if they were a little too thick. And she seldom parted her lips because she didn’t find much cause for mirth or eloquence (or she was afraid to reveal what lay hidden inside). This shallowness would lack depth if her hair were left out, because they were ebony and thick, to the point of being luscious . However, she was strong and obstinate. And so she was the queen. Never before had she regretted it. Again, never before had her strength been tested like this. This was no battlefield. In front of her, stood a boy of ten. He had a look of impudence. She was told that it had required two Amazons to restrain him. A feral mongrel , Klymene had told her, who now awaited his sentence. The slave was accused of theivery and violence against his mistress. Theft was an unpardonable crime in Apollonia, again a corruption of the men’s world. It was no wonder that only slaves committed such crimes in Apollonia. If the accused was proven guilty, the sentence was death. Androdameia didn’t have to think much. Slaves were slaves, even if they were ten. And yet… “What’s your name, slave?” she asked. “Dion.” “And why did you steal?” “I was hungry.” She was going to condemn the boy to death for being hungry. Dion , she thought, after Dionysus, who is perpetually drenched in festivities with his maenads and satyrs. “So you could have asked her for food. Why would you steal? And above all, why should you have hurt her?” “I asked her. She said she was not there to feed my gluttony. I don’t know what a gluttony is so I told her I want it for myself, not my gluttony.” “And?” “Of course, she didn’t give me anything. She never does even though her larder is filled. So I sneaked in when she wasn’t watching and ate a sausage. She caught me and went mad. She started beating me. And I was very angry and I am stronger than her, so I hit her back.” He was strong. Although he was skinny, he would go on to have a muscular build like her, that is, if he were to live. He was looking her in the eye and when she returned his gaze, he did not flinch. His hair were dark. And that look of defiance, god, he mirrored her in every way. It had to be thus. After all, he was her child, her firstborn. Her vanity had kept her from breaking apart when she had to give him up after nursing him for one year. They had told her it would be impossible for her later on but she was insistent. He was such a small thing. How could she just dispose of him? And so he had stayed. One year among Amazons, nameless (slaves were named by their mistresses) and looked down upon, her firstborn had tickled her maternal instincts. But she was also the queen. Her sisters came before a nameless slave. So she let them take him away. There were no tears, just a few shards of broken Amazonian spirit and a name. A name, Euthymius … Klymene was tapping her foot. She had suffered a few cuts from the scuffle. Lampedo was having trouble keeping Dion at bay. Her eyes searched Androdameia expectantly. They didn’t have any clue what wars her mind was waging. Frustrated, Lampedo pinned Dion down on the floor. Still Androdameia sat quietly. The wreath was heavy upon her brow. “Is he telling the truth?” she said at last. Lampedo and Klymene looked at each other. It was Klymene who spoke. “My queen, the slave tells the truth. His mistress told us the same thing. If I may dare, I say, have his head off, in the name of Tethys. He has committed a gruesome crime and its punishment must serve as warning to the other slaves.” “Shall I punish him for being improperly treated? Tethys has a gentle nature, I hear.” She didn’t mask the irritation in her voice. It startled Klymene. At that moment, Dion broke free from Lampedo’s arms and punched her in the face. She regained her bearing quickly and slapped Dion hard. Klymene looked at the two with disdain. A bloodied nose and a reddened cheek. H e was right , thought Androdameia. Klymene had a point though. She could not allow this to go unpunished. For years, they had kept Apollonia free from vermin. Strength was the only thing that mattered to Amazons. And this boy lacked the strength of character. She was the protector of her sisters’ rights even if it meant butchering the child that had played at her lap. She was not responsible for his actions. Or was she? What if she had kept him with herself, taught him values that she taught her daughter? Was it his fault that she had abandoned him? But then it wasn’t her fault either. May be it was. You are Amazon by choice, not by compulsion. She could have chosen not to be an Amazon and be some man’s consort. She could even choose to do that now. No, she could not. She was Androdameia, the Amazon who tamed men. “Put him to sword unless he can convince me otherwise. Can you?” She desperately wished he could convince her, more than that, convince the other two. The boy lifted his head. She knew that look all too well. Tears trickled down his face, tears of seething anger and contempt. They did not ask for mercy, they indicted her for injustice. He shook his head once and Lampedo started dragging him away. Wait Euthymius , she might have said. She remained silent. Perhaps she did not want him to live a slave. He had told her, “Androdameia, this one won’t be a slave.” Slaves must be docile. But Amazons liked the feisty ones too because it meant feisty daughters. The slaves were always at their disposal, but once a year, Amazons travelled abroad. Their ancestors had taught them that it was a way to ensure the health of the tribe. Besides, it was a ritual that they looked forward to. Since Androdameia would not touch a slave, it was also her only chance at giving vent to her pent-up desires. There was no dearth for hosts to provide them with meat, mead and men. The city that they were visiting now was called Caucasus, a new haunt of Gargarians whom their ancestors had driven out from Amazonian territories. They were hardy men and trustworthy, if not pleasant, hosts. As was the custom, the chieftains of the two tribes would consecrate the tradition with their union. Eutropia represented Gargarians alright. Built like a battering ram, he could be best described as a clumsy bull. Unlike the Amazons, the Gargarians considered strength in physical terms only and thus, Eutropia fit the bill as their leader. Androdameia was a little anxious. This was her first time and according to the legends she had heard, mating between chieftains often turned out to be a battle of brawn, each asserting the dominance of the respective tribe. So the first day of the ritual, she went into his chamber prepared to wrestle her way through. Surprisingly, he was gentle with her, gentler than she would have thought possible for a man of his stature. The ritual lasted seven days. And in these seven days, she enjoyed his company. It was almost as if a part of her that she had exchanged for being an Amazon was returned to her. She did not see him as a slave. She saw someone who could coexist with the Amazons and match them in strength and demeanour. They talked little. He never had much to talk about and Androdameia was not articulate either. But on the last day of their stay, he surprised her. Perhaps it was the magic of that last night. With the dawn, the revels would be at an end. The Amazons would be gone and for both the tribes, life would be routine again. With serious concern, he asked her, “Will you turn him into a slave?” At first she did not grasp the meaning but then it dawned on her. “Why do you think it will be a boy?” “Let’s just say, it is. Then what?” “I may not even conceive. What makes you so sure?” “My seed is strong and it’s been seven nights. Tell me, will you make a slave out of him? I heard that is what they do to boys in your city. You could send him to me. He will be strong and a true Gargarian. I could make a leader out of him.” “That we cannot do. If it’s a boy, he is meant to serve as a slave. And the mutual agreement between our tribes is that we will respect each other’s laws.” “But it is always your choice. You are the queen –” “– which means I have to uphold the laws. The boy will be a slave.” “I know my blood. He will never be a slave. It will be better if you kill him than let him trudge along with lower men and women. Androdameia, this one won’t be a slave. ” How much she would have liked to say then – All men a nd women are equal in Apollonia. “There is a war upon us, mother, and you are the queen.” Cyrene had barged into her chamber. Androdameia looked up and quipped, “Am I now? Then I suppose you could have waited for permission to enter. In Apollonia I am first a queen to my sisters and then a mother.” Cyrene blanched. It must be out of anger, she thought. Fear was an unlikely emotion for her. She was her eldest daughter, hot headed and impatient, a fierce warrior and commander of the Amazonian forces. “So you are, the queen,” she said. “Then why do you not command your forces to battle? These are dire times for us.” “Yes, yes, they always are, my dear.” Her mother’s nonchalance irritated Cyrene further. “Is it not your duty to protect your sisters? To guide us?” “Of course it is. So wage war and plunder the lands of men. Now that I have guided you, you may prepare for war.” “Is it so easy to send us off for slaughter? Do our lives mean nothing to you? Does my life mean nothing to you?” “Who said that? I care for you and that is why I say go fight for glory.” “And what about you mother? What will you do here?” “Oh don’t worry about me. I will live.” “I didn’t mean that. I meant that won’t you help us? Make strategies, send reinforcements if we are in trouble…” “They have taught you well. You will fend for yourself, I have no doubt.” “They were right all along. I did not believe them but now I do.” “Who, dear?” “The ones that told me the queen has gone mad. Ever since that happened. Tell me mother, was that slave so important to you? More important than your living daughters?” That caught Androdameia’s attention. “He was not a slave. He was your brother.” Her voice was icy. Cyrene flinched once again, but this time out of fear. Cyrene ventured, unsure, “There are no brothers in Apollonia. Only sisters. Besides he was a petty thief. Vile, as they all are, men.” “It was my weakness that I gave him to that woman who would not even feed him. I could have done that with you , dear. The results would have been interesting, indeed.” Ah! That struck a few chords. “Mother! You compare me with a slave!” “And you call my firstborn a slave in front of me, you fool! A slave is not a slave when he is born. A slave is one by the life he lives, by the death he chooses. And he did not die a slave.” “He died a criminal!” “Yes, he did not die a slave. I didn’t let him live as a slave. I killed him…” Androdameia had stopped listening and was ranting as if in a trance. Cyrene felt lonely. Her mother and their queen had lost her mind. She had been a great queen once. Powerful, just and clear headed. Now, she was but a shadow of her former self. Cyrene turned to leave. The onus was on her then, to fight legions of men at their gates. Just then, her mother called out. “Cyrene, they taught you well.” “You told me –” Androdameia raised a hand. “Be the queen and lead the Amazons. I guess I have had enough.”
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

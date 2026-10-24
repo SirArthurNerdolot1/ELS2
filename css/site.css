@@ -1,0 +1,1030 @@
+:root {
+  --ink: #1c1410;
+  --muted: #5e564f;
+  --accent: #7a3040;
+  --paper: #f7f1e8;
+  --card: #fffdf9;
+}
+
+body {
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  background-color: var(--paper);
+  background-image: url("../paper-texture-wide.png");
+  background-repeat: repeat-x;
+  background-position: top center;
+  background-attachment: scroll;
+  background-size: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+#navbar-title,
+header nav {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+::selection {
+  background: #ead3c4;
+  color: var(--ink);
+}
+
+header.sticky {
+  box-shadow: 0 1px 0 rgba(28, 20, 16, 0.06);
+}
+
+header .max-w-screen-xl > div:first-child {
+  min-width: 0;
+}
+
+header .max-w-screen-xl > nav {
+  flex-shrink: 0;
+}
+
+#navbar-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  #navbar-title {
+    white-space: normal;
+    line-height: 1.2;
+    font-size: 0.96rem;
+  }
+}
+
+header nav a {
+  letter-spacing: 0.16em;
+  color: #3a332e;
+}
+
+header nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+header nav a.nav-current {
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+a.text-blue-600 {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.content-box {
+  border: 1px solid rgba(122, 48, 64, 0.12);
+  border-left: 4px solid var(--accent);
+  background-color: rgba(255, 253, 249, 0.96);
+}
+
+.hero-title {
+  position: relative;
+  z-index: 20;
+  max-width: 18ch;
+  text-shadow: 0 1px 0 rgba(247, 241, 232, 0.4);
+}
+
+.hero-kicker {
+  position: relative;
+  z-index: 20;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  position: relative;
+  z-index: 20;
+  margin-top: 1.75rem;
+  max-width: 34rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+#blog-grid .group > a > div.absolute {
+  opacity: 1;
+  background: linear-gradient(
+    to top,
+    rgba(22, 12, 10, 0.88) 0%,
+    rgba(22, 12, 10, 0.45) 38%,
+    transparent 68%
+  );
+}
+
+#blog-grid .group > a > div.absolute p.text-sm {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
+}
+
+#blog-grid .group:hover > a > div.absolute p.text-sm {
+  max-height: 7rem;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.filter-btn.filter-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.year-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .year-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.year-card {
+  background: var(--card);
+  border: 1px solid rgba(28, 20, 16, 0.08);
+  border-radius: 1rem;
+  padding: 1.25rem 1.35rem 1.1rem;
+  box-shadow: 0 8px 24px rgba(60, 30, 20, 0.05);
+}
+
+.year-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(122, 48, 64, 0.25);
+  color: var(--accent);
+}
+
+.year-card ul {
+  display: grid;
+  gap: 0.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.year-card li {
+  color: #2c2622;
+  line-height: 1.45;
+}
+
+#team .grid > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+}
+
+#team .grid img,
+#team .grid [aria-hidden="true"] {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+#team .grid > div > :last-child {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#team .grid.lg\:grid-cols-4 > div > :last-child {
+  min-height: 5.5rem;
+}
+
+.alumni {
+  margin-top: 2.5rem;
+}
+
+.alumni-year {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem 1.75rem;
+  align-items: start;
+  padding: 1.6rem 0 1.35rem;
+  border-top: 1px solid rgba(122, 48, 64, 0.16);
+}
+
+.alumni-year h4 {
+  margin: 0.35rem 0 0;
+  font-size: 1.35rem;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+.alumni-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem 1.35rem;
+}
+
+.alumni-person {
+  width: 6.6rem;
+  margin: 0;
+  text-align: center;
+}
+
+.alumni-person img,
+.alumni-initials {
+  width: 6.1rem;
+  height: 6.1rem;
+  border-radius: 999px;
+  object-fit: cover;
+  object-position: center 18%;
+  background: #f3e6df;
+  border: 3px solid #fffdf9;
+  box-shadow: 0 8px 18px rgba(60, 30, 20, 0.12);
+}
+
+.alumni-initials {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  color: var(--accent);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.alumni-person figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.84rem;
+  line-height: 1.3;
+  color: #2c2622;
+}
+
+@media (max-width: 640px) {
+  .alumni-year {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+}
+
+.issue-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .issue-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.issue-grid img {
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+header.sticky.top-0 {
+  background: rgba(247, 241, 232, 0.92);
+  border-bottom: 1px solid rgba(122, 48, 64, 0.12);
+  box-shadow: none;
+}
+
+h1.hero-title {
+  text-transform: none;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+#hero-floating .hero-float {
+  opacity: 0.22;
+}
+
+#hero-floating .hero-float:nth-child(2),
+#hero-floating .hero-float:nth-child(4),
+#hero-floating .hero-float:nth-child(6) {
+  display: none;
+}
+
+section.spacious-section {
+  min-height: 0;
+  padding: 4.25rem 1.5rem;
+}
+
+section.spacious-section h2 {
+  font-size: clamp(2.4rem, 4vw, 3.15rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1.1rem;
+}
+
+section.spacious-section h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 0.85rem;
+  background: var(--accent);
+}
+
+section.spacious-section .content-box {
+  padding: 2.5rem 2.35rem 2.15rem;
+  max-width: 46rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  border-radius: 1.2rem;
+  box-shadow: 0 18px 46px rgba(60, 30, 20, 0.06);
+}
+
+section.spacious-section .content-box > p {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 1.14rem;
+  line-height: 1.75;
+  color: #3c342e;
+}
+
+a.text-blue-600 {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-family: "Playfair Display", Georgia, serif;
+  text-decoration: none;
+}
+
+a.text-blue-600:hover {
+  text-decoration: none;
+  color: #5c2432;
+}
+
+.eventsSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  height: auto;
+  padding: 0 0 1.3rem;
+  background: var(--card);
+  border: 1px solid rgba(28, 20, 16, 0.06);
+  border-radius: 1rem;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.eventsSwiper .swiper-slide img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 1rem;
+}
+
+.eventsSwiper.is-poster .swiper-slide img {
+  object-fit: contain;
+  width: auto;
+  max-width: 100%;
+  height: 22rem;
+  margin: 1rem auto 0.85rem;
+  padding: 0;
+  background: transparent;
+  display: block;
+}
+
+.eventsSwiper .swiper-slide h3,
+.eventsSwiper .swiper-slide p {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  text-align: left;
+}
+
+.eventsSwiper .swiper-slide h3 {
+  margin-bottom: 0.35rem;
+}
+
+.eventsSwiper .swiper-slide p {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--accent);
+}
+
+section.text-center.py-20 {
+  padding-top: 4.75rem;
+  padding-bottom: 2.5rem;
+}
+
+section.text-center.py-20 h1 {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+section.text-center.py-20 h1::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 1rem auto 0;
+  background: var(--accent);
+}
+
+section.text-center.py-20 > p {
+  margin-top: 1.15rem;
+  color: var(--muted);
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  line-height: 1.65;
+}
+
+.page-kicker {
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.page-intro {
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid rgba(122, 48, 64, 0.1);
+  border-top: 3px solid var(--accent);
+  border-radius: 1.25rem;
+  padding: 3.1rem 2.4rem 2.6rem;
+  box-shadow: 0 18px 44px rgba(60, 30, 20, 0.06);
+}
+
+.page-intro h1 {
+  font-size: clamp(2.6rem, 5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.15rem;
+}
+
+.page-intro p {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  color: #3c342e;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+button.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(122, 48, 64, 0.28);
+  color: var(--ink);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+button.filter-btn:hover {
+  transform: none;
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+button.filter-btn.filter-active,
+button.filter-btn.filter-active:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fffdf9;
+}
+
+#blog-grid > .group {
+  border-radius: 1rem;
+  box-shadow: 0 12px 28px rgba(60, 30, 20, 0.07);
+  border: 1px solid rgba(28, 20, 16, 0.05);
+}
+
+#blog-grid > .group h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+main a.group.rounded-2xl {
+  background: var(--card);
+  border: 1px solid rgba(28, 20, 16, 0.06);
+  box-shadow: 0 14px 32px rgba(60, 30, 20, 0.06);
+}
+
+main a.group.rounded-2xl:hover {
+  box-shadow: 0 18px 36px rgba(60, 30, 20, 0.1);
+}
+
+main a.group.rounded-2xl .h-48 {
+  height: 15rem;
+}
+
+main a.group.rounded-2xl img {
+  object-position: center top;
+}
+
+main a.group.rounded-2xl h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+main a.group.rounded-2xl h3:hover {
+  text-decoration: none;
+}
+
+main a.group.rounded-2xl p {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+}
+
+#team > h2 {
+  border-bottom-color: rgba(122, 48, 64, 0.28);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+#team .grid > div {
+  background: var(--card);
+  border: 1px solid rgba(28, 20, 16, 0.05);
+  box-shadow: 0 10px 24px rgba(60, 30, 20, 0.06);
+}
+
+.dandelion-fall:nth-child(n + 5) {
+  display: none;
+}
+
+.dandelion-fall {
+  opacity: 0.4;
+  width: 40px;
+  height: 40px;
+}
+
+.issue-grid a {
+  background: var(--card);
+  border: 1px solid rgba(28, 20, 16, 0.06);
+  border-radius: 1rem;
+  box-shadow: 0 14px 32px rgba(60, 30, 20, 0.07);
+  overflow: hidden;
+}
+
+.issue-grid a p {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+footer {
+  border-top: 1px solid rgba(122, 48, 64, 0.16);
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.colophon-mark {
+  color: var(--accent);
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-bottom: 0.45rem;
+}
+
+.site-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 0.85rem 0 0.95rem;
+}
+
+.site-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.site-socials a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-socials svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.colophon-line {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.hero-ornament {
+  position: relative;
+  z-index: 20;
+  margin-top: 2.25rem;
+  color: var(--accent);
+  font-size: 1.35rem;
+  letter-spacing: 0.3em;
+  opacity: 0.78;
+}
+
+.chapter-num {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.is-dropcap > p:not(.page-kicker):not(.chapter-num):not(.manuscript-byline):first-of-type {
+  text-align: left;
+}
+
+.is-dropcap > p:not(.page-kicker):not(.chapter-num):not(.manuscript-byline):first-of-type::first-letter,
+main.book-page.is-prose .prose > p:first-of-type::first-letter {
+  float: left;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.35rem;
+  line-height: 0.84;
+  padding-right: 0.55rem;
+  padding-top: 0.12rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Manuscript leaf cards in blog.html */
+#blog-grid > .group.is-leaf {
+  background: var(--card);
+  border: 1px solid rgba(122, 48, 64, 0.14);
+  border-top: 3px solid var(--accent);
+  min-height: 300px;
+  display: flex;
+}
+
+#blog-grid > .group.is-leaf .leaf-link {
+  display: flex;
+  width: 100%;
+  padding: 1.55rem 1.5rem 1.35rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+#blog-grid > .group.is-leaf .leaf-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+}
+
+#blog-grid > .group.is-leaf .leaf-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(122, 48, 64, 0.14);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.leaf-cat {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+#blog-grid .group > a > div.absolute .leaf-cat {
+  color: #f3d7c8;
+  margin-bottom: 0.25rem;
+}
+
+.leaf-orn {
+  color: var(--accent);
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+#blog-grid > .group.is-leaf .leaf-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.28;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+
+#blog-grid > .group.is-leaf:hover .leaf-title {
+  color: var(--accent);
+}
+
+#blog-grid > .group.is-leaf .leaf-meta {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.84rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+#blog-grid > .group.is-leaf .leaf-excerpt {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 0.94rem;
+  line-height: 1.58;
+  color: #3c342e;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+}
+
+#blog-grid > .group.is-leaf .leaf-read {
+  margin-top: auto;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Individual blog & event book pages */
+section.manuscript-header {
+  padding: 3.75rem 1.5rem 1rem;
+}
+
+section.manuscript-header .page-intro {
+  max-width: 48rem;
+}
+
+section.manuscript-header .manuscript-byline {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--muted);
+  margin-top: -0.35rem;
+}
+
+section.manuscript-header .manuscript-plate {
+  margin: 1.65rem auto 0.25rem;
+  max-width: 34rem;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  border: 1px solid rgba(28, 20, 16, 0.08);
+  box-shadow: 0 14px 32px rgba(60, 30, 20, 0.1);
+  background: #f6efe6;
+}
+
+section.manuscript-header .manuscript-plate img {
+  width: 100%;
+  max-height: 26rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+main.book-page {
+  background: rgba(255, 253, 249, 0.95);
+  border: 1px solid rgba(122, 48, 64, 0.12);
+  border-radius: 1.25rem;
+  padding: 3rem 2.75rem 2.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 18px 44px rgba(60, 30, 20, 0.06);
+}
+
+@media (max-width: 640px) {
+  main.book-page {
+    padding: 2.1rem 1.4rem 1.85rem;
+  }
+}
+
+main.book-page .prose p {
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 1.12rem;
+  line-height: 1.85;
+  color: #2b231e;
+  margin-bottom: 1.25rem;
+}
+
+main.book-page .prose br {
+  display: none;
+}
+
+main.book-page .prose::after,
+main.book-page.is-poem > div:first-child::after {
+  content: "— ❦ —";
+  display: block;
+  text-align: center;
+  color: var(--accent);
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.28em;
+  margin-top: 2.4rem;
+  opacity: 0.75;
+}
+
+/* ==========================================================================
+   Subtle Hand-Drawn Margin Sketches & Ink Marginalia
+   ========================================================================== */
+#hero-floating {
+  pointer-events: none;
+}
+
+.sketch-wrap {
+  position: absolute;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.sketch-wrap.pos-tl { top: 8%; left: 5%; }
+.sketch-wrap.pos-tr { top: 9%; right: 5.5%; }
+.sketch-wrap.pos-ml { top: 44%; left: 4.5%; }
+.sketch-wrap.pos-mr { top: 44%; right: 5%; }
+.sketch-wrap.pos-bl { bottom: 10%; left: 6.5%; }
+.sketch-wrap.pos-br { bottom: 11%; right: 6.5%; }
+
+.sketch-item {
+  position: relative;
+  transform: rotate(var(--rot, 0deg));
+  animation: sketchDrift 13s ease-in-out infinite;
+}
+
+.sketch-wrap:nth-child(2n) .sketch-item {
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+
+.sketch-wrap:nth-child(3n) .sketch-item {
+  animation-duration: 14.5s;
+  animation-delay: -8s;
+}
+
+@keyframes sketchDrift {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(calc(var(--rot, 0deg) + 1.5deg));
+  }
+}
+
+/* Blend hand-drawn illustrations into the warm parchment like sepia ink */
+.sketch-img {
+  display: block;
+  height: auto;
+  opacity: 0.34;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) sepia(55%) contrast(108%) brightness(96%);
+}
+
+.sketch-img.is-etching {
+  opacity: 0.24;
+  filter: grayscale(100%) sepia(65%) contrast(115%) brightness(95%);
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 78%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0) 78%);
+}
+
+/* Fine pen-and-ink line drawings with paper-grain displacement */
+.ink-line-svg {
+  width: 9.5rem;
+  height: auto;
+  overflow: visible;
+  opacity: 0.38;
+  filter: url(#ink-sketch);
+}
+
+.ink-line-svg.is-botanical {
+  width: 7.2rem;
+}
+
+.ink-line-svg path {
+  fill: none;
+  stroke: #4a2a24;
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ink-line-svg path.thin {
+  stroke-width: 0.9;
+  opacity: 0.78;
+}
+
+.ink-line-svg path.flourish {
+  stroke: #6e2d3b;
+  stroke-width: 1.05;
+  opacity: 0.75;
+}
+
+.ink-line-svg path.hatch {
+  stroke-width: 0.65;
+  opacity: 0.55;
+}
+
+.marginalia-note {
+  margin-top: 0.25rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: rgba(74, 38, 32, 0.46);
+  white-space: nowrap;
+}
+
+/* Ambient margin sketches while scrolling through chapters */
+#floating-background.visible {
+  opacity: 1;
+}
+
+.ambient-sketch {
+  position: absolute;
+  animation: sketchDrift var(--dur, 15s) ease-in-out infinite;
+}
+
+.ambient-sketch .sketch-img {
+  opacity: 0.22;
+}
+
+/* Chapter headpiece vignettes inside content-box and page-intro */
+.chapter-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.chapter-plate {
+  margin: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.chapter-plate .sketch-img {
+  width: 4.4rem;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0.34;
+}
+
+.chapter-plate figcaption {
+  margin-top: 0.15rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.62rem;
+  color: rgba(74, 38, 32, 0.5);
+  letter-spacing: 0.04em;
+}
+
+.intro-vignette {
+  margin: 0 auto 0.6rem;
+  width: 4.5rem;
+}
+
+.intro-vignette .sketch-img {
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0.34;
+}
+
+@media (max-width: 640px) {
+  .sketch-wrap.pos-tl { top: 4.5%; left: 4%; }
+  .sketch-wrap.pos-tr { top: 5%; right: 4%; }
+  .sketch-wrap.pos-bl { bottom: 6.5%; left: 4.5%; }
+  .sketch-wrap.pos-br { bottom: 7%; right: 4.5%; }
+  .sketch-img {
+    opacity: 0.25;
+  }
+  .marginalia-note {
+    font-size: 0.58rem;
+  }
+  .chapter-plate .sketch-img {
+    width: 3.4rem;
+  }
+}

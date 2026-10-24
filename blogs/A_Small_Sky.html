@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Small Sky | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>A Small Sky</h1>
+      <p class="manuscript-byline">November 23, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She holds it to her lips like life does breath. Her glasses fog over as the steam lingers and rises away from the cup, restless spirits of tea leaves blooming away from their ceramic purgatory. Sweat clings to her brows and trickles down the ridges of her neck.I ask my mum why she insists on drinking pipping hot tea in the July heat.”It’s the way I’ve always done it. It’s the way I like my tea” The ugly pink walls of my school stare me down, our navy flag drooping without winds to set sail to.I may never see this place again,I think, never smell this place again. My vision doesn’t blur, my throat doesn’t burn but my heart swells and falls.My dad’s in the army so we were always a moving family,3 winters and 4 summers in a place was part of my education but the thought of a lost winter would always feel the coldest, sting the hardest.I would go inside our temporary house one last time and with everything in boxes, it almost looked like the place we once came to, not the one we were leaving behind.An empty house screams back when you scream, sings back when you sing, your time there bounces off the white walls and the rectangular place much paler than its vicinity, one can only imagine, must have been a lovely portrait of its inhabitants. In our case, it was a random picture of sad stags. Since seventh grade, the circumstances had me settling down in Kota for a period of 6 miserably hot years and as a result I had to maintain friendships for periods longer than elephant pregnancies. Now mind you, we still changed houses twice because no house should have to(read can)bare my family for more than two years.But I stayed in the same school and talked to pretty much the same people and remembered birthdays for the first time in my existence.Now,I was never a school enthusiast,6 am is too early for life.The only reason I went was to make teachers uncomfortable with excessive eye contact and to lose debates. Every single one, every single time.As I came out with my last school mark-sheet in hand,I looked at the basketball court with naked hoops, a quiver of yellowing trees shooting early autumn leaves in the blue breeze.I never turned around but through the exit, I could see what led to it,I could see it all.The arching centre of the second floor school library where the flags hung,I felt the air conditioning of our reception caressing my summer sweat and the way it always smelled of new carpets.I saw pigeons fighting for nesting grounds through busted up windows and I saw our class making obscene gestures at the newly installed cctv, huddling too close to spin bottles and throwing pens across five rows of teenagers. I heard the electric bell that sounded like jangling pennies by the kg .It had sounded like freedom for six years and I realized I wanted to hear it once more, that feeling of a lock clicking into place. As the class of 2020,I suppose we had to be the most introspective of recent graduates, what with the exam dates getting pushed out of sight. Our affair with jee wasn’t wanting in eyerolling drama. I spent two years professing my love at ungodly hours and proving my worth but when she’d finally agreed to meet me, she stood me up. Later she’d reason she had just learnt of black market toilet paper and I’d work on forgiving her. It was 4 months of patience wearing thin, stretching like sidewalk bubblegum under the bellowing feet of the virus.Everything that wasn’t happening stacked up in jenga walls around us, threatening a clumsy fall if we were to try and look for window slats. The unprecedented had happened and I was finally ready for the signature dystopia virus to up and wipe out everyone except me, my dog and two suitable love interests. Alas, that wasn’t meant to be either. Change is a frightening thing, but change for us came in the guise of masks and sanitisers and plate banging instead of the usual first year college diploma in procrastination. College didn’t happen when the sticky summer sun melted the sky in blinding white, when the mechanical whir of fans made you lethargic and the vanilla dripped off your chin and onto your favourite shorts or even when the sky serenaded us with gentle droplets, reclaimed the greens and painted every house anew. When lightning split and forked in the sky and distant bombs dotted the horizon, when every rain smelled like hope, if perhaps hope is petrichor and a little bit of animal faeces. College didn’t happen in the humidity when you could’ve drunk water from thin air or even as the trees changed to austere bones piercing where they held the purple hued sky. The ways of lockdown were harsh on some, for me it was the realization that if this feels normal, maybe I should step out more. And ironically I did, me and my brother walked Tuffy, the barking cat all through lockdown and then some. I had the non-paying yet respectable job of gathering dog poop in newspapers that announced celebrity resolutions for 2020 and how Britain still couldn’t decide. I came to like this obligation mostly because I like songs and I listened to the whole discography of Airborne Toxic Event while Tuffy strutted through the manicured apartment lawn and stopped to feel the winds on his whiskers every once in a while. I learnt that if you’re counting feathers on your balcony, you can only ever count the ones coming down because the sky camouflages the ones that soar above concrete and chimney smoke. I launched an experiment on the ways to make Maggie with only water and seasoning.It took endless 2 am tastings to get it right. I went through the same notes over and over again.Monday bled into Tuesday,June into July into August and climbing six flights of stairs in a mask left me waiting to catch a real breath. The city around us had always bustled with students, early morning garbage disposal music, drums at the most unfortunate hours and me singing along to Don’t Cry. It all fell silent one day, there were no roadside sellers clogging arteries with their oil drenched livelihood and over-speeding imbeciles honking away at the smoke in the air.There was silence and then there were dogs. The dogs that, forgive me, went to the dogs with people not risking coming out to feed them ,with people struggling to feed themselves. The dogs howled and yapped from their empty bellies, their bones protruding at the meagre flesh on their bodies, they ate away hungrily at the silence, tearing scrapes off of it with their gleaming teeth, licking and swallowing with their gaping wet mouths. Change is a certain thing. September came around,I sat my exam in three parts nerves and one part nonchalance,I don’t remember much from those six hours but I looked at the timer often. I can hear that silence too, the silence of shuffling eyes from the screen to paper to the timer, it played over like a broken record. The silence of pens screeching in haste and chairs being moved delicately, to nurture this silence. The silence that slithered and coiled, asphyxiated my thoughts after the timer showed that I had, at last, done my time. I expected change to be climactic, not me sitting in a car outside my school with a mask hanging from my neck like a chin rest while I scanned my report card before the deadline at 5. I think we’d all expected to be homesick by now, instead we are home and we are sick of the virus. I’m not inherently excited about college like I thought I would be and I wonder if I’m still waiting for the sky to come down and tell me that something has changed drastically. For the house to tell me that I had lived in it, for this winter breeze to carry with it autumn leaves, for my mother to switch to Redbull. I am sitting amidst great beauty as I write this, surrounded in acres and acres of hills dotted in dirty green pines and telephone towers standing upon them like scarecrows. The sky is small here, my mum said the very first day as the hills obscured the world outside. Tufts of white chrysanthemums are abloom and the roses lipstick red, nature flushing crimson at its own beauty. There are snow-capped mountains to the north and a crow is singing the chorus to Don’t Cry as it passes over my head. Things are changing, it’s winter after all. Things are changing, the mist that shrouded the top of the mountains yesterday has descended to the foothills. Things must be changing,I start college tomorrow. A watched pot never boils but I can’t seem to take my eyes off of it.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

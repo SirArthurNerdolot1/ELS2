@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call of the Void | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Call of the Void</h1>
+      <p class="manuscript-byline">November 24, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ~Ishita Vyavahare
+      </p>
+
+      <ol class="list-decimal pl-8 my-6 space-y-2 text-gray-800 text-lg">
+        <li class="mb-2">Anna Anna walked onto the edge of that 20th story building. A few hours ago, Anna’s daughter’s ECG monitor screen showed the straight, green line she’d been taking as an impending but inevitable loss. Her cancer had spread to her abdomen. It felt like it was her fault although Anna knew that any rational person would know better. Words of consolation came in and all she did was gave to them were a few murmured thank-yous and head nods. She craved solitude. Amidst her grief, the sight of anyone who wanted to speak to her ended up nauseating her and although they meant well, she wanted to shut them off. The 20th story building was the one right in front of the hospital building. The building was a beauty, exclusively reserved for big timers and big business offices. It wasn’t uncommon to see people in expensive clothing and limos lingering around and entering this building. Anna went there solely to look at the city from the terrace. As she looked out from the surprisingly low railings, she sighed which came out as a white puff disintegrating into the November cold. There were buildings everywhere, and from where she looked, tiny shops dotted along streets like ants lining up chaotically yet orderly. This side of Manhattan was particularly well lit. As she peered down below, the lights from buildings layered from one floor to the next almost as if she was staring into a never ending, downward, psychedelic tunnel. People looked like specs of dust floating in and out of her vision. Her eyes registered movement as if she was on a hunt; wild instincts taking over. Her heart was racing, her pupils were dilated. All she could feel was the urge to jump and with every breath, this feeling intensified. At this point, every cell in her body yearned to let go of the railings. With quivering hands and a mourning heart, she had flashes of perplexation; what was this feeling? It was as if her rational mind couldn’t explain this and that was terrifying. A hand reached out and grabbed her arm and yanked her back into the terrace. “Ma’am, you better be careful.” Leon was confused. Was this woman suicidal? She looked like she could jump. Leon thought he saw a silhouette lingering around here. This woman clearly needed to get to lower ground. Anna, blinked a couple of times, still in a daze. What had just happened? She could answer this question just as much as a kid could talk about the stock market. But she loved this feeling. It was wild and untamed. Leon was convinced that this woman needed help. Leon escorted her all the way to the elevator and then left her to her own.</li>
+        <li class="mb-2">Leon Leon knew he had to report to the manager in about twenty minutes. But this woman bothered him. He straightened his clothes and took a deep breath. He was almost done with duty. A dull headache and an aspirin were almost a routine now. He was reluctant of go back to the lobby. He headed straight to the terrace. His post as a security guard was transient. He despised having to live like this. He decided to use his twenty minutes in an introspective solitude. He gravitated to the terrace and he couldn’t tell why. The flurry of night lights and endless arrays of building floors and straight down. There was something deeply assuring about this place. What was a breeze down on the ground was a storm of sorts up here. Yet, one could hear the blood gushing in his ears. This deadly combination of sounds made the terrace a spectacle for Leon. But this place was high. A jump spelt doom. Possibly an unpleasant splutter for the people directly underneath. 20 stories was no joke. What there was; eerily enough, an inexplicable urge to look down below, at your coquettish doom. The doom catcalled him. He looked straight down; he shouldn’t have. He checked how high this place was. Then, he couldn’t stop staring. He felt light-headed, a first in many weeks. He could feel a pulsating exhort to go on and let go. He had the urge to jump. It was real. He didn’t want to die, he wanted to feel alive, weightless, floating. It was this rapt attention that the doom caught. He was aware of this confused feeling. His rationale and his biology clashed. His switched in and of reason like the pendulum of a grandfather clock. He tore away from the void and forced himself to look away. He didn’t want to do anything stupid. He shook his head and briskly walked away from the edge. He pulled his trench coat close to his neck and brushed off the invasive thoughts. What the heck was he doing? He quickly stepped into the lobby where Walter was doing the standard drill. He needed this raise. He’d worked really hard for the last three months. “You’re late.” Walter wasn’t in the best of moods. Was he? Leon checked the time. He was nearly twenty minutes late. Did he really spend forty minutes on the terrace? It felt like five. The next day, Leon pressed his thumb into the biometric device. He couldn’t stop thinking about that spot on the terrace. It appalled common sense but fascinated his instinct. He wondered if that woman was doing the same thing up there. Just as he was thinking this, he saw her outside the lobby window. Talk of the devil.</li>
+      </ol>
+
+      <ol class="list-decimal pl-8 my-6 space-y-2 text-gray-800 text-lg">
+        <li class="mb-2">Anna Anna came back to the hospital to complete documentation and formalities. She waited outside so that filing was complete. Unlike last night, it was comfortably warm and sunny this morning. The overhanging clouds of last night metamorphed into scattered and connected webs of clouds. She was caught by surprise when she saw the same man jogging up to her as the one, she met last evening. “Morning. I didn’t get a chance to thank you last evening. Seems like I walked a little too far upon the edge.” She was embarrassed.</li>
+      </ol>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “It no problem ma’am. I just wanted to ask, what were you doing there last night?” Anna was struck by the candidness of the question. “What do you mean?” “I mean, did you uh…feel something up there?”
+      </p>
+
+      <ol class="list-decimal pl-8 my-6 space-y-2 text-gray-800 text-lg">
+        <li class="mb-2">Leon Leon realized that this woman was emaciated. He was a sensitive person; he had to be, after these years of living in poverty. “I don’t know what you are talking about.” He knew she was covering up with words. He knew that she knew. Leon just nodded. “Okay. I’ll just leave you to it then.” He turned around and began to walk to the street. Manhattan was a place where time was a commodity sold in scanty amounts if you were poor; Leon had to get to work. “Wait! I felt something up there.” Leon turned around. The woman looked like she could collapse at any moment. He walked back up. “Yeah. Me too. Did you feel like jumping?” “Yeah.” “I’m Leon Kaspersky.” He extended his hand. “Hi, I’m Anna Alkaitis.” She took it. “I felt like I was going to jump, but I wasn’t suicidal. Does that make sense?” Leon was clearly shaken by this experience. His hand was warmer than hers. She needed to eat.</li>
+        <li class="mb-2">Anna/Leon Anna nodded, agreeing. At this point, she had to sit down or she’d double over. “Can we go sit somewhere?” Leon nodded. The café they went to was lit with warm yellow lights and smelt like biscuits and coffee. Anna took a bite of her sandwich and sipped at her coffee. The coffee travelled down her throat and she felt the warmth descent into her belly. She sighed and felt relieved. “I think we should investigate that place.” Leon knew he was late. But he felt and inexplicable pull to that place, he wanted more of it. “You mean go up there again?” Anna thought this was an absolutely frivolous idea. She had no plans of risking her life again. But she was curious too. Was it just that place or just a coincidence? “Yeah. You see, I had an experience up there and then, had it again this morning.” “You went up there again? Are you crazy?”</li>
+      </ol>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “No, I didn’t. I was at home. It was……controlled.” “What?” “Yeah, I mean, I was staring at my window and it happened again, except it was a sort of alertness.” “You mean you kinda induced it?” “I don’t know.” “What do you mean?” “I don’t know.” Anna was ambivalent about this. She looked into her empty glass which now had coffee residue at the bottom. She looked at the grainy patterns and fiddled with her spoon. A second later, a snake made of lightning slithered around her veins. Like electricity, her eyes hardened over the glass. The glass looked like a never-ending tunnel. Doom called her battle cry. Anna was sucked into the depths. She could feel herself falling into a labyrinth of brown coffee inside. She felt alive and looked away. She saw the surface of Leon’s face. Every irregularity bared itself to her. Like fractals, everything was connected but independent. She saw the order in the apparent randomness. Leon called out her name. “Anna?” She was simply staring into space. “Anna!” He speculated that it’s Doom again. Leon took her by the shoulders and shook her. She snapped out of it and inhaled deeply. “Let’s go up there.”
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

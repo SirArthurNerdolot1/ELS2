@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaleSpin Entry #9 | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>TaleSpin Entry #9</h1>
+      <p class="manuscript-byline">May 3, 2016</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        [Link to TaleSpin ]
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Talespin
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I am a spinner of tales. I am the one blowing smoke in your eyes; literally and figuratively.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I sit at my loom each day, painstakingly pick out the material, thread the needle carefully, and weave.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Today I work with golden silk. I am lonely today. The gleaming thread is the finest I could obtain. It came from the silkworms I fashioned from silver wool, they cluster on the tree in the far corner of the room, can you see it? They yield well, those worms, enough for me to give birth to a harem; but I save it. Abundance does not make the material less precious; economy is the best path to take.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Aurelia… In a few hours she will be alive; gilded skin glowing and the darker silk of her hair flowing to the floor. I will get to work in a moment, I just have to roll this square of cellulose, add a bit of dried tobacco. Can you see a matchbook anywhere? Ah, here it is. Hmm.. this is good. To work now.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It’s always good to feel the pedal of the loom working under my feet. The bars press into my soles creating a painful but pleasurable pressure; by the time I finish, there is a delightful numbness in every sinew. I don’t recall my skin without the purple embroidery of varicose on them. I strain myself too much, perhaps, but I feel strangely stagnant, without the rocking of the loom, and the chafe of thread against my fingers. Not even stagnant, no, it’s the wrong texture to use; what I mean is adrift. I am constantly flitting between worlds and people and things; old and new. The loom is an anchor; with the loom there is a start and from there a logical progression. There will eventually be an end too, maybe, but I don’t want to think about that right now. With the loom there is Aurelia, without it, it will just be me nursing my loneliness in an empty room, slowly unravelling to oblivion.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        This cigarette is out. Can you roll me another? No, no, you do know how to roll one. Just do what comes naturally. Yeah, see, I told you. Thanks, old guy.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The smoke is necessary to this delicate process of making fabric out of thin thread. I lose rhythm sometimes, makes the whole thing go awry; worlds jumble, faces blend together to create something unintended. The results are almost without exception horrendous, and it takes forever to make it right. I was taught how to smoke by a traveller from a land far away; he was as exotic as the cotton he was made out of; one of the most fascinating characters I have encountered thus far. I am proud of that one. He told me that lungfuls of burnt air will keep the pace going, even when I’m too exhausted to see straight. It’s bad, I know, but see, I don’t really care if I’m threadbare and ragged, as long as I can keeping weaving; faster, better and longer.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        There, just look at her, almost complete; she’s so perfect. I’ve been planning her for a long time. Can you get me that wooden chest over there? Yes, that one, right by the map of the world. That map… brings back memories. It’s goatskin, very good quality, would outlive me for centuries if that were possible. The chest yes… open it… I’ve gathered quite a few things over the years to make Aurelia whole. See those brilliant knots of green, they’re emeralds, for her eyes. Scarlet satin for her lips. The grey for her dress. I just need a bit of black for her hair… can you see a skein of black thread anywhere? No, no, that won’t do… too coarse. Only the finest for her.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Where did I leave it? I could not have run out… This place is just too messy sometimes; too many things I’ve created and cast aside… Some of them find their way out, some don’t… It’s a labyrinth, this place… like my head… that’s why the cigarettes are good… it quiets down the static and filters out the melody. I really must find some black soon. The brown silk, is good, yes, but her hair needs a little more depth… Just a little more… Aurelia, must be perfect, you know… I can’t scrimp on her… I intend to keep her here forever, next to me… I have had enough of solitude, enough of silence… Yeah, I do talk to you, but see, you never respond. That’s how I made you, of course, to hear myself speak, to have someone nod and not contradict. Now, I want more… you understand don’t you? You will help build her, right? I just need a little bit of your blackness, just some of it. I put some thought into forming you too, you know? Black, the perfect absorber, the perfect reflector; you show me what I want to see, not more, not less. You’ve served me well. There, the needle is threaded. Did that hurt? I’m sorry, but the pain will end soon… I feel guilty for doing this, you know, but I need more… So tell me, how does it feel to be… unravelling? I have often wondered how it would be like, when my time comes. You can’t tell me, of course. It’s not your fault. It’s mine. I’m sorry, old man, I really am.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        This is for the bes-
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

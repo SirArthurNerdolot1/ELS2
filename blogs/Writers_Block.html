@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writer’s Block | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Writer’s Block</h1>
+      <p class="manuscript-byline">May 30, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Writer’s Block was living the good life. It was flitting lazily through the dioxide-saturated atmosphere of the city, surveying the veritable feast below. Masses of humanoid sheep hurrying from Point A to Point B, practised expressions of preoccupation firmly in place. Block felt a sudden pang of shame induced by its gluttonous thoughts, as it remembered the extra layers of fat it had recently acquired. It’s true that Block had been overindulging as of late, moving from one host to another at a rate that has been unheard of since the advent of the First Writer. It needed to regain some control, it thought, as it stared with longing at the tempting flow of nourishment that it did not really need. The waves of guilt coursing through Block suddenly crashed on a shore of denial, dotted with pretty sea shells of greed, which when brought to the ear, gave off the roar of belligerence. It was not to blame. They made it so easy these days, how could it be expected to abstain from feeding off the anxieties of the damaged Sapiens below it. There had been a time when it had had to travel far and wide to forage for psyches. And those rare minds had not been that easy to breach; they had superior immunity, they would purge themselves of it well before it had its fill. Now that it thought of it, it had enjoyed its existence then. Some of these consciousnesses still existed. They were gourmet to Block’s palate; rare fixes of ecstasy. Today, mostly there was no challenge. Half the world fancied itself a Writer. And half of that half of the world was begging to be Blocked. Because half of that half of the world couldn’t write anything original. Nothing they would write would ever touch anything, change anything, inspire anything. But no one gave a damn about that. It was the generation of Narcissism and Self-publishing, you see. Sometimes however, due to some tiny glitch in their personal smoke screens, pinpricks of reality would permeate and they couldn’t find it in themselves to churn out bullshit at the same frequency as their morning ablutions. That’s where Block came in. They needed to hide behind it for a while, and to maintain the symbiosis, Block drew nutrition from the stress, anxiety, fear of failure; the Golden Age of Neuroses, no wonder it was getting fat.These are to Block what a McDonalds at every street corner is to humans. Block continued its lazy backstroke over the city. It saw its siblings at work. There was Depression, healthier than ever before, funnelling itself into the seventh cigarette of the hour of a chain-smoking human; nicotine laced with melancholia, a potent combination. Bulimia was insinuated on the dripping mozzarella on a pizza slice diving into a feminine mouth. Inferiority Complex smiled maliciously from the crest of the sound waves emanating from an adolescent bully’s sound box, looking forward to playing a glorious solo on the victim’s ear drums. Block bumped into something mid stroke. It turned to find Addiction, the most prodigious of the family, by virtue of omnipresence. Block greeted Addiction. Addiction grinned and said, “I’m sorry.” Block frowned at the rather strange response. Addiction, without bothering to clarify, vaporised into greyish mist, and surrounded Block. Block had a brief moment of clarity before a single-minded desire crept over it. Its lethargy crumbled. Its gaze narrowed on a girl on a park bench writing furiously in a leather-bound journal. Target acquired. It swooped down. A month later, the journal was found lying in a trash can at a street intersection known to be the hub of the connoisseurs of crack, headquarters of Addiction and its human minions.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -12,9 +12,10 @@ from dataclasses import dataclass, asdict
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional
+from urllib.parse import urlparse
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 
 @dataclass
@@ -29,7 +30,8 @@ class BlogPost:
     category: str
     preview: str
     blocks: List[Dict[str, object]]
-    is_poem: bool = False
+    is_poem: bool
+    images: List[str]  # Local paths to downloaded images = False
 
 
 class BlogFetcher:
@@ -72,10 +74,46 @@ class BlogFetcher:
     def _normalize_whitespace(self, text: str) -> str:
         return re.sub(r"\s+", " ", text.strip())
 
-    def _text_with_breaks(self, node: BeautifulSoup) -> str:
+    def _text_with_breaks(self, node: Tag) -> str:
+        """Extract text preserving line breaks."""
         for br in node.find_all("br"):
             br.replace_with("\n")
         return node.get_text(" ", strip=True)
+    
+    def _is_share_or_social(self, node: Tag) -> bool:
+        """Detect if a node is part of Share/Like/social media sections."""
+        if not isinstance(node, Tag):
+            return False
+        
+        # Check text content
+        text = node.get_text(strip=True).lower()
+        if any(phrase in text for phrase in [
+            "share this:", "click to share", "click to print",
+            "opens in new window", "like this:", "loading...",
+            "facebook", "twitter", "tumblr", "pocket", "reddit",
+            "click to email"
+        ]):
+            return True
+        
+        # Check classes
+        classes = " ".join(node.get("class", [])).lower()
+        if any(term in classes for term in [
+            "share", "sharedaddy", "social", "sd-sharing",
+            "share-button", "jetpack", "like-button", "reblog"
+        ]):
+            return True
+        
+        # Check parent nodes
+        parent = node.parent
+        for _ in range(3):  # Check up to 3 levels up
+            if not parent or not isinstance(parent, Tag):
+                break
+            parent_classes = " ".join(parent.get("class", [])).lower()
+            if any(term in parent_classes for term in ["share", "sharedaddy", "social"]):
+                return True
+            parent = parent.parent
+        
+        return False
 
     def _convert_node(self, node: BeautifulSoup) -> List[Dict[str, object]]:
         blocks: List[Dict[str, object]] = []
@@ -100,7 +138,15 @@ class BlogFetcher:
             items: List[str] = []
             for li in node.find_all("li", recursive=False):
                 li_text = self._normalize_whitespace(self._text_with_breaks(li))
-                if li_text:
+                # Filter out share-related list items
+                if li_text and not any(phrase in li_text.lower() for phrase in [
+                    "click to share",
+                    "opens in new window",
+                    "facebook",
+                    "twitter",
+                    "tumblr",
+                    "pocket"
+                ]):
                     items.append(li_text)
             if items:
                 blocks.append(
@@ -118,6 +164,27 @@ class BlogFetcher:
 
         return blocks
 
+    def _is_share_section(self, node: BeautifulSoup) -> bool:
+        """Check if a node is part of the social sharing section."""
+        text = node.get_text(strip=True).lower()
+        
+        # Direct text matches
+        if any(phrase in text for phrase in [
+            "share this:",
+            "click to share",
+            "opens in new window",
+            "loading…",
+            "like or reblog"
+        ]):
+            return True
+        
+        # Check for sharing-related classes
+        node_classes = node.get("class", [])
+        if any(cls for cls in node_classes if "share" in str(cls).lower() or "sharedaddy" in str(cls).lower()):
+            return True
+        
+        return False
+
     def _extract_blocks(self, parent: BeautifulSoup) -> List[Dict[str, object]]:
         blocks: List[Dict[str, object]] = []
         for child in parent.children:
@@ -126,15 +193,16 @@ class BlogFetcher:
 
             name = child.name.lower()
             
-            # Skip "Share this:" section
-            text_content = child.get_text(strip=True).lower()
-            if "share this:" in text_content or "click to share" in text_content:
+            # Skip "Share this:" section and related elements
+            if self._is_share_section(child):
                 continue
             
             if name in {"p", "span", "h2", "h3", "h4", "blockquote", "ul", "ol", "pre"}:
                 blocks.extend(self._convert_node(child))
             elif name in {"div", "section", "figure", "article"}:
-                blocks.extend(self._extract_blocks(child))
+                # Check if entire container is a share section
+                if not self._is_share_section(child):
+                    blocks.extend(self._extract_blocks(child))
 
         return blocks
 
@@ -300,26 +368,37 @@ class BlogFetcher:
         return date_obj.strftime("%B %d, %Y")
 
     def _block_to_html(self, block: Dict[str, object]) -> str:
+        """Convert a content block to HTML."""
         block_type = block["type"]
+        
         if block_type == "paragraph":
             return (
-                "      <p>\n        "
+                "      <p class=\"text-gray-800 leading-relaxed mb-6 text-lg\">\n        "
                 + self._escape(block["content"])
                 + "\n      </p>"
             )
 
         if block_type == "heading":
             level = block.get("level", "h3")
-            level = level if level in {"h2", "h3", "h4"} else "h3"
+            level = level if level in {"h1", "h2", "h3", "h4", "h5", "h6"} else "h3"
+            size_map = {
+                "h1": "text-4xl",
+                "h2": "text-3xl",
+                "h3": "text-2xl",
+                "h4": "text-xl",
+                "h5": "text-lg",
+                "h6": "text-base"
+            }
+            size_class = size_map.get(level, "text-2xl")
             return (
-                f"      <{level} class=\"text-2xl font-semibold text-gray-800\">"
+                f"      <{level} class=\"{size_class} font-bold text-gray-900 mb-4 mt-8\">"
                 + self._escape(block["content"])
                 + f"</{level}>"
             )
 
         if block_type == "quote":
             return (
-                "      <blockquote class=\"border-l-4 border-gray-300 pl-4 italic text-gray-700\">\n        "
+                "      <blockquote class=\"border-l-4 border-gray-400 pl-6 py-4 my-6 italic text-gray-700 bg-gray-50 rounded\">\n        "
                 + self._escape(block["content"])
                 + "\n      </blockquote>"
             )
@@ -329,19 +408,35 @@ class BlogFetcher:
             tag = "ol" if ordered else "ul"
             classes = "list-decimal" if ordered else "list-disc"
             items_html = "\n".join(
-                f"        <li>{self._escape(item)}</li>" for item in block.get("items", [])
+                f"        <li class=\"mb-2\">{self._escape(item)}</li>" for item in block.get("items", [])
             )
             return (
-                f"      <{tag} class=\"{classes} pl-6 space-y-2 text-gray-800\">\n"
+                f"      <{tag} class=\"{classes} pl-8 my-6 space-y-2 text-gray-800 text-lg\">\n"
                 + items_html
                 + f"\n      </{tag}>"
             )
 
         if block_type == "code":
             return (
-                "      <pre class=\"bg-gray-900 text-gray-100 text-sm rounded-lg p-4 overflow-auto whitespace-pre-wrap\">\n"
+                "      <pre class=\"bg-gray-900 text-gray-100 text-sm rounded-lg p-6 overflow-auto whitespace-pre-wrap my-6 shadow-lg\">\n"
                 + html.escape(str(block.get("content", "")))
                 + "\n      </pre>"
+            )
+        
+        if block_type == "image":
+            src = block.get("src", "")
+            alt = block.get("alt", "")
+            return (
+                f"      <figure class=\"my-8\">\n"
+                f"        <img src=\"{self._escape(src)}\" alt=\"{self._escape(alt)}\" class=\"w-full rounded-lg shadow-md\" />\n"
+                f"      </figure>"
+            )
+        
+        if block_type == "caption":
+            return (
+                "      <p class=\"text-center text-sm text-gray-600 italic mt-2 mb-6\">\n        "
+                + self._escape(block["content"])
+                + "\n      </p>"
             )
 
         return ""

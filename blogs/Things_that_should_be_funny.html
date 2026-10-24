@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Things that should be funny | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Things that should be funny</h1>
+      <p class="manuscript-byline">March 8, 2018</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-poem" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <div class="space-y-6 my-12">
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="0">
+        [ https://www.youtube.com/watch?v=jhC1pI76Rqo ]
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="100">
+        Silence is a funny thing
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="200">
+        It has a way of acquiring meaning.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="300">
+        It has a friend called Stillness.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="400">
+        If you remain with Silence for too long,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="500">
+        She comes along after a while.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="600">
+        It’s funny how silence can be enforced.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="700">
+        A logical solution in this world,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="800">
+        Where we, one of the most inefficient species
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="900">
+        On the planet, decide:
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1000">
+        We want our inefficiency to be efficient.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1100">
+        Funnily enough, the same comparison applies
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1200">
+        To classes of human beings:
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1300">
+        Haves and have-nots. Men and Women.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1400">
+        Silence is often for those who have-not
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1500">
+        While those who “have” scream at the top of their lungs.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1600">
+        It’s like we are really children,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1700">
+        With the added ability to have sex.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1800">
+        And added incentive to control other people.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="1900">
+        People with candies scream because the shape isn’t right.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2000">
+        While a world of hungry children,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2100">
+        Would be glad for a rotten piece of bread.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2200">
+        Silence is often assumed to be a characteristic.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2300">
+        And it is, but not acquired by choice.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2400">
+        Invisible threads of privilege support our puppet shows.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2500">
+        It’s funny how we all forget,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2600">
+        That plants grown without water and nutrition,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2700">
+        Or without fertile symbiotic soil,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2800">
+        Tend to die or become stunted.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="2900">
+        Consciousness is funny,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3000">
+        You think it’s you.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3100">
+        Strange when you are half-supported by the best threads.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3200">
+        And the other half is dangling because some cheap paper tore up.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3300">
+        Perspective is the funniest. It gives rise to other inefficiencies.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3400">
+        Like empathy.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3500">
+        It’s giving somebody your threads,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3600">
+        Because you think they have only paper.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3700">
+        An inefficient process for someone,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3800">
+        Who cannot prevent their threads from being stolen.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="3900">
+        And with people who paste paper over threads,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4000">
+        To maximise capital.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4100">
+        I don’t speak of Stillness very often, though.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4200">
+        Because stillness is love.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4300">
+        And I like to protect that segment of my existence
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4400">
+        From the multi-level system of inefficient puppets.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4500">
+        That measures everything by efficiency,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4600">
+        Which is just a justification for inefficiency, in the end.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4700">
+        Love is the calm that washes over me,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4800">
+        When I don’t have to be a puppet.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="4900">
+        It’s a rare, unintended side effect,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5000">
+        Of partial isolation. It’s lying down with my parents,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5100">
+        In silence, saying nothing, absorbed in thought.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5200">
+        But still not alone. Its when my silence breaks for a moment,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5300">
+        And the whole world doesn’t matter.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5400">
+        Stillness is delicate. It spoils with display.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5500">
+        They call it love. But their love is not stillness,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5600">
+        The calm of not having threads.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5700">
+        It’s pulling an act for the benefit,
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5800">
+        Of nobody. Not for enjoyment.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="5900">
+        For entertainment.
+      </p>
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="6000">
+        Subtle distinctions are funny.
+      </p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

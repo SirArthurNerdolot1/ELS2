@@ -83,6 +83,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
 
@@ -91,7 +92,7 @@
     <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html">
-          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
         </a>
         <h2 id="navbar-title" class="text-xl sm:text-2xl font-bold tracking-wide hidden md:block">
           English Literary Society IIT Kanpur
@@ -103,7 +104,7 @@
         <a href="events.html" class="hover:text-gray-700">Events</a>
         <a href="blog.html" class="hover:text-gray-700">Blog</a>
         <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
-        <a href="contact.html" class="hover:text-gray-700">Contact</a>
+        <a href="contact.html" class="hover:text-gray-700 nav-current">Contact</a>
       </nav>
     </div>
   </header>
@@ -155,7 +156,19 @@
 
   <!-- Footer -->
   <footer class="mt-32 text-center text-gray-500 text-sm max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up" data-aos-delay="500">
-    &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
   </footer>
 
   <!-- AOS Animation -->

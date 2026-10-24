@@ -29,6 +29,7 @@
       transition: transform 0.3s ease;
     }
   </style>
+  <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
 
@@ -38,7 +39,7 @@
       <!-- Logo + Title -->
       <div class="flex items-center space-x-3">
         <a href="index.html">
-          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+          <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
         </a>
         <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
   English Literary Society IIT Kanpur
@@ -50,7 +51,7 @@
       <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
         <a href="index.html" class="hover:text-gray-700">Home</a>
         <a href="about.html" class="hover:text-gray-700">About</a>
-        <a href="events.html" class="hover:text-gray-700">Events</a>
+        <a href="events.html" class="hover:text-gray-700 nav-current">Events</a>
         
         <a href="blog.html" class="hover:text-gray-700">Blog</a>
         <a href="Dandelion.html" class="hover:text-gray-700">Dandelion</a>
@@ -72,7 +73,7 @@
          class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
       <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
       <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
-      <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="events.html" class="py-3 border-t hover:text-gray-700 nav-current">Events</a>
       
       <a href="blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
       <a href="Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
@@ -81,8 +82,9 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 bg-[#fef9f4]" data-aos="fade-down">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Our Gatherings</h1>
+  <section class="text-center py-20" data-aos="fade-down">
+    <p class="page-kicker">Chapter II · Chronicles</p>
+    <h1 class="text-5xl md:text-6xl mb-4">Our Gatherings</h1>
     <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
       A celebration of stories, voices, and literary camaraderie — through events that unite us in thought and expression.
     </p>
@@ -93,10 +95,179 @@
   <section class="max-w-6xl mx-auto px-6 py-20">
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 
-      <!-- Event Card Template -->
-      <a href="events/poetry_week/poetry_week.html" class="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <a href="events/chronicles/chronicles.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
         <div class="h-48 bg-gray-200 overflow-hidden">
-          <img src="events/poetry_week/poster.png" alt="Poetry Week" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="events/chronicles/hero.jpg" alt="Campus Chronicles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Campus Chronicles</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: October 15, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Original stories and poems for the inter-collegiate team — and a short-story list that rewards a careful reading.</p>
+        </div>
+      </a>
+
+      <a href="events/little_women/little_women.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/little_women/hero.jpg" alt="Little Women Screening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Little Women Screening</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: October 4, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Alfaaz × ELS screened Greta Gerwig’s Little Women in L12 — sisters, ink, and a canoe of one’s own.</p>
+        </div>
+      </a>
+
+      <a href="events/word_waterways/word_waterways.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/word_waterways/hero.jpg" alt="Word Waterways" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Word Waterways</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: October 3, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">A cryptic crossword evening with Viresh Ratnakar in L-14. Never leave a grid unfinished.</p>
+        </div>
+      </a>
+
+      <a href="events/write_off/write_off.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/write_off/hero.jpg" alt="The Great Indian Write-Off" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">The Great Indian Write-Off</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: October 1–4, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">ELS and Alfaaz asked for short stories and poems — four days, cash prizes, and finished pages.</p>
+        </div>
+      </a>
+
+      <a href="events/open_mic/open_mic.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/open_mic/hero.jpg" alt="Gender Cell × ELS Open Mic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Gender Cell × ELS Open Mic</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: September 3, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">A shared microphone at CCD: poems, prose, and whatever someone had been carrying all week.</p>
+        </div>
+      </a>
+
+      <a href="events/campus_scrabble/campus_scrabble.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/campus_scrabble/hero.jpg" alt="Campus Scrabble League 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Campus Scrabble League '26</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: August 31 – September 5, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Open boards on Woogles and on campus tables — a week of tiles, bingos, and quiet rivalries.</p>
+        </div>
+      </a>
+
+      <a href="events/jam/jam.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/jam/hero.jpg" alt="Campus JAM 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Campus JAM '26</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: August 27–30, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Just A Minute in the Tutorial Block: one clock, no hesitation, and a table full of interruptions.</p>
+        </div>
+      </a>
+
+      <a href="events/open_mic_aug/open_mic_aug.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/open_mic_aug/hero.jpg" alt="Open Mic Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Open Mic Night</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: August 13, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">CCD, 6 PM: poems, songs, jokes, and anything that needed a microphone.</p>
+        </div>
+      </a>
+
+      <a href="events/frolica/frolica.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/frolica/hero.jpg" alt="Freshers’ Frolica 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Freshers’ Frolica 2026</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: August 6–10, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Y26’s first week: Scrabble Blitz, CC 101, JAM WHAM, and an open mic.</p>
+        </div>
+      </a>
+
+      <a href="events/blues_clues/blues_clues.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/blues_clues/hero.jpg" alt="Blue’s Clues" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Blue’s Clues</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: June – July 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Summer workshops: cryptics with Viresh Ratnakar, story with Srijani Mitra, slam with Ridhi Bhutani.</p>
+        </div>
+      </a>
+
+      <a href="events/poetry_week_26/poetry_week_26.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/poetry_week_26/hero.jpg" alt="Poetry Week 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Poetry Week '26</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: May 24, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Ten days of prompts, opened by Madhu Raghavendra — then the campus wrote back.</p>
+        </div>
+      </a>
+
+      <a href="events/kavita_kisse/kavita_kisse.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/kavita_kisse/hero.jpg" alt="Kavita Kisse Kahaniyan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Kavita Kisse Kahaniyan</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: May 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">Nine ELS voices on a Lucknow stage — one trail of poems, until the next mic drops.</p>
+        </div>
+      </a>
+
+      <a href="events/soiree/soiree.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/soiree/hero.jpg" alt="Soirée 2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>
+        <div class="bg-white p-6 flex flex-col justify-between flex-grow">
+          <div>
+            <h3 class="text-2xl font-semibold mb-2 group-hover:underline">Soirée 2026</h3>
+            <p class="text-sm text-gray-600 mb-1">Date: April 13–18, 2026</p>
+          </div>
+          <p class="text-gray-700 mt-2">JAM, Word Games Night, and a last set from the outgoing batch with MClub.</p>
+        </div>
+      </a>
+
+      <!-- Event Card Template -->
+      <a href="events/poetry_week/poetry_week.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+        <div class="h-48 bg-gray-200 overflow-hidden">
+          <img src="events/poetry_week/poster.jpg" alt="Poetry Week" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"  loading="lazy" />
         </div>
         <div class="bg-white p-6 flex flex-col justify-between flex-grow">
           <div>
@@ -107,9 +278,9 @@
         </div>
       </a>
 
-      <a href="events/game_night/game_night.html" class="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <a href="events/game_night/game_night.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
         <div class="h-48 bg-gray-200 overflow-hidden">
-          <img src="events/game_night/hero.png" alt="Game Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="events/game_night/hero.jpg" alt="Game Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"  loading="lazy" />
         </div>
         <div class="bg-white p-6 flex flex-col justify-between flex-grow">
           <div>
@@ -121,9 +292,9 @@
       </a>
 
 
-      <a href="events/bumble/bumble.html" class="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <a href="events/bumble/bumble.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
         <div class="h-48 bg-gray-200 overflow-hidden">
-          <img src="events/bumble/hero.png" alt="Bumbled" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="events/bumble/hero.jpg" alt="Bumbled" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"  loading="lazy" />
         </div>
         <div class="bg-white p-6 flex flex-col justify-between flex-grow">
           <div>
@@ -133,9 +304,9 @@
           <p class="text-gray-700 mt-2">Valentine’s Day reimagined with literary matchmaking, plot twists, and poetic sparks.</p>
         </div>
       </a>
-<a href="events/scrabble_league/scrabble_league.html" class="flex flex-col h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+<a href="events/scrabble_league/scrabble_league.html" class="group flex flex-col h-full rounded-2xl overflow-hidden bg-white shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
         <div class="h-48 bg-gray-200 overflow-hidden">
-          <img src="events/scrabble_league/hero.png" alt="Scrabble League" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="events/scrabble_league/hero.jpg" alt="Scrabble League" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"  loading="lazy" />
         </div>
         <div class="bg-white p-6 flex flex-col justify-between flex-grow">
           <div>
@@ -152,7 +323,19 @@
 
   <!-- Footer -->
   <footer class="mt-16 text-center text-sm text-gray-500 py-10">
-    &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->

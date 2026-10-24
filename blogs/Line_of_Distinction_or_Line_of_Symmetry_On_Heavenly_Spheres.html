@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Line of Distinction or Line of Symmetry: On Heavenly Spheres | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Line of Distinction or Line of Symmetry: On Heavenly Spheres</h1>
+      <p class="manuscript-byline">June 28, 2014</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        If it seems to you that the title of this prose is a rehash of the title of Copernicus’ magnum opus, I will warn you that I am about to pull off a cliché – I will begin with a quote from the same book. Those who know that the consensus of many centuries has sanctioned the conception that the earth remains at rest in the middle of the heaven as its centre would, I reflected, regard it as an insane pronouncement if I made the opposite assertion that the earth moves. It is easy to write this off as a conflict of a bygone era. However, if you look closely, this aphorism reflects the nature of most, if not all, social norms. For instance, let me change a few words here: Those who know that the consensus of many centuries has sanctioned the conception that men, unlike women, can roam about with their bosoms bare would, I reflected, regard it as an insane pronouncement if I made the opposite assertion. It is quite convenient at this point to say that sexism is a result of age old obsolete ideologies. You might look back a few decades and think that the hypothesis stands. And from there on, it’s just extrapolation, isn’t it? Well, let’s see. Unlike what many people think, myths are dynamic. Folklore evolves depending upon the sensibilities of people of that era and when these stories are penned in the form of epics, a particular version of a myth is established. In a way, the malleability of folklore is vital to its existence. An outdated and immutable myth may lose relevance because of lack of context. So why are we suddenly talking mythology? Because we are going to test the hypothesis mentioned above using the variable nature of myths. In her book, Virgin Mother Goddesses of Antiquity , Rigoglioso shows how goddesses were originally independent, in the sense that they didn’t need male entities to create. While this may seem counter-intuitive to us, it is essentially the idea of parthenogenesis. The creation of a universe out of the primordial femininity of the cosmos is a prevalent belief in many ancient mythologies. In Hindu philosophy, Shakti is the manifestation of this, a cosmic energy that drives everything. In fact, in the Shaktism tradition of Hinduism, Shakti is considered as the ultimate deity with all other gods playing auxiliary roles. In Adi Shankara’s hymn from Soundarya Lahiri (considered a textbook for Tantric Hinduism), it is written: “Lord Shiva, only becomes able to do creation in this world along with Shakti. Without her, even an inch he cannot move…” To interpret this as subordination of the male principle would be folly. As Rigoglioso writes, “…In origin stories in which the goddess is a Virgin Mother, the ‘whole’ is understood to be ‘Feminine,’ even though the Masculine is included as an equal part. Or, as the contemporary Hindu mystic Ammachi says, ‘Is God a Man or a Woman? The answer to the question is Neither – God is That. But if you must give God a gender, God is more female than male, for he is contained in She’ (in Canan 2004, 169).” In other words, it is congruent to the fact that a boy is born from a woman. Now, isn’t that obvious? Something must come from somewhere, even if that something is a divine being. Not really; Neith, an early goddess in the Egyptian Pantheon, created herself out of nothing. Her autogenetic and parthenogenetic powers granted her the position of Supreme Being in early Egyptian religion. According to certain creation myths, she was also considered as the mother of Ra. However, after the rise of Ra as the supreme deity, she surrendered her parthenogenetic powers to him and Ra became the creator. This transition could be seen as the onset of a patriarchal religion. In a particularly amusing sarcophagus, we see how the ascension of Ra and demotion of Neith was cleverly contrived by declaring Neith as having come from Ra who then came from Neith. Neith’s counterpart in Greek mythology is Athena. While at times she has been granted parthenogenetic powers because of her virginity, she is considered to have been born from the head of Zeus, implying she inherits her ability of parthenogenesis from her father figure. The increasing dominance of male principle later in the Greek pantheon is evident from the fact that Hestia, considered to be an Olympian earlier, was relegated to the rank of minor god when Dionysus became an Olympian. Although there is no clear reference to her stepping down as an Olympian, sometimes this incident has been attributed to her kindness, as a way to prevent heavenly squabble. This coupled with the fact that Hestia was the goddess of hearth and domestic values makes one think whether this incident was to serve as a guideline for all women. The ancient world supposedly witnessed the flourishing of various Amazonian tribes, whether in Libya, Turkey (Thermodon) or elsewhere. In South India, Cheras, an Iron Age dynasty, ruled over a kingdom where women enjoyed a kind of freedom that they wouldn’t experience till centuries later. The importance of the war goddess Kottavai among the Cheras also points to the possibility that the ancient world was not as dominated by male bigotry as one might be inclined to think. The evolution of various mythologies suggests a definite change in the way society has perceived goddesses. And even though we have focussed upon prejudices on heavenly spheres, these reflect the nature of schisms in the all too familiar earthly realm. As Rigoglioso describes, the cause of these schisms is taking femininity (or masculinity, in an imaginary setting) for granted. So when God creates man out of soil, He still needs Gaia (the earth) to create; the true form of a creator being androgynous as depicted in Hindu mythology through the Ardhnarishwar form of Shiva. Shakti and Shiva as Ardhnarishwar/Ardhanari
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

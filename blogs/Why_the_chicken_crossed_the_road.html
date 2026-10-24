@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why the chicken crossed the road | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Why the chicken crossed the road</h1>
+      <p class="manuscript-byline">June 14, 2014</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Why did the chicken cross the road? Lagon sat troubled in the corner of his room. The corner because, well, although there were eight corners in his room, he had sort of an attachment to that one corner. You know that thing that people have, which they can’t explain, makes them do weird stuff and often drives them crazy like hell. Feelings! ‘Feelings’ is the word I was looking for. So, we can say that Lagon had some special feelings for that corner of his room. There were very few aspects of his life that he couldn’t explain with the application of mathematical theorems, and this was one of them. (Another one being his fondness for pancakes!) The thought often scared him, enough to often make him think of himself as ‘human’. Now that’s an extremely scary thought, right? Wait! Does this mean that he was not human? Difficult to say actually. His parents found his habits a tad strange (‘a tad’ being a gross understatement), his detachment from all those cool fads that bewitched people his age, his inclination to stay alone and aloof and his remaining lost in his books, be it those thick books by Terence Tao or be it those chance pieces of literature that he went through (maybe in order to get an exposure to these ‘feelings’ thing that others seem to have) . His ‘friends’ believed that he was a device for turning pancakes into equations. Equations about anything you know, from equations governing the motion of a water droplet on a windowpane during a rain shower to equations describing the crawling motion of a ladybug! Anything at all! But all of this was just what others thought of him. What did he think about himself? What were the thoughts that went through his mind? No one knew. No one other than himself, of course. People would say that his mind was haunted by spirits, but, I beg to differ. ‘Haunted’ is not even remotely close to the actual word. More like hypnotized by some unknown omnipotent entity or maybe, mesmerized, as if lost in the eyes of Mona Lisa or the symphonies of Mozart. And if you are adamant on the use of ‘haunted’, I would say he was haunted by numbers. His prodigal brain subconsciously looked for patterns or logic in each and every thing that he could perceive. His body, his physical appearance, all of it was just a cover for a tiny little soul. I say tiny because, unfortunately some of us may say, he was one of the most single-minded creatures possible. For him, there was nothing beyond deciphering the world around him, and putting it down into a straightforward mathematical form. People might say that he was a math maniac who got joy from all those numbers and equations, but that’s not true because, he knew not what joy was. Completely stolid as he was, his indulgence in his mathematical pursuits gave him a reason to strive for in a world, that moved too fast to enjoy the little things of life, like smelling flowers closely or maybe watching birds walk. So now that we know quite a lot about Lagon, let’s get back to the corner. The corner had been a witness to Lagon’s many an intellectual musings like the answer to universe, life and everything or the decision whether to be or not to be. But, as in every other story, today was different. Today, Lagon sat in the corner thinking, not about the generalization of one of Euler’s theorems, but about poultry. To be more precise, he was thinking about chickens. Why did the chicken cross the road? He just kept on thinking. Over and over. Anyway, don’t be under the misconception that he did not know the answer. Of course he did, everyone knows that the chicken wanted to get to the other side. As simple as that. Actually, there was more to it. Some time ago, in his quest to understand human behavior and their, what’s that word, ah, feelings, Lagon came across the concept of ‘humor’. He gave a lot of thought to it, and finally after a lot of research, found a rule of thumb, that humor generally involved a bunch of meaningless sentences, called jokes, that provoked onomatopoeic sounds, called laughter. But well, Lagon being a man of five fingers was never going to be satisfied with this rule of thumb. In order to make some sense out of the so called jokes, he compiled a set of 10001 jokes ( …01 being a very common number that he found in joke books) and set experimenting. He wrote the literal meanings of all the jokes, translated them into different languages, tested them on several people and observed their reactions. This went on for a while when he thought that he had finally found a pattern. He had found a rule which could determine whether a set of sentences would qualify as a joke. (The rule had something to do with the primality of the 1729th power of the ASCII codes of the sentences, but well, let us not go into it). He wrote down a code in order to verify this rule and started testing all popular jokes with it. Everything seemed to be going fine, every joke seemed to be following the rule. And then, there was a violation! A joke did not satisfy the rule. A very simple and yet, one of the most popular jokes around the globe. Why did the chicken cross the road? To get to the other side. Lagon didn’t know what to do. It had seemed to him that he had uncovered the ‘formula’ for humor, but apparently, he was wrong. He checked and rechecked his calculations. He tried out all sorts of other examples. Everything seemed to fit. Everything except this one joke. Lagon was at a loss. He spent hours, days and then weeks thinking about this problem. He had no idea what to do. And then finally, a solution crept into his mind. Maybe the only way of understanding what makes this joke funny is to get to the other side. That’s where the joke lies and so, that’s where he would be able to understand the joke. Now, as there was no specific place whose other side he could go to, it didn’t take him much time to realize that he had to go to the other side of the life. Death. He had to die, to achieve the ultimate enlightenment. Phlegmatic as he was, the thought of death didn’t bring any particular emotion to his mind. In fact, when he pulled the trigger to end his life, it was just as if he was writing ‘quod erat demonstrandum’ at the end of just another one of his math problems. When he opened his eyes, he saw that he was in a closed room with no specific features to describe. It was just a plain white room. Lagon never expected heaven to be this way! Anyway, in the room was another person. An old man with white hair, double bent, with a long flowing beard and wearing a gray cloak who was smiling mildly, his enchanting blue eyes fixed on Lagon. “Welcome to Heaven, dear son! As you might have guessed, I am God. You were a really remarkable lad Lagon and so, I wanted to meet you personally when you came here. But, I suppose you were due later. Any specific reasons for you coming here before time, son?” Lagon, a bit surprised by this introduction, narrated his entire dilemma to God. God listened to him with deep interest, thought for a while and then remarked- “Quite interesting son. Okay, tell me. This chicken that you are talking about, tell me about its birth. When was it born? What sort of egg did it hatch from?” “I don’t know, um, I thought it was just a joke. The chi…” “Tch tch tch. You don’t know about its birth?! Now now now! I get what the problem is. So, you are telling me that you know nothing about the birth of this chicken, right?” “Yeah, but…” “Then, maybe this chicken was never even born! Maybe the egg never hatched!” “But, my prob…” “No son, listen to me. You human beings have become very impatient. You should have known this! Do not count your chickens before they hatch!” “But God, even if the egg did not hatch, there must have been another chicken who laid that egg. What if the joke refers to that chicken?” “Hahaha! And how do you suppose that chicken was born?” “From an egg laid by another chi… Oh! I see the problem! My argument is going in circles. I guess I will have to decide who came first, the egg or the chicken, before I can go on with the joke…” And so Lagon set out on another quest, with a new problem in his mind. Some people believe, that he still goes around racking his brains in heaven, trying to find peace of mind, trying to figure out who came first, the egg or the chicken. And so friends, this is why the saying goes, do not count your chickens before they hatch.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

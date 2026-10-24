@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torn Threads | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Torn Threads</h1>
+      <p class="manuscript-byline">May 6, 2017</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “There seems to be some issue of memory management. Aryan, please fix it.” This not-so-helpful debugging message popped up on Aryan’s laptop screen, and he set out to fix the bug, taking a final gulp from his glass of ice tea. As he put the glass down beside his laptop, his fingers started dancing on the black keys of his device’s keyboard, producing the most wonderful sound that beings living in that lab, or for that matter, any lab in the world with computers, generally want to hear. It had all the elements of grace and appeal – the continuity in the discrete taps, the realization of the power of muscle memory and the occasional sweet sound that hitting the spacebar produced. But the most beautiful part was when multiple composers typed together, pressing the keys in a manner that created some wonderful music, along with stitching together modules, fixing bugs and sending messages. There were two more people in the lab, and were both intent upon their work. The sound produced by their fingers and the keys set in motion a series of emotions in Aryan, each more intense than the previous one, that culminated in a feeling of ecstasy as the taps reached a resonance. The spike went too high for him to resist a smile. Aryan was done with the issue, after searching for the source of the bug like a hungry dog, in about a quarter of an hour. He packed his belongings, slung his bag over his shoulder, and proceeded to leave. He’d had a productive day. — A stream of passengers made their way out as the metro halted. They were few in number, as the hour was late and the day didn’t mark an end to the week. Most of them were returning from a rather exceptionally long day at work, but my case was different. I had been out strolling aimlessly, absorbed in thought, unobservant of my surroundings, after a boring day at college. I made my way out of the metro station, just catching a glimpse of the signboard at the exit. “ Rajiv Chowk ” A sigh escaped my lips as my mind sought to entertain me by playing a slideshow of my numerous memories at this place with him. Yes, our time together had been glorious. Maybe too glorious for me to relinquish it so easily. I remembered this particular night in winter when the two of us had been returning from a relatively lavish dinner in Hauz Khas, absorbed in conversation as we walked across the station, arm in arm. I was wearing his favorite overcoat then, and he adorned a jacket of my choice. His occasional geeky jokes were the spice of our conversation, my gossip was the crux. Yes, I had my own doubts about the longevity of our relationship, but never had I imagined how it would feel when it would finally end. That was one thought that I had consciously sought to neglect: I didn’t want to ruin the ideal notion of everlasting love in my head. I reached home after a ten minute walk. I climbed right up to my room, changed and looked straight across at my reflection in the mirror. It had my name written on top, “Shireen”. Adjacent to it were marks of fingernails that had scratched at the surface a month ago to erase his name. I don’t know if it would have been worse had that name remained there. The person looking back from the mirror was a distressed girl of twenty, tall but lean. Someone who used to be agile, fascinated by automobiles, physics and philosophy, but had lately resorted to drinking, insomnia and an endless loop of toxic thoughts. Two weeks back, I had promised myself that I would get out of this emotionally turbulent zone by the next fortnight. I hadn’t made much progress. I tried, once again in vain, to sleep. I guess tossing and turning in bed isn’t such a taxing exercise after all. * Three hours later, Shireen’s room’s window slid open and an intruder made his way in. An hour after that, she was nowhere to be found in her house. — Aryan parked his bicycle outside the campus cafe and ordered a cappuccino. As he set down the table number card, Ahalya, one of his friends, walked up to him and sat on the chair opposite his. Her dressing sense was immaculate, and Aryan could hardly ever avoid feeling a sense of awe at her attention to detail, be it her clothing or her homework assignments. She asked promptly, “Are you fine now?” Aryan chuckled as he replied, “Yeah. Had a memory management issue in the project, but now it is fine.” Without blinking an eye, Ahalya exclaimed, “Oh, really? How did you solve it?” “I just swapped out one memory intensive process from the main memory of the simulator using a process scheduler with a slightly lower threshold for memory utilisation. Anyway, I think that’s not what you had in mind.” Her lips curved from the right side, pupils slightly constricted, before she spoke, “I am glad you realised that. So, are you over her?” Aryan looked down as he collected his thoughts. Thankfully for him, his coffee arrived, and he had a few more moments to think before he answered her. The first sip from the cup wet his lips and invoked a sense of freshness as the hot liquid made its way down his throat, waking up his cells that had gone for hibernation for the past few hours. “Give a drowsy programmer a cup of coffee in the winters, and see what he can do after that,” he let out a sheepish grin as this thought skidded by the conundrums that his mind was dealing with. He set the cup down, and prepared to face Ahalya. “Yes, you could say so.” Aryan wasn’t an ardent believer of being truthful, and this admission was no different. He had known Shireen for too long and their relationship had been too “pure” in his head to just move on. A bug in the code for a project that he was working on was definitely not enough for him to let go of her thoughts. “By the way, I have a project presentation tomorrow. I guess it would be better if I spent some time working on it.” Ahalya bit her lip and followed that up with a generous smile. She got up to leave, and he waved his hand, before taking another sip from his cup. He logged into his laptop, and stared briefly at the folder titled, “shireen” on his home directory, before moving on to his presentation slides. — About 10 am the next day. The house had been turned upside down in search of Shireen. Her mother had inquired in the neighbourhood, her father had brought the police up to speed. There were no signs of any struggle in her room. One of the residents of the street reported hearing soft movements outside her house, but she couldn’t be sure, as she had been half asleep. The policemen began a thorough investigation, raising questions about the lost girl’s history, her lifestyle, her friends and her problems. A formal interrogation of the immediate neighbours was scheduled. Her photograph made its way to all the places in the city where it should have, and the news of her absence was circulated promptly on the radio. Her friends had called at her home, but couldn’t furnish much that the cops already didn’t know through her parents. She had been open about her problems and desires. She couldn’t have just disappeared in thin air, they reasoned. It was an unusually hot day. It was turning into an unusually uncertain day for Shireen’s family. — Aryan’s attempts to reduce the system usage of his running code were going in vain. He realized that If he failed to address the problem, his laptop would get overheated and shut down. So he manually overrode his laptop’s fan settings and set it to run at maximum speed. “This should give me a window of time to think of a work around,” he mumbled as he began to try and close down any hidden application that might be running. — (Shireen) Had my eyesight deserted me for life? I ran my right hand over my eyes but couldn’t feel any bruises sitting there. So maybe this place was actually devoid of light and the darkness didn’t stem from the inside. I felt a little dizzy. I had clearly been sedated for a long while, I suppose. I let my hands loose, trying to find something to grope while my eyes got accustomed to the darkness. I touched surfaces, ran my hand over objects to guide my way, and used some input from the odour as well. I couldn’t hear a thing, apart from the amplified sound of my own breathing and movement. It took a while, but my head stopped spinning. After a couple of minutes of groping and stumbling, I came upon a turn which led to a slightly illuminated pathway. Following a fresh scent, I pursued the source of light in hope of information – my craving for information compared positively to my fear of the unknown. It hardly took a minute for me to reach the source, or rather the mediator, of the illumination. It was a window, shut from the outside, giving an ample view of the late afternoon sprouting in the city. I could also sense a strong wind blowing, judging by the clearly visible flying particles of dust spinning off in an orderly fashion towards my right, ready to contribute to the ordeals of the home makers and the shopkeepers. The innocent pedestrians were walking leisurely and the men and women of hurry were moving briskly, a hundred things running in their heads. I was curious about my captor, but the window had opened the gates to my sense of security, and my curiosity gave way to the dormant thoughts of returning home. There still existed a countable number of people who cared about me, and keeping them waiting anxiously was not a part of my plans. My visibility was limited, so I coupled my sense of touch with my sight to try and find anything strong enough to break the window shutter. As it turned out, my abductor had not let such an object lying around in the loose, at least not close to the window. Wait, did I really expect to find something like that? — Aryan went to bed with a triumphant grin decorating his face. After clamping down on an unnecessarily compute intensive background process, the code for his project was running smoothly. His roommate, Saket, played a beautiful tune on his keyboard, his fingers dancing on the short black keys and the long white ones, as Aryan drifted into dreams of sitting in front of a keyboard himself, albeit of a different nature. — “So where does this guy live, who you claim was the reason behind Shireen’s unhappiness and uncharacteristically quiet demeanour over the recent past?” a police officer was formally interrogating Shireen’s father. Her father was quite unnerved by the absence of his only child, even though it had just been slightly longer than half a day. He replied in the most stable voice he could muster, “I have told you before. He is a Delhi boy only. He studies in Kanpur, if I am not mistaken.” The questions went on for another half an hour, as all the relevant, and mostly irrelevant (at least according to Shireen’s father, who was getting more irritated by the minute) details were sucked out of the old man. The series of interrogations continued with family members, relatives and friends. And neighbors. Basically with everyone who had nothing to do with the actual crime. — Aryan readied himself for the presentation. He had had a breakfast after a fortnight, and had bathed after three days. He connected a comb to his hair, many strands sticking to his head like those of a school kid. He didn’t know why he did that, except for the belief that special occasions demanded special measures, and that day definitely marked a special occasion. He entered a ground floor room of the Computer Science department building, dropped his bag on a chair in the front row, and began setting up his laptop for the screen to be displayed on the projector. That was usually the tough part, but since most of his friends in the department were bad at getting a computer screen to mirror on a projector, he didn’t mind that. In about a quarter of an hour, his project supervisor, Prof Gupta, arrived, along with a few other faculty members from the department working in the area of computational modelling of real world systems. They took their seats, and so did a couple of other students working on their theses in related areas, and Aryan began the show, sliding the projector screen down. — (Shireen) I was quite close to my home, sprinting in excitement. How did I manage to get out? I broke the window with a doorknob, that I had wrestled out with some force. Wait, let that sink in. Yeah, the window wasn’t as strong as I had imagined. The ground shook, and I trembled. The tremors lasted for about ten seconds, and I thankfully wasn’t hurt. The earth most certainly was. — Aryan cleared his throat and began, “Good evening everyone. I am here to present before you a model of a world inhabited by a species much like our own, but with some salient differences. I have developed it over the course of this semester. I hope that this turns out to be useful in realising how capable we are of damaging the world we live in, and how such a terrible situation can be potentially avoided.” His audience nodded, and he went on, “This is a self contained program running on my machine, much like an operating system simulation. Each thread that runs on this simulation is one entity of the species that I am talking about. At any point of time, the simulated memory can accommodate only a certain number of threads, which is usually around half of them. The rest are swapped out and remain in a sleeping state.” He switched to the next slide, “Each thread believes that it has a unique purpose to fulfill, but that’s not really the case. As I said, I just set up the system and let it evolve the way it wants to. Which brings me to a crucial point. How are new threads created?” “Here is where you would notice a striking similarity with our species. The threads come in two variants, or genders. The difference is, unlike us, a new thread can be forked, or given birth to, only by a pair of threads with different genders. This makes for interesting observations, as population growth was a metric I was quite interested in analyzing over the course of time.” “Are these entities intelligent in any way?” one of the PhD students interjected. Aryan replied, “You could say so. I have been generous in writing code that exploits machine learning in many aspects of these entities’ existence. It has taken a few hundred generations of threads running on the system, and now they have matured enough to be called intelligent. But that could just be me overstating their capabilities.” “An interesting dimension to this system is that the simulated world is affected by the external conditions of the machine that it is running on. So, my laptop’s environment plays a vital role in determining the weather conditions and natural phenomena occurring in the simulation. I can, for example, induce strong winds by turning on the fan of my machine.” The last point was met with gentle applause. Aryan let out a chuckle escape his lips as he moved on. “As for exiting, I ha programmed the initial set of entities to exit once their lifetime had exceeded a certain time span. Eventually, some of the threads learnt how to kill themselves and others by modifying their code segments to meet their needs. This looked peculiar to me, but it seems that this behavior is crucial to the system’s existence and flourishing. Some of the threads take on the role of master codes and start altering the code segments of others to achieve some goal that they have learnt to be of value for them through timely reinforcements generated internally by the state of the system. But as one would expect, multiple threads can come to this understanding, and that leads to conflicts and killings, or murders, if I may extend the usage of the term to this model.” Aryan waited for what he had said to sink in. If the faces of the spectators were to be taken as evidence, he figured that he wasn’t doing too badly. He cleared his throat again, and went ahead, “There are a couple of serious problems that I faced while trying to build the system, and to get it to a working state. Firstly, right in the initial stages, my computer was infected by a virus that liked to call itself Shireen for some reason. It was one hell of a stubborn piece of code. I spent an entire week trying to remove it and restore my system, but my eventual success emerged from one bright idea. I guess I am digressing too far, as this didn’t take birth from my model. Anyway, just in case any of you gets hit by this malicious wretch, look up my blog post on this issue. It turns out that I got pretty attached to this piece of malware, simply because of the challenges that it posed.” — (Shireen) I was horrified when I reached home. People were vanishing into thin air without a warning. I watched the police, who were there to investigate my disappearance, disappear. Then my family members, one by one. Then my pet. I screamed, but to no avail. I tried to get hold of someone, anyone, but that didn’t stop them from going. What was happe- — “As unlikely as it may seem, Shireen troubled me again yesterday. Not the same one, no. One of the running threads was consuming too much memory, blocking resources for other threads, and it was coincidentally named the same. I changed my process scheduler’s per process memory limits, which forced another process to swap out this heavy thread for a while.” Switching to the next slide, Aryan continued with an air of finality, “There were other issues as well, but were easier to catch and debug. So coming back to the population thing, yes, the threads have grown in number exponentially, and that has led to an astronomically quick depletion of system resources. If this rate continues, my laptop would run out of them in a few days and the project would have to be terminated. Or else, the entities, or “humans”, as they call themselves, will find a way to destroy their own species before time runs out. The latter case would be heartbreaking, but interesting to witness nonetheless.” He ended the slideshow. Prof. Gupta spoke up this time, “if we allow your model to be run on a more powerful machine in our lab, would you have to start it from scratch? And if so, how much do the initial conditions matter?” Aryan didn’t try to hide his smile. This smelled of success. “Yes, I would have to start it from scratch on the new system, and that shouldn’t take a lot of time to set up. Since the initial conditions depend on a pseudo random process, they won’t be the same, and it would be interesting to see how that affects how the system develops.” After a few more questions, the presentation ended and Aryan stopped the system. It was time to free his laptop’s resources and use the department lab computers for further observations. Humans would have to start all over again.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

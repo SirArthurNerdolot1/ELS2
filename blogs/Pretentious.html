@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pretentious | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header with-plate" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article</p>
+      <h1>Pretentious</h1>
+      <p class="manuscript-byline">by Mudit Chand Narayan · September 21, 2021</p>
+      <figure class="manuscript-plate">
+        <img src="../images/blogs/Pretentious.png" alt="Pretentious" loading="eager" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        On December 15th, Mudit Chand Narayan, 28, left my house with one nasty smirk on his lips, that still makes it hard to accept for me that he isn’t with us anymore. On the way home, his car crashed into a constructional vehicle, maybe due to the fog, which crushed the front of the car he was driving. As the eyewitness of the accident told the police, he died the moment his car hit the vehicle. Witnesses told the Police that the car was almost at 100km/h, which has sparked the theories of this being a suicide, but that isn’t what we are here to know.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        He enjoyed the first 15 years of his life being an unequivocally brilliant, bright and centre of attraction kind of individual (or at least that’s what he used to tell me), and then I saw him struggling to be above average the rest of his life, which makes me doubt if he actually was even half of what the picture he drew me the first day we talked. And for the rest of our time together, he didn’t dishearten me once for being a predictable one. Even in the way he died.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Mudit loved to listen to music. A very particular kind of music which was lyric heavy and questioned love and the subsequential pain were his go-to these days, but when his music activity crossed 60 hours of listening in the past few weeks, we knew it was getting too much. Police reports say that when the crashed car was found, the song “Main Zindagi Ka Saath Nibhaata Chala Gaya” was playing in it, which further supported the suicide theory. But that again can be pure chance that apart from the mainstream garbage pop he used to listen to, his taste in music was rather sad. He used to say his kids will cringe if they read what he has written, because he romanticizes death a lot, so just for the sake of not getting judged by his own kids he won’t have kids at all. One of his favourite lyric was
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Is it romantic how all my elegies eulogize me?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        -Taylor Swift, 2020
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Who knows if maybe he took it too seriously?
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A man with very limited vocabulary, all the notes and creative writing pieces he has left behind are filled with cliché analogies and overtly non-poetic and rather dull wording with some words marked with asterisk and * have to google a better synonym for these written in the footnotes which, when found, further added to the disappointment to the ones who thought he was a good writer. One of his notes, as his friends recall, elucidate further on it where he writes how in his first few college years people used to call him “pretentious”, and he didn’t care about it for all those years because apparently, he didn’t know what pretentious meant and couldn’t bother googling it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        He always said that he preferred dying in his 60s rather than as a 27-year-old, because for him death was a pain and the least a human being could do was to not to pass the pain to the ones they cared about, and a 27-year-old has way more people to care about than a saggy 60-year-old. He highly despised the idea of “The 27 club”, or how all the poets he admired from the romantic era died rather young. P. B. Shelley, at 29. Lord Byron at 36. John Keats, 25. No matter how he worshipped these people and their art, he always thought it was a very “pretentious” way to make a fucked-up life sound more poetic, and it doesn’t change the fact that Shelley eloped with a 16-year-old when he was 21, had a 19-year-old wife at home with a kid aged 3, or how Fanny Brawne, a woman with a rather aquiline nose didn’t suck the sap out of dying Keats. But dying 2 weeks before his 28th birthday it still stays questionable if he meant what he used to say.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A week before his sudden demise, in a friendly meet which of which I didn’t have a thought would be our last with him, he blurted out a slightly different version of his cliché line about death. He said, “Death is a pain that deserves to be felt. If you’re going to leave the ones you love in pain, you better go off with a part of that pain.”, which seemed more like his pretentious self at the moment he said it but now feels as if he had it all worked out in his wicked brain.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Buried within his 10,000 Google Keep notes, when I searched for the keyword “Epitaph” out of my anger mixed with the curiosity about the clues I missed or ignored, I found this one.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “You will die one day. Surely, not now, but one day, right? What do you think your final words should be? Do you want it to be another Taylor Swift lyric and to be remembered as a crazy fanboy for the rest of your life…wait there would be no life. You’re planning about something that’s after you have died asshole. Yeah so, no Taylor Swift lyric. You know what, you’ve never seen Gone with The Wind. I hope you do by the time you have died, because believe me or not “Frankly my dear, I don’t give a damn” sounds like a cool mic drop. And even if you haven’t watched it by then, it would kind of convince the people reading your epitaph that you must have been a big-time-moviegoer. You’ve faked your whole life, one more show of that skill won’t hurt anyone will it?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        – Mudit Chand Narayan, circa his 24th birthday
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I hope he didn’t die without watching it, because I don’t want him to die a liar, or worse, to be remembered as one. May the dead soul rest in peace.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        PS: I can almost bet that if he had to write an obituary of himself, he must have had to Google first what an obituary actually means.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

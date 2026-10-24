@@ -143,8 +143,8 @@
       }
       .hero-float {
         position: absolute;
-        width: 180px;
-        opacity: 0.85;
+        width: 120px;
+        opacity: 0.5;
         transform: translateY(0px);
         animation: floatBounce 10s ease-in-out infinite;
         user-select: none;
@@ -188,9 +188,12 @@
           bottom: auto;
           right: auto;
         }
-        /* Hide floating background on small screens */
-        #floating-background {
+        /* Keep subtle margin sketches visible on mobile & tablet */
+        #floating-background .ambient-sketch:nth-child(n + 5) {
           display: none;
+        }
+        #floating-background .ambient-sketch {
+          transform: scale(0.76);
         }
       }
       @media (max-width: 480px) {
@@ -230,90 +233,49 @@
   })();
 </script>
 <!-- End Matomo Code -->
-  </head>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
   <body>
     <!-- Hero Fullscreen Title -->
     <section
-      class="min-h-screen flex items-center justify-center text-center px-6 relative"
+      class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
       data-aos="fade"
     >
+      <p class="hero-kicker">Vol. MMXXVI · IIT Kanpur</p>
       <h1
         id="typewriter"
-        class="text-5xl md:text-7xl font-bold tracking-wide uppercase"
+        class="hero-title text-5xl md:text-7xl font-bold tracking-wide uppercase"
       ></h1>
+      <p class="hero-sub">A campus home for reading, writing, and the pleasure of saying something well.</p>
+      <p class="hero-ornament" aria-hidden="true">❦</p>
 
-      <!-- Hero Floating Decorations with Parallax -->
-      <div id="hero-floating">
-        <img
-          src="images/quill.png"
-          class="hero-float"
-          style="top: 1%; left: 1%;"
-          alt="Quill"
-        />
-        <img
-          src="images/scrabble.png"
-          class="hero-float"
-          style="top: 29%; left: 58%; width: 200px;"
-          alt="Scrabble"
-        />
-        <img
-          src="images/book.png"
-          class="hero-float"
-          style="top: 60%; left: 25%;"
-          alt="Book"
-        />
-        <img
-          src="images/JAM.png"
-          class="hero-float"
-          style="top: 70%; left: 70%;"
-          alt="JAM"
-        />
-        <img
-          src="images/drama.png"
-          class="hero-float"
-          style="top: 17%; left: 70%;"
-          alt="Drama"
-        />
-        <img
-          src="images/pen.png"
-          class="hero-float"
-          style="top: 70%; left: 5%; width: 90px;"
-          alt="Pen"
-        />
-        <img
-          src="images/shakespeare.png"
-          class="hero-float"
-          style="top: 5%; left: 50%; width: 120px;"
-          alt="Shakespeare"
-        />
-        <img
-          src="images/fyodor.png"
-          class="hero-float"
-          style="top: 80%; left: 50%; width: 120px;"
-          alt="Fyodor"
-        />
-        <img
-          src="images/edgar.png"
-          class="hero-float"
-          style="top: 20%; left: 15%;width: 130px"
-          alt="Edgar"
-        />
+      <!-- Hero Margin Ink Drawings -->
+      <div id="hero-floating" aria-hidden="true">
+        <div class="sketch-wrap pos-tl" data-depth="0.9">
+          <div class="sketch-item" style="--rot: -4deg;">
+            <img src="images/quill.png" alt="" class="sketch-img w-16 sm:w-20 md:w-28" />
+          </div>
+        </div>
+        <div class="sketch-wrap pos-tr" data-depth="0.8">
+          <div class="sketch-item" style="--rot: 5deg;">
+            <img src="images/book.png" alt="" class="sketch-img w-20 sm:w-24 md:w-32" />
+          </div>
+        </div>
+        <div class="sketch-wrap pos-bl" data-depth="0.75">
+          <div class="sketch-item" style="--rot: -3deg;">
+            <img src="images/edgar.png" alt="" class="sketch-img is-etching w-16 sm:w-20 md:w-24" />
+          </div>
+        </div>
+        <div class="sketch-wrap pos-br" data-depth="0.85">
+          <div class="sketch-item" style="--rot: 3deg;">
+            <img src="images/shakespeare.png" alt="" class="sketch-img is-etching w-16 sm:w-20 md:w-24" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Floating Background Elements - shown only after scroll -->
-    <div id="floating-background" class="pointer-events-none">
-      <img src="images/JAM.png" class="floating-item" style="top: 10%; left: 5%;" alt="JAM" />
-      <img src="images/book.png" class="floating-item" style="top: 70%; left: 6%;" alt="Book" />
-      <img src="images/scrabble.png" class="floating-item" style="top: 30%; left: 10%;" alt="Scrabble" style="width:300px;" />
-      <img src="images/quill.png" class="floating-item" style="top: 85%; left: 90%;" alt="Quill" />
-      <!-- Added all hero images as floating items -->
-      <img src="images/drama.png" class="floating-item" style="top: 35%; left: 75%; width: 200px;" alt="Drama" />
-      <img src="images/pen.png" class="floating-item" style="top: 40%; left: 10%; width: 70px;" alt="Pen" />
-      <img src="images/shakespeare.png" class="floating-item" style="top: 5%; left: 80%; width: 100px;" alt="Shakespeare" />
-      <img src="images/fyodor.png" class="floating-item" style="top: 65%; left: 85%; width: 100px;" alt="Fyodor" />
-      <img src="images/edgar.png" class="floating-item" style="top: 85%; left: 12%; width: 90px;" alt="Edgar" />
-    </div>
+    <!-- Floating Background Elements - hidden so chapters stay clean -->
+    <div id="floating-background" class="pointer-events-none" aria-hidden="true"></div>
 
 <!-- Sticky Navigation Bar -->
 <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
@@ -322,7 +284,7 @@
     <!-- Logo + Title -->
     <div class="flex items-center space-x-3">
       <a href="index.html">
-        <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+        <img src="images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
       </a>
       <h2 id="navbar-title" class="text-xl sm:text-2xl font-bold tracking-wide hidden md:block">
         English Literary Society IIT Kanpur
@@ -331,7 +293,7 @@
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
-      <a href="index.html" class="hover:text-gray-700">Home</a>
+      <a href="index.html" class="hover:text-gray-700 nav-current">Home</a>
       <a href="about.html" class="hover:text-gray-700">About</a>
       <a href="events.html" class="hover:text-gray-700">Events</a>
       <a href="blog.html" class="hover:text-gray-700">Blog</a>
@@ -352,7 +314,7 @@
   <!-- Slide-Down Mobile Nav -->
   <nav id="mobile-menu"
        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
-    <a href="index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+    <a href="index.html" class="py-3 border-t hover:text-gray-700 nav-current">Home</a>
     <a href="about.html" class="py-3 border-t hover:text-gray-700">About</a>
     <a href="events.html" class="py-3 border-t hover:text-gray-700">Events</a>
     
@@ -387,7 +349,8 @@
 
     <!-- About Section -->
     <section class="spacious-section" data-aos="fade-up">
-      <div class="content-box">
+      <div class="content-box is-dropcap">
+        <p class="chapter-num">Chapter I · Preface</p>
         <h2>About Us</h2>
         <p>
           The English Literary Society at IIT Kanpur fosters a vibrant
@@ -396,7 +359,7 @@
           life.
         </p>
         <a href="about.html" class="text-blue-600 hover:underline mt-6 inline-block"
-          >Learn more →</a
+          >Turn to the club →</a
         >
       </div>
       
@@ -410,14 +373,103 @@
 <!-- Events Section -->
 <section class="spacious-section" data-aos="fade-up">
   <div class="content-box">
+    <p class="chapter-num">Chapter II · Chronicles</p>
     <h2 class="mb-6">Events</h2>
 
     <!-- Swiper Container -->
-    <div class="swiper eventsSwiper">
+    <div class="swiper eventsSwiper is-poster">
       <div class="swiper-wrapper">
+        <a href="events/chronicles/chronicles.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/chronicles/hero.jpg" alt="Campus Chronicles" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Campus Chronicles</h3>
+          <p class="text-sm">Original stories and poems for the inter-collegiate team.</p>
+          <p class="text-sm mt-1">
+            Ishita Singh, Vinayak Majumder, and Abhinaya Maraivalavan lead the short-story list — now worth a slow reading.
+          </p>
+        </a>
+        <a href="events/little_women/little_women.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/little_women/hero.jpg" alt="Little Women Screening" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Little Women Screening</h3>
+          <p class="text-sm">Alfaaz × ELS screened Greta Gerwig’s Little Women in L12.</p>
+          <p class="text-sm mt-1">
+            Sisters, ink-stained ambition, and Jo March’s canoe — a film night for people who take endings personally.
+          </p>
+        </a>
+        <a href="events/word_waterways/word_waterways.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/word_waterways/hero.jpg" alt="Word Waterways" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Word Waterways</h3>
+          <p class="text-sm">A cryptic crossword evening with Viresh Ratnakar.</p>
+          <p class="text-sm mt-1">
+            L-14, 3 October, 6:30 PM. Definitions drifted; a few clues are still somewhere downstream.
+          </p>
+        </a>
+        <a href="events/write_off/write_off.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/write_off/hero.jpg" alt="The Great Indian Write-Off" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">The Great Indian Write-Off</h3>
+          <p class="text-sm">ELS and Alfaaz opened a four-day short-story and poetry contest.</p>
+          <p class="text-sm mt-1">
+            Cash prizes, finished pages, and a dare to stop scribbling only in notebooks.
+          </p>
+        </a>
+        <a href="events/open_mic/open_mic.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/open_mic/hero.jpg" alt="Gender Cell × ELS Open Mic" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Gender Cell × ELS Open Mic</h3>
+          <p class="text-sm">A shared microphone at CCD on 3 September.</p>
+          <p class="text-sm mt-1">
+            No theme but the one you brought with you — poems, prose, and the courage to stand up.
+          </p>
+        </a>
+        <a href="events/campus_scrabble/campus_scrabble.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/campus_scrabble/hero.jpg" alt="Campus Scrabble League 2026" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Campus Scrabble League '26</h3>
+          <p class="text-sm">Open boards from 31 August to 5 September, online and offline.</p>
+          <p class="text-sm mt-1">
+            A week of tiles, bingos, and a few people discovering that QI is legal.
+          </p>
+        </a>
+        <a href="events/jam/jam.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/jam/hero.jpg" alt="Campus JAM 2026" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Campus JAM '26</h3>
+          <p class="text-sm">Just A Minute returned to the Tutorial Block, 27–30 August.</p>
+          <p class="text-sm mt-1">
+            One minute, no hesitation, and a table that lives to interrupt.
+          </p>
+        </a>
+        <a href="events/frolica/frolica.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/frolica/hero.jpg" alt="Freshers’ Frolica 2026" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Freshers’ Frolica 2026</h3>
+          <p class="text-sm">Y26’s first week: Scrabble Blitz, CC 101, JAM WHAM, and an open mic.</p>
+          <p class="text-sm mt-1">
+            Four evenings from a CCD board to a LitSoc clock.
+          </p>
+        </a>
+        <a href="events/poetry_week_26/poetry_week_26.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/poetry_week_26/hero.jpg" alt="Poetry Week 2026" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Poetry Week '26</h3>
+          <p class="text-sm">Ten days of prompts, opened by Madhu Raghavendra.</p>
+          <p class="text-sm mt-1">
+            Then the campus wrote back.
+          </p>
+        </a>
+        <a href="events/kavita_kisse/kavita_kisse.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/kavita_kisse/hero.jpg" alt="Kavita Kisse Kahaniyan" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Kavita Kisse Kahaniyan</h3>
+          <p class="text-sm">Nine ELS voices on a Lucknow stage.</p>
+          <p class="text-sm mt-1">
+            One trail of poems — until the next mic drops.
+          </p>
+        </a>
+        <a href="events/soiree/soiree.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
+          <img src="events/soiree/hero.jpg" alt="Soirée 2026" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" loading="lazy" />
+          <h3 class="text-xl font-semibold">Soirée 2026</h3>
+          <p class="text-sm">JAM, Word Games Night, and a last set with MClub.</p>
+          <p class="text-sm mt-1">
+            April in the OAT: hesitation, cryptics, and goodbye songs.
+          </p>
+        </a>
         <!-- Slide 1 -->
         <a href="events/poetry_week/poetry_week.html" class="swiper-slide bg-white rounded-xl shadow-xl p-6 flex flex-col md:flex-row items-center gap-6 md:items-start text-left max-w-4xl mx-auto">
-          <img src="images/Poetry_week.png" alt="Poetry Week" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/Poetry_week.jpg" alt="Poetry Week" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Poetry Week</h3>
           <p class="text-sm">ELS is bringing you 10 days of poetic magic with Poetry Week.</p>
           <p class="text-sm mt-1">
@@ -427,7 +479,7 @@
 
         <!-- Slide 2 -->
         <a href="events/game_night/game_night.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="events/game_night/hero.png" alt="Game Night" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="events/game_night/hero.jpg" alt="Game Night" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Game Night'25</h3>
           <p class="text-sm">ELS welcomed word-lovers to a battle of wit, tiles, and vocabulary.</p>
           <p class="text-sm mt-1">
@@ -435,7 +487,7 @@
           </p>
         </a>
         <a href="events/bumble/bumble.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="events/bumble/hero.png" alt="Bumbled" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="events/bumble/hero.jpg" alt="Bumbled" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Bumbled</h3>
           <p class="text-sm">Valentine’s Day got the literary treatment with ELS’s take on romance and reading lists.</p>
           <p class="text-sm mt-1">
@@ -443,7 +495,7 @@
           </p>
         </a>
 <a href="events/scrabble_league/scrabble_league.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="events/scrabble_league/hero.png" alt="Scrabble League'25" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="events/scrabble_league/hero.jpg" alt="Scrabble League'25" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Scrabble League'25</h3>
           <p class="text-sm">The IITK Scrabble League 2025 offered a competitive yet welcoming platform for players to sharpen their vocabulary and strategy.</p>
           <p class="text-sm mt-1">
@@ -470,6 +522,7 @@
 <!-- Blog Section -->
 <section class="spacious-section" data-aos="fade-up">
   <div class="content-box">
+    <p class="chapter-num">Chapter III · Leaves from the Journal</p>
     <h2 class="mb-6">Latest Blogs</h2>
 
     <!-- Swiper Container -->
@@ -477,7 +530,7 @@
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <a href="blogs/The_Substance.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/The_Substance.png" alt="The Substance" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/The_Substance.png" alt="The Substance" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">The Substance</h3>
           <p class="text-sm">by Soumadittya Chandra · May 2025</p>
           <p class="text-sm mt-1">
@@ -486,7 +539,7 @@
 
         <!-- Slide 2 -->
         <a href="blogs/we_live_in_a_time.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/we_live_in_time.png" alt="We Live in time" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/we_live_in_time.jpg" alt="We Live in time" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">We Live in Time</h3>
           <p class="text-sm">by Sritama Sarkar · March 3,2025</p>
           <p class="text-sm mt-1">
@@ -494,7 +547,7 @@
           </p>
         </a>
         <a href="blogs/waiting_for_the_letter_of_her_love.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/waiting_for_the_letter_of_her_love.png" alt="waiting_for_the_letter_of_her_love" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/waiting_for_the_letter_of_her_love.jpg" alt="waiting_for_the_letter_of_her_love" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Waiting For The Letter of her Love</h3>
           <p class="text-sm">by Shivam Tyagi · October 25, 2024</p>
           <p class="text-sm mt-1">
@@ -502,7 +555,7 @@
           </p>
         </a>
         <a href="blogs/Spirit_of_the_oak_tree.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/Spirit_of_the_oak_tree.png" alt="Spirit_of_the_oak_tree" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/Spirit_of_the_oak_tree.jpg" alt="Spirit_of_the_oak_tree" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Spirit of the Oak Tree</h3>
           <p class="text-sm">by Satyaki Banerjee · 25 October 2024</p>
           <p class="text-sm mt-1">
@@ -510,7 +563,7 @@
           </p>
         </a>
         <a href="blogs/Infatuation.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/Infatuation.png" alt="Infatuation" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/Infatuation.jpg" alt="Infatuation" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Infatuation</h3>
           <p class="text-sm">by Kajori · October 25, 2024</p>
           <p class="text-sm mt-1">
@@ -518,7 +571,7 @@
           </p>
         </a>
         <a href="blogs/Prisoners_of_Fate.html" class="swiper-slide flex flex-col items-center text-center hover:opacity-90 transition-all duration-300">
-          <img src="images/blogs/Prisoners_of_Fate.png" alt="Prisoners_of_Fate" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4" />
+          <img src="images/blogs/Prisoners_of_Fate.jpg" alt="Prisoners_of_Fate" class="w-full h-80 object-cover md:object-contain object-center rounded-xl shadow mb-4"  loading="lazy" />
           <h3 class="text-xl font-semibold">Prisoner of Fate</h3>
           <p class="text-sm">by Aditya V · October 12, 2024</p>
           <p class="text-sm mt-1">
@@ -584,12 +637,18 @@
         }
       });
 
-      // Parallax floating on hero images
+      // Subtle parallax on hero margin sketches
       const heroFloating = document.getElementById('hero-floating');
+      const sketchWraps = heroFloating ? heroFloating.querySelectorAll('.sketch-wrap') : [];
       window.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 15;
-        const y = (e.clientY / window.innerHeight - 0.5) * 15;
-        heroFloating.style.transform = `translate(${x}px, ${y}px)`;
+        const nx = e.clientX / window.innerWidth - 0.5;
+        const ny = e.clientY / window.innerHeight - 0.5;
+        sketchWraps.forEach((wrap) => {
+          const d = parseFloat(wrap.dataset.depth || '1');
+          const tx = nx * 16 * d;
+          const ty = ny * 12 * d;
+          wrap.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+        });
       });
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -648,7 +707,19 @@
 
     <!-- Footer -->
     <footer class="mt-32 text-center text-gray-500 text-sm max-w-screen-xl mx-auto px-6 py-12" data-aos="fade-up" data-aos-delay="500">
-      &copy; 2025 English Literary Society IIT Kanpur. All rights reserved.
+      <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+      <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+      <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
     </footer> 
   </body>
 </html>

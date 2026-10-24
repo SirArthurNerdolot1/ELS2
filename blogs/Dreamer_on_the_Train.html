@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dreamer on the Train | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Dreamer on the Train</h1>
+      <p class="manuscript-byline">August 18, 2018</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was raining heavily back home.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Drip, Drip, Drop.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It’d been hours, and she was there, waiting at the station. The train was late and apparently, she was the only one who didn’t get the information on time. All alone, with the station-master and a few regular people as an exception, sitting in the lounge, with her iPad, her books, her stories, she starts to drift away.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The bench had become warm by now, but the air seemed to talk to her bones, chilling them to their core as if it carried with itself horror stories from another dimension. She took off her coat and pulled it in front of her, in a desperate attempt to close the listening aids of her bones, in a negligibly effective move to avoid the air from hitting her.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She looks above, the skies are dark as if it’s London in the old days, or a romantic movie perhaps, with the rain and all, and a couple in the middle of the path with the view grey as it is, becoming coloured only where they stood. Hopefully it wasn’t the rail-track where they expressed their affection for it might mean the end of their love story as she was expecting the train any time now.*Giggle*
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Excuse me miss. I’ve been want-‘”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Wha-“, she was startled at the voice of another soul. She didn’t hear any footsteps, or maybe it was just the rain hid them as curtains do light.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “I was saying, would you be so kind as to tell me what you are doing at this time of the hour over here at the train station? A little girl like you shouldn’t be alone around these areas. Where are your parents?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She sharpened her gaze and tried to look more clearly, to identify that the station master had come over. Probably his shift got over and was concerned about her.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Oh! I was waiting for a train. My parents have gone back to where they belong, Mister-?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Joshua. I’d say, what has this world come up to, letting a young lady such as yourself all alone at night over a place such as this. What about those goons that roam around here?”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Well, I can take care of myself quite well you see. There’s nothing to be worried about. Thank you for your concern though.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “If you say so, I’ll be on my way. Take care!”, the station-master departed.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Little Asha sat there by herself, all through the night till the morning when the train arrived, wondering about how fake the world is, like the station-master, pretending to care while all of it is just a way to tell to themselves how good they are. ‘Puh! If he was so nice, then why didn’t he stay the night, giving me company?’, she thought.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The train did arrive, and quite late one would say, but there was one thing off when it departed, Asha was not on it.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

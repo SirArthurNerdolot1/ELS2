@@ -31,6 +31,7 @@
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
         }
     </style>
+  <link rel="stylesheet" href="../css/site.css" />
 </head>
 
 <body>
@@ -40,7 +41,7 @@
             <!-- Logo + Title -->
             <div class="flex items-center space-x-3">
                 <a href="../index.html">
-                    <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+                    <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
                 </a>
                 <h2 id="navbar-title"
                     class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
@@ -55,7 +56,7 @@
                 <a href="../about.html" class="hover:text-gray-700">About</a>
                 <a href="../events.html" class="hover:text-gray-700">Events</a>
 
-                <a href="../blog.html" class="hover:text-gray-700">Blog</a>
+                <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
                 <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
                 <!--<a href="../contact.html" class="hover:text-gray-700">Contact</a>-->
             </nav>
@@ -76,7 +77,7 @@
             <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
             <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
 
-            <a href="../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
+            <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
             <a href="../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
             <!--<a href="../contact.html" class="py-3 border-y hover:text-gray-700">Contact</a>-->
         </nav>
@@ -104,16 +105,16 @@
     <section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
         <!-- Blurred Background -->
         <div class="absolute inset-0 z-0">
-            <img src="../images/blogs/Poetry_and_the_smiths.png" alt="Blurred Background"
-                class="w-full h-full object-cover blur-2xl scale-125 opacity-60" />
+            <img src="../images/blogs/Poetry_and_the_smiths.jpg" alt="Blurred Background"
+                class="w-full h-full object-cover blur-2xl scale-125 opacity-60"  loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
         </div>
 
         <!-- Foreground Image and Text -->
         <div class="relative z-10 flex flex-col items-center justify-center px-4">
             <!-- Animated Image -->
-            <img src="../images/blogs/Poetry_and_the_smiths.png" alt="Poetry and the Smiths"
-                class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up" />
+            <img src="../images/blogs/Poetry_and_the_smiths.jpg" alt="Poetry and the Smiths"
+                class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl transition-all duration-1000 ease-in-out animate-fade-in-up"  loading="lazy" />
 
             <!-- Animated Text -->
             <div class="text-center text-black" data-aos="fade-up" data-aos-delay="200">
@@ -131,7 +132,7 @@
 
 
     <!-- Blog Body -->
-    <main class="max-w-3xl mx-auto px-4 py-16" data-aos="fade-up">
+    <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
         <div class="prose max-w-none text-lg leading-relaxed text-gray-800 prose-p:mb-4">
             <p>When the Swedish Academy announced its decision to award Bob Dylan the Nobel Prize for Literature in 2016
                 “for having created new poetic expressions within the great American song tradition,” it sent ripples
@@ -291,6 +292,22 @@
             </a>
         </div>
     </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
 
     <!-- AOS Init -->
     <script>

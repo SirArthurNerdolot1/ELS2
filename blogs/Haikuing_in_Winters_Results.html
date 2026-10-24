@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haikuing in Winters: Results | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Haikuing in Winters: Results</h1>
+      <p class="manuscript-byline">January 7, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Finally, we have the results of our winter haiku competition! Shweta Taneja , the author of Cult of Chaos and our judge for this competition painstakingly marked each entry (and there were many) to arrive at a decision. We are very grateful to her for sparing time for us. She also informed us about the judging criteria for the contest which can be found here . You can find her remarks below each haiku.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        THREE WINNERS (not in sequence)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Vaidehi Menon
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Winter vibrations Teeth chatter, bodies shiver Hear the symphony (This has been able to capture the music of winter very well. Though I wish the word ‘winter’ hadn’t been used. It kills subtlety.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Harshit Bisht
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Cups of steaming tea Under the afternoon sun And her memories (This haiku makes me linger. Makes me ponder on my own memories and that hot cup of tea. Again, it has captured winter as I’ve experienced it.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Nitica Sakharwade
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Light sleeping angel Deep under the snow she lies In quiet misery (I so wish the first line could’ve improved a bit. But I loved the surprise of misery that the haiku ended with. Again, a trueblue winter haiku)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ALMOST MADE IT (not in any sequence)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Swapnil Gupta
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Water turns to ice. Breath to a soft misty haze. Tears aloof, untouched. (It explores a sadness which I loved. Except the last line could’ve been give more clarity, more pain maybe?)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Ayush Mukherjee
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Leaves drop in the snow What perishes here today Revives tomorrow. (I wish this was more visual. The concept is quite nice.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Yash Singh
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Pensive Elements conflict, Facetious words spoken, by Sullen crackling fire. (Concept is nice, but the words didn’t bring it alive)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Shehzad Hathi
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ice or inferno death is wintery always which steel would you like (Again, almost there. Needed a clearer set of words perhaps)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Pallav Goyal
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Hidden is the truth of a hug or a murder; in the foggy airs (This was a lovely concept, could’ve gone to a greater height.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Nikhil Kumar
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Sunshine scarce, days blue Nights cold with mist overdue How I miss warmth, you. (The rhyme wasn’t required and took away from the story of the haiku)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Rishav Agarwal
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She loved another a snowflake, lost in the fog Winter her lover (Last line could’ve been structured better. Love the first two!)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Anushka Jha
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        erica shivers frigid night, her only foe only companion (Again, nice concept, but a little change of words would’ve brought clarity. I love the first line though.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Yash Singh
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Prodigal The cold winter bit, Dozing into wakening; A face forgotten. (The subject hasn’t been brought out. Better choice of words perhaps?)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Shehzad Hathi
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Trojan horse is cold its coal won’t burn – Troy won’t fall will Apollo shine (This was a lovely concept, could’ve gone to a greater height.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Shashank Singh
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Von Snow falling softly Cold music from a harsh land Haunting the still air (Falls a little short of emotion, though the structure is quite nice.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Ayush Mukherjee
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Bludgeoning blizzards Blow a blue bird far away. How will it return? (The alliteration was forced, though I loved the second and third line)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Shashank Singh
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Pain Death staring at me Wondering who is colder Fish frozen in bowl (Nice concept, fell in the choice of words. Especially the last line.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Rishav Agarwal
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Fahrenheit 451 (a) cold Winter morning “it was a pleasure to burn” inky paper Lives
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        (b) Ignite each chapter Beautiful Black Butterflies Fluttering to ash (I simply loved the idea of writing Haiku on a classic book. It was quite innovative. Except both these peices fell short as a haiku, because of structure. Maybe a single to combine both would’ve made it powerful.)
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Ayush Mukherjee
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Weather of nightmares That sends chills down every spine Till the blankets slide. (Nice concept, hurried in execution)
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

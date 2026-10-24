@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Art of Looking | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The Art of Looking</h1>
+      <p class="manuscript-byline">April 9, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “You’ll miss the best things if you keep your eyes shut.” ― Dr. Seuss, I Can Read With My Eyes Shut! This is an image of the back of an eye. It shows all the nerves from the retina and everywhere else in the eye converging at what is called the optic nerve. And the optic nerve is what feeds from the eye into the brain and sends all the information from the photoreceptor cells that allows us to see what we see. It is an interesting place in the eye because from where the optic nerve goes through the retina into the brain, there are no photoreceptor cells. So whatever is there on that little hole in the back of our eye on the visual field, we can’t see. This is called the visual blind spot. We all have this blind spot. Literally and metaphorically. Right now, we are missing the vast majority of what is happening around us. We are missing the events unfolding in our body, in the distance, and right in front of us. By marshalling your attention to these words, helpfully framed in a distinct border of white, you are ignoring an unthinkably large amount of information that continues to bombard all of your senses: the hum of the fluorescent lights, the ambient noise in a large room, the places the chair presses against the legs or back, the tongue touching the roof of the mouth, the tension in the shoulders or jaw, the map of the cool and warm places on our body, the constant hum of traffic or a distant lawn-mower, the blurred view of your own shoulders and torso in the peripheral vision, a chirp of a bug or whine of a laptop. I would find myself at once alarmed, delighted, and humbled at the limitations of my ordinary looking. My consolation is that this deficiency of mine is quite human. We see, but we do not see: we use our eyes, but our gaze is glancing, frivolously considering its object. We see the signs, but not their meanings. We are not blinded, but we have blinders. Attention is an intentional, unapologetic discriminator. It asks what is relevant right now, and gears us up to notice only that. Though paying attention seems simple, there are numerous forms of payment… To concentrate, to pay attention, is viewed as a brow-furrowing exercise. Sit still, don’t blink, and attend. This may do for a moment of concentration, but it is not the way to better attention in your daily life. For that, we need to know what attention is. The very concept is odd. Is it an ability, a tendency, a skill? Is it processed in a special nugget in the brain, or by your eyes and ears? The longtime model used by psychologists is that of a “spotlight” that picks out particular items of interest to examine, bringing some things into focus and awareness while leaving other things in the dim, dusty sidelines. The metaphor makes me feel like a headlight-wearing spelunker who can only see what is right in front of him in the darkness of the cave. Such a comparison can be misleading, because in fact one can still report on what was within one’s peripheral vision at rates better than chance. And despite that spotlight, we seem to miss huge elements of the thing we are ostensibly attending to. A better way of thinking about attention is to consider the problems that evolution might have designed “attention” to solve. The first problem emerges from the nature of the world. The world is wildly distracting. It is full of brightly colored things, large things casting shadows, quickly moving things, approaching things, loud things, irregular things, smelly things. Evolution’s problem-solving left us modern humans with two kinds of attention: vigilance, which allows us to have a quick and life-saving fight-or-flight response to an immediate threat, be it a leaping lion or a deranged boss, and selective attention, which unconsciously curates the few stimuli to attend to amidst the flurry bombarding us, enabling us to block out everything except what we’re interested in ingesting. (Selective attention, of course, can mutate to dangerous degrees, producing such cultural atrocities as the filter bubble.) Much like French polymath Henri Poincaré argued that to invent is simply to choose ideas, to attend, it turns out, is simply to choose stimuli — but what sounds so deceptively simple turns out to be marvelously complex. Part of normal human development is learning to notice less than we are able to. The world is awash in details of color, form, and sound— but to function, we have to ignore some of it. The world still holds these details. Children sense the world at a different granularity, attending to parts of the visual world we gloss over; to sounds we have dismissed as irrelevant. What is indiscernible to us is plain to them. A lot of toddlers’ extraordinary capacity for noticing has to do with their hard-wired neophilia — the allure of the new and unfamiliar, which for them includes just about everything that we, old and jaded, have deemed familiar and thus uninteresting. In a way, “experts” have a toddler’s ability to zoom in on the details, the very fabric of experience that most of us glide intuitively by. Looking at the ordinary, looking and really seeing it, seeing its extraordinary wonder, is a special talent that takes patient cultivation. Part of what restricts us seeing things is that we have an expectation about what we will see, and we are actually perceptually restricted by that expectation. In a sense, expectation is the lost cousin of attention: both serve to reduce what we need to process of the world “out there.” Attention is the more charismatic member, packaged and sold more effectively, but expectation is also a crucial part of what we see. Together they allow us to be functional, reducing the sensory chaos of the world into convenient and understandable units. This perceptual constraint that I labor under is the constraint that we all create for ourselves: we summarize and generalize, stop looking at particulars and start taking in scenes at a glance—all in an effort to not be overwhelmed visually when we just need to make it through the day. An artist seems to retain something of the child’s visual strategy: how to look at the world before knowing (or without thinking about) the name or function of everything that catches the eye. An infant treats objects with an unprejudiced equivalence: the plastic truck is of no more intrinsic worth to the child than an empty box is, until the former is called a toy and the latter is called garbage. To the child, as to the artist, everything is relevant; little is unseen. Once you look at what seems ordinary long enough, though, it often turns odd and unfamiliar, as any child repeatedly saying his own name aloud learns. In truth, all our life’s “education” is the ambulatory equivalent of saying our own name aloud a hundred times. So what is it about artists or some people in particular who possess a childlike capability of perception and ‘talent’ which makes them an artist? One research team reported a correspondence between the brains of those who seem to be especially creative thinkers. Certain people, they found, have fewer of one kind of dopamine receptor in the thalamus of the brain. These people also performed well on tests of “divergent thinking,” in which people are asked to concoct more and more elaborate uses for ordinary objects, for instance. The reduction in receptors might actually increase information flow to various parts of the brain, essentially allowing them to think up new and interesting solutions. “Thinking outside the box might be facilitated by having a somewhat less intact box,” the researchers wrote. As a number of scientists have noted, research on the human brain is complicated by the fact that the brain is struggling to understand itself. This one-and-a-half kilo organ is perhaps the only bit of matter in the universe−at least as far as we know−that observes and studies itself, wonders about itself, tries to analyze how it does what it does, and tries to maximize its capabilities. This paradoxical situation no doubt contributes to the deep knowledge. One of the most encouraging new discoveries that the human brain has made about itself is that it can physically change itself by changing its accustomed ways of thinking, by deliberately exposing itself to new ideas and routines, and by learning new skills. This discovery has led to a new category of neuroscientists, neuroplasticians, who use microelectrodes and brain scans to track complex brain maps of neuronal communication, and who have observed the revising its neuronal maps. This conception of a plastic brain, a brain that constantly changes with experience, that can reorganize and transmute and even develop new cells and new cell connections, is in direct contrast to previous judgments of the human brain as being more akin to a hardwired machine, with its part genetically determined and unchangeable except for development in early childhood and deterioration in old age. Perhaps, what is missing is any experience other than a visual experience. This is not terribly surprising. After all, humans are visual creatures. Our eyes have prime positioning on our faces. We have trichromatic vision, which is sufficient to paint a Technicolor, million-coloured landscape of the world. Our brains’ visual areas, with hundreds of millions of neurons designed to make sense of what we see, takes up a full fifth of each of our cortices. The resplendent scene our eyes carry to us is entrancing. As a result, we humans generally do not bother paying attention to much other than the visual. What we wear, where we live, where we visit, even whom we love is based in large part on appearance — visual appearance. But the world around us is not entirely or even mostly defined by its light-reflective qualities. What of the odors of the molecules making up every object, and those loosened odors wafting in the space around us? Or the perturbations of air that we can hear as sound — and the frequencies higher or lower than we can hear? I imagined that someone who has lost their sense of sight could lead me, however superficially, into the invisible wonderland that I miss with my wide open eyes. Our brains are changed by experience — in a way directly related to the details of that experience. If we have enough experience doing an action, viewing a scene, or smelling an odor to become an “expert” in a field, then our brains are functionally — and visibly — different from non-experts. The brain is plastic, and can creatively adapt to a new situation, but it changes right back when it no longer needs to be creative. Simply giving a name to a sound can change the experience of it: when we see the thing that clatters or moans or sighs, we hear it differently. What makes that “noise” and not just neutral “sound” is another question. The avant-garde composer John Cage famously declared that “music is sounds,” and thus appropriated ordinary sounds to be his music. In one of his compositions, the orchestra is silent for four minutes and thirty-three seconds; whatever sounds come in through the window of the concert hall or emerge from the increasingly restless and puzzled audience constitute his music. Still, if Cage was right, it need not follow that all sounds are music-(al). Any sound we do not like we call noise, thereby introducing a subjective assessment to the din. That subjectivity is always there in talking about noise. Decibels are the subjective experience of the intensity of a sound. Zero decibels marks the threshold for hearing a sound—and in a modern city, there is never a moment of zero decibel silence. We mostly reside in the 60–80 decibel range, which includes sounds from normal conversation across the dinner table, vacuum cleaners, and traffic noise. Once a sound gets to 85 decibels, it begins to damage the mechanism of our ears irreparably. The reason lies in the mechanism itself. Cilia, tiny hair cells that stand upright in the cochlea, sway and jiggle when the vibration of air—the rush of air that is sound — wends its way into the inner ear. So stimulated, the cilia trigger nerves to fire, translating that vibration into electrical signals that give us the experience of hearing something. If those vibrations are strong enough, the hair cells bend deeply under their force. Air pressure can mow, crush, or sever the hairs until they are splayed, fused, floppy, or fractured — an earful of well-trodden grass. Bent and damaged enough because of exposure to loud sounds for prolonged periods, the hair cells do not grow back; the ears lose their neural down. The world becomes progressively quieter for the person attached to those ears, until there are no sounds, no music, and no noise. Cities are crowded with sources of sound regularly approaching this threshold of hearing loss. Enormous numbers of man-made sounds occur in those same frequencies. We often find high pure tones the most irritating: the screech of a subway turning a tight corner or braking, at 3,000 or 4,000 hertz, or the sound of fingernails on a chalkboard, between 2,000 and 4,000 hertz. These sounds clobber us because of the shape of the human ear, which allows high frequencies to find their way efficiently to the cochlea. The very design of the ear amplifies these vibrations for waiting hair cells. But it is not just our ears that find the sound distressing; it is our brains. If we know that we are hearing what we have already deemed an “annoying sound,” our bodies react to it as though it is: we have a sympathetic nervous system response, usually reserved for final exams, suddenly appearing lions, and the sight of our beloved. We sweat, and then we notice that we are sweating, and we sweat some more. And if you thought the human ear was a marvel, just wait for the dog’s nose. The inside of the nose is a labyrinth of tunnels lined with specialized olfactory receptors waiting for an odorant molecule — a smell — to land on them. In the back of the nose is an “olfactory recess” separated from the main respiratory pathway by a bony plate, allowing smelling to be distinct from breathing, and letting odors loiter for a long time to be considered. Though we tend to think that only some things are smelly — a spring bloom, a trash can, a new car, a bus’s exhaust — just about everything has a scent. Anything with molecules that can be “volatile,” that can evaporate into the air and travel toward a receptor in someone’s nose, smells. The dog nose has hundreds of millions of receptors in that nose; they even have a second kind of nose above the hard palate of their mouth, called a vomeronasal or Jacobson’s organ. Molecules such as hormones that do not stir the receptors of the nose to fire may find a rousing welcome here. All animals house hormones, which are involved in bodily and brain activities, and those hormones we emit, called pheromones, are detected by the vomeronasal organ. This is how a dog could detect another dog’s stress or sexual readiness in a spray of her urine left on the ground. Dogs are called macro somatic, or keen-scented, while humans are called micro somatic, or feeble-scented. Our feebleness is not due to software but to hardware — it’s not that we don’t know how to use our noses like a dog does, it’s that we lack the dog’s extravagant number of cells to detect and decode smells, which they’re able to do at the unimaginably low concentration of one or two parts per trillion. Even more remarkably, a dog’s nose is wired to detect the half-life of smells, with each noseful of the “same” smell delivering different information — a sort of stereo olfaction that gives them astounding precision in tracing where the smell has come from and where its carrier has gone next. To see a scene is not to stare fixedly at one point; it is to open our eyes to everything in front of us, looking to and fro. Similarly, to smell a scene, is sniff a breath of air to identify all the things that are nearby. A dog can smell something different in each noseful — and there is something different there to smell. This taught me something about smells: they are not at fixed points, nor are they static and unchanging. They are a haze, a cloud, spreading out from their source. Viewed as odors, the street is a mishmash of overlapping object identities, each crowding into the next’s odorous scene. Part of seeing what is on an ordinary street is seeing that everything visible has a history. It arrived at the spot where you found it at some time, was crafted or whittled or forged at some time, filled a certain role or existed for a particular function. It was touched by someone (or no one), and touches someone (or no one) now. It is evidence. The other part of seeing what is on the street is appreciating how limited our own view is. We are limited by our sensory abilities, by our species membership, by our narrow attention — at least the last of which can be overcome. But the greatest learning is that our ability to see is a factor of two complementary forces — attention and intention — as the choices we make in what we attend to shape our entire experience of reality. And expertise is nothing but the carefully orchestrated osmotic balance of the two. What allows me to see the bits that many would have otherwise missed is not my experience in visual arts, per se; it was my simple interest in attending to how different artists (or animals) look at the world. Understanding their way of looking at the world gives a boost to my own selective attention. An expert can only indicate what they see; it is up to your own head to tune your senses and your brain to see it. Once you catch that melody, and keep humming, you are forever changed.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

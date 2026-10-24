@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Camera: A Short Story | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Camera: A Short Story</h1>
+      <p class="manuscript-byline">November 29, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        ~Mudit Chand Narayan
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The sound of the cold, steady stream of water was acting like a lullaby to her ears. It’s been twenty minutes of her sitting on the wooden bridge that somehow was the only passage from one side to another in the miles of the river’s flow.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She had her eyelids closed, and her ears were doing nothing but listening to the noises the water running underneath her was making as it was pummeling on the impenetrable rocks underlying the riverbed. Her legs were hanging into the river from the bridge-side. The occasional drizzles of icy-cold water were making her quiver as they touched her toes.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She was a photographer.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Had she looked up, the glorious mountains glistening in the north would have been her dream come true. She spent her childhood snaring the flowers of her garden in her camera, and her early twenties capturing her dreams; but today she was sitting stock-still.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She unconsciously broke what seemed an eternal stare, and palpated to her right where her camera was. Fumbling through the jacket and things lying there, her hand fell on the camera.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She groped it. Adjusting herself on the ridge of the wooden bridge, she delicately picked it up. With her eyes closed, she felt the button she once clicked to capture a million memories in that little frame.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She touched the lens, oh those lenses. How much she cared about them. The whole set she had, how she was proud of each of them. She knew their functions by heart, and she never shied off from bragging about her knowledge about cameras.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        She rolled her fingers on the ridges of the lens, zooming in and out, and then left it in her lap.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Riya!” She heard her name echoing the valley from a distance, which meant that it was her time to leave the tranquility of this valley, which was the only thing she enjoyed. She grasped on her shoes, and then her jacket.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        But as she was picking up her jacket, she heard that particular “knock” too.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It was the lens. The other lens she had left on her jacket when he took her there on the bridge and left. It rolled, and rolled, and as she knew it was falling, she kept throwing her hands in different directions but could not get a hold of it.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It tossed to the edge and then it fell.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        It took a last bump on her toe, and then it was gone. Gone in the roaring waves of the waterway rippling under her feet. An accident, an imperceptible recklessness, and she lost the lense she loved the most.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Just the way she lost her eyes three months ago in that accident.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The cold water had made her feet numb, more numb than her soul at the moment. And as the sound of waves crashing on lifeless stones went louder, a sob built up and went unnoticed.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        The chilling wind was enough to freeze someone’s guts as she wore the jacket. “ Coming “, She replied to the voice that called her what seemed like a millennium ago and she clenched her camera to her chest.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        A camera, which once was the other face of hope to her was not leaving any chance of reminding her of her frailing dreams and the feebleness of her knees. The lens that fell was continuously paining her with the fact that she couldn’t even see how it fell off the bridge like her fragile hopes tripped when she was hit by the car that day.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “ Click “, a painfully unnatural sound filled the valley. And though she could not see the pictures, she kept clicking as a tear rolled down her cheeks and disappeared midway.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

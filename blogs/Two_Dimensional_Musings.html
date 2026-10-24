@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Two Dimensional Musings | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Two Dimensional Musings</h1>
+      <p class="manuscript-byline">September 30, 2016</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Time- 2:47 am. State of mind- unnerved. “I could start with a quote since we’re going to talk about meaning.” I wouldn’t say no to some coffee if someone were to make it for me. While I do have a diversified palate and I can gulp down a coffee brewed in sewage without regurgitating my guts out, I wouldn’t mind a decent espresso in a sanitized cup. There is a desultory door formidably closed in front of me. It has a mean doorknob. I wouldn’t open it because I despise doorknobs anyway. Beyond this door is catalogued garbage. A mortgaged dumpster. Like any other dustbin, it houses objects that wouldn’t be able to make acquaintance if they were still functioning. Old cassettes that are so dead that they wouldn’t cough a song now, CDs that no longer reflect, newspapers dating back to 500 BC, issues of magazines which are now defunct, utensils, spoons that don’t look like spoons anymore et al have been stored in it. I don’t think it stinks but I never go in there without holding my breath even though I punctured a lung once doing the same. Every time my parents come across a dying claustrophobic object, they look at it quizzically and quickly decide whether it deserves another chance. If it’s lucky, it is carelessly thrown out of the garbage collection window and it then falls six stories to meet its maker. Eventually. Otherwise the door is cast open and another object is deposited. Their lifetime starts tending towards positive infinity once the door is closed on them. One can never get out. Why do they collect them? They never look at them again. (like me) (I hope I was not collected) I understand the urge to preserve, to go back and drown in your past, to revaluate and assign significance to things that didn’t matter then, out of compassion maybe, or respect. Meaning VS logic- I am uncertain about the ‘VS’ I just typed and in hindsight I should not have plunged into this. I must resist the urge to draw a line here and start listing differences. Here we go. Let us dedicate two consecutive sentences to how I’m praying right now this doesn’t turn into a clusterfuck. Amen. If I were a devout logician, I wouldn’t have fiddled with my sleeping pattern. My grandmother keeps poking me with ‘ sleeping during the day isn’t as relaxing as a proper night’s slumber’. But I am a dreamer. Ironically. I like to stay up late, eating out of the fridge and wondering if I should cook but as soon as the stove lights up, the flames threaten to envelop me so I drop the idea all together. When I think about it, plastered idols with elephant faces do not go well with the rest of my furniture. But I gotta defend myself against valak. I have found the power of god in them. All of that dump needs to be cleared away. But my parents occasionally like to brood over them. Most of us fuss over meaning because there is no regulation, nothing to hold our imagination back. Unchartered waters that extend as far as we are willing to go. All the rocks and pebbles I’ve seen couldn’t inspire a cathedral in me. that’s because I’m not a Christian, we don’t have churches. I often think of meaning as a menace, which is extravagant yet incoherent. Isn’t it counter- intuitive? Meaning is after all devoid of sense. Of course, that’s my version of it. Logic is however stable, unquestionable and confident in itself. I want to defend its claim but what’s life without meaning? (tolerable, that’s what). What if everything we do is meaningless? Let’s hope not. That sounds depressing. What am I writing anyway? (a testament of my incompetence.) What comes next? Preferably, sleep. Time- 5:22 AM State of mind- (no one cares) …….” I wish I had a poem to end with but I don’t”.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Con-fusing Choice | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>A Con-fusing Choice</h1>
+      <p class="manuscript-byline">May 30, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I woke up to the sound of an old man yelling “TRAMP” nearby, probably outside one of the rooms was the scene of alcohol, disappointment and rejection that night. It was 5:30 in the morning and as I looked out of the window of my cheap motel room, I could see the blood-stained sun piercing through the snowy haze who somehow managed to do his job daily and remained perfectly stationary, without ever deviating. My job had its ups and downs, sure. I was extremely rich because as it unsurprisingly turns out if your job has to deal with the deepest, darkest secrets of prominent businessmen, celebrities and politicians, they keep your wallet full. On the flip side though, my job requires, above all, anonymity. So the commonality between my exquisite travels to Vegas, Geneva or New Delhi was always that stinking cheap motel. Also, and this is a big one according to most humans, I don’t have any friends or a romantic counterpart. I can’t form attachments when I am working a case and I don’t think people are willing to date a con master who will be at home for three weeks in a year. I do have an agent though because I am terrible at organisational work. I know him as noob_master69. We talk a lot but I don’t think I’m going to ask him out. Honestly, he’s a bore.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I slipped into my slippers as I rose from my bed and picked up my phone. Notifications later, I thought as I Googled “Hangover cure to keep me active all day”. I think every website was in purple but I don’t remember ever making or drinking one. There’s a first time for everything, right? When you grow up conning people for a living, concoctions aren’t really a primary concern. My career started when I was 14, I think? My best friend in school, Anirudh, asked me to figure out whether or not his crush was single. I don’t remember the exact details of it but I do remember excelling at conning people and at disappointing the ones closest to me, and the immense joy. Thanks to my Anirudh, I now had a new hobby. And for a young master conman living in the slums of Bombay, life was good. I worked my way up from lowly thugs to Mumbai’s most elite. I worked on my flirtation skills, presentation skills and imitations. I watched movies, TV shows and I idolized DiCaprio’s character from Catch Me If You Can. For a boy whose mother died while delivering him, and whose father never held on to a job long enough to actually be able to spend some quality time at home with his son, and whose teachers probably didn’t have teachers, a moral compass doesn’t exist. It’s survival, food, glamour on one side and on the other, rotting in a slum.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        As I thought about all this, I probably ended up overbrushing my teeth. It was 6:30 am and I had to postpone the hangover cure to some other day. Obviously I had work to do, at least that was what my alarm was screaming at that moment but more importantly, something unexpected happened that almost, literally, blew my mind.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        My phone burst into flames at 6:31 am, sharp. I don’t think I could have crafted a better concoction, honestly. For a cheap motel, this one had surprisingly superb fire alarm systems. Water was everywhere and my ears were ringing as I jumped out of the window into the
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        beautiful city of Oslo with whatever I could grab. First things first, let’s analyse what happened. Someone tried to kill me-police is going to investigate the explosion so I need a new identity and new getup- someone tried to blow my head off- I was at the bar in the city last night charming Ms Medha for a case presented to me by the Indian arms dealer Mr Pulkit Deshmukh for a surprisingly massive amount of money, not that I mind – I don’t remember much which is weird because I know how to handle my alcohol-someone tampered with my phone and tried to blow my fucking head off. I entered a taxi, got off at a thrift store, changed my getup and walked over to a PCO. I dialled noob_master69’s emergency-only number and gave him a quick summary. I was rewarded with a list of concise instructions. 1) Get a burner phone 2) Print out your new ID at a cybercafe 3)Reverse engineer what happened at the bar, or jump countries ASAP 4) You will have everything I can dig up on Deshmukh and Medha in 15 minutes on your mail 5) Be loyal, do not say anything about your agent no matter what happens now. I only needed him for (1) and (3) honestly.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        After a quick breakfast at a cafe cafe, I bought a phone and proceeded to the cyber cafe. Step 1, check. Step 2, check. I am now Orfuk Vladimir, a bartender who does part-time shifts at various bars and pubs. I was never one to back down from a fight so I read everything noob had on Deshmukh and Medha on my cab ride to the CCD bar, in the heart of the city. Convincing the one guy working his lonely morning shift to go out and something worthwhile with his limited hours on Earth while I cover for his job was a piece of cake. Now, onto business. I tried to relive that night and trace the explosion to its origin. The booth I sat at, the drinks I ordered, the people around me- everything was a blur except Ms Medha. I had to interrogate her, but how? My eyes fell on something on the billing computer at the counter. A name I hadn’t seen for years. ‘CCD Bar, a holding of Ojha Pvt Ltd’. Anirudh Ojha, could it really be him? Before I had time to react properly, I got my answer. A guy entered the bar. He was of average build and height, he had ruffled hair and an unshaven beard. It was him, only the last time I saw him, he wasn’t pointing a gun at my face. Medha walked in right behind him.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Hey Ojha,” I said with a smile. “Hey, Banga. Wait sorry, who are you right now?” “A bartender, I see your observation skills never improved” “Shut up!” “Okay then, no pleasantries. What the heck is going on?” “I do not want to shoot you unless you prompt me to” “That’s reassuring” “I and Medha are the current associate heads of the ELS syndicate in Mumbai, the syndicate that brought you to where you are right now. We’ve been tracking you for two years now” “I don’t need a history lesson but hey, congrats on the promotion. At least you won’t go around pulling the trigger for someone anymore. You’ll be the one ordering hits” “Don’t act like you’re a saint. The things you’ve done might not seem as cruel to you because you’ve never observed the consequences, have you?” “What do you mean?” “You’ve caused deaths and crushed dreams Ankur, countless, and no these aren’t the ones you won’t care about.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “You’ve been working for the HSS for the past few years” cut in Medha, interrupting the soon-to-be melodramatic best friend reunion. “The same HSS that is the reason that kids in Mumbai slums never rise high enough to see a clear sky and drives the income inequality to a much worse state. Before you object, I have a folder full of your cases and I can explain to you why every single one has strengthened the HSS in ways you never expected. Hence, I had no option but to drug you, render you completely inactive, rig your phone and hope you die. You clearly defied my expectations ”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Thank You?” I said, my eyes wide open. “I wasn’t aware of all that. Sorry. I know you won’t do it on purpose, nothing can corrupt you to this extent. I know you’ll never betray your origins, or me. You still regret what happened all those years ago.” My heart skipped a beat. “So in 5 minutes, figure out how this could happen and I won’t have to shoot you in the head.” finished Ojha. I couldn’t believe this was happening. It was too much to process. “It’s too much to process!” I exclaimed as I found a seat to support me. I felt the gun stashed behind me rub up against my butt as I considered my options. Shooting my way out was an idiotic option, Ojha was an experienced marksman and I couldn’t have taken him even if he was there alone. So I started paying heed to what they said, and I thought. I thought between my best friend who I grew up with and the only person I talk to often. I had never faced such a difficult decision, ever before. But then again, it was Anirudh, always Anirudh. At the end of 5 minutes, all I could force out of my throat was “noob_master69”. “What?” asked Anirudh “He handles all my cases. He tells me what case to take on, and he arranges everything” I explained. “You must have contacted him as Mr Deshmukh, I presume?” “Yes,” said Medha, still giving me that creepy look of mistrust. “Well then that’s it!” exclaimed Ojha. “All we need to do is figure out a way which enables Ankur here to con his partner on the job, figure out his identity and eliminate him, if need be.” “It’s not going to be easy. He’s smart and he knows me. Also, I don’t know if my heart is in this given that you just tried to kill me” “Well then your heart can be stopped,” said Medha. “Hey, relax. Keep your weapon aside. Ankur, do it for me. Trust me.” said Ojha, looking me in the eye. “Okay.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Medha’s tech guys started working on whatever lead noob’s emergency number could lead to as I and Ojha got some time to catch up in the bar’s office. We went from small talk to general life to wavering around the elephant in the room to the elephant. “So that job, all those years ago. You’re right, I regret it.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “Hey don’t beat yourself over it. We all make mistakes” said Ojha. “It was a lot more than some simple mistake, I got careless. I never realized that my carelessness could lead to you being in danger.” “Hey come on I-”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        “No! I almost got you killed. That’s the reason I don’t make any attachments anymore. I just cannot take the risk. And even now if what you say is true I’ve been doing the very actions I swore against?! Everything I’ve done will always haunt me now, forever” I screamed as I held back my tears.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Anirudh walked up to me, held me and put his lips to mine. It felt nice. It felt like everything I’ve been doing for the past few years was useless if I didn’t have that. It felt like home and money never gave me that. It reminded me of our childhood together, and that was worth more than all my cons combined. Medha walked in. “We have something”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I was briefed. The call logs on that number led to the house of a high profile financial trader living in Bombay. We went over the plan on the flight. It was my most challenging deception yet. I had to finalize every minute detail. There was something about the smell of my city that made my adrenaline kick in. If there ever was someone who could do this, it was me. I arrived at his high rise apartment disguised as a member of the HSS. I had to pretend to offer him more insider information for more money or some weird permutation of the same, assuming that there was a similar deal in place. It was extremely risky, and it could have gone very wrong, any second. Thankfully, it didn’t go wrong enough. He did figure out I was conning him but he had uttered what we needed by then in the following snapshot of our conversation, “….” “I think Athale would have notified me of this change” “….” The poor trader obviously disappeared. Parth Athale was one of the heads of the HSS. The pieces were falling into place, I made the correct decision. I had the chance to right my every wrong. The only thing left was to draw him out into the open. A simple news flash that the trader’s body was found in a discrete location was enough to ambush Athale. I witnessed it all. I witness how Athale’s bodyguards were shot down, how Medha and Ojha pointed their guns right at Athale’s forehead, I remember the final look Athale gave me. He looked decent and he had curly hair. I could see his eyes through the specs he wore. More than anger or betrayal, I think Athale’s look told me I made a mistake. It was sheer disappointment. I don’t know, did I do the right thing? I picked one evil out of the two, but is picking the lesser evil, that too in my perspective, up to me? What is God for? My allegiance didn’t shift from Anirudh even though I worked with Athale for 20 years. I chose love and home more than simple loyalty, I thought as I played his final instructions over and over in my head. Lucky for you, there’s no cliffhanger here. Because Ojha turned around, walked towards me, gun in his hand and said, “Let’s get drunk tonight.” Which we did. We slept together. In the morning, as Ojha was leaving my room he said, “You know we will need your skills right? I am the new noob master. You will get the other details soon.” I finally made the hangover cure that morning, but I made one change to the top recipe. A tablespoon of the deadliest poison I had. I don’t think I’m going back to loyalty after playing for the home side. More than I feared his bullet, I feared his absence in my life.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

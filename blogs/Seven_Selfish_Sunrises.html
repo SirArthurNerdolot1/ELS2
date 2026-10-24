@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seven Selfish Sunrises | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Seven Selfish Sunrises</h1>
+      <p class="manuscript-byline">January 2, 2017</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        adagio On the eucalyptus tree the crows fuss and jeer and rouse all into wakefulness. The bittersweet tang of spilt beer and distant, fading memories, come drifting on the careless autumn breeze, teasing my nostrils, and I, waiting for dawn to break on a clouded horizon, find my troubled thoughts and countless worries pale into insignificance in the yellowing mellowing burnished-orange gloom. *** a line of poetry written with a splash of blood a peacock struts on the lawn and pays obeisance to the slanted rays that manage to slice through the fog ‘Are you trying to live the life of a recluse, reads the mail, (with a mission or without?)’ I wonder… some dogs scuffle and play and raise a dust cloud a passing guard nods at me (show of solidarity among the sleepless?) A mission… I ruminate on my toothbrush and a young man knelt on a cliff facing the rising sun spilling his guts and smiling. *** a cenar teco The spider that has been sitting on my windowsill for as long as I can remember has woven a dense clustered web and she sits there calmly surrounded by her luxuriant gossamer tapestries and we listen to Ravi Shankar and we look out our windows and we watch our small fractions of sky slowly light up and the guy next door softly snores and the babblers frolic about on my balcony and I am grateful for her company *** felix culpa I had forgotten her she had remained distant I had remained afraid and the hours and days and years slipped away she’d forgotten me, but that didn’t matter, remembrances fade little by little and the deserts of memory stretch on endlessly. But sometimes she lingers in my dreams; haunting, prowling; sleek dark jungle-cat under a clouded moon, bright eyes searching mine. Always on the fringes of my dreams, always almost slipping out of my eyelashes and she bows her head acknowledging my presence and she purrs a low rumbling purr and Sometimes Androcles steps forward opens my arms and says aloud to the whispering trees ‘please come back. please let’s just go home’ I’ve gotten so used to that wild-cat of mine, you see, and I’m never sure if I should let her go Sometimes she comes bounding to me paws padding through the forest floor and she laughs merry and gentle Sometimes she turns and walks away deeper into the forest twilight eyes twinkling with a sadness that is as lonesome as it is captivating And strangely, the former never ends as well Sometimes we just sit there huddled in the cold on a still-warm granite slab in an overgrown crumbling temple- -long forgotten in the ever-sighing forest sharing a languid cigarette and we watch time slowly trickle uphill and before I can think of something stupid to say the sunlight comes creeping in and steals her away. *** suukaramaddava melancholia, adrift, returning as wave upon incomprehensible wave from the winedark sea crash and break on a wordless shore returning as I stand at the compartment door of a train whistling through a rainy autumn night, returning from aimless travel. looking out over muddy rivers swirling with inundated fury, and muddy roads mired with trucks, I pause on the Buddha walking through the deer park obscured by the fog walking through the thickets and clearings following a dust trail late one moonlit night the Sakyamuni walking through the streets of Benares as dawn breaks he steps down the ghats and into the cold receiving embrace of the ancient river and he can see the wistful rays that seek to light up the sleeping temples which blacken with the soot from the bodies burning on the banks and crackling as if with hollow laughter and he has calm empty thoughts, I brush the streaks of raindrops off my face and shiver a little. the Buddha, of course, died of the shits in a forest. a little chilled melancholia never killed anyone. the hour is late. electric-lit smokestacks belch and spew sickly grey clouds. nothing to do now but wait *** miss deeds This friend and I decide to stay up one night we sit on a rooftop and smoke a joint and the crispcold morning silence is punctuated by stiffening yawns Later we scald our fingers on steaming eggshells and saunter to our classes and he is describing to me (aloud) the catchy lyrics to a coarse Odia ditty, a vulgar oddity, if you will, and the imagery (which I am not going to include here I’m afraid it would outshine these lines so let’s just say there were many horses involved and leave it at that) took me by surprise ( scrotumtightening as Joyce might say) and I look up and this girl walks by in a Metallica shirt he stops and stares as well we’ve never seen her- short denim shorts -before tall, ravenhaired and she swings past us just as quick as she came in leaving behind- -a fleeting memory of a tightlipped smile -a faint lingering scent of jasmine -two dogs drooling in her wake It is 7:53 am And so every friday that semester we stay up- sharescaldstiffensaunter -down that same road at 7:53 am making small talk while our eyes search restlessly. the mornings grow colder the joints grow thicker we’ve never seen her since. *** empty ghats i find myself drawn to water on deadcalm mor nings like this, the river, the sea, the gently gurgling creek; something in a soft light glinting off the tingling surface of water, perhaps, the stillness of the air; maybe it’s the weight of all the associated meanings and the oblatory cupped palmfuls; i sit here, wishing i could take a dip, and ahab marvels at a whale bleeding out and paying last respects to the setting sun, and an orange-robed mendicant pets and feeds a wailing puppy and sings a bhajan in a soothing baritone, and the early-rousing fishermen cast their silvery nets from the boats that bob in the distance, free of thoughts; maybe it’s the hope in shaking off an invisible, paralysing slumber; i stand up and dust my pants; the booze has worn off, and the ride back will be considerably easier. I always wonder why
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

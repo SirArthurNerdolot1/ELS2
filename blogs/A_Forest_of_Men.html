@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Forest of Men | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>A Forest of Men</h1>
+      <p class="manuscript-byline">March 8, 2016</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        To escape years of dependence on the younger generation that had no need for their wisdom, the elders of the village became trees. When the middle-aged folk of the village came to know about this, they feared having to give up their own humanity in a few years for the sake of tradition. When the youth of the village, who harboured hopes of saving the day and becoming heroes, found out, they sprung into action. The children did not like to hear stories from their parents who were too busy to improvise in their stories and considered storytelling a chore. Their only source of good stories were the grandparents. Babies started crying because, well, that’s what they do. In short, the entire village rushed to the forest to convince the trees to become humans. But how do you convince trees? After much bargaining and pleading, the eldest of the trees changed back to a human. But the villager’s premature rejoicing was harshly hushed once the Eldest One spoke. He told them that the elders had hired a wizard to put a spell on all those past the age of 65, both present and future, to turn them into trees. Only an adventurer brave enough to retrieve a single fang of the Great Fanged Falcon, that could sometimes be seen in the uppermost boughs of the tallest trees of the forest, could reverse the spell. The catch was, the Great Fanged Falcon could possibly be found only through the wisdom of the elders. The adventurer destined to reclaim the village elders would have to be in tune with his elders to be able to read the signs the trees could give. Having said so, the Eldest One resumed his slumber. That’s how the legend goes. That’s how my parents recited it to me, anyway. Pity and prudence are the reasons most often given by “rational” people. The elders a hundred years ago decided, in their limited wisdom, that the village would be better off without them, that they were a burden on their children. I do concede that they were right from one perspective. The workforce now is a dynamic, fresh-faced juggernaut. The spell is fundamentally a prescription for retirement. Retirement makes sense, right? But children need grandparents. I was a child once. Still am, perhaps, in some neglected recess of my mind. I know how lonely it can feel when your parents go to work and the other kids think you’re scum. I’ve known firsthand the cold caress, the frigid grasp of isolation, the four walls of the house trapping me inside my own head. People think not going out of the house to work means being useless. Perhaps the first trees did too. The Quest can be fun though. Every boy or girl between the 13 and 21 is eligible to undertake the Quest for the Falcon’s fang. The entire village gathers on a Sunday in mid-April (people work every day except Sunday) in a grand procession to see the heroes march gaily forth into the Forest. Most return with stories of their valor, and subsequent defeat, and many villagers gather on Sundays to hear what became of their heroes. As a teenager, I was enraptured by the fantasy of reversing what I thought was a grave error in judgement. I signed up for the Quest at 13, and steeled myself against the trials of the Forest. I was disappointed. The Forest was pleasant. The gentle wind rustled through the foliage as the trees looked on austerely. Modestly lit even at night by the light of the countless stars and the smiling midsummer moon, the Forest seemed like it could not possibly be home to a mythical beast. Indeed, I did not find any sign of the Great Fanged Falcon there. I returned alright, but had no stories of valour, so the villagers called me a coward instead. Idiots. I never liked any of them anyway. I don’t think there exists a Great Fanged Falcon. Or that the trees can become human again. The legend was created merely to give detractors of the measure something to do apart from protesting. And I don’t think most of the “heroes” venture forth to regain their elders. And I don’t think anyone except me cares. The Forest became my favourite hideout after the Quest. I had seen its true face, and I fell in love with it. Gruesome for its history, it was resplendent in natural beauty. And it was quiet because almost nobody went there. I grew up, eventually. My work became what I lived for. The peaceful Forest, the imbecility of the villagers, the grave injustice of mandatory eternal retirement: everything resigned itself to the same dark, unvisited crevice of my mind where I hid my childhood. Those years of my life, when I was a “productive member of society”? Those were the grayest years. I never bore children. Didn’t see the point. I never met a girl to settle down with either. Everybody’s the same. I chose to forget the fact that I’m different from everybody else in my middle ages, but as I near my retirement, I like to visit the unvisited corners of my mind now and again. I like to visit the Forest on Sundays. I sometimes try to strike up a conversation with a tree, yearning for it to show me a wizened face and answer back, wondering if it can hear me. What would life as a tree be like? Would it be oblivion? That could be nice. Not much different from dying. But of course, no one dies. They just exist forever silently. I’m tired. Tired of having worked all my adulthood, trudging with my head bent behind everyone else, taking care to place my feet exactly where the footprints of my predecessors lay. Tired of meeting people convinced that mandatory arboreal retirement is the best thing to have happened to the economy. It’s my birthday at midnight. My 65th birthday. I didn’t have to work today, on account of my imminent retirement. I guess that, at least, counts in the positives. I ventured out at dusk for one of my strolls through the Forest. Best get used to my new home. My body creaks slightly as I walk. Was it the spell? Maybe. I’ve always liked the Forest. That’s another one in the positives. I like my new home. I’ve found a pleasant spot to take root. I can almost feel my joints begin to ossify. It’s about to be midnight, I presume. A gentle wind rustles through my hair as I look austerely at my neighbours. I sigh and close my eyes. Happy birthday to me.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

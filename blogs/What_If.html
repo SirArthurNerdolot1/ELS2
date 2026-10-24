@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What If ? | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>What If ?</h1>
+      <p class="manuscript-byline">October 16, 2018</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        Sunshine flooded in through the window of a dingy, dusty room as the heavy curtains were pulled to reveal a yellow tinted window. Aaron, a slender man of about 40 spun his eyes through the room, eyeing every aspect with a look of temptation, mixed with disgust. It had been years since he had set foot in the room. He used to call it genesis or ‘genèse’, reminding him of his elegant primary French teacher, Mademoiselle Alair. What better name for his first office, the origin of his story. As he sat at his desk, the old leather of his chair irked him through his Armani suit. Maybe his old flea market trousers weren’t that bad after all. In the corner of the room lay a pool table, covered with dust but to Aaron, it was the turning point in his life. Every fortune he ever came across in his life could be traced back to that pool table. Or was it misfortune? It was 15 years ago, Aaron Walker was just another budding lawyer in New York City trying out his luck with his partner, Samantha Drew. They had opened shop in an area which was filled with people who needed good legal support but couldn’t afford it. Isn’t that how every lawyer starts? Wanting to do general good for the benefit of the world, secretly hoping that one day they’ll be famous enough to sign on big clients and fill up their pockets. Greed is a natural human instinct, fighting it is of no use. But harnessing that greed in the correct direction might lead to something incredible. Both Samantha and Aaron believed that they had a greed for righteousness, to obtain justice for those who can’t on their own. “Drew &amp; Walker”, they couldn’t possibly have had a better name for it. He had known Samantha since law school, she always struck him as a person who can be reasoned with. Who understands, interprets and then takes action. Important quality for a lawyer. He would have never admitted it but he knew she was a better lawyer than him. She was known throughout the law school for her mock trials, and the lawyer opposite her was known to get completely crushed. She was from a small town in Arizona and had worked hard to admit herself into a prestigious Californian law school. For Aaron, a local of L.A., her views on topics were always a different taste. He loved new perspective on things and he could not have asked for a better partner. You could say she was fair and quite attractive with her flickering green eyes, but Aaron was the ‘business is business’ type of man. They both were smart and genuine people, but why they purchased a second-hand pool table for their office was beyond the comprehension of any person they knew. Some things simply happen, in their own silly manner. It was a simple story.The two were walking around NYC one evening and Samantha became infatuated with a cute squirrel she saw speeding along the street.The squirrel led them to small shop which sold antiquities. Both Aaron and Samantha were attracted to the shop, and the sweet lady at the counter was a master at sales, which is necessity for these small shops. She convinced them both to buy either the pool table or a Mayan statue, and as the reader clearly knows, the pool table was purchased. Every night before heading home, they used to have a game of pool, alive with bets related to the few cases they had. In a few months time, they realized how tough it actually is to be a lawyer in NYC, where in every corner there’s a law firm, and the rent is off the charts. While cutting down on expenses and luxuries they told themselves that were doing this for the good of the public but the fact that they needed a big sum soon was clear as crystal. One rainy evening, the two were in the office fussing over a ruling in a fraud case in 1974, when a burly young man dressed as if he had just come from Hawaii entered with his leaf printed shirt and shorts and a round beige hat. Over the patter of the raindrops on the windowsill he informed the two of his ‘problematic’ situation. “Are you the lawyers?” he said, in a deep harsh voice. Aaron replied in the affirmative. “I will offer you a sum of 10 grand if you help me out in a case” Aaron and Samantha were both extremely shocked. The temptation in them almost brought out the yes but the logic made it stay at the top of the throat. “What kind of a case carries that kind of money with it?” The man replied with a modified offer, “15 grand. And I will only tell you once you take the case, under the confidential agreement. And don’t waste my time, all three of us know you must be in desperate need of money to ‘help people’ “. The exasperation was apparent in his tone. Aaron and Samantha, after much deliberation through the 2 second eye contact they had, agreed. What could possibly be so bad, if they get to help multiple people in return? They would still be retaining their choice to fight his case. The man lay back in his seat, and lit a cigarette without even bothering to ask for permission and began his story. “My name is Todd. I am a business associate of a tech industrialist named Steve Zargenzy.” Aaron’s jaw dropped. Samantha’s face was that of utter shock and disbelief. “I suppose your reactions are justified. He has been all over the news lately. Cheated around tens of thousands of citizens with his ‘cheap but top-notch’ phone. He knew the processors were going to malfunction, but he thought he would be able to handle it. As I am sure you know, he has left the country and gone into hiding with his millions of dollars. And no, I don’t know where, so do not bother asking. See, that’s where I come in, the next-in-line CEO of Zargenzy Tech. We’ll probably change the name” He chuckled to himself. “If you are able to convince the court to lay off the backs of the company and put all the blame on Steve and only Steve, I might actually be able to get the company up on top again. Provide people genuine products. Here’s the case-file. I hope you get the 15 grand” he said with a sort of snort. Something inside of Aaron spoke out. A greedy demon living inside, angry for being neglected so long. “20 grand.” Todd said with a raised eyebrow, “Very well Mr. Walker. I liked the tone.”. With that, he left. Samantha still had a shocked expression, but the newer reason was Aaron. “What are you trying to do? Sell your integrity for 20 grand? Protecting the people cheated in this scam is why we became lawyers. Not protecting the scammers!” Aaron’s response was three-fold. “All the money scammed out of the poor is with Zargenzy in his endless vacation. It’s not coming back. 99% of the employees of Zargenzy Tech probably had no idea about this defect and finding the 1% is impossible. Yes, Todd is a candidate but why not save the jobs of thousands of innocent employees. Also, the amount of good we can do with 20 grand, imagine!” Was that greed a big city origin? No, the devil lives in all of us. Even Samantha nearly crossed the line, but her Arizona childhood resisted her from changing her ways. Even in New York and LA, Arizona never left her. She was not ready to give her dreams up. But even not accepting would lead to that. She went to the case-file and started hunting for a winning point. Both Samantha and Aaron spent three hours and found nothing. Or nothing legal, to be more precise. Aaron had an idea that involved a simple document forging, mostly risk-free, and a high winning chance. But recommending that to Samantha means approaching a lion while wearing a goat-skin. But it was nearly midnight and he had no other option. For a split second after he suggested the idea, Samantha’s eyes seemed to say “I will burn you alive”, slowly changing to “..are you okay?”. Aaron was determined, something had taken over him. And there was only one way he could think of to end this prolonged discussion. Samantha agreed, but said that if she loses, the consequences would be severe. Aaron had no idea how severe. The pool game started with the biggest bet at hand. It all came down to the 8-ball for both. But it was Aaron’s turn. Samantha failed to pocket it, which troubled her. Aaron knew it was an intermediate shot. Required some skill to pocket but understandable if he misses. It all came down to that one shot. On one side was integrity, morale and his best friend cum associate. On the other, his desire for a successful career, and a huge firm. It was all upto him. Whether the shot was intentional or not, he still does not know. A midnight bell rang in the distance. And he took the shot. The 8 ball went in. Samantha’s consequence in her own words was” I can’t…. stay in this firm anymore, I just can’t. You are not the partner I expected..anymore.” and she ran out crying in the darkness. Aaron had never felt so lonely in his life. Samantha’s role in his life was one that even he failed to understand. But now that it was gone, he felt empty as if someone took a part of his soul. He wandered off into a pub and realized after a few drinks that he hadn’t felt so close to success in his life either. He decided to move on, forceful and depressing though it maybe, it seemed only the next logical step. The next day, he briefed Todd who seemed to take forging a document an activity like getting his car washed. Just something you have to do regularly. But nothing could stop Aaron now. The court date arrived next week and Aaron’s law skills spread throughout the city. He was now a big-time lawyer. He took huge cases, ranging from criminal cases: defending criminals to keep his pocket full and pro bono: to give him the fabricated feeling from time to time that he is still doing good for the community. He tried to contact Samantha a few times, but with no avail. He never realized the severe consequences she warned him about were not over. Cut to present. Last year, he had learned that Zargenzy was still in hiding, and he did not like the fact that a small lawyer named Aaron Walker had made sure that his overseas stay was more than difficult and long. And that worthless insect Todd Gleeson was running the company. Aaron had received an email threatening his law firm, “Walker &amp; Co. is about to blow” summed it up, because the heat on Zargenzy had lessened. Slowly over the year, Aaron witnessed the epidemic that took over his firm. Employees quit with a look of fear in their eyes, they stopped winning cases and the word around town went from “Walker&amp;Co. is the best” to “Walker&amp;Co., is that a beer company?” He realized he had lost. Todd Gleeson had fallen to his death from a bridge while walking due to a ‘knee health issue’. There was no way he was going to beat Zargenzy at this game. He emailed him back, at the same email address, inviting him to his original firm location. Which he had never bothered to sell. Actually, he just couldn’t part with it. He wrote another e-mail to Samantha inviting her as well, but at an earlier time. He had to see her once, he had to know, he had to tell, he had to accept the fact that he gave up his partner for a lonely successful life. He had to see her. But there was no R.S.V.P. And this is how Aaron arrived at his old office, after nearly 15 years. Maybe Samantha wasn’t coming or she was late. In any case, the last memory he will have of her will be her rushing out leaving a teardrop trail behind. Him sitting down and crying consequently. Because then entered Steve Zargenzy. Before Aaron could even reach for his compact handgun and try to distract him with his lawyer pleasantries, he was shot, thrice. They say that your whole life flashes in front of you before you die, especially the moments with people you cherish most. He saw his family but the most distinct memory was of arguing over legalizing marijuana with Samantha, while being high on marijuana. He saw a memory of her hair flying in the wind. He wondered, what if? Aaron didn’t mind the outcome. With his career nearly destroyed and his loneliness eating him up from inside, he had nothing to live for. He was happy to have passed in his ‘genèse’. It felt poetic. What he didn’t see was the two green eyes peeking through the window, now with a more emerald glow which added a sort of wisdom. After witnessing the murder of her former best friend, Samantha walked away. Tears welled up in her eyes, but no action took form in her head. She thought of husband, her two kids and her small but satisfying law firm. Some may call it fear. But after all, isn’t everyone a little greedy? Aaron always thought, what if Samantha hadn’t pursued the squirrel? What if its tail wasn’t dwindling so sweetly? Would they have still been partners? Aaron always knew the answer was no. Someday, another offer would have come up, tempting him even more and then even Samantha’s logic would fail. The two were like the ends of a compressed spring, waiting to be pushed apart. Ideology can create barriers. But another thought used to strike his mind was the possibility of one conforming to the mindset of the other, by the time the next offer comes. But how much time? They were on the brink of shutting down. They needed the money and Aaron realized that. What if they had bought the Mayan? It would have radiated a more elegant and classy feel to the rugged office. Maybe the Mayan would have knocked some sense into Aaron, instead the pool table provided just a path to the apparently ‘ethically inappropriate’ way. They could have sold the statue to an artifact collector with some schemed lies for quick money.. Thing is, Aaron never knew the cunning side of Samantha even after all the years together. He didn’t know what would be considered crossing the line according to her. People always try to put up their best in front of people,even their best friends. One could also argue the flexibility of Aaron’s incentive and decision when he took the shot. What if he had let Samantha win on purpose. They would have remained together, forever, because not Aaron nor Samantha would have lost that match, it would be the greedy devil inside Aaron getting demolished in the battle. What if, and this was Aaron’s deepest secret which even he didn’t know of, what if he could have thrown the 8 ball and the cue ball away, slid across the table and kissed Samantha, saying “ I love you and your integrity”? What would have been her response? What if? Mademoiselle Alair always said “L’argent ne fait pas le bonheur”
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dead Ends | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>Dead Ends</h1>
+      <p class="manuscript-byline">June 15, 2015</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        What goes around comes around, in some shady back-alley in the middle of nowhere, clubbed to death and left to soak in one’s own pool of blood. “Forensics,” she said, thrusting the coffee cup into my bare hands with such vigour that I could hardly reject the offer. “Keeps you focused,” she explained, and left with the gait of someone who has had enough caffeine for the day. The day had just begun. Blood spatter gave a semi-detailed analysis as to how the shooting might have occurred. A dimly-lit alleyway, with just two people – one with her time swiftly fleeting away as her pulse ticked – and the other with intentions bloated up to murder-sized proportions. The shot was quick, and ballistic reports would later prove that it was silent – a well-executed kill leaving no traces. The victim had faced her killer, probably even looked the killer in the eye before the shot pierced through her sternum and lodged squarely within her left atrium. So much for analysis, but not a single clue that could connect anyone to the scene of crime… Ballistic reports came in negative. The bullet markings were inconclusive. The barrel was unduly filed to remove all identification marks from the bullet. The girl killed was a nobody – no next of kin and none to reel in for preliminary investigation. It was as if she had never existed. She may as well have been offed in some church and no one would have questioned it, save some law enforcers whose duty forced them to look into the lives of such individuals who did not matter. She wanted out – desperately. The division she was in did not agree to her taste. The work turned out to be even more stressful than she had hoped it would be and the paperwork that followed was excruciating. It was not a job that would pay your bills, or grant you dinner at the best restaurant in town, but was more of a job that kept a steady influx of secure bills, and was honorable. “There are no footprints. For all we know, she was shot by a ghost,” she spilled with a cup of coffee in her hands. Neon lights glowed bright, promising a fair display of skin to everyone who entered there. The logical thing to do was to call for the manager. The place smelt like testosterone, and the bright lights made everything seem more vivacious than they actually were. Strangely, for a place this loud and colourful, it was anonymous. The dealings were private and so were some of the dances. It was not a club that would invite the particularly esteemed crowd in their dark beastly hours. It was more of a place that mirrored my comfort. I could guess that the manager would be tight-lipped about the whole situation, and although he would confess to knowing the girl, he would never mention any other detail. “The club was a dead end. We have no killer and the city is getting restless. Identifying the gun is tougher than we expected,” she blurted out. “Drink that,” she motioned towards the cup. The victim’s life was all that could be relied on for now. However, this was tougher than it appeared on the surface. The girl was an immigrant and her passport was probably in the custody of the club-manager who might have held her an unwilling prisoner there, perhaps in exchange for some money owed, pleasing perverts and delinquents in grim evening hours. It was no use getting a warrant to the manager’s office- chances were that the passport in question was destroyed completely, and other similar ones hidden away. There were dead ends everywhere, and bare speculation was all that the department could come up with. There was no family. She did not crop up on the radar for joyriding or irresponsible parking. She was not someone who socialized or was romantically involved with any guy, or girl. Her apartment was unknown, and releasing her information over the media seemed to have no effect. She either lived in a location where the neighbours were perpetually too knocked out to notice her, or, in what was more plausible, she lived someplace that was tagged as a ‘bad’ locality. “I can only imagine her horrors. We need to find the killer fast.” She was very stressed about the entire affair. She behaved this uncoordinated only when my parents came over, or when I pulled her close in the elevators. I mouthed coffee, and she smiled weakly. The girl had a burner phone, a kind you would normally expect a stripper to carry, once you knew that her life was practically steered by someone else. There were no records to pull off. The phone was not discovered on her body. Neither was her purse, nor her rings, or necklaces, or hair-clips or shoes or clothes discovered. There was nothing that could give a clue about her whereabouts, or track her movements, or even hint at something that could allow one to proceed with the investigation. Moreover, the blood marks on the ground had not been disturbed. This meant that everything was removed before the killing and not after. When you close the case for the cops, the doctors take over. The forensic team concluded that the victim had indeed died from the bullet found in her heart. Her death was instantaneous. There was also a blunt force trauma to the head, probably as a result of the fall after she died. Ballistics had already confirmed that the shot originated from the dead wall of the alley. What was surprising, however, was the fact that she would be standing naked in front of the killer while the guy aimed casually at her heart and shot her to death. It almost seemed like a death ritual of some sort, without the elaborate visual symbols carved onto the surroundings, or the elegance of the kill. This was not a religious sacrifice. This was, according to what the department had in its hands now, a perfect murder. “It is not perfect, you see. We have the body,” she held my hands tight. “I promise I will get you out of here.” I knew it was my last cup of coffee for the day. I also knew they stood behind the large mirror on the wall, looking at me, debating whether to send her over for the interrogation. They had already apologised multiple times for bringing me in. They said it was routine and that I was their best lead. She had argued, probably, and they had disregarded her arguments. I was after all, a guy who was convicted once with a false charge of homicide. Although it had later turned out that I was falsely accused, the news of the writer-fiancée of a cop being wheeled in for questioning does have some after-effects. I did not complain much. It was good for my books. I researched perfect crimes, though I usually wrote to hurt religious sentiments. I have a wife who gulps insane amounts of coffee when she is stressed and a daughter who thinks I resemble the heroes I write about. I hate attention though. Anonymity is interesting. “Tell me where you were at the time of the murder, from eleven forty five to one fifteen on the twenty-sixth of this July,” she continued in her routine voice. “With you.” “How about fifteen minutes in the timeline when I cannot testify you were with me?” “I was trying to put my daughter to sleep upstairs. She can testify.” This was just procedure, she would later say. “Do you know of one Claire Doris Engels?” “Yes, I do.” “In what context?” “You told me about her last night. You also said that the name sounded farce. You told me she was a stripper at a club named something that I cannot remember. It was something along the lines of some kitten or cat… You added that her name might easily have been something that the girl had assumed in her line of work.” “It is possible, however, that you could have asked someone else to commit the crime for you.” “My cell-phone records are all available. I would be happy to co-operate with the department should they wish to go through the records. Moreover, my movements are tracked and I am not allowed to leave the city for six more months. There is a record of all places I have been, and hopefully camera footages of some of them.” “Why are you still on the scanner if you have not been found guilty?” “I assume you know that?” “It is all for the record.” She told me later that I needed to calm down during such questions. “I engaged in a life-threatening brawl with an inmate during my stay at prison. The psychiatrists assigned to me later said it was due to stress, and I was asked to be monitored for a six-month period because the fight was unnecessarily violent.” “What exactly was so violent in it?” “I started stabbing him in the foot, and was proceeding higher with each stab. They stopped me near the thighs and put me under psychiatric care.” “You are not damaged for life. You have me, and Alex,” she would later say, before blowing me a kiss. “Do you know why we have brought you in here?” “Because you have no one else to bug?” “Because your scanner pinged around the location of the murder.” “I live in the apartment that overlooks the street- the one to which the alley, where your victim was clubbed, is attached. Sometimes, as is the case in my daughter’s room, moving towards the corner near the street actually shows up as if I am somewhere on the street. It is a case which the tech-support at the department describes as an error in precise triangulation. It has caused me enough problems in the past. I usually show up near the book-shop or the baker’s. There are records of it having occurred earlier.” “Did you hear anything, or see anything during the time of the murder?” “The alley cannot be seen from our apartment, and the walls are soundproofed.” “Considering your research in perfect crimes, how do you make a bullet untraceable?” This was why I later asked her to narrate the entire crime to me. “You file down the barrel so that the bullets get marked all over. Gardner’s classic courtroom novels- Perry Mason. I guess it has appeared in multiple works later. But there are risks.” “What risks?” “You can so damage the barrel, that the shot might veer off course, or the gun might explode in your hands. If you actually get it done, it is pure luck.” “Again, hypothetically, how do you keep someone still while you are killing him?” “The person must know you well, and be ready for the kill, or whatever act you are trying to pull off. Or you shoot in the back, so the person isn’t looking.” “How would you remove your footprints?” “Hypothetically?” “Hypothetically.” “By not standing on a surface someone would try to pull off the prints from. This would then force me to shoot from a distance. If I am not a trained shot, I risk missing the target. Also, it would imply that the target could not have interacted with me close up.” “Hypothetically, how would you dump the weapon?” “I would dismantle it and spread it over the world in forms that appear harmless.” “Hypothetically again, how do you get the girl out of the clothes and where do you dump her belongings?” “Isn’t she already a stripper? I would return them to her apartment. Everything except her phone. That, I would dismantle and distribute.” “That will be all,” she said.
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

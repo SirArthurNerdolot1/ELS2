@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Half-chub poems | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Poetry · From the Archive</p>
+      <h1>Half-chub poems</h1>
+      <p class="manuscript-byline">April 22, 2017</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-poem" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <div class="space-y-6 my-12">
+      <p class="text-center text-xl md:text-2xl leading-[2.5rem]" data-aos="fade-up" data-aos-delay="0">
+        Je te veux (my times with) you remind me of listening to Satie and watching the sun go down; clear, alluring, expressive notes separated by long, achingly ponderous lulls, silhouetted against the dying of the heavens. and, if you will permit me the indelicacies of one so boisterously drunk on you and the violent, naive joy in being serendipitously alive that the notes will induce, I will confess that I, disliking vulgar crescendos and bombastic codas, sometimes wonder if you too will slowly and gently fade away from my life; one soft note shyly vanishing into the deepening hues of the sky before the next, softer note can take its place, half-remembered, half-forgotten, until the last note lingers on in the stillness that follows, shimmering, translucent, ephemeral, it arrives far too early and leaves behind far too much yearning. and yet, it does far more justice to you, i should hope, than these hollow adjectives and unnecessary nouns of mine ever can. Harassment (this constitutes it) I once met this girl who smelled like stale cigarettes and fresh coffee and every third person in the bus she had, no doubt, ridden that morning, all rolled into one. I was new to the city and had gotten caught in the rains, and stood before her in the metro station, melting into puddles, and she asks me, in broken Bengali-Hindi, (Bhindi if you will) if it really was raining that hard outside, adding a wink. I, not understanding the subtleties of that cunning linguistic gesture, said no, it really was, which seemed to fuddle her somewhat, but she soon began a merry, loitering chat, the kind only total strangers seem to have, about her college, and her guitar-playing on lonely moonlit nights, and her shady side-business in gold that kept her in alcohol through the year, you know, saccharine slop like that, and though I was listening, half-listening, a half-dozing bull in the shade of a hot summer’s day, and my eyes wandered like the flies bothered by its tail; flitting from head to shoulders to extra-thick slippers to her jeans, and peeping out, peeping, winking, giggling, from under her jeans, were panties pink. Not a sleazy black or red; not the lacy, light pink of air-headed Disney princesses; not the flustered hot pink of an extended adolescence; just cotton pink; practical, pragmatic pink; the pink of bougainvilleas, inexpensive and easy to maintain; the pink of two girls in class, mutually uncomfortable in English; the pink of blushing village brides, applied with unsure, loving deliberation; the pink of a winter sunset on a crowded beach; sweaty, breathing pink; the pink that seems to consume all of time, and all of my thoughts; that sort of pink. Fun yet reasonable; impishly rebellious; wistful, sighing pink. And though I would like to say I kept my eyes where they were supposed to be, that would be a little unfair to the hoary, lecherous mongrel that snarls and dreams as it frolics on its back in the grass of the mind, quivering in pleasure, and… but you get that, right? Of course you do. So then I resume talking, dripping, slurring, using the word ‘pink’ a little too often and emphatically, when her train arrives and she asks me if I was heading to the memorial, and I realize I’ve been waiting on the wrong side all this time, quite to my surprise and dawning sorrow, and must bid those panties, those petulant, passionate, pink panties, a tear-brimming farewell, and she doesn’t notice or mind too much, and we part- familiar stranger and strange familiar. Fare thee well, pink cottons, may you flutter ever-free. And everything nice She told me that it was absurd that she lived in a world where she could basically subsist on sugar, and have just mango shakes and ice cream for dinner, lunch, and whenever else she liked, and thick, syrupy candy, before and after every class, and misri every night, at her desk where she sat and tried not to get distracted too often, and bitter, dark chocolate on special (but not rare) occasions, just sugar, thickening her blood and turning her hair brown. It was absurd, she said, that all that sugar was placed like that in brightly lit fridges, and marketed and packaged to look so good in those brightly lit fridges, if we weren’t supposed to have any of it. It was absurd, she said, to be expected to resist the steady advance of sugar, rising over the centuries and untrustworthy economies. (“and pirates’ rum is made from the same stuff too! See?”) It was absurd, she said, to ever deny all that sugar to a middle generation like us stuck in meaningless jobs, living enchained by our own wills; just semi-solid sugary blobs of squandered possibilities, destined to have no impact whatsoever. And it was absurd, she said, of me not to have assumed she’d been doing so already, in an exercise of free will, and for a while now, too. (“You said I was a sweet little girl, didn’t you?”) That night, I saw a painted dragonfly, white and yellow, being carried away by crimson ants in oozing chunks on the stained bathroom tiles. I stood, mind numbed, (by the sugar?) and watched them all through their drawing and quartering, until there was nothing left of the silver-winged albino apex predator but another suspicious dark stain on the floor. She had been standing on the lawn in front of my room when it happened, grinding her teeth in silent, righteous fury because I, quite obviously, hadn’t been listening to her. As she ground them and debated kicking me in the toes, they suddenly splintered into paper-thin shards of sugar, white dust clogging her throat, and as I watched, her lips and eyes and hair and legs and fingernails crystallised into sandpapery-white sugar, and the more delicate parts crumbled like old glassware. We smelled her, all of us around, and tasted her, when she came apart; her face frozen in inward terror, eyes bulging; she cracked up the middle, and collapsed into windblown white piles of powder and large, sticky, yellow-white lumps. I haven’t been able to have anything sweet ever since. maybe it was the dragonfly, maybe it was the way the mess and canteen owners exchanged meaningful glances on seeing it happen, (did you have it with your coffee this morning?) but I just couldn’t stomach the thought anymore, and had to quit the stuff, cold turkey, and that’s the most absurd thing of them all!
+      </p>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

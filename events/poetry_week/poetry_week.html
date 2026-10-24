@@ -36,7 +36,8 @@
         color: #111;
       }
     </style>
-  </head>
+    <link rel="stylesheet" href="../../css/site.css" />
+</head>
 
   <body>
 <!-- Navigation Header -->
@@ -45,7 +46,7 @@
       <!-- Logo + Title -->
       <div class="flex items-center space-x-3">
         <a href="../../index.html">
-          <img src="../../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16" />
+          <img src="../../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
         </a>
         <h2 id="navbar-title" class="text-base sm:text-lg md:text-2xl font-bold tracking-wide text-left md:text-left">
   English Literary Society IIT Kanpur
@@ -57,7 +58,7 @@
       <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
         <a href="../../index.html" class="hover:text-gray-700">Home</a>
         <a href="../../about.html" class="hover:text-gray-700">About</a>
-        <a href="../../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../../events.html" class="hover:text-gray-700 nav-current">Events</a>
         
         <a href="../../blog.html" class="hover:text-gray-700">Blog</a>
         <a href="../../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
@@ -79,7 +80,7 @@
          class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
       <a href="../../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
       <a href="../../about.html" class="py-3 border-t hover:text-gray-700">About</a>
-      <a href="../../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../../events.html" class="py-3 border-t hover:text-gray-700 nav-current">Events</a>
       
       <a href="../../blog.html" class="py-3 border-t hover:text-gray-700">Blog</a>
       <a href="../../Dandelion.html" class="py-3 border-t hover:text-gray-700">Dandelion</a>
@@ -106,33 +107,18 @@
 
 
     <!-- Hero Section -->
-    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden" data-aos="fade-up">
-      <div class="absolute inset-0 z-0">
-        <img
-          src="poster.png"
-          alt="Blurred Background"
-          class="w-full h-full object-cover blur-2xl scale-125 opacity-60"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-[#fef9f4]/90 to-[#fef9f4]/80"></div>
-      </div>
-
-      <div class="relative z-10 flex flex-col items-center px-4 text-center text-black">
-        <img
-          src="poster.png"
-          alt="Poetry Week"
-          class="max-h-[70vh] w-auto object-contain mb-6 rounded-xl shadow-2xl"
-        />
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">Poetry Week 2025 – A Celebration of Verse and Voice</h1>
-        <!--<p class="text-sm md:text-base text-gray-700">December 12, 2025</p>-->
-      </div>
-
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20">
-        <div class="animate-bounce text-gray-500 text-xs">Scroll Down ↓</div>
+    <section class="manuscript-header with-plate" data-aos="fade-up">
+      <div class="page-intro">
+        <p class="page-kicker">Chronicle · May 12, 2025</p>
+        <h1>Poetry Week 2025 – A Celebration of Verse and Voice</h1>
+        <figure class="manuscript-plate">
+          <img src="poster.jpg" alt="Poetry Week" loading="eager" decoding="async" />
+        </figure>
       </div>
     </section>
 
     <!-- Main Content -->
-    <main class="max-w-3xl mx-auto px-6 py-16" data-aos="fade-up">
+    <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
       <div class="prose max-w-none text-lg leading-relaxed text-gray-900 prose-p:mb-4">
         <p>Poetry Week was a week-long celebration of poetic expression that brought together voices from within and beyond the campus community. Held online, the event featured a series of creative prompts released every two days on our Instagram handle, encouraging writers to respond with original poetry.</p>
         <p>The response was overwhelming, submissions poured in from students and poetry enthusiasts across the country. Each entry reflected a unique blend of imagination, emotion, and craft, making Poetry Week not just a showcase of talent but a space for literary connection and creative exploration.</p>
@@ -148,70 +134,70 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide flex justify-center">
-            <img src="Echoes_of_the_Fallen.png" alt="Poem 1" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Echoes_of_the_Fallen.jpg" alt="Poem 1" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="aryavart1.png" alt="Poem 2" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="aryavart1.jpg" alt="Poem 2" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Laugh_All_You_Want.png" alt="Poem 3" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Laugh_All_You_Want.jpg" alt="Poem 3" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="A_Brighter_Eclipse.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="A_Brighter_Eclipse.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="By_hook_or_by_crook.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="By_hook_or_by_crook.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Contact_High.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Contact_High.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Everything.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Everything.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="I_Thought.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="I_Thought.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="If_My_Mind_Could_Talk.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="If_My_Mind_Could_Talk.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Mayur.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Mayur.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Not_What_You_See.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Not_What_You_See.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="On_The_Surface.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="On_The_Surface.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Siblings.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Siblings.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="The_First_Time.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="The_First_Time.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="Version_One.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="Version_One.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <!--<div class="swiper-slide flex justify-center">
-            <img src="aryan_Prajapati.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="aryan_Prajapati.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="the_letter.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="the_letter.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="The_Mirror_Speaks_in_Silence.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="The_Mirror_Speaks_in_Silence.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="diya_arora.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="diya_arora.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="sonal_tripathi.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="sonal_tripathi.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="mohit_chaudhary.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="mohit_chaudhary.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>
           <div class="swiper-slide flex justify-center">
-            <img src="The_Unheard_Screams.png" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg" />
+            <img src="The_Unheard_Screams.jpg" alt="Poem 4" class="h-[70vh] object-contain rounded-xl shadow-lg"  loading="lazy" />
           </div>-->
 
 
@@ -231,6 +217,22 @@
         ← Back to all Events
       </a>
     </div>
+
+    <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+      <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+      <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+      <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+    </footer>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

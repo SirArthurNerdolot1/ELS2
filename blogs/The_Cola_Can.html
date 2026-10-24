@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Cola Can | ELS IIT Kanpur</title>
+  <link rel="icon" href="../images/logo-bg.png" type="image/png" />
+
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #fef9f4;
+      background-image: url('../paper-texture-wide.png');
+      background-repeat: repeat-x;
+      background-position: top center;
+      background-attachment: fixed;
+      background-size: auto;
+      color: #111;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+
+<body>
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-[#fef9f4]/90 backdrop-blur-md border-b border-gray-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="ELS Logo" class="h-12 w-auto sm:h-16"  loading="lazy" />
+        </a>
+        <h2 class="text-base sm:text-lg md:text-2xl font-bold tracking-wide">
+          English Literary Society IIT Kanpur
+        </h2>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-sm md:text-base font-light uppercase tracking-widest">
+        <a href="../index.html" class="hover:text-gray-700">Home</a>
+        <a href="../about.html" class="hover:text-gray-700">About</a>
+        <a href="../events.html" class="hover:text-gray-700">Events</a>
+        <a href="../blog.html" class="hover:text-gray-700 nav-current">Blog</a>
+        <a href="../Dandelion.html" class="hover:text-gray-700">Dandelion</a>
+      </nav>
+
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu"
+      class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden flex flex-col text-sm font-light uppercase tracking-widest bg-[#fef9f4] px-6 shadow-md">
+      <a href="../index.html" class="py-3 border-t hover:text-gray-700">Home</a>
+      <a href="../about.html" class="py-3 border-t hover:text-gray-700">About</a>
+      <a href="../events.html" class="py-3 border-t hover:text-gray-700">Events</a>
+      <a href="../blog.html" class="py-3 border-t hover:text-gray-700 nav-current">Blog</a>
+      <a href="../Dandelion.html" class="py-3 border-y hover:text-gray-700">Dandelion</a>
+    </nav>
+  </header>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    let isOpen = false;
+    toggleBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0px";
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        isOpen = false;
+        mobileMenu.style.maxHeight = "0px";
+      });
+    });
+  </script>
+
+  <section class="manuscript-header" data-aos="fade-up">
+    <div class="page-intro">
+      <p class="page-kicker">Article · From the Archive</p>
+      <h1>The Cola Can</h1>
+      <p class="manuscript-byline">June 4, 2020</p>
+    </div>
+  </section>
+
+  <main class="max-w-3xl mx-auto px-6 py-14 book-page is-prose" data-aos="fade-up">
+    <div class="prose max-w-none leading-relaxed text-gray-800">
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        27 January 2037,10:27 p.m., Monday. It’s been 17 years since I have been watching the pale moon shine on the clouds and clustered leaves print their shadows on the walls that surround me. The night being as cold as it always was, reminding me every night of how cold the world is out there. Every night, the sound of the wind breezing past the iron rust slowly decays me, cell by cell. The walls witnessing how I have been broken and shattered all through these years. They might be the only one’s who would remember my existence after I join the moon and the stars in the cold nights that I live through every night. Little did I know that someday, I would not be a part of anyone’s memory and that these red bricks that make the wall around me would be the only part of the world that would ever know that I was. 17 long years, of me watching the moon rise on me each night, as if it looks at me in pity. This long a time would suffice to kill any thoughts a person could ever have. 17 years, is long enough to kill of all memories of a person and I might also say that it takes 17 Years for a soul to decay till its end. 17 years ago, my nights ended with ice cream for the family and dinner with Alan saying grace. Alan, my youngest son, used to love saying grace before meals for he had just learnt to do so in school. Julia, my wife would have for us a lovely meal prepared to finish off our days and we were the happiest families in the royal lineage. Our lives were everything anyone could ever wish for. I had respect in people’s heart and love from everyone that knew me. Little did I know that those were the last days of me knowing that such a thing would exist. I was sent here for a murder, a murder I didn’t commit but I suppose the world conspired to pin it down on me. A murder that took away the respect I had earned in all the years I had grown up, it took away the pride people had when they identified themselves to me and it took away my world, it took my Alan and my Julia. A murder that left me in here with these walls and with moonlight every night that have slowly and slowly killed off all my thoughts and all my memories. All these years, and the only memory I have left is what haunts me each day and each night. It breaks me up and shatters me to the very core. The words ring in my ears when I try to close my eyes and they seem to be taunting me when I’m awake. The sentence that ended my life as I knew it and brought me to a place where I decay each moment. “The Court of Victoria finds Prince Robert to be guilty of adultery and murder of one, Elena Kosch, and orders that his name be struck off him all record book and that his involvement with any part of the United Kingdom be removed from existence. The court also sentences Robert to a life term imprisonment in the Waldor Prison.”
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        8 February 2020, 3:36 p.m., Saturday. After Robert addresses the people of Anfield, all of us come home to sit together and talk like a family after a long time. Robert has been away from home for the past few months and Alan is delighted to be with his father this time around. “Dad, do you know how to mould clay?” He keeps asking Robert, but somehow somewhere, I have a feeling that Robert is in a different sphere. He seems a little disconnected from us this time around. It probably might just be the jet lag or that coming home might be a change to him from all the travelling he has been doing. Anyway, I brush aside this thought, knowing that being with the family will bring him back to us, back to his home. Tonight, we host a homecoming dinner for Robert, and everyone who knows him since he has been growing up is invited. The gala begins and all of our guests are delighted to see Robert in the flesh. He is center of attention tonight, and I guess he deserves it too. Watching him smile with his old friends makes me happy. I haven’t seen his smile in months and this is what I cherish the most about him. His smile. As I head to have myself a drink, Mona finds me and pulls me into a corner. She has an urgency in her eyes and somehow, she is screaming even before she has uttered a word. “There is something you must know”. There is a panic and fear in her which has me scared. And this is when everything falls apart for me and breaks me down. She says, “Robert, Robert has done something bad”. I nervously ask her to sit but she just wants to blurt something out. “Did you hear about the murder in Scotland a week ago, a girl, in her 20s was killed?”. I had not known of such an incident but this didn’t really bother me at first as I thought it was out of context. The next sentence she says chills my spine and has me frozen, “Robert was staying there too and its him who murdered her.” “The girl, Elena, had met Robert when he was in Ukraine, and she was travelling with him for all these past months. It was on the streets all over Eastern Europe that Robert was seen with a young girl in all his tours and visits. It was quite evident that they were having an affair and that Robert, when he got to Scotland, figured that if the people of United Kingdom found out about this, he’d lose everything and he had to anyhow get rid of Elena before he reached back home at Anfield”. Before I can comprehend what she just said, she shows me a tape of Robert with the girl and shows me a couple of photos of them having dinner. This makes my heart stop and breaks me down. Tears leave my eyes but I somehow hold them back. I hold onto my wits and I know that I’ll make Robert pay for this. The next morning, I make sure everything reaches the press and the next day, I have Robert in court. I make sure everything is done to erase off every memory of Robert that any of us would ever have. And I bury him in the jails once and for all.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        24 October 2019, 6:38 p.m., Thursday I met Mona on one of my visits to London for selling the drugs I had smuggled from Africa. She seemed to be in a mood to strike a deal with me ever since we made eye contact. I knew that she might be a truckload of trouble but I also knew that she could bring me a truckload of money. So, it didn’t come to me as a shock when she asked to find a girl that would love to travel and would be into selling my drugs to someone important. I knew Elena was the one girl who I could rely on. I had brought her into this business just so that I could rake in the big bucks that someone like Mona could offer me for such a job. And I knew Elena could never say no to me given that I had provided her with a new means to life when she had nothing to hold onto and was shattered to pieces. Elena had readily agreed to do the job, after all, it involved drugs, travelling across Europe and one fine English Gentleman, it didn’t have to take much convincing to get her to agree to this. I knew that this was my chance at getting as rich as my the next three of my generations needed to be and the deal was done. Elena went to meet with the fine Englishman, and Mona had wired me all the cash I needed to swim in money for ages to come.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        12 June 2018,3:42 a.m,Saturday Elena is staring at herself while she contemplates whether it’s worth living anymore or not. She looks at her own eyes , they have been red and bloody after all the crying she has done the whole night. On top of that some asshole has just spilled an entire cola ,while she was walking down the street, on her favourite jacket. She hurried to the bathroom hoping that maybe she could undo the damage. “You do know this is a Men’s Room right?” said a voice from the corner. She was startled but she didn’t want to show it. And then he started flirting, getting too close like all men.. but something about him was different. He had some sort of a charm unlike others. She had been dating Aaron for the past year but somehow, that night, Liam made her smile a bit more than she usually does. He appreciated the spark in her eyes and played with her hair while she giggled. She hadn’t felt this way in a long time and she felt like there was something in Liam that pulled her towards him. The walk back to her place led to one thing and another and before they knew it, they were both into each other, somehow leaving behind what anyone else would think of them and were just making out like there was no tomorrow. This moment, this very moment is the time when Aaron opens the door to find Elena on top of another man. He doesn’t think a lot but the only thing he does at this very moment is slams the lamp on Liam’s head and keeps doing so till there is blood all over. He slaps Elena so hard she drops down cold. He slams the door on his way out and leaves Elena bludgeoned and Liam, almost dead. This leaves Elena in the middle of the night, with no person to talk to her and nothing to help her out of her misery. This brings her to something she never thought would get into, but she does. She finds help in drugs that she bought out of curiosity. She keeps doing drugs till she is left with nothing but an addiction to it. This brings about desperate times for her and this is when she gets into the drug smuggling business.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        11 June 2018,9: 54p.m, Friday Me and my friends had just watched this movie, “The Butterfly Effect”, and damn, it was just some far fetched drama to make a story out of thin air. People in the movies business seem to think that they could create content out of absolutely nothing and believe that the audience would buy the crap that they hope to sell in the name of a “Butterfly Effect”. My friend is completely on board with the movie and he says ”The Butterfly effect isn’t just that small things have big consequences , it means that each and every creature on this planet is connected through our actions whether e are aware or not.” but I don’t think I could ever fathom such logic. I mean, who on earth would believe that say, Suppose I spill this cola I have in my hands, the world would end? At this moment, I stop to give a shit and throw the damn cola can into the air. Some of it spills on this young girl in her 20s…, I apologise immediately for what I did but she just screams “asshole” and starts running to the washroom. She was probably in a hurry because she went into the men’s room.
+      </p>
+
+      <p class="text-gray-800 leading-relaxed mb-6 text-lg">
+        I could’ve stopped her… but I didn’t
+      </p>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="../blog.html" class="inline-block text-blue-600 hover:underline font-medium text-sm">
+        ← Back to all blog posts
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-10">
+    <p class="colophon-mark">❦</p>
+    <nav class="site-socials" aria-label="Social links">
+      <a href="https://www.instagram.com/elsiitk/?hl=en" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.15" cy="6.85" r="1.05" fill="currentColor"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://englishliterarysocietyiitk.substack.com/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.2 4.4h17.6v2.15H3.2V4.4zm0 4.05h17.6V20.2L12 16.45 3.2 20.2V8.45z"/></svg>
+        <span>Substack</span>
+      </a>
+    </nav>
+    <p class="colophon-line">Set in Playfair Display &amp; Georgia · IIT Kanpur</p>
+    <p>&copy; 2026 English Literary Society IIT Kanpur. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
